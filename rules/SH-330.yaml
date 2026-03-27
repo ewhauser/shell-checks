@@ -1,0 +1,10 @@
+id: SH-330
+name: spaced-tabstrip-close
+summary: A `<<-` heredoc uses spaces before its closing marker.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/330.sh
+rationale: Use tabs for the indented marker, or use plain `<<`.

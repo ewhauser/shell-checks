@@ -1,0 +1,10 @@
+id: SH-334
+name: until-missing-do
+summary: An `until` loop skips the `do` keyword.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/334.sh
+rationale: Insert `do` before the loop body.

@@ -1,0 +1,8 @@
+id: SH-272
+name: caret-negation-in-bracket
+summary: "A `[^...]` negated bracket expression is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/272.sh
+rationale: "Use `[!...]` for portable negation in bracket expressions."

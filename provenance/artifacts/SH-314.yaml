@@ -1,0 +1,23 @@
+---
+artifact_id: SH-314
+created_at: '2026-03-28'
+files:
+- path: rules/SH-314.yaml
+  sha256: 217c267be31db40d03ea2fe332e4815ec82397e54d4f8270059245cd3b8fc70f
+- path: examples/314.sh
+  sha256: 6aa67ae12af520f26f49a561bb149af555bd5bd2d364baa7fbd1e0a9910333c9
+source_basis:
+- A `local` statement assigns from a variable defined earlier on the same line.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-040
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/314.sh
+  expected_code: 2318
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

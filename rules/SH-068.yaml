@@ -1,0 +1,10 @@
+id: SH-068
+name: command-output-array-split
+summary: Feeding raw command output straight into an array can break on whitespace and similar separators.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/068.sh
+rationale: Capture the data with a structured reader instead of arraying command output directly.

@@ -1,0 +1,8 @@
+id: SH-267
+name: v-test-in-sh
+summary: "The `-v` variable-is-set test is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/267.sh
+rationale: "Use `[ -n \"${var+set}\" ]` for portability."

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-121
+created_at: '2026-03-28'
+files:
+- path: rules/SH-121.yaml
+  sha256: 68ec3fff2f6941204dd913e6c7f32f0bcd797aad439a921f98091b1b82594d39
+- path: examples/121.sh
+  sha256: f18c71645e770732ef6876b347a829050d6eef733016e994b5b44ff0d681d346
+source_basis:
+- C-style comment text is not a shell comment.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-026
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/121.sh
+  expected_code: 1127
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

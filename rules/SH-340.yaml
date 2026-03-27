@@ -1,0 +1,10 @@
+id: SH-340
+name: comma-array-elements
+summary: A Bash array literal uses commas, so multiple intended elements become one malformed item.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/340.sh
+rationale: Write Bash array elements as whitespace-separated words inside `(...)`.

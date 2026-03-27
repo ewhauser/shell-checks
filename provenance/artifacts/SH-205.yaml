@@ -1,0 +1,23 @@
+---
+artifact_id: SH-205
+created_at: '2026-03-28'
+files:
+- path: rules/SH-205.yaml
+  sha256: 5b8a76e186dfc3c1c2ca851cb9532ee4cfd7462b6d5cf09141b7f7a337001a19
+- path: examples/205.sh
+  sha256: c837f739d9d5187095f72a77a19d046bbcbd0d32fd7749f118e22f12d32018f0
+source_basis:
+- An unquoted word sits between two single-quoted segments.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/205.sh
+  expected_code: 2026
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

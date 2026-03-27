@@ -1,0 +1,23 @@
+---
+artifact_id: SH-208
+created_at: '2026-03-28'
+files:
+- path: rules/SH-208.yaml
+  sha256: 4b9d054eb30d54fc73b47b540a6a35593dd727cc2925b1d267e366b857ae1dd4
+- path: examples/208.sh
+  sha256: b58622cfb0661d1e1b9d7b7233d0fe48547d52937cafeeb7aab72c6790495d73
+source_basis:
+- A `tr` character class is not quoted and may be expanded as a glob.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/208.sh
+  expected_code: 2060
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

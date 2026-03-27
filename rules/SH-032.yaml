@@ -1,0 +1,8 @@
+id: SH-032
+name: uppercase-expansion
+summary: The script converts a parameter to uppercase with a bash-only expansion form.
+shells:
+- sh
+- dash
+example: examples/032.sh
+rationale: Perform case conversion in another step, or target a shell that supports this expansion.

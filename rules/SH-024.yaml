@@ -1,0 +1,8 @@
+id: SH-024
+name: array-reference
+summary: "The script references an indexed array value, which portable `sh` does not support."
+shells:
+- sh
+- dash
+example: examples/024.sh
+rationale: Use separate variables or positional parameters instead of array indexing in portable shell.

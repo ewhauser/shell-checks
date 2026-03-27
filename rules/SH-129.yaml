@@ -1,0 +1,10 @@
+id: SH-129
+name: bad-redirection-fd-order
+summary: Uses a malformed file-descriptor redirection
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/129.sh
+rationale: "Write the redirection in a standard form like `2>&1`."

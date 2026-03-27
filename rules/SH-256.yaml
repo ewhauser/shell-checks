@@ -1,0 +1,10 @@
+id: SH-256
+name: x-prefix-in-test
+summary: "A test comparison uses the `x$var` idiom for empty-string safety."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/256.sh
+rationale: "Use proper quoting instead of the legacy `x` prefix trick."

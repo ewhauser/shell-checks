@@ -1,0 +1,7 @@
+id: SH-352
+name: heredoc-end-trailer
+summary: A here-document closing marker has extra syntax attached to its line.
+shells:
+- bash
+example: examples/352.sh
+rationale: Keep the closing marker by itself and move separators to the command line.

@@ -1,0 +1,10 @@
+id: SH-306
+name: double-quote-nesting
+summary: A double-quoted variable sits between unquoted text inside a larger double-quoted string.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/306.sh
+rationale: Escape inner quotes or restructure the string to avoid split quoting.

@@ -1,0 +1,10 @@
+id: SH-347
+name: subshell-side-effect
+summary: A value is updated inside a pipeline child shell and then read afterward.
+shells:
+- sh
+- bash
+- dash
+example: examples/347.sh
+rationale: Keep the update in the main shell or pass the result out explicitly.
+requires_dataflow: true

@@ -1,0 +1,8 @@
+id: SH-291
+name: nested-default-expansion
+summary: A nested default-value expansion is used in POSIX sh.
+shells:
+- sh
+- dash
+example: examples/291.sh
+rationale: Use intermediate variables instead of nesting expansions.

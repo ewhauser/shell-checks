@@ -1,0 +1,22 @@
+---
+artifact_id: SH-005
+created_at: 2026-03-27
+files:
+- path: rules/SH-005.yaml
+  sha256: b0aba423dd017389301b2ac5d8e0c4c36d2759a66e144257c2bd10b83f421967
+- path: examples/005.sh
+  sha256: 5fd566c794754f5f444f7f51f28e63107f3eb97958686565416bf1122ffd069b
+source_basis:
+- An unquoted command substitution is still subject to shell splitting before the
+  receiving command sees the text.
+- The example was trimmed to a single substituted argument and verified until only
+  one code remained in sh mode.
+ai_sessions:
+- session-005
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/005.sh
+  expected_code: 2046
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

@@ -1,0 +1,10 @@
+id: SH-292
+name: function-references-unset-param
+summary: A function references a positional parameter that is never passed by callers.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/292.sh
+rationale: Pass the expected arguments at every call site.

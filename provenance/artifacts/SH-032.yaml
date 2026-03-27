@@ -1,0 +1,20 @@
+---
+artifact_id: SH-032
+created_at: 2026-03-27
+files:
+- path: rules/SH-032.yaml
+  sha256: 05cbb56f5239176a025e7fdc003cde3f8613dae319e3d2444b12213c2ef0d9d4
+- path: examples/032.sh
+  sha256: daf1deb47276fddd2eccb5746ac5d7d8a98f1b73d14fa3cbdce59d4cabde0b5f
+source_basis:
+- Uppercase conversion inside parameter expansion is a bash-only form.
+- I used positional parameters so the example stayed minimal and stable.
+ai_sessions:
+- session-007
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/032.sh
+  expected_code: 3059
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

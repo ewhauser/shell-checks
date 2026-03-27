@@ -1,0 +1,22 @@
+---
+artifact_id: SH-007
+created_at: 2026-03-27
+files:
+- path: rules/SH-007.yaml
+  sha256: 7421bc78193371e7de057e92a3163ca47d277be3b5fd8184ef7f0e082e4a7360
+- path: examples/007.sh
+  sha256: 04c4aff4182b58bb1d0a876f3d2cc544eded61c3988af9ece6cd72b85ed737cd
+source_basis:
+- POSIX test syntax uses a single equals sign, so the bash-style equality operator
+  is not portable in /bin/sh.
+- The example was reduced to one comparison expression and checked until it isolated
+  the expected code.
+ai_sessions:
+- session-005
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/007.sh
+  expected_code: 3014
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

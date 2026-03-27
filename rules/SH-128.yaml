@@ -1,0 +1,10 @@
+id: SH-128
+name: conditional-assignment-shortcut
+summary: Uses a boolean-style assignment shortcut after a command check
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/128.sh
+rationale: "Use an explicit `if` block instead of hiding the assignment behind `||`."

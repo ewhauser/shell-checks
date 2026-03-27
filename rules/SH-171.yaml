@@ -1,0 +1,10 @@
+id: SH-171
+name: overwritten-function
+summary: A function definition is overwritten before it can be called.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/171.sh
+rationale: Remove the first definition or give the functions distinct names.

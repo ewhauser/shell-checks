@@ -1,0 +1,10 @@
+id: SH-336
+name: keyword-function-name
+summary: A reserved shell word is written as a function name.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/336.sh
+rationale: Use a non-keyword name for the function.

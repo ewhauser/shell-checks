@@ -1,0 +1,10 @@
+id: SH-100
+name: missing-space-before-bracket-close
+summary: "A test expression is missing the space before `]`, which ShellCheck flags as a bracket-spacing issue."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/100.sh
+rationale: Keep the test minimal and omit the closing-space mistake so the example isolates this warning.

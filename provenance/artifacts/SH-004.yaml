@@ -1,0 +1,22 @@
+---
+artifact_id: SH-004
+created_at: 2026-03-27
+files:
+- path: rules/SH-004.yaml
+  sha256: b91afac88984e84c7be9ccce176364e44a0254991f57d407303e9c99b7854135
+- path: examples/004.sh
+  sha256: 3b85a6d7b4c6fad13d45488615372655eb434211f72bf0b0cb90696dfaa33330
+source_basis:
+- Iterating over command output lets whitespace and pathname characters change the
+  loop input, which makes the behavior fragile.
+- The example was reduced to one loop over ls output and checked until it produced
+  only the intended oracle code in sh mode.
+ai_sessions:
+- session-005
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/004.sh
+  expected_code: 2045
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

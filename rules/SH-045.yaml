@@ -1,0 +1,10 @@
+id: SH-045
+name: chained-test-branches
+summary: "Chaining conditions with `&&` and `||` can make the fallback depend on the middle command's exit status."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/045.sh
+rationale: "Use an explicit `if` when you need clear branch selection instead of a command chain."

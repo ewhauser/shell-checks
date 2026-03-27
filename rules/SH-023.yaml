@@ -1,0 +1,8 @@
+id: SH-023
+name: indirect-expansion
+summary: The script uses indirect parameter expansion, which is a bash extension.
+shells:
+- sh
+- dash
+example: examples/023.sh
+rationale: Reshape the data flow so the script can name the target variable directly.

@@ -1,0 +1,10 @@
+id: SH-142
+name: case-pattern-var
+summary: A case pattern is built from a variable.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/142.sh
+rationale: Use a direct test or a fixed pattern instead.

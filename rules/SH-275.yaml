@@ -1,0 +1,7 @@
+id: SH-275
+name: errexit-trap-in-sh
+summary: "The `-E` flag for `set` is used in POSIX sh."
+shells:
+- sh
+example: examples/275.sh
+rationale: "Use trap on specific signals instead of `-E` for portability."

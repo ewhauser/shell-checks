@@ -1,0 +1,23 @@
+---
+artifact_id: SH-227
+created_at: '2026-03-28'
+files:
+- path: rules/SH-227.yaml
+  sha256: 45adadbdadd4ded40681d44cdf31f5950eb399ad1de1c9533209afb4b13b2893
+- path: examples/227.sh
+  sha256: 727795d5b01566ff10449af0d8429f8f8338b5aec6919492a476798c8fff0117
+source_basis:
+- The `su` command is used without `-l` or `-c`.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-035
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/227.sh
+  expected_code: 2117
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

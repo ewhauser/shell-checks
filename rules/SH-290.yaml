@@ -1,0 +1,10 @@
+id: SH-290
+name: a-flag-in-double-bracket
+summary: "The `-a` flag inside `[[ ]]` is ambiguous in POSIX sh."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/290.sh
+rationale: "Use `-e` for file existence or `&&` for boolean conjunction."

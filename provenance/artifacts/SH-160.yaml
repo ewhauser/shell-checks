@@ -1,0 +1,23 @@
+---
+artifact_id: SH-160
+created_at: '2026-03-28'
+files:
+- path: rules/SH-160.yaml
+  sha256: 50dffdb6d869160662c590e574e676e6ddc69836149b31015d1a6e642b4d8f4c
+- path: examples/160.sh
+  sha256: 427f2c494553fc46b8d66e938d6bd89ae0756b4fe2357b600c042685363cb7cd
+source_basis:
+- Runs a command substitution with redirected output in the subshell.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-031
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/160.sh
+  expected_code: 2328
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

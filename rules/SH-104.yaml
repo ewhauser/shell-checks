@@ -1,0 +1,10 @@
+id: SH-104
+name: indented-here-doc-end
+summary: The here-doc terminator is indented instead of starting at column 1.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/104.sh
+rationale: Align the terminator flush-left so the shell can recognize the end marker.

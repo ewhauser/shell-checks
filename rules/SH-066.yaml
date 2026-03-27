@@ -1,0 +1,10 @@
+id: SH-066
+name: echo-inside-command-substitution
+summary: Capturing echo output through command substitution adds an unnecessary extra step.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/066.sh
+rationale: Use a direct emitter such as printf when building substitution output.

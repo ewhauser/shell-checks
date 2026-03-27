@@ -1,0 +1,10 @@
+id: SH-197
+name: dollar-in-arithmetic
+summary: "A dollar sign is used before a variable name inside `$(( ))`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/197.sh
+rationale: "Omit the `$` prefix; variables expand implicitly in arithmetic."

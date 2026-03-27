@@ -1,0 +1,23 @@
+---
+artifact_id: SH-148
+created_at: '2026-03-28'
+files:
+- path: rules/SH-148.yaml
+  sha256: a41e69233e8d8cf49938848c608adb449073fcba721de0c71267d1efc8a13b98
+- path: examples/148.sh
+  sha256: f74abfee5fff88eeb42b11b4f0265fe5350ef3d1148e7f84ea9f08824d5ed79f
+source_basis:
+- A lone `*/` token is not valid shell syntax.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-029
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/148.sh
+  expected_code: 2287
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

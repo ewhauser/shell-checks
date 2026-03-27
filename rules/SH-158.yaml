@@ -1,0 +1,10 @@
+id: SH-158
+name: plus-equals-append
+summary: "Uses `+=` style assignment in `sh`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/158.sh
+rationale: Rewrite it as a normal assignment or string append.

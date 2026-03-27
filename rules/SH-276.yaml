@@ -1,0 +1,8 @@
+id: SH-276
+name: signal-name-in-trap
+summary: "A symbolic signal name like `SIGHUP` is used with `trap` in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/276.sh
+rationale: "Use the numeric signal or omit the `SIG` prefix for portability."

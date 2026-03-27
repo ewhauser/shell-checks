@@ -1,0 +1,8 @@
+id: SH-140
+name: sourced-with-args
+summary: A sourced file is invoked with extra words.
+shells:
+- sh
+- dash
+example: examples/140.sh
+rationale: Keep the source path simple and quote dynamic pieces.

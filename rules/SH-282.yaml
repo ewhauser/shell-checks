@@ -1,0 +1,7 @@
+id: SH-282
+name: ownership-test-in-sh
+summary: "The `-O` ownership test is used in a POSIX sh script."
+shells:
+- sh
+example: examples/282.sh
+rationale: "Use `stat` or a similar portable check for file ownership."

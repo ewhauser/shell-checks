@@ -1,0 +1,10 @@
+id: SH-215
+name: mixed-and-or-in-condition
+summary: "A `[[ ]]` test mixes `&&` and `||` without grouping."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/215.sh
+rationale: Add explicit parentheses to clarify operator precedence.

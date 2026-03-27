@@ -1,0 +1,23 @@
+---
+artifact_id: SH-119
+created_at: '2026-03-28'
+files:
+- path: rules/SH-119.yaml
+  sha256: '0809cd0f315df1191923bc66e568aff2bdd23e3a739a80501898519a8f07b926'
+- path: examples/119.sh
+  sha256: 3d446e770a6a9b4273615fc0879d43ff8bb4e863d15feaa253be286ee488a5c0
+source_basis:
+- Trailing whitespace on a here-doc terminator makes the marker sloppy.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-026
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/119.sh
+  expected_code: 1118
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

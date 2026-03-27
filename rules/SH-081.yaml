@@ -1,0 +1,8 @@
+id: SH-081
+name: printf-q-format-in-sh
+summary: "A POSIX shell script is using bash's `%q` `printf` conversion."
+shells:
+- sh
+- dash
+example: examples/081.sh
+rationale: "Keep `printf` format strings within POSIX features when targeting `sh`, or run the script under bash if you need `%q`."

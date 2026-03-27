@@ -1,0 +1,10 @@
+id: SH-165
+name: redirect-to-command-name
+summary: Redirects output to a filename that shadows a known command.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/165.sh
+rationale: Use a distinct filename or a path prefix to avoid overwriting a command.

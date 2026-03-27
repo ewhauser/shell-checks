@@ -1,0 +1,10 @@
+id: SH-258
+name: assignment-to-numeric-variable
+summary: A numeric string is used as a variable name in an assignment.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/258.sh
+rationale: Use a valid variable name that starts with a letter or underscore.

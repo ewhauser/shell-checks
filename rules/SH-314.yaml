@@ -1,0 +1,10 @@
+id: SH-314
+name: local-cross-reference
+summary: "A `local` statement assigns from a variable defined earlier on the same line."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/314.sh
+rationale: Split the declarations onto separate lines so each has the correct value.

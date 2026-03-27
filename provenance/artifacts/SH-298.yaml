@@ -1,0 +1,23 @@
+---
+artifact_id: SH-298
+created_at: '2026-03-28'
+files:
+- path: rules/SH-298.yaml
+  sha256: a40204c97b9cb6be6f3a8c05d0910dad59acecfa844ca353fb0430f7497d94b6
+- path: examples/298.sh
+  sha256: 015bdec53160b08172b06841a239b147483da30db84a97e20f4a3c80c3045396
+source_basis:
+- A here-document is opened without a consuming command.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/298.sh
+  expected_code: 2188
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,10 @@
+id: SH-188
+name: double-paren-grouping
+summary: Double parentheses are used to group commands instead of arithmetic.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/188.sh
+rationale: "Use a subshell `( ... )` or brace group `{ ...; }` for grouping."

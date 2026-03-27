@@ -1,0 +1,10 @@
+id: SH-184
+name: csh-syntax-in-sh
+summary: "A csh-style `set` assignment appears in a POSIX shell script."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/184.sh
+rationale: Use standard variable assignment syntax for sh.

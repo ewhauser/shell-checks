@@ -1,0 +1,10 @@
+id: SH-115
+name: linebreak-in-test
+summary: "A `[` test is split across lines without the required line-continuation backslash."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/115.sh
+rationale: Keep the test on one line or add the backslash before the newline when you must split it.

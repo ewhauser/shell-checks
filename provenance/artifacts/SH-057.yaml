@@ -1,0 +1,22 @@
+---
+artifact_id: SH-057
+created_at: 2026-03-27
+files:
+- path: rules/SH-057.yaml
+  sha256: 3eb89934499c507361279d78cdc860c9a54ad329cfbd690e383143f240899871
+- path: examples/057.sh
+  sha256: 86e5fdbf20ca87a1787d131d70da8d96095b61c7ecd3661ce212c47d88a17a1b
+source_basis:
+- Filtering directory listings with grep makes the shell depend on ls formatting rather
+  than file names.
+- I reduced the example to one ls pipeline and stopped once the wrapper reported only
+  the target code.
+ai_sessions:
+- session-011
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/057.sh
+  expected_code: 2010
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

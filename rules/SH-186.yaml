@@ -1,0 +1,10 @@
+id: SH-186
+name: backslash-before-closing-backtick
+summary: A backslash-space appears right before a closing backtick.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/186.sh
+rationale: "Use `$( ... )` instead of backticks for cleaner quoting."

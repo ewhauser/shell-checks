@@ -1,0 +1,10 @@
+id: SH-063
+name: quoted-dollar-star-loop
+summary: Putting "$*" in a loop turns every positional parameter into one combined item.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/063.sh
+rationale: Use "$@" if the loop should process each positional parameter on its own.

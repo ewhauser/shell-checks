@@ -1,0 +1,10 @@
+id: SH-253
+name: find-output-in-loop
+summary: "A `find` command output is captured in a word-splitting loop."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/253.sh
+rationale: "Use `find -exec` or `-print0 | while read` for safe file handling."

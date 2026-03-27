@@ -1,0 +1,17 @@
+---
+session_id: session-001
+date: 2026-03-27
+tool: codex
+model: gpt-5-codex
+task_summary: Implement the provenance-first seed scaffold for SH-001 in an empty
+  repository.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+generated_files:
+- examples/001.sh
+- provenance/artifacts/SH-001.yaml
+- rules/SH-001.yaml
+prompt_sha256: 8967948895f0db310592e815230368cab2e59d76836cb6d166df1dac32ebae31
+output_sha256: b687195748ae75ab19e22691bfc0338960f8050a7aaa6d1ed67c3bb16e164e19

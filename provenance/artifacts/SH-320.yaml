@@ -1,0 +1,22 @@
+---
+artifact_id: SH-320
+created_at: '2026-03-29'
+files:
+- path: rules/SH-320.yaml
+  sha256: 97c201b971ec502adc2f028c2e6988e6778336866e3469fc4b2fa01691d4c4c4
+- path: examples/320.sh
+  sha256: 9570fd3afbc2582cfa4abe46996b2fac2cddbff3b6a400f4ad9271045d4821bc
+source_basis:
+- Shell semantics knowledge about the construct that triggers this diagnostic.
+- Example independently authored and verified against shellcheck oracle.
+ai_sessions:
+- session-042
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/320.sh
+  expected_code: 2282
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via synthetic bad-script generation but the
+  example script was independently authored.

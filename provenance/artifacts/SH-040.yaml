@@ -1,0 +1,22 @@
+---
+artifact_id: SH-040
+created_at: 2026-03-27
+files:
+- path: rules/SH-040.yaml
+  sha256: 5c9d2a56f8a86299ee81b07a9a1a6da6af6513048ca9644131cbabe20db9f838
+- path: examples/040.sh
+  sha256: a1327cf645b525417f332fb7b9d2b2ff95c1a190a8119f7c7bb0b5c2e45e4d2f
+source_basis:
+- A command substitution already produces the text to print, so wrapping it in `echo`
+  only adds an extra layer.
+- I reduced the snippet to a single quoted substitution and confirmed the wrapper
+  left one code.
+ai_sessions:
+- session-009
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/040.sh
+  expected_code: 2005
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

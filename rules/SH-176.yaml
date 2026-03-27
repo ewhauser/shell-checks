@@ -1,0 +1,10 @@
+id: SH-176
+name: else-without-then
+summary: "An `else` clause appears without a preceding `then`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/176.sh
+rationale: "Add `then` after the condition so that `else` is valid."

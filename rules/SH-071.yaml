@@ -1,0 +1,10 @@
+id: SH-071
+name: grep-output-in-test
+summary: Using grep's printed text as a boolean check ties control flow to formatting instead of success or failure.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/071.sh
+rationale: Use the command's exit status directly or test the match in a simpler way.

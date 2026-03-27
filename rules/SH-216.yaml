@@ -1,0 +1,10 @@
+id: SH-216
+name: quoted-command-in-test
+summary: A command pipeline is quoted as a string inside a test bracket.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/216.sh
+rationale: Remove the quotes and use command substitution or a variable.

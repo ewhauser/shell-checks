@@ -1,0 +1,22 @@
+---
+session_id: session-038
+date: '2026-03-28'
+tool: codex
+model: claude-opus-4-6
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/292.sh
+- examples/293.sh
+- provenance/artifacts/SH-292.yaml
+- provenance/artifacts/SH-293.yaml
+- rules/SH-292.yaml
+- rules/SH-293.yaml
+prompt_sha256: 8c99466eab2e68eca60bc631b0e3dbec0ff1e0596e05c544a7ad94674cf8f949
+output_sha256: fbb9f8b2909efbc793c3a53bbca6271ce796eaefcf46190fe61b4607cfb1c48e

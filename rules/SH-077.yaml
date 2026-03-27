@@ -1,0 +1,10 @@
+id: SH-077
+name: positional-args-in-string
+summary: Folding positional parameters into a larger quoted string changes the argument shape.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/077.sh
+rationale: Pass literal text and positional parameters as separate arguments instead.

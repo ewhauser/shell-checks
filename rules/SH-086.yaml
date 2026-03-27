@@ -1,0 +1,10 @@
+id: SH-086
+name: positional-ten-braces
+summary: Refers to the tenth positional parameter without braces.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/086.sh
+rationale: Use braces when addressing arguments above nine.

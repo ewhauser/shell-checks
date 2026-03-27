@@ -1,0 +1,23 @@
+---
+artifact_id: SH-268
+created_at: '2026-03-28'
+files:
+- path: rules/SH-268.yaml
+  sha256: a6e1ee9a09c40b3c4d3b64bc78d6619bafc0ef19f91608b3f2e8759149309d65
+- path: examples/268.sh
+  sha256: db537f39cc53d5800a0aecf456c51b906165a54e0126a857c70455b4be1fa7ea
+source_basis:
+- The `-a` file-existence test is used inside `[[ ]]` in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/268.sh
+  expected_code: 3017
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

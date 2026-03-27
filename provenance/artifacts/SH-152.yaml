@@ -1,0 +1,23 @@
+---
+artifact_id: SH-152
+created_at: '2026-03-28'
+files:
+- path: rules/SH-152.yaml
+  sha256: 89c60ce37a4b92d062a06322c6484d148ebca2ee49db88011073c528a81b7d84
+- path: examples/152.sh
+  sha256: d53417b14cfc7745f144384e0381af222dc0c15ed240480f1d09a0d232e14f2f
+source_basis:
+- A variable is being expanded inside a pattern expression.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-029
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/152.sh
+  expected_code: 2295
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

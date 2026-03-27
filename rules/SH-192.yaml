@@ -1,0 +1,10 @@
+id: SH-192
+name: space-after-hash-bang
+summary: "The shebang has a space between `#` and `!`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/192.sh
+rationale: "Write `#!` without a space so the kernel treats it as a shebang."

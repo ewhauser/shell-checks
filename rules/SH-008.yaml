@@ -1,0 +1,7 @@
+id: SH-008
+name: local-variable-in-sh
+summary: "Using `local` in a function ties the script to shells that implement function-scoped variables."
+shells:
+- sh
+example: examples/008.sh
+rationale: "Avoid `local` in `/bin/sh`, or require a shell that provides it."

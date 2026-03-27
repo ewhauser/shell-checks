@@ -1,0 +1,7 @@
+id: SH-054
+name: echo-flags
+summary: Echo flags make output formatting depend on the shell's own implementation choices.
+shells:
+- sh
+example: examples/054.sh
+rationale: "Use `printf` when the script needs predictable formatting."

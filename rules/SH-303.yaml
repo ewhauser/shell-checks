@@ -1,0 +1,10 @@
+id: SH-303
+name: zsh-parameter-index-flag
+summary: A zsh-style parameter index flag is used in POSIX sh.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/303.sh
+rationale: Extract the value with cut or awk instead of zsh subscripting.

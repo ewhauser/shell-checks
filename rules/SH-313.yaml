@@ -1,0 +1,10 @@
+id: SH-313
+name: case-arm-not-in-getopts
+summary: A case arm handles an option not listed in the getopts string.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/313.sh
+rationale: Add the missing option to the getopts string or remove the case arm.

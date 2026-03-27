@@ -1,0 +1,23 @@
+---
+artifact_id: SH-297
+created_at: '2026-03-28'
+files:
+- path: rules/SH-297.yaml
+  sha256: 9592afbf11b13b0aa2296a3e96a0cb995a124a2dc7617875e4410dd781aea5be
+- path: examples/297.sh
+  sha256: 1560bc9d26dc7495974cb2122ca861772edda16451ce03fc4b684afcbb884396
+source_basis:
+- Numeric signal identifiers are used in a trap command.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/297.sh
+  expected_code: 2172
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,8 @@
+id: SH-007
+name: test-equality-operator
+summary: "The `==` comparison operator inside `[` is not portable in POSIX shells."
+shells:
+- sh
+- dash
+example: examples/007.sh
+rationale: "Use `=` when writing tests for `/bin/sh`."

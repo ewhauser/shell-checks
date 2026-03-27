@@ -1,0 +1,9 @@
+id: SH-236
+name: glob-in-test-directory
+summary: "A glob pattern inside a `[ -d ... ]` test may match multiple paths."
+shells:
+- sh
+- bash
+- dash
+example: examples/236.sh
+rationale: Quote the path or use a loop to test each match.

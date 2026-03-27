@@ -1,0 +1,23 @@
+---
+artifact_id: SH-218
+created_at: '2026-03-28'
+files:
+- path: rules/SH-218.yaml
+  sha256: 29923de407e107e42bf53afa0c6812fd4fa74b609ff1d69142209942346ea7d0
+- path: examples/218.sh
+  sha256: 1b4dba89a46bc69f439b90c69aabc5bddea4b2f237d495e40dff6afbee1cf6f6
+source_basis:
+- A zsh-style nested parameter expansion is used in a POSIX script.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/218.sh
+  expected_code: 2082
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

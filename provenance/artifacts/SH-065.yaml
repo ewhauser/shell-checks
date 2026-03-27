@@ -1,0 +1,22 @@
+---
+artifact_id: SH-065
+created_at: 2026-03-27
+files:
+- path: rules/SH-065.yaml
+  sha256: b0952d5ad232b5cdf48e7765c49378ae636faf2f20e40589d90b407cf73f870d
+- path: examples/065.sh
+  sha256: e4424ad8d35aba9c15ae70f951aecc875a2516741e794b831c524285e229baa0
+source_basis:
+- A stray closing keyword leaves the parser with no matching block to close, so I
+  reduced the probe to a single `fi`.
+- I started from a malformed control-flow fragment and trimmed it until the oracle
+  reported only one numeric code.
+ai_sessions:
+- session-012
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/065.sh
+  expected_code: 1089
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

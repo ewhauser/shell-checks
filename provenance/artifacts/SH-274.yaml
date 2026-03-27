@@ -1,0 +1,23 @@
+---
+artifact_id: SH-274
+created_at: '2026-03-28'
+files:
+- path: rules/SH-274.yaml
+  sha256: bfb23a3215c0c43bcbb5100bc14c346f8d16582d12fc669c3888774ce3065c9c
+- path: examples/274.sh
+  sha256: '09ccdc4741d785fb16238730651af4380c4c3e54b5fef5a9e89d07308ad51f2b'
+source_basis:
+- A function name contains a hyphen, which is not portable.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/274.sh
+  expected_code: 3033
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,8 @@
+id: SH-163
+name: bare-read
+summary: "Uses `read` without extra options."
+shells:
+- sh
+- dash
+example: examples/163.sh
+rationale: Provide the needed options explicitly for the input you expect.

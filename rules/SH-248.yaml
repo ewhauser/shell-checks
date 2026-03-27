@@ -1,0 +1,10 @@
+id: SH-248
+name: fgrep-deprecated
+summary: "The `fgrep` command is used instead of `grep -F`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/248.sh
+rationale: "Replace `fgrep` with `grep -F` as fgrep is deprecated."

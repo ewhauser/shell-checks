@@ -1,0 +1,11 @@
+id: SH-346
+name: call-before-function-definition
+summary: A function is called before its definition has been reached.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/346.sh
+rationale: Define or source the function before the first call.
+requires_dataflow: true

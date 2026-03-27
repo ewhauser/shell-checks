@@ -1,0 +1,10 @@
+id: SH-091
+name: bare-done-word
+summary: A reserved word is being passed as a literal argument.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/091.sh
+rationale: Quote it if it is text, or place it where the shell expects a keyword.

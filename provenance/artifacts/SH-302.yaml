@@ -1,0 +1,20 @@
+---
+artifact_id: SH-302
+created_at: '2026-03-28'
+files:
+- path: rules/SH-302.yaml
+  sha256: e0a7f29b63c0e084d53cd7e807322c3435c0e1d1959ab6779df72865307545a5
+- path: examples/302.sh
+  sha256: dd778e0c784da9d4d19699ebfc7791a16667a76afc47e3e0e096dcbf6168f9bc
+source_basis:
+- Case patterns are matched in order; a broad glob can shadow narrower later arms
+- Example places a glob before a more specific default pattern
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/302.sh
+  expected_code: 2222
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

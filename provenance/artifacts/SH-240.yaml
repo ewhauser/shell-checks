@@ -1,0 +1,23 @@
+---
+artifact_id: SH-240
+created_at: '2026-03-28'
+files:
+- path: rules/SH-240.yaml
+  sha256: fdb849f268ea749a7e53cce28287a16a48907677d841b0b98c19795c4e92d332
+- path: examples/240.sh
+  sha256: 2e086abb60e385c97caf0adde0691611461d595dd864e0796c62a2ed65b4206a
+source_basis:
+- A variable path is not quoted in a directory creation command.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/240.sh
+  expected_code: 2174
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-203
+created_at: '2026-03-28'
+files:
+- path: rules/SH-203.yaml
+  sha256: bb7cccb3855841a81aa0f4fa45d282d611e58df8511694faf1f02279540c7fef
+- path: examples/203.sh
+  sha256: e5fd98559bc118ab8d83d94e80f3451b5975f0ccef6bf3cffd9cc16cb1c2a221
+source_basis:
+- A `tr` character class is passed without quoting.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/203.sh
+  expected_code: 2021
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

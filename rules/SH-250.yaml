@@ -1,0 +1,10 @@
+id: SH-250
+name: array-slice-in-comparison
+summary: An array slice is used in a string comparison.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/250.sh
+rationale: Compare individual elements or convert the slice to a string first.

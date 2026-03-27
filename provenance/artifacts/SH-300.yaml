@@ -1,0 +1,23 @@
+---
+artifact_id: SH-300
+created_at: '2026-03-28'
+files:
+- path: rules/SH-300.yaml
+  sha256: 20d39fd5b6d51b5d1117bba29f36b11041ccca89a1beb161db4ea876ba09ffd8
+- path: examples/300.sh
+  sha256: aee52cd222e4f835a8244bf12f03ce14f7b504640327a63d14b9e8d870d0c6fd
+source_basis:
+- A bare single letter is used as a case label in a getopts handler.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/300.sh
+  expected_code: 2220
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,10 @@
+id: SH-050
+name: export-command-substitution
+summary: "Capturing command output directly inside `export` hides the assignment step and mixes two concerns."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/050.sh
+rationale: Store the value first, then export it explicitly.

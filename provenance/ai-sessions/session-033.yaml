@@ -1,0 +1,85 @@
+---
+session_id: session-033
+date: '2026-03-28'
+tool: codex
+model: claude-opus-4-6
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/172.sh
+- examples/173.sh
+- examples/174.sh
+- examples/175.sh
+- examples/176.sh
+- examples/177.sh
+- examples/178.sh
+- examples/179.sh
+- examples/180.sh
+- examples/181.sh
+- examples/182.sh
+- examples/183.sh
+- examples/184.sh
+- examples/185.sh
+- examples/186.sh
+- examples/187.sh
+- examples/188.sh
+- examples/189.sh
+- examples/190.sh
+- examples/191.sh
+- examples/192.sh
+- examples/193.sh
+- examples/194.sh
+- provenance/artifacts/SH-172.yaml
+- provenance/artifacts/SH-173.yaml
+- provenance/artifacts/SH-174.yaml
+- provenance/artifacts/SH-175.yaml
+- provenance/artifacts/SH-176.yaml
+- provenance/artifacts/SH-177.yaml
+- provenance/artifacts/SH-178.yaml
+- provenance/artifacts/SH-179.yaml
+- provenance/artifacts/SH-180.yaml
+- provenance/artifacts/SH-181.yaml
+- provenance/artifacts/SH-182.yaml
+- provenance/artifacts/SH-183.yaml
+- provenance/artifacts/SH-184.yaml
+- provenance/artifacts/SH-185.yaml
+- provenance/artifacts/SH-186.yaml
+- provenance/artifacts/SH-187.yaml
+- provenance/artifacts/SH-188.yaml
+- provenance/artifacts/SH-189.yaml
+- provenance/artifacts/SH-190.yaml
+- provenance/artifacts/SH-191.yaml
+- provenance/artifacts/SH-192.yaml
+- provenance/artifacts/SH-193.yaml
+- provenance/artifacts/SH-194.yaml
+- rules/SH-172.yaml
+- rules/SH-173.yaml
+- rules/SH-174.yaml
+- rules/SH-175.yaml
+- rules/SH-176.yaml
+- rules/SH-177.yaml
+- rules/SH-178.yaml
+- rules/SH-179.yaml
+- rules/SH-180.yaml
+- rules/SH-181.yaml
+- rules/SH-182.yaml
+- rules/SH-183.yaml
+- rules/SH-184.yaml
+- rules/SH-185.yaml
+- rules/SH-186.yaml
+- rules/SH-187.yaml
+- rules/SH-188.yaml
+- rules/SH-189.yaml
+- rules/SH-190.yaml
+- rules/SH-191.yaml
+- rules/SH-192.yaml
+- rules/SH-193.yaml
+- rules/SH-194.yaml
+prompt_sha256: 81cea213d9b63088b56507ae91195150a2e3fd25860b544c72f5cace38865471
+output_sha256: a98a697d611e75ef5df6c40f28a41854931941f10597c8e2eb80b376082272a6

@@ -1,0 +1,8 @@
+id: SH-279
+name: unset-pattern-in-sh
+summary: "A pattern-based `unset -v` is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/279.sh
+rationale: Unset variables individually for portability.

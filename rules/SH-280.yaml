@@ -1,0 +1,8 @@
+id: SH-280
+name: option-test-in-sh
+summary: "The `-o` option test is used inside `[[ ]]` in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/280.sh
+rationale: "Check shell options with a case statement or `set -o` output."

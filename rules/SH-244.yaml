@@ -1,0 +1,10 @@
+id: SH-244
+name: mapfile-process-substitution
+summary: "A `mapfile` command reads from a process substitution."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/244.sh
+rationale: Use a pipe or temporary file if the shell version does not support this.

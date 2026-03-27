@@ -1,0 +1,23 @@
+---
+artifact_id: SH-252
+created_at: '2026-03-28'
+files:
+- path: rules/SH-252.yaml
+  sha256: 3fe6945cc39cb7ee8dcbcb215005792baf86b06d33d011486e7a6afad21ca18f
+- path: examples/252.sh
+  sha256: 687c29bb9a1d521550120cf11933e173ffaf56c316183a8a35fde22da399786b
+source_basis:
+- A symbolic link target uses a relative path with many `../` segments.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/252.sh
+  expected_code: 2226
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

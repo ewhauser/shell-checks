@@ -1,0 +1,8 @@
+id: SH-226
+name: function-keyword-in-sh
+summary: "The `function` keyword is used with parentheses in a POSIX shell script."
+shells:
+- sh
+- dash
+example: examples/226.sh
+rationale: "Remove the `function` keyword or the parentheses for portability."

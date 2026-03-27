@@ -1,0 +1,8 @@
+id: SH-012
+name: ansi-c-quoting
+summary: The script uses ANSI C-style quoting, which is a shell extension rather than POSIX syntax.
+shells:
+- sh
+- dash
+example: examples/012.sh
+rationale: Use ordinary shell quoting and explicit escaping when the script needs to stay portable.

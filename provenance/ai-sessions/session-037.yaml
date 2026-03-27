@@ -1,0 +1,43 @@
+---
+session_id: session-037
+date: '2026-03-28'
+tool: codex
+model: claude-opus-4-6
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/283.sh
+- examples/284.sh
+- examples/285.sh
+- examples/286.sh
+- examples/287.sh
+- examples/288.sh
+- examples/289.sh
+- examples/290.sh
+- examples/291.sh
+- provenance/artifacts/SH-283.yaml
+- provenance/artifacts/SH-284.yaml
+- provenance/artifacts/SH-285.yaml
+- provenance/artifacts/SH-286.yaml
+- provenance/artifacts/SH-287.yaml
+- provenance/artifacts/SH-288.yaml
+- provenance/artifacts/SH-289.yaml
+- provenance/artifacts/SH-290.yaml
+- provenance/artifacts/SH-291.yaml
+- rules/SH-283.yaml
+- rules/SH-284.yaml
+- rules/SH-285.yaml
+- rules/SH-286.yaml
+- rules/SH-287.yaml
+- rules/SH-288.yaml
+- rules/SH-289.yaml
+- rules/SH-290.yaml
+- rules/SH-291.yaml
+prompt_sha256: b7aa7b27011e1587a23e9c11b6cf492651f659c24bfe82dcfd6210eb9e1f1d7c
+output_sha256: 4149129551a9dcc68f74ce013d5735a88e44fd67d89ce2e926562688ce5a344d

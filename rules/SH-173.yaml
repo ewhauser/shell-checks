@@ -1,0 +1,10 @@
+id: SH-173
+name: backslash-before-command
+summary: A backslash precedes a command name to bypass aliases.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/173.sh
+rationale: Use 'command' instead of a leading backslash for clarity.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-231
+created_at: '2026-03-28'
+files:
+- path: rules/SH-231.yaml
+  sha256: f00ff4788d8ffbf628b9e4961b7a7f5b8a7354186e87746a1ac6ff07722d9d10
+- path: examples/231.sh
+  sha256: af7ac9ac74bd62c6593e4bdee4676346b15997a9bd9aa5a66e99bdd4fadf0e5d
+source_basis:
+- A glob pattern is assigned to a variable without quoting.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-035
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/231.sh
+  expected_code: 2125
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

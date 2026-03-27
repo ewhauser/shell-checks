@@ -1,0 +1,23 @@
+---
+artifact_id: SH-294
+created_at: '2026-03-28'
+files:
+- path: rules/SH-294.yaml
+  sha256: 4cbf04c52744eb75795636f811262165735b7814d65744a642bb850af1408bd5
+- path: examples/294.sh
+  sha256: abbe03307402c06693d098b5ae9d300c1489b22a43c48c83a7488b24f385fab8
+source_basis:
+- Backtick output is word-split and passed as arguments to a command.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/294.sh
+  expected_code: 2063
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,10 @@
+id: SH-335
+name: ampersand-semicolon
+summary: A backgrounded command is followed immediately by `;`.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/335.sh
+rationale: End the command with `&` by itself.

@@ -1,0 +1,22 @@
+---
+artifact_id: SH-001
+created_at: 2026-03-27
+files:
+- path: rules/SH-001.yaml
+  sha256: ea61a3f1b42d56e1a99e700aa81fbf09c3b59144e896e35e441f3a6510778bef
+- path: examples/001.sh
+  sha256: 9f3ac37ca5feaa4912fa4ca514af2c07f3ef438e0555d4c477beef34e075f07a
+source_basis:
+- POSIX shell expansion applies field splitting and pathname matching to unquoted
+  parameter expansion in an ordinary argument position.
+- The seed example was authored in this repository and reduced until one compatibility
+  code explained the result in sh mode.
+ai_sessions:
+- session-001
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/001.sh
+  expected_code: 2086
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

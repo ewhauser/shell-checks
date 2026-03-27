@@ -1,0 +1,23 @@
+---
+artifact_id: SH-308
+created_at: '2026-03-28'
+files:
+- path: rules/SH-308.yaml
+  sha256: f7543cb5cdbaabcdd075f1b905ed5a6f92f6432a3d28a78ad75d4fca5fdd55bf
+- path: examples/308.sh
+  sha256: 87f41b6c2d56e569097669d9e4da836151d1369eb0f3e61d83d00d5cd1813d08
+source_basis:
+- An unquoted variable is used as a command name in a function.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-040
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/308.sh
+  expected_code: 2090
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-116
+created_at: '2026-03-28'
+files:
+- path: rules/SH-116.yaml
+  sha256: 8c050cf68d16c75a3810b73653aeb192f993a824ace3d3113a5db53b8a9bdd2e
+- path: examples/116.sh
+  sha256: b4a4215d3152f44981cadb73e639253edb64f8406c03ae83d94ed8903d251e5f
+source_basis:
+- Literal braces appear where bash may treat them as expansion syntax.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-024
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/116.sh
+  expected_code: 1083
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

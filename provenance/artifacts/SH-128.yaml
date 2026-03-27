@@ -1,0 +1,23 @@
+---
+artifact_id: SH-128
+created_at: '2026-03-28'
+files:
+- path: rules/SH-128.yaml
+  sha256: 4ad9322dab957274ccda15538186e563f7f176a8339580de609895ac73dccc8d
+- path: examples/128.sh
+  sha256: 0e53be165ab770712419d18540f3cd9dc1449298debe1376ca82b2db30b07c65
+source_basis:
+- Uses a boolean-style assignment shortcut after a command check.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-027
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/128.sh
+  expected_code: 2209
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

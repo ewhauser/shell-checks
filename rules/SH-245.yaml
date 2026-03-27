@@ -1,0 +1,10 @@
+id: SH-245
+name: deprecated-tempfile-command
+summary: "The deprecated `tempfile` command is used to create a temporary file."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/245.sh
+rationale: "Use `mktemp` instead of `tempfile`."

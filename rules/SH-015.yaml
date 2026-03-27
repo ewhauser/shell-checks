@@ -1,0 +1,8 @@
+id: SH-015
+name: brace-expansion
+summary: "The script depends on brace expansion, which portable `sh` does not expand."
+shells:
+- sh
+- dash
+example: examples/015.sh
+rationale: Spell out the values explicitly or generate them in a loop instead of using braces.

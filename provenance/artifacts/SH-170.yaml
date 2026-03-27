@@ -1,0 +1,23 @@
+---
+artifact_id: SH-170
+created_at: '2026-03-28'
+files:
+- path: rules/SH-170.yaml
+  sha256: 8d6bfee3b37204c2787d4ac5ee03ebaa329e13abcae214749ee9ac2385a5a775
+- path: examples/170.sh
+  sha256: 40c6778b4da7b0d10fa4f746430f84850c39efa5b72562dc4214b32e85baf5cd
+source_basis:
+- Returns the exit status that the function would already propagate.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-032
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/170.sh
+  expected_code: 2320
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

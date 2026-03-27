@@ -1,0 +1,10 @@
+id: SH-073
+name: truthy-literal-test
+summary: A one-word test on a fixed literal does not ask a runtime question and is always decided the same way.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/073.sh
+rationale: Check a variable, path, or explicit comparison instead of a bare literal.

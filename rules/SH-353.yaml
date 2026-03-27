@@ -1,0 +1,7 @@
+id: SH-353
+name: if-bracket-glued
+summary: The `if` keyword is concatenated with a `[` test.
+shells:
+- sh
+example: examples/353.sh
+rationale: Separate the keyword and test command with whitespace so parsing stays unambiguous.

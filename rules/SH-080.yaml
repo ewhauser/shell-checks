@@ -1,0 +1,8 @@
+id: SH-080
+name: source-builtin-in-sh
+summary: "A POSIX shell script is relying on `source`, which is not part of the portable shell vocabulary."
+shells:
+- sh
+- dash
+example: examples/080.sh
+rationale: "Use the portable dot command when you need to include another file, or switch to bash intentionally if you want `source`."

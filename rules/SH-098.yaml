@@ -1,0 +1,10 @@
+id: SH-098
+name: missing-bracket-space
+summary: A test bracket is closed without surrounding space.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/098.sh
+rationale: "Keep spaces around `[` and `]` in test expressions."

@@ -1,0 +1,8 @@
+id: SH-305
+name: star-glob-removal-in-sh
+summary: "The `${*%%pattern}` longest-suffix removal is applied to `$*` in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/305.sh
+rationale: "Assign `$*` to a variable first, then apply parameter expansion."

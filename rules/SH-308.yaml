@@ -1,0 +1,10 @@
+id: SH-308
+name: variable-as-command-name
+summary: An unquoted variable is used as a command name in a function.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/308.sh
+rationale: Quote the variable or validate its content before execution.

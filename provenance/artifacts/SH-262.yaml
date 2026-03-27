@@ -1,0 +1,23 @@
+---
+artifact_id: SH-262
+created_at: '2026-03-28'
+files:
+- path: rules/SH-262.yaml
+  sha256: ed7a9c167557d147b695c5cb7c3bd4aeabd0b74882739736ea982d623e9f3bd3
+- path: examples/262.sh
+  sha256: e5915e6d0904bf4d7f2b1d9007b3fd460544c57a69aebdc6e2032f0ffbe7c7aa
+source_basis:
+- A `$"string"` locale-translated string is used in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/262.sh
+  expected_code: 3004
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

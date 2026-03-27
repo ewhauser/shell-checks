@@ -1,0 +1,10 @@
+id: SH-241
+name: append-to-array-as-string
+summary: "A string is appended to an array variable with `+=` and a space."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/241.sh
+rationale: "Use `+=()` syntax to append an element to an array."

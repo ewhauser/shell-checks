@@ -1,0 +1,10 @@
+id: SH-249
+name: at-sign-in-string-compare
+summary: "Quoting `$@` inside a string comparison folds all arguments together."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/249.sh
+rationale: Use a loop or check individual parameters.

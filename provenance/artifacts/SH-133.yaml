@@ -1,0 +1,23 @@
+---
+artifact_id: SH-133
+created_at: '2026-03-28'
+files:
+- path: rules/SH-133.yaml
+  sha256: 765669834759db42b6da79fc7b776f653cc418219f759dd7e89f28e83a3d5db4
+- path: examples/133.sh
+  sha256: ec90cc84843e622bd19dd82ee2b608eec663a25c082d3648efb885c773a7cf30
+source_basis:
+- Contains a patch-style marker line in shell code.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-027
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/133.sh
+  expected_code: 2215
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

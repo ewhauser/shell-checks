@@ -1,0 +1,10 @@
+id: SH-219
+name: tilde-in-string-comparison
+summary: A literal tilde inside quotes is compared instead of the expanded home path.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/219.sh
+rationale: "Expand the tilde outside quotes or use `$HOME`."

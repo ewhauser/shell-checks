@@ -1,0 +1,24 @@
+---
+artifact_id: SH-114
+created_at: '2026-03-28'
+files:
+- path: rules/SH-114.yaml
+  sha256: 99252cff80ecbe888dbaca18476811c44519c4f840f14150ea4dfa0b8dc46c01
+- path: examples/114.sh
+  sha256: 25bdaf1083ef21642003b4449f9dccb49716d6770e1325682dd8c8db2517fb73
+source_basis:
+- A quote is syntactically closed, but the following character makes ShellCheck flag
+  it as suspicious.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-025
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/114.sh
+  expected_code: 1079
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

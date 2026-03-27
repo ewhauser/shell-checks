@@ -1,0 +1,10 @@
+id: SH-038
+name: unquoted-array-expansion
+summary: An array is expanded without quotes, so its elements can split or expand as patterns.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/038.sh
+rationale: Quote array expansions unless you deliberately want word splitting or pathname matching.

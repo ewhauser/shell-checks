@@ -1,0 +1,8 @@
+id: SH-268
+name: a-test-in-sh
+summary: "The `-a` file-existence test is used inside `[[ ]]` in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/268.sh
+rationale: "Use `-e` instead of `-a` for file existence testing."

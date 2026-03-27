@@ -1,0 +1,10 @@
+id: SH-042
+name: trap-string-expansion
+summary: Expanding variables inside a trap body resolves them when the trap is set instead of when it runs.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/042.sh
+rationale: Keep trap commands quoted so the values are evaluated at signal time rather than at definition time.

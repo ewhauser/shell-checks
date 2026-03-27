@@ -1,0 +1,62 @@
+---
+session_id: session-006
+date: 2026-03-27
+tool: codex
+model: gpt-5.4-mini
+task_summary: Discover new ShellCheck compatibility codes and create clean-room artifact
+  bundles.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+generated_files:
+- examples/009.sh
+- examples/010.sh
+- examples/011.sh
+- examples/012.sh
+- examples/013.sh
+- examples/014.sh
+- examples/015.sh
+- examples/016.sh
+- examples/017.sh
+- examples/018.sh
+- examples/019.sh
+- examples/020.sh
+- examples/021.sh
+- examples/022.sh
+- examples/023.sh
+- examples/024.sh
+- provenance/artifacts/SH-009.yaml
+- provenance/artifacts/SH-010.yaml
+- provenance/artifacts/SH-011.yaml
+- provenance/artifacts/SH-012.yaml
+- provenance/artifacts/SH-013.yaml
+- provenance/artifacts/SH-014.yaml
+- provenance/artifacts/SH-015.yaml
+- provenance/artifacts/SH-016.yaml
+- provenance/artifacts/SH-017.yaml
+- provenance/artifacts/SH-018.yaml
+- provenance/artifacts/SH-019.yaml
+- provenance/artifacts/SH-020.yaml
+- provenance/artifacts/SH-021.yaml
+- provenance/artifacts/SH-022.yaml
+- provenance/artifacts/SH-023.yaml
+- provenance/artifacts/SH-024.yaml
+- rules/SH-009.yaml
+- rules/SH-010.yaml
+- rules/SH-011.yaml
+- rules/SH-012.yaml
+- rules/SH-013.yaml
+- rules/SH-014.yaml
+- rules/SH-015.yaml
+- rules/SH-016.yaml
+- rules/SH-017.yaml
+- rules/SH-018.yaml
+- rules/SH-019.yaml
+- rules/SH-020.yaml
+- rules/SH-021.yaml
+- rules/SH-022.yaml
+- rules/SH-023.yaml
+- rules/SH-024.yaml
+prompt_sha256: 133bac37d0f6f8b2f8fb284cb91e1097b12258291fa602cc5e47293c52cf2287
+output_sha256: a11356ffa36c9a3e48ce97470087ca691862edf3c717d4dd00ebd25824352df8

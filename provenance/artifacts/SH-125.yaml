@@ -1,0 +1,23 @@
+---
+artifact_id: SH-125
+created_at: '2026-03-28'
+files:
+- path: rules/SH-125.yaml
+  sha256: c532cd20e391b857974f544566d9b906ece5a20b60c3c9fcdfa938ea17ceb639
+- path: examples/125.sh
+  sha256: c673f50fc9f1e5c5f26a8c8923b3d67119ad7504350e78afcea929252b23b5d2
+source_basis:
+- Zsh `always` blocks are not valid shell syntax.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-026
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/125.sh
+  expected_code: 1141
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

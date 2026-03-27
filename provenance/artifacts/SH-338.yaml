@@ -1,0 +1,22 @@
+---
+artifact_id: SH-338
+created_at: '2026-03-29'
+files:
+- path: rules/SH-338.yaml
+  sha256: f436494177643b2e0a2509e516a97cf17281f254fb51d34e897c7ffbe7d017d7
+- path: examples/338.sh
+  sha256: d1895c3c83e0089f249b9e8678318eb30130b3591962c5c0f87c846e95003a86
+source_basis:
+- Shell semantics knowledge about the construct that triggers this diagnostic.
+- Example independently authored and verified against shellcheck oracle.
+ai_sessions:
+- session-047
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/338.sh
+  expected_code: 2285
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via synthetic bad-script generation but the
+  example script was independently authored.

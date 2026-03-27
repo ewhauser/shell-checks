@@ -1,0 +1,22 @@
+---
+artifact_id: SH-066
+created_at: 2026-03-27
+files:
+- path: rules/SH-066.yaml
+  sha256: d421780681ed06e4b0957eeeff74a80d08f9b3b56b30315ad595732e5b4568db
+- path: examples/066.sh
+  sha256: e7929f5ffe1cb445c644b9d6e8d76ea88eca73ef8aff1d077c639a51f7acb019
+source_basis:
+- An echoed command inside substitution introduces an avoidable extra process, so
+  I reduced the probe to one substitution around `echo`.
+- I started with a broader command-substitution case and removed unrelated output
+  until the oracle reported only one code.
+ai_sessions:
+- session-012
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/066.sh
+  expected_code: 2116
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

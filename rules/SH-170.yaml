@@ -1,0 +1,10 @@
+id: SH-170
+name: redundant-return-status
+summary: Returns the exit status that the function would already propagate.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/170.sh
+rationale: Omit the explicit return when the last command status is the desired result.

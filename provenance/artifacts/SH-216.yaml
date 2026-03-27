@@ -1,0 +1,23 @@
+---
+artifact_id: SH-216
+created_at: '2026-03-28'
+files:
+- path: rules/SH-216.yaml
+  sha256: 4adb3d4a5a36f80db2cd839b19ad614390a60e03f30cc582e7e1d48aa30b12e3
+- path: examples/216.sh
+  sha256: cdc45a603cd7115bc61bc1dbfea61988118471a582c81fd691b0096543dbfda6
+source_basis:
+- A command pipeline is quoted as a string inside a test bracket.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/216.sh
+  expected_code: 2078
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

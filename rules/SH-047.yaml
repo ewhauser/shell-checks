@@ -1,0 +1,10 @@
+id: SH-047
+name: ssh-local-expansion
+summary: An ssh command string can be expanded by the local shell before the remote host ever sees it.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/047.sh
+rationale: Keep remote command text quoted until the remote shell is meant to interpret it.

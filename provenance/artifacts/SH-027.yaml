@@ -1,0 +1,21 @@
+---
+artifact_id: SH-027
+created_at: 2026-03-27
+files:
+- path: rules/SH-027.yaml
+  sha256: 6b0712fe26a80e578c69b2666fb7457a2af0d6c6bd12150a9e33b7b9e44fc572
+- path: examples/027.sh
+  sha256: 01d5647af506ff5822b4085c877e43be386699e09aed3531682dfcda984bf6c6
+source_basis:
+- Changing directories can fail, and later commands should not assume the new location
+  exists.
+- I used a bare `cd` to the smallest path that still triggered the code.
+ai_sessions:
+- session-007
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/027.sh
+  expected_code: 2164
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

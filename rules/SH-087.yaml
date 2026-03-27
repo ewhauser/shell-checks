@@ -1,0 +1,10 @@
+id: SH-087
+name: single-quote-backslash
+summary: Includes a literal backslash inside a quoted shell string.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/087.sh
+rationale: Use a quoting form that preserves the intended literal text.

@@ -1,0 +1,9 @@
+id: SH-061
+name: echo-backslash-escapes
+summary: Backslash sequences in echo depend on shell behavior and may not print as intended.
+shells:
+- sh
+- bash
+- ksh
+example: examples/061.sh
+rationale: Use printf when the text needs predictable escape handling.

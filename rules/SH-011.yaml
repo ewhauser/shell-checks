@@ -1,0 +1,8 @@
+id: SH-011
+name: process-substitution
+summary: "The script relies on process substitution, which is not available in standard `sh`."
+shells:
+- sh
+- dash
+example: examples/011.sh
+rationale: Replace process substitution with a pipe, temporary file, or another portable data flow.

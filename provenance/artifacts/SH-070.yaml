@@ -1,0 +1,22 @@
+---
+artifact_id: SH-070
+created_at: 2026-03-27
+files:
+- path: rules/SH-070.yaml
+  sha256: 8bf34ff8655812e1039ad8fe2caf94f75d880e4edf585d8ff6380c66ab61ac82
+- path: examples/070.sh
+  sha256: 6e7adc0188addd15c15609e06765abf981477563a969d26132e00aaf22fdab44
+source_basis:
+- A loop-control command at top level has nowhere to break from and just stops script
+  execution.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-013
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/070.sh
+  expected_code: 2105
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

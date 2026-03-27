@@ -1,0 +1,10 @@
+id: SH-213
+name: greater-than-in-test
+summary: "A `>` operator inside `[ ]` creates a file instead of comparing."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/213.sh
+rationale: "Use `-gt` for numeric comparison or `[[ ]]` for string ordering."

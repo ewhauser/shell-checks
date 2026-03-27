@@ -1,0 +1,21 @@
+---
+artifact_id: SH-050
+created_at: 2026-03-27
+files:
+- path: rules/SH-050.yaml
+  sha256: e57eb67d3759e4b262df61986aa982ce78c5d822833881e6c9fdc88c88b8a88f
+- path: examples/050.sh
+  sha256: 71da3b1b8c520245012101e080d617a023d58723766416d3d1a48bc5445094ca
+source_basis:
+- Putting command substitution directly inside export mixes value capture with environment
+  setup.
+- The example was trimmed to one exported assignment sourced from printf output.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/050.sh
+  expected_code: 2155
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

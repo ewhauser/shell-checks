@@ -1,0 +1,23 @@
+---
+artifact_id: SH-130
+created_at: '2026-03-28'
+files:
+- path: rules/SH-130.yaml
+  sha256: 01020daf309a57febac31f8da510b78d1d00a2206d5b6ac643f3fc61739e9267
+- path: examples/130.sh
+  sha256: a6fa3bbc56e9de3d1e4a08cb0d954df3225d96cf5772dec894e1d4894273bcfd
+source_basis:
+- Leaves a wildcard path unquoted in command position.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-027
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/130.sh
+  expected_code: 2211
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

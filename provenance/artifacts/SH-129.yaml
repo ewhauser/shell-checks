@@ -1,0 +1,23 @@
+---
+artifact_id: SH-129
+created_at: '2026-03-28'
+files:
+- path: rules/SH-129.yaml
+  sha256: 633a2b06db718c91450f2784d17625f5bcd800fab43fe6a6cf8147ff21a5b8a5
+- path: examples/129.sh
+  sha256: b568962472482bf29264259f7f7f4f4188c2f63ff2956a0378f5bb39c4a0b086
+source_basis:
+- Uses a malformed file-descriptor redirection.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-027
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/129.sh
+  expected_code: 2210
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

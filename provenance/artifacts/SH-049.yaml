@@ -1,0 +1,22 @@
+---
+artifact_id: SH-049
+created_at: 2026-03-27
+files:
+- path: rules/SH-049.yaml
+  sha256: 4e84e412a28d15ccf93e28b183fe73167888f3efe4eaa97b9e33e3513fbfe64e
+- path: examples/049.sh
+  sha256: 0da83336aefe0ec824c5784ee476cb3dc6ac695af6f388558f57cdf382108e64
+source_basis:
+- Putting find output into a for loop breaks filename boundaries because the shell
+  re-splits the results.
+- The example was reduced to one for loop around find output with a body that only
+  prints each item.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/049.sh
+  expected_code: 2044
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

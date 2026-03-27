@@ -1,0 +1,88 @@
+---
+session_id: session-034
+date: '2026-03-28'
+tool: codex
+model: claude-opus-4-6
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/195.sh
+- examples/196.sh
+- examples/197.sh
+- examples/198.sh
+- examples/199.sh
+- examples/200.sh
+- examples/201.sh
+- examples/202.sh
+- examples/203.sh
+- examples/204.sh
+- examples/205.sh
+- examples/206.sh
+- examples/207.sh
+- examples/208.sh
+- examples/209.sh
+- examples/210.sh
+- examples/211.sh
+- examples/212.sh
+- examples/213.sh
+- examples/214.sh
+- examples/215.sh
+- examples/216.sh
+- examples/217.sh
+- examples/218.sh
+- provenance/artifacts/SH-195.yaml
+- provenance/artifacts/SH-196.yaml
+- provenance/artifacts/SH-197.yaml
+- provenance/artifacts/SH-198.yaml
+- provenance/artifacts/SH-199.yaml
+- provenance/artifacts/SH-200.yaml
+- provenance/artifacts/SH-201.yaml
+- provenance/artifacts/SH-202.yaml
+- provenance/artifacts/SH-203.yaml
+- provenance/artifacts/SH-204.yaml
+- provenance/artifacts/SH-205.yaml
+- provenance/artifacts/SH-206.yaml
+- provenance/artifacts/SH-207.yaml
+- provenance/artifacts/SH-208.yaml
+- provenance/artifacts/SH-209.yaml
+- provenance/artifacts/SH-210.yaml
+- provenance/artifacts/SH-211.yaml
+- provenance/artifacts/SH-212.yaml
+- provenance/artifacts/SH-213.yaml
+- provenance/artifacts/SH-214.yaml
+- provenance/artifacts/SH-215.yaml
+- provenance/artifacts/SH-216.yaml
+- provenance/artifacts/SH-217.yaml
+- provenance/artifacts/SH-218.yaml
+- rules/SH-195.yaml
+- rules/SH-196.yaml
+- rules/SH-197.yaml
+- rules/SH-198.yaml
+- rules/SH-199.yaml
+- rules/SH-200.yaml
+- rules/SH-201.yaml
+- rules/SH-202.yaml
+- rules/SH-203.yaml
+- rules/SH-204.yaml
+- rules/SH-205.yaml
+- rules/SH-206.yaml
+- rules/SH-207.yaml
+- rules/SH-208.yaml
+- rules/SH-209.yaml
+- rules/SH-210.yaml
+- rules/SH-211.yaml
+- rules/SH-212.yaml
+- rules/SH-213.yaml
+- rules/SH-214.yaml
+- rules/SH-215.yaml
+- rules/SH-216.yaml
+- rules/SH-217.yaml
+- rules/SH-218.yaml
+prompt_sha256: d5634bf2cfc4b2f1ffb7eb2c53ebcf31b6e37be039484c3f9d1e9bb1c578732f
+output_sha256: 4b1022819758ff7ac00bd4efebf482740641292c9fbadfa29b0befc90c0aec97

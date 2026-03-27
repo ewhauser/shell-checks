@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sh_id": { "type": "string", "description": "Rule ID in SH-NNN format" },
+          "code": { "type": "integer", "description": "ShellCheck numeric code" },
+          "shells": { "type": "array", "items": { "type": "string", "enum": ["sh", "bash", "dash", "ksh"] }, "minItems": 1, "description": "Shell dialects this rule applies to" },
+          "name": { "type": "string", "description": "Short kebab-case name" },
+          "summary": { "type": "string", "description": "One sentence describing the issue" },
+          "rationale": { "type": "string", "description": "One sentence recommendation" },
+          "example_script": { "type": "string", "description": "Minimal shell script that triggers the code" },
+          "requires_dataflow": { "type": "boolean", "description": "True if the rule requires cross-statement dataflow analysis to detect" }
+        },
+        "required": ["sh_id", "code", "shells", "name", "summary", "rationale", "example_script", "requires_dataflow"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["artifacts"],
+  "additionalProperties": false
+}

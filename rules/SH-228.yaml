@@ -1,0 +1,10 @@
+id: SH-228
+name: function-called-without-args
+summary: "A function that references `$1` is called without arguments."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/228.sh
+rationale: Pass the expected arguments or guard against missing parameters.

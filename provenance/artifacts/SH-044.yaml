@@ -1,0 +1,22 @@
+---
+artifact_id: SH-044
+created_at: 2026-03-27
+files:
+- path: rules/SH-044.yaml
+  sha256: fc30247b963a4abdb3a9e6228abba625fb0c5ee48bbe7da01970381c86da40b3
+- path: examples/044.sh
+  sha256: 88e13c203ff9f1afb10e738fc7e34496d0d807bc8cab890e433ec2e9e435c131
+source_basis:
+- A variable directory combined with `rm -rf` and a glob can widen the deletion target
+  unexpectedly.
+- I reduced the deletion case to a single variable path and glob pair and confirmed
+  one code.
+ai_sessions:
+- session-009
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/044.sh
+  expected_code: 2115
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

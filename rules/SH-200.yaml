@@ -1,0 +1,10 @@
+id: SH-200
+name: unquoted-globs-in-find
+summary: "An unquoted variable and glob appear in a `find -exec` command."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/200.sh
+rationale: "Quote variables and escape globs passed to `find`."

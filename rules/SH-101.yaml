@@ -1,0 +1,10 @@
+id: SH-101
+name: extended-glob-in-test
+summary: "A `[[` match uses extended glob syntax."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/101.sh
+rationale: "Switch to `case` or a portable pattern."

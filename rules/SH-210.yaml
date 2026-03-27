@@ -1,0 +1,10 @@
+id: SH-210
+name: unquoted-grep-regex
+summary: A grep regex contains characters that may be glob-expanded.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/210.sh
+rationale: Quote the regex argument to prevent shell expansion.

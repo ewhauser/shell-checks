@@ -1,0 +1,22 @@
+---
+artifact_id: SH-002
+created_at: 2026-03-27
+files:
+- path: rules/SH-002.yaml
+  sha256: 40e5ece4b8b2661dd838be354741ee1d093267dd7fa269a614215418ed27199d
+- path: examples/002.sh
+  sha256: a90cbe6889f67bf37f6e7b2a10e3e452c5832d1823eb711f89c944224a5f39a0
+source_basis:
+- POSIX shell input reading treats backslashes specially unless the raw-read form
+  is requested, so a minimal read/print pair can isolate that behavior.
+- The example was authored directly in this repository and reduced until one oracle
+  code remained in sh mode.
+ai_sessions:
+- session-004
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/002.sh
+  expected_code: 2162
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

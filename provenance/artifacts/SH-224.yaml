@@ -1,0 +1,23 @@
+---
+artifact_id: SH-224
+created_at: '2026-03-28'
+files:
+- path: rules/SH-224.yaml
+  sha256: 97f0fd14b2e8c1728f0c52636f711226dde15b988c99cb6fde970d84b7841073
+- path: examples/224.sh
+  sha256: 677ed8f8629850e0ef2597785b7bc640099fedc2506dd1e71a94c3e4604d290a
+source_basis:
+- An assignment value contains a dash that may indicate a typo.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-035
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/224.sh
+  expected_code: 2100
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

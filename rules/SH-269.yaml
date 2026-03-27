@@ -1,0 +1,8 @@
+id: SH-269
+name: c-style-for-arithmetic-in-sh
+summary: A C-style for loop with arithmetic uses bashism syntax in POSIX sh.
+shells:
+- sh
+- dash
+example: examples/269.sh
+rationale: Use a while loop for portable iteration.

@@ -1,0 +1,21 @@
+---
+artifact_id: SH-020
+created_at: 2026-03-27
+files:
+- path: rules/SH-020.yaml
+  sha256: a083e07117da661a71938c1f9ffd79151b1fafb4f287af210de0d7bfaf7ecc95
+- path: examples/020.sh
+  sha256: 18b43112e6160a188edd1ac70d9e3ac232d549a2c1dc400331b95022c03c9ee7
+source_basis:
+- The script relies on `let`, which portable `sh` does not define.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-006
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/020.sh
+  expected_code: 3039
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

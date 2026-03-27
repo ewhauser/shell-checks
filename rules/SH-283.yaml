@@ -1,0 +1,10 @@
+id: SH-283
+name: find-execdir-with-shell
+summary: "A `find -execdir` passes `{}` to a shell command that may mishandle filenames."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/283.sh
+rationale: "Use safe quoting or `-print0` with `xargs -0` instead."

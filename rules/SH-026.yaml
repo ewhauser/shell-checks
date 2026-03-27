@@ -1,0 +1,10 @@
+id: SH-026
+name: untracked-source-file
+summary: A script loads another file directly, but that dependency is not part of the analyzed input set.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/026.sh
+rationale: Pass sourced files to the linter together with the script, or avoid hidden file dependencies.

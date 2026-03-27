@@ -1,0 +1,10 @@
+id: SH-206
+name: glob-in-string-comparison
+summary: A variable used in a string comparison may be treated as a glob.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/206.sh
+rationale: Quote the variable to prevent pattern matching.

@@ -1,0 +1,8 @@
+id: SH-031
+name: substring-expansion
+summary: The script slices a parameter with a bash-only substring form.
+shells:
+- sh
+- dash
+example: examples/031.sh
+rationale: Use a POSIX-safe transformation or require bash for substring slicing.

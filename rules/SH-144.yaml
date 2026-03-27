@@ -1,0 +1,9 @@
+id: SH-144
+name: arith-redirection-target
+summary: A redirection target is an arithmetic expansion.
+shells:
+- sh
+- bash
+- ksh
+example: examples/144.sh
+rationale: Write to a normal filename or redirect by descriptor.

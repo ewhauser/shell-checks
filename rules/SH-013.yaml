@@ -1,0 +1,8 @@
+id: SH-013
+name: standalone-arithmetic
+summary: "The script uses the standalone arithmetic command form, which is not defined by POSIX `sh`."
+shells:
+- sh
+- dash
+example: examples/013.sh
+rationale: Use a portable arithmetic approach or switch to a shell that supports this command form.

@@ -1,0 +1,22 @@
+---
+artifact_id: SH-034
+created_at: 2026-03-27
+files:
+- path: rules/SH-034.yaml
+  sha256: f115f0a81e26d32b9e5ac530262daab4b0897813731ea2ca792107c2bd57651a
+- path: examples/034.sh
+  sha256: b25ed9c33d45f9dcb915df0a93c407711d5210b96bebec68b2d8781929ad6962
+source_basis:
+- Backtick substitution is a legacy command-substitution form that is harder to nest
+  and quote safely.
+- I reduced the example to one assignment that feeds a later quoted readback, which
+  kept only the legacy substitution warning.
+ai_sessions:
+- session-008
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/034.sh
+  expected_code: 2006
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

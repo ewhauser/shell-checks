@@ -1,0 +1,10 @@
+id: SH-072
+name: literal-unary-string-test
+summary: A unary string check on a hard-coded word never reflects changing input.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/072.sh
+rationale: Test a variable or path that can change, or drop the check if the literal is intentional.

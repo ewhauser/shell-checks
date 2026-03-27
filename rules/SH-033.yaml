@@ -1,0 +1,8 @@
+id: SH-033
+name: replacement-expansion
+summary: The script performs global substitution in a parameter with a bash-only expansion form.
+shells:
+- sh
+- dash
+example: examples/033.sh
+rationale: Use a different transformation path, or switch to bash for this substitution syntax.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-270
+created_at: '2026-03-28'
+files:
+- path: rules/SH-270.yaml
+  sha256: c5b3b15453c809931018b471f537b83a94681e450a981cdc5026aee769f95900
+- path: examples/270.sh
+  sha256: 17947fa1cedb057dabbee255e38f5c8b6c70ef8232f5e56281530605d4584961
+source_basis:
+- The `>&` combined redirect is used in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/270.sh
+  expected_code: 3021
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

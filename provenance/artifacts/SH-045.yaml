@@ -1,0 +1,22 @@
+---
+artifact_id: SH-045
+created_at: 2026-03-27
+files:
+- path: rules/SH-045.yaml
+  sha256: 97490fe5e7e1977536075a41a7667c789d3ec8080d87829134242629912d21ea
+- path: examples/045.sh
+  sha256: 9943528100044781b27e2299574ea0971b47eb301aa5a31bda58076669814954
+source_basis:
+- Chaining tests with `&&` and `||` can make the fallback depend on whether the middle
+  command succeeds.
+- I reduced the logic to one chained condition and verified the wrapper reported a
+  single code.
+ai_sessions:
+- session-009
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/045.sh
+  expected_code: 2333
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

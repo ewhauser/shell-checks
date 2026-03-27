@@ -1,0 +1,8 @@
+id: SH-304
+name: source-inside-function-in-sh
+summary: "The bash-only `source` command is used inside a function in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/304.sh
+rationale: "Use the portable `.` (dot) command instead of `source`."

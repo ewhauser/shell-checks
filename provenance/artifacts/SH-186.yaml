@@ -1,0 +1,23 @@
+---
+artifact_id: SH-186
+created_at: '2026-03-28'
+files:
+- path: rules/SH-186.yaml
+  sha256: '0988d705c8c61d8661b93fe708dabadfbeaa8b74dbc4e7c7ff89891e7dfb3eb3'
+- path: examples/186.sh
+  sha256: 1fadf6ffe2bb13d38d2e9716942a9cb001444d89f8b8dc2a3b3e338a204d3b0d
+source_basis:
+- A backslash-space appears right before a closing backtick.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/186.sh
+  expected_code: 1101
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

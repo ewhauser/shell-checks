@@ -1,0 +1,10 @@
+id: SH-235
+name: function-in-alias
+summary: A function definition is embedded inside an alias string.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/235.sh
+rationale: Define the function separately and alias only the call.

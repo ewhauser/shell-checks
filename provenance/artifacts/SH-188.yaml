@@ -1,0 +1,23 @@
+---
+artifact_id: SH-188
+created_at: '2026-03-28'
+files:
+- path: rules/SH-188.yaml
+  sha256: 6833ee81a1b0528272139b123ec264d6879cdb2f6a43f9f897a135ff667ffc9f
+- path: examples/188.sh
+  sha256: 3cc620887ab3cf3c717e35f6990e0bc7195ff2ffda79dc7d21c839c98bafc0fa
+source_basis:
+- Double parentheses are used to group commands instead of arithmetic.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/188.sh
+  expected_code: 1105
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

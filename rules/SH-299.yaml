@@ -1,0 +1,10 @@
+id: SH-299
+name: zsh-array-subscript-in-case
+summary: A zsh-style array subscript is used in a case subject.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/299.sh
+rationale: Use a variable to hold the value before the case statement.

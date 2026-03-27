@@ -1,0 +1,10 @@
+id: SH-222
+name: redirect-clobbers-input
+summary: A command reads and writes the same file via redirection.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/222.sh
+rationale: "Use a temporary file or `sponge` to avoid truncating the input."

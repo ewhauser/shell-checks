@@ -1,0 +1,9 @@
+id: SH-214
+name: string-comparison-for-version
+summary: "A `<` operator inside `[[ ]]` compares lexicographically, not numerically."
+shells:
+- sh
+- bash
+- dash
+example: examples/214.sh
+rationale: "Use `-lt` for numeric comparison or a version-aware tool."

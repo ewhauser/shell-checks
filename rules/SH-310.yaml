@@ -1,0 +1,10 @@
+id: SH-310
+name: misspelled-option-name
+summary: A configure option name looks like a misspelling.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/310.sh
+rationale: Check the option name against the expected spelling.

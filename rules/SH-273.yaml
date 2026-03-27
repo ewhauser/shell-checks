@@ -1,0 +1,8 @@
+id: SH-273
+name: pipe-stderr-in-sh
+summary: "The `|&` pipe-stderr operator is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/273.sh
+rationale: "Use `2>&1 |` for portable stderr piping."

@@ -1,0 +1,7 @@
+id: SH-260
+name: zsh-assignment-to-zero
+summary: "The variable `0` is assigned a value, which is a zsh idiom."
+shells:
+- bash
+example: examples/260.sh
+rationale: "Use a regular variable name instead of `0`."

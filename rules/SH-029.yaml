@@ -1,0 +1,7 @@
+id: SH-029
+name: pipefail-option
+summary: The script enables pipeline failure handling with a shell option that portable sh does not define.
+shells:
+- sh
+example: examples/029.sh
+rationale: Check command statuses explicitly in sh, or switch to a shell that supports this option.

@@ -1,0 +1,10 @@
+id: SH-036
+name: single-quoted-literal
+summary: A dollar-sign sequence is wrapped in single quotes, so it stays literal text instead of expanding.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/036.sh
+rationale: Use double quotes when you intend the shell to expand a variable-like value.

@@ -1,0 +1,10 @@
+id: SH-114
+name: suspect-closing-quote
+summary: A quote is syntactically closed, but the following character makes ShellCheck flag it as suspicious.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/114.sh
+rationale: Restructure the string generation so the closing quote is unambiguous, or move the embedded script text to a here-doc.

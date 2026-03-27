@@ -1,0 +1,21 @@
+---
+artifact_id: SH-051
+created_at: 2026-03-27
+files:
+- path: rules/SH-051.yaml
+  sha256: 7238146b56033b0668445a8c3319b4c3c32c509f4ef4044cfe4b0e812479619d
+- path: examples/051.sh
+  sha256: ef724627c0acf67610692d0be3421db4bd6bb78a08ca791a7d09515a8d29759e
+source_basis:
+- Using -a or -o inside a single test expression compresses boolean logic into a form
+  that is easy to misread.
+- The example was reduced to two initialized variables and one compact condition.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/051.sh
+  expected_code: 2166
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-246
+created_at: '2026-03-28'
+files:
+- path: rules/SH-246.yaml
+  sha256: 6f431f7cac093ddd7c3bc811cb91bc85244768eb31b004cda684ca8ed885fb8b
+- path: examples/246.sh
+  sha256: 0bc986d0e3a285f5cd71f351d60ca2e63cf0b855064d11867ebd31a95fa7d1b4
+source_basis:
+- A test expression contains `=` that looks like an assignment.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/246.sh
+  expected_code: 2193
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

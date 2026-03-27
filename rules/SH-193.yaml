@@ -1,0 +1,10 @@
+id: SH-193
+name: shebang-not-on-first-line
+summary: The shebang appears on the second line instead of the first.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/193.sh
+rationale: Move the shebang to the very first line of the file.

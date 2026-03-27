@@ -1,0 +1,21 @@
+---
+artifact_id: SH-028
+created_at: 2026-03-27
+files:
+- path: rules/SH-028.yaml
+  sha256: dfc4d9d51c00b5be276170286b248bee056c20dafe7b44080b1a554ec1c111a0
+- path: examples/028.sh
+  sha256: caf05351777b2b1146ba86c2acf835bc41dc26e5989a6ac775f54b50c04cdb80
+source_basis:
+- Brace-based file descriptor allocation is a shell extension rather than portable
+  sh redirection syntax.
+- I reduced the case to one file descriptor assignment and one readback of that descriptor.
+ai_sessions:
+- session-007
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/028.sh
+  expected_code: 3022
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

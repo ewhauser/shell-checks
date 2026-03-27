@@ -1,0 +1,23 @@
+---
+artifact_id: SH-217
+created_at: '2026-03-28'
+files:
+- path: rules/SH-217.yaml
+  sha256: '049f4c9f1600613c979e3a1e8da782581be7a9fd443d6a430bb66a43fa226a0c'
+- path: examples/217.sh
+  sha256: 47d4385d9fd1732d004e9c2be241365d6c8559c1c9311fc60a89974840d52224
+source_basis:
+- A glob pattern on the right side of `==` inside `[ ]` is not expanded.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/217.sh
+  expected_code: 2081
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

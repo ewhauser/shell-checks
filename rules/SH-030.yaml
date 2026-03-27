@@ -1,0 +1,8 @@
+id: SH-030
+name: wait-option
+summary: The script uses a wait option that portable sh does not provide.
+shells:
+- sh
+- dash
+example: examples/030.sh
+rationale: Avoid that wait flag in portable scripts, or require bash for the workflow.

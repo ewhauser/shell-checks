@@ -1,0 +1,10 @@
+id: SH-178
+name: empty-function-body
+summary: A function body contains no commands.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/178.sh
+rationale: "Add a colon or `true` as a placeholder command."

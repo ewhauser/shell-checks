@@ -1,0 +1,10 @@
+id: SH-095
+name: escaped-underscore
+summary: "A backslash before `_` is unnecessary in bash and becomes a literal underscore."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/095.sh
+rationale: Drop the escape unless you truly need a literal backslash.

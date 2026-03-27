@@ -1,0 +1,10 @@
+id: SH-145
+name: duplicate-redirect
+summary: A later redirect makes an earlier one pointless.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/145.sh
+rationale: Keep only the final redirect.

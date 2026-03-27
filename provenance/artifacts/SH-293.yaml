@@ -1,0 +1,23 @@
+---
+artifact_id: SH-293
+created_at: '2026-03-28'
+files:
+- path: rules/SH-293.yaml
+  sha256: 1132eed8d87c79b212b128bcdc399fdb67e855764712ce04c327cf2f8854a0b4
+- path: examples/293.sh
+  sha256: 909a8be6d59b97e09bfaa0ef2fcdc0c7ac1d3ff1f728a92ba2ee7cd748e9daaa
+source_basis:
+- Code appears after all branches exit, making it unreachable.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-038
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/293.sh
+  expected_code: 2317
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

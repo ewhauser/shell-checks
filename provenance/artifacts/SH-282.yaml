@@ -1,0 +1,23 @@
+---
+artifact_id: SH-282
+created_at: '2026-03-28'
+files:
+- path: rules/SH-282.yaml
+  sha256: 9de06bfdc849bb07750c2188e72a7fa9645832c608b928308cac00952239bd0e
+- path: examples/282.sh
+  sha256: 3cb8c98b07059ff70ca82ca26afc654dfa565439c94602891fb8b206b2ccf284
+source_basis:
+- The `-O` ownership test is used in a POSIX sh script.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/282.sh
+  expected_code: 3067
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

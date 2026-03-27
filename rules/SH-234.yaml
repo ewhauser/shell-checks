@@ -1,0 +1,10 @@
+id: SH-234
+name: ifs-set-to-literal-backslash-n
+summary: IFS is set to the literal string \n instead of a newline.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/234.sh
+rationale: Use IFS=$'\n' in bash or a literal newline in POSIX sh.

@@ -1,0 +1,10 @@
+id: SH-111
+name: extglob-case
+summary: A grouped case pattern uses non-POSIX shell syntax.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/111.sh
+rationale: Spell out the alternatives with plain case patterns or use bash.

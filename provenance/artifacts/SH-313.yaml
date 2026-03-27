@@ -1,0 +1,23 @@
+---
+artifact_id: SH-313
+created_at: '2026-03-28'
+files:
+- path: rules/SH-313.yaml
+  sha256: cde42d867eb44a8ce3e3684ffe8e43aeb3e54a682df21914200ade9ce591e2a1
+- path: examples/313.sh
+  sha256: 748bc0dcff6d5972c6ec02aab045953ce17922c0a1ae306000302d4b8c82a038
+source_basis:
+- A case arm handles an option not listed in the getopts string.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-040
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/313.sh
+  expected_code: 2214
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

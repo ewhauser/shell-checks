@@ -1,0 +1,10 @@
+id: SH-040
+name: echoed-command-substitution
+summary: "An `echo` around a command substitution adds an unnecessary wrapper around output that is already available."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/040.sh
+rationale: "Print the command's result directly instead of wrapping it in another `echo` call."

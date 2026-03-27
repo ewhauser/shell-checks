@@ -1,0 +1,20 @@
+---
+artifact_id: SH-031
+created_at: 2026-03-27
+files:
+- path: rules/SH-031.yaml
+  sha256: 1ca6d6ce7e804d83415d6e2f83361485873f375331c3fb8f3b0e9f53c955b163
+- path: examples/031.sh
+  sha256: bc597825d80ddd16adeffa4099afd6f8e575f12d2cbfb8921d463aa560bf424c
+source_basis:
+- Substring slicing inside parameter expansion is a bash-only form.
+- I used positional parameters so the slice stayed single-purpose.
+ai_sessions:
+- session-007
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/031.sh
+  expected_code: 3057
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

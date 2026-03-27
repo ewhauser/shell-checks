@@ -1,0 +1,22 @@
+---
+artifact_id: SH-052
+created_at: 2026-03-27
+files:
+- path: rules/SH-052.yaml
+  sha256: 1b316fd5fac06d30cafb260a5dcb7053cbcf02bbf3338de0c193428953ca9895
+- path: examples/052.sh
+  sha256: 433c7a54bcb7965dfd3a2bbc95667388f87cf1b618e609cc802ea5e1ae298ca0
+source_basis:
+- In bash, local is only valid inside a function body and does not describe script-scope
+  state.
+- The example was reduced to a top-level local declaration with a readback so no unrelated
+  warning masked it.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/052.sh
+  expected_code: 2168
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

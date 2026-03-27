@@ -1,0 +1,10 @@
+id: SH-344
+name: nested-loop-variable-reuse
+summary: An inner loop reuses the outer loop's iteration variable.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/344.sh
+rationale: Give the nested loop its own control variable.

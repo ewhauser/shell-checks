@@ -1,0 +1,23 @@
+---
+artifact_id: SH-280
+created_at: '2026-03-28'
+files:
+- path: rules/SH-280.yaml
+  sha256: 6da10b6fb5d65bebb2b951588cab7cb516fc95e2a2ca8000846c2f906d88823a
+- path: examples/280.sh
+  sha256: '082817bc3527f10f40712d17c8b0efdbb87c7dafebdb3aa34c12ef0ff1387a46'
+source_basis:
+- The `-o` option test is used inside `[[ ]]` in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/280.sh
+  expected_code: 3062
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

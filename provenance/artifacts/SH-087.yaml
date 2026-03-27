@@ -1,0 +1,23 @@
+---
+artifact_id: SH-087
+created_at: '2026-03-28'
+files:
+- path: rules/SH-087.yaml
+  sha256: 74aca7d1af6924f32a604464411008001d940f27807ca5365af8d941bf1f3649
+- path: examples/087.sh
+  sha256: fcf1a2ef0f04e26d7089e441532d804f140d70b0d198fcc09bee91e464ed46f1
+source_basis:
+- Includes a literal backslash inside a quoted shell string.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-017
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/087.sh
+  expected_code: 1003
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

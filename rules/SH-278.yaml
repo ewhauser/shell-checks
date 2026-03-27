@@ -1,0 +1,8 @@
+id: SH-278
+name: array-keys-in-sh
+summary: "The `${!arr[*]}` array key expansion is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/278.sh
+rationale: Use a loop or associative array in bash instead.

@@ -1,0 +1,10 @@
+id: SH-167
+name: template-brace-in-command
+summary: A template placeholder with double braces appears in command position.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/167.sh
+rationale: Replace the template variable before running the script.

@@ -1,0 +1,10 @@
+id: SH-041
+name: find-output-to-xargs
+summary: "Sending raw `find` output into `xargs` assumes file names stay simple and whitespace-free."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/041.sh
+rationale: Use a null-delimited handoff or another safer iteration pattern when file paths may contain spaces or newlines.

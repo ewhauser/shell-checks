@@ -1,0 +1,32 @@
+---
+session_id: session-008
+date: 2026-03-27
+tool: codex
+model: gpt-5.4-mini
+task_summary: Discover new ShellCheck compatibility codes and create clean-room artifact
+  bundles.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+generated_files:
+- examples/034.sh
+- examples/035.sh
+- examples/036.sh
+- examples/037.sh
+- examples/038.sh
+- examples/039.sh
+- provenance/artifacts/SH-034.yaml
+- provenance/artifacts/SH-035.yaml
+- provenance/artifacts/SH-036.yaml
+- provenance/artifacts/SH-037.yaml
+- provenance/artifacts/SH-038.yaml
+- provenance/artifacts/SH-039.yaml
+- rules/SH-034.yaml
+- rules/SH-035.yaml
+- rules/SH-036.yaml
+- rules/SH-037.yaml
+- rules/SH-038.yaml
+- rules/SH-039.yaml
+prompt_sha256: 45f369431992ecfa01045c8d3e5e014e40f9722b125c7827562ab71de071f0ac
+output_sha256: e7fd3725f9736ef1c11290bcdd01d1eff14118aac3c58fbde2800a4fa4167148

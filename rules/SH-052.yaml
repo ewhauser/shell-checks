@@ -1,0 +1,8 @@
+id: SH-052
+name: local-top-level
+summary: "In bash, `local` is only valid inside a function body and is not meaningful at script scope."
+shells:
+- bash
+- dash
+example: examples/052.sh
+rationale: Move the declaration into a function or use a regular assignment when working at top level.

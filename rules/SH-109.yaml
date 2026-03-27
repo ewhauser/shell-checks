@@ -1,0 +1,10 @@
+id: SH-109
+name: broken-test-end
+summary: "A malformed `[` test leaves ShellCheck unable to finish parsing the expression."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/109.sh
+rationale: Fix the test syntax first, or keep the test on one line so ShellCheck can continue checking the rest of the script.

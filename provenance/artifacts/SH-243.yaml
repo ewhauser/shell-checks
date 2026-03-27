@@ -1,0 +1,23 @@
+---
+artifact_id: SH-243
+created_at: '2026-03-28'
+files:
+- path: rules/SH-243.yaml
+  sha256: 49aa1b86820953a51c951029b22491a27b30fdcba49919e5589215b5c2032a51
+- path: examples/243.sh
+  sha256: 2a5a296eb00bfb536378e5308aaef0cbf47f27324f47c0cf9fd83f75bd9ba7cc
+source_basis:
+- An associative array element is unset with a quoted key.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/243.sh
+  expected_code: 2184
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

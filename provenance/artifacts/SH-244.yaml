@@ -1,0 +1,23 @@
+---
+artifact_id: SH-244
+created_at: '2026-03-28'
+files:
+- path: rules/SH-244.yaml
+  sha256: ed5136d91494d5c8102d71ffc8ba61b99d50b2cb812349077d2a92c7a7103d11
+- path: examples/244.sh
+  sha256: '083ae362821f4a2ce947a9c58ac5ba50728e5a2e9f7f995b4942caf9bb034a1a'
+source_basis:
+- A `mapfile` command reads from a process substitution.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/244.sh
+  expected_code: 2185
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

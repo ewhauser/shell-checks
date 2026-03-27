@@ -1,0 +1,8 @@
+id: SH-274
+name: hyphenated-function-name
+summary: A function name contains a hyphen, which is not portable.
+shells:
+- sh
+- dash
+example: examples/274.sh
+rationale: Use underscores instead of hyphens in function names.

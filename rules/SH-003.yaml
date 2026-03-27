@@ -1,0 +1,10 @@
+id: SH-003
+name: unused-assignment
+summary: A variable is assigned but never read later, so the statement has no effect on the script's behavior.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/003.sh
+rationale: Remove dead assignments, or export the value if a child process needs it.

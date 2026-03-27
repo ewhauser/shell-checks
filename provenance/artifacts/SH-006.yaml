@@ -1,0 +1,22 @@
+---
+artifact_id: SH-006
+created_at: 2026-03-27
+files:
+- path: rules/SH-006.yaml
+  sha256: 726300383efaca1d2eb791e28e005065dc6b9a968aa3f9ee6774da9a502546e2
+- path: examples/006.sh
+  sha256: 9f4413d3fde9d565e1f6e81afb498ff5e63c75bb9e0a5b92ead5c7ef57015015
+source_basis:
+- POSIX sh does not define the double-bracket conditional form, so that syntax ties
+  the script to a different shell family.
+- The example was reduced to a single conditional that still triggered only the portability
+  warning in sh mode.
+ai_sessions:
+- session-005
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/006.sh
+  expected_code: 3010
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

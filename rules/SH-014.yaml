@@ -1,0 +1,8 @@
+id: SH-014
+name: select-loop
+summary: "The script relies on `select`, which is a shell-specific menu loop rather than portable `sh` syntax."
+shells:
+- sh
+- dash
+example: examples/014.sh
+rationale: "Build the menu flow with basic shell loops if the script must run in `sh`."

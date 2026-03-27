@@ -1,0 +1,2765 @@
+---
+mappings:
+- sh_id: SH-001
+  example: examples/001.sh
+  shellcheck_code: 2086
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-002
+  example: examples/002.sh
+  shellcheck_code: 2162
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-003
+  example: examples/003.sh
+  shellcheck_code: 2034
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-004
+  example: examples/004.sh
+  shellcheck_code: 2045
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-005
+  example: examples/005.sh
+  shellcheck_code: 2046
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-006
+  example: examples/006.sh
+  shellcheck_code: 3010
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-007
+  example: examples/007.sh
+  shellcheck_code: 3014
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-008
+  example: examples/008.sh
+  shellcheck_code: 3043
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-009
+  example: examples/009.sh
+  shellcheck_code: 2113
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-010
+  example: examples/010.sh
+  shellcheck_code: 2127
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+  - ksh
+- sh_id: SH-011
+  example: examples/011.sh
+  shellcheck_code: 3001
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-012
+  example: examples/012.sh
+  shellcheck_code: 3003
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-013
+  example: examples/013.sh
+  shellcheck_code: 3006
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-014
+  example: examples/014.sh
+  shellcheck_code: 3008
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-015
+  example: examples/015.sh
+  shellcheck_code: 3009
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-016
+  example: examples/016.sh
+  shellcheck_code: 3011
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-017
+  example: examples/017.sh
+  shellcheck_code: 3020
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-018
+  example: examples/018.sh
+  shellcheck_code: 3030
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-019
+  example: examples/019.sh
+  shellcheck_code: 3032
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-020
+  example: examples/020.sh
+  shellcheck_code: 3039
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-021
+  example: examples/021.sh
+  shellcheck_code: 3044
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-022
+  example: examples/022.sh
+  shellcheck_code: 3047
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-023
+  example: examples/023.sh
+  shellcheck_code: 3053
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-024
+  example: examples/024.sh
+  shellcheck_code: 3054
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-025
+  example: examples/025.sh
+  shellcheck_code: 1090
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-026
+  example: examples/026.sh
+  shellcheck_code: 1091
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-027
+  example: examples/027.sh
+  shellcheck_code: 2164
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-028
+  example: examples/028.sh
+  shellcheck_code: 3022
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-029
+  example: examples/029.sh
+  shellcheck_code: 3040
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-030
+  example: examples/030.sh
+  shellcheck_code: 3045
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-031
+  example: examples/031.sh
+  shellcheck_code: 3057
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-032
+  example: examples/032.sh
+  shellcheck_code: 3059
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-033
+  example: examples/033.sh
+  shellcheck_code: 3060
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-034
+  example: examples/034.sh
+  shellcheck_code: 2006
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-035
+  example: examples/035.sh
+  shellcheck_code: 2007
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-036
+  example: examples/036.sh
+  shellcheck_code: 2016
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-037
+  example: examples/037.sh
+  shellcheck_code: 2059
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-038
+  example: examples/038.sh
+  shellcheck_code: 2068
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-039
+  example: examples/039.sh
+  shellcheck_code: 2154
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-040
+  example: examples/040.sh
+  shellcheck_code: 2005
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-041
+  example: examples/041.sh
+  shellcheck_code: 2038
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-042
+  example: examples/042.sh
+  shellcheck_code: 2064
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-043
+  example: examples/043.sh
+  shellcheck_code: 2076
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-044
+  example: examples/044.sh
+  shellcheck_code: 2115
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-045
+  example: examples/045.sh
+  shellcheck_code: 2333
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-046
+  example: examples/046.sh
+  shellcheck_code: 2013
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-047
+  example: examples/047.sh
+  shellcheck_code: 2029
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-048
+  example: examples/048.sh
+  shellcheck_code: 2035
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-049
+  example: examples/049.sh
+  shellcheck_code: 2044
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-050
+  example: examples/050.sh
+  shellcheck_code: 2155
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-051
+  example: examples/051.sh
+  shellcheck_code: 2166
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-052
+  example: examples/052.sh
+  shellcheck_code: 2168
+  shellcheck_version: 0.11.0
+  shells:
+  - bash
+  - dash
+- sh_id: SH-053
+  example: examples/053.sh
+  shellcheck_code: 3034
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-054
+  example: examples/054.sh
+  shellcheck_code: 3037
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-055
+  example: examples/055.sh
+  shellcheck_code: 2003
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-056
+  example: examples/056.sh
+  shellcheck_code: 2009
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-057
+  example: examples/057.sh
+  shellcheck_code: 2010
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-058
+  example: examples/058.sh
+  shellcheck_code: 2018
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-059
+  example: examples/059.sh
+  shellcheck_code: 2019
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-060
+  example: examples/060.sh
+  shellcheck_code: 2024
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-061
+  example: examples/061.sh
+  shellcheck_code: 2028
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - ksh
+- sh_id: SH-062
+  example: examples/062.sh
+  shellcheck_code: 2048
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-063
+  example: examples/063.sh
+  shellcheck_code: 2066
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-064
+  example: examples/064.sh
+  shellcheck_code: 2126
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-065
+  example: examples/065.sh
+  shellcheck_code: 1089
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-066
+  example: examples/066.sh
+  shellcheck_code: 2116
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-067
+  example: examples/067.sh
+  shellcheck_code: 2206
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-068
+  example: examples/068.sh
+  shellcheck_code: 2207
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-069
+  example: examples/069.sh
+  shellcheck_code: 2050
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-070
+  example: examples/070.sh
+  shellcheck_code: 2105
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-071
+  example: examples/071.sh
+  shellcheck_code: 2143
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-072
+  example: examples/072.sh
+  shellcheck_code: 2157
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-073
+  example: examples/073.sh
+  shellcheck_code: 2161
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-074
+  example: examples/074.sh
+  shellcheck_code: 2194
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-075
+  example: examples/075.sh
+  shellcheck_code: 2212
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-076
+  example: examples/076.sh
+  shellcheck_code: 2043
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-077
+  example: examples/077.sh
+  shellcheck_code: 2145
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-078
+  example: examples/078.sh
+  shellcheck_code: 2080
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-079
+  example: examples/079.sh
+  shellcheck_code: 2219
+  shellcheck_version: 0.11.0
+  shells:
+  - bash
+  - ksh
+- sh_id: SH-080
+  example: examples/080.sh
+  shellcheck_code: 3046
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-081
+  example: examples/081.sh
+  shellcheck_code: 3050
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-082
+  example: examples/082.sh
+  shellcheck_code: 1001
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-084
+  example: examples/084.sh
+  shellcheck_code: 1007
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-086
+  example: examples/086.sh
+  shellcheck_code: 1037
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-087
+  example: examples/087.sh
+  shellcheck_code: 1003
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-088
+  example: examples/088.sh
+  shellcheck_code: 1001
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-090
+  example: examples/090.sh
+  shellcheck_code: 1007
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-091
+  example: examples/091.sh
+  shellcheck_code: 1010
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-092
+  example: examples/092.sh
+  shellcheck_code: 1001
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-093
+  example: examples/093.sh
+  shellcheck_code: 1009
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-094
+  example: examples/094.sh
+  shellcheck_code: 1007
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-095
+  example: examples/095.sh
+  shellcheck_code: 1001
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-096
+  example: examples/096.sh
+  shellcheck_code: 1010
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-098
+  example: examples/098.sh
+  shellcheck_code: 1019
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-101
+  example: examples/101.sh
+  shellcheck_code: 1027
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-102
+  example: examples/102.sh
+  shellcheck_code: 1035
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-104
+  example: examples/104.sh
+  shellcheck_code: 1039
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-105
+  example: examples/105.sh
+  shellcheck_code: 1046
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-100
+  example: examples/100.sh
+  shellcheck_code: 1020
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-106
+  example: examples/106.sh
+  shellcheck_code: 1047
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-108
+  example: examples/108.sh
+  shellcheck_code: 1070
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-111
+  example: examples/111.sh
+  shellcheck_code: 1074
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-112
+  example: examples/112.sh
+  shellcheck_code: 1075
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-116
+  example: examples/116.sh
+  shellcheck_code: 1083
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-107
+  example: examples/107.sh
+  shellcheck_code: 1065
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-109
+  example: examples/109.sh
+  shellcheck_code: 1072
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-110
+  example: examples/110.sh
+  shellcheck_code: 1073
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-113
+  example: examples/113.sh
+  shellcheck_code: 1078
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-114
+  example: examples/114.sh
+  shellcheck_code: 1079
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-115
+  example: examples/115.sh
+  shellcheck_code: 1080
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-119
+  example: examples/119.sh
+  shellcheck_code: 1118
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-120
+  example: examples/120.sh
+  shellcheck_code: 1126
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-121
+  example: examples/121.sh
+  shellcheck_code: 1127
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-123
+  example: examples/123.sh
+  shellcheck_code: 1132
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-124
+  example: examples/124.sh
+  shellcheck_code: 1140
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-125
+  example: examples/125.sh
+  shellcheck_code: 1141
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-126
+  example: examples/126.sh
+  shellcheck_code: 2202
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-127
+  example: examples/127.sh
+  shellcheck_code: 2203
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-128
+  example: examples/128.sh
+  shellcheck_code: 2209
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-129
+  example: examples/129.sh
+  shellcheck_code: 2210
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-130
+  example: examples/130.sh
+  shellcheck_code: 2211
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-133
+  example: examples/133.sh
+  shellcheck_code: 2215
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-134
+  example: examples/134.sh
+  shellcheck_code: 2216
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-135
+  example: examples/135.sh
+  shellcheck_code: 2217
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-137
+  example: examples/137.sh
+  shellcheck_code: 2234
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-140
+  example: examples/140.sh
+  shellcheck_code: 2240
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-141
+  example: examples/141.sh
+  shellcheck_code: 2242
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-142
+  example: examples/142.sh
+  shellcheck_code: 2254
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-143
+  example: examples/143.sh
+  shellcheck_code: 2252
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-144
+  example: examples/144.sh
+  shellcheck_code: 2257
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - ksh
+- sh_id: SH-145
+  example: examples/145.sh
+  shellcheck_code: 2261
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-146
+  example: examples/146.sh
+  shellcheck_code: 2280
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-147
+  example: examples/147.sh
+  shellcheck_code: 2283
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-148
+  example: examples/148.sh
+  shellcheck_code: 2287
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-152
+  example: examples/152.sh
+  shellcheck_code: 2295
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-153
+  example: examples/153.sh
+  shellcheck_code: 2296
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-154
+  example: examples/154.sh
+  shellcheck_code: 2298
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-151
+  example: examples/151.sh
+  shellcheck_code: 2294
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-155
+  example: examples/155.sh
+  shellcheck_code: 2319
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-157
+  example: examples/157.sh
+  shellcheck_code: 2321
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-158
+  example: examples/158.sh
+  shellcheck_code: 2324
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-159
+  example: examples/159.sh
+  shellcheck_code: 2327
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-160
+  example: examples/160.sh
+  shellcheck_code: 2328
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-161
+  example: examples/161.sh
+  shellcheck_code: 2323
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-163
+  example: examples/163.sh
+  shellcheck_code: 3061
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-164
+  example: examples/164.sh
+  shellcheck_code: 2235
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-165
+  example: examples/165.sh
+  shellcheck_code: 2238
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-166
+  example: examples/166.sh
+  shellcheck_code: 2239
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-167
+  example: examples/167.sh
+  shellcheck_code: 2288
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-168
+  example: examples/168.sh
+  shellcheck_code: 2291
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-169
+  example: examples/169.sh
+  shellcheck_code: 2299
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-170
+  example: examples/170.sh
+  shellcheck_code: 2320
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-171
+  example: examples/171.sh
+  shellcheck_code: 2329
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-172
+  example: examples/172.sh
+  shellcheck_code: 1011
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-173
+  example: examples/173.sh
+  shellcheck_code: 1012
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-174
+  example: examples/174.sh
+  shellcheck_code: 1036
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-175
+  example: examples/175.sh
+  shellcheck_code: 1049
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-176
+  example: examples/176.sh
+  shellcheck_code: 1050
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-177
+  example: examples/177.sh
+  shellcheck_code: 1054
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-178
+  example: examples/178.sh
+  shellcheck_code: 1055
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-179
+  example: examples/179.sh
+  shellcheck_code: 1056
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-180
+  example: examples/180.sh
+  shellcheck_code: 1058
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-181
+  example: examples/181.sh
+  shellcheck_code: 1064
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-182
+  example: examples/182.sh
+  shellcheck_code: 1085
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-183
+  example: examples/183.sh
+  shellcheck_code: 1087
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-184
+  example: examples/184.sh
+  shellcheck_code: 1088
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-185
+  example: examples/185.sh
+  shellcheck_code: 1097
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-186
+  example: examples/186.sh
+  shellcheck_code: 1101
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-187
+  example: examples/187.sh
+  shellcheck_code: 1102
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-188
+  example: examples/188.sh
+  shellcheck_code: 1105
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-190
+  example: examples/190.sh
+  shellcheck_code: 1113
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-191
+  example: examples/191.sh
+  shellcheck_code: 1114
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-192
+  example: examples/192.sh
+  shellcheck_code: 1115
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-193
+  example: examples/193.sh
+  shellcheck_code: 1128
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-194
+  example: examples/194.sh
+  shellcheck_code: 1143
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-189
+  example: examples/189.sh
+  shellcheck_code: 1111
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-195
+  example: examples/195.sh
+  shellcheck_code: 2000
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-196
+  example: examples/196.sh
+  shellcheck_code: 2001
+  shellcheck_version: 0.11.0
+  shells:
+  - bash
+  - ksh
+- sh_id: SH-197
+  example: examples/197.sh
+  shellcheck_code: 2004
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-198
+  example: examples/198.sh
+  shellcheck_code: 2011
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-200
+  example: examples/200.sh
+  shellcheck_code: 2014
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-201
+  example: examples/201.sh
+  shellcheck_code: 2015
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-202
+  example: examples/202.sh
+  shellcheck_code: 2017
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+- sh_id: SH-203
+  example: examples/203.sh
+  shellcheck_code: 2021
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-204
+  example: examples/204.sh
+  shellcheck_code: 2022
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-205
+  example: examples/205.sh
+  shellcheck_code: 2026
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-206
+  example: examples/206.sh
+  shellcheck_code: 2053
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-207
+  example: examples/207.sh
+  shellcheck_code: 2057
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-208
+  example: examples/208.sh
+  shellcheck_code: 2060
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-209
+  example: examples/209.sh
+  shellcheck_code: 2061
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-210
+  example: examples/210.sh
+  shellcheck_code: 2062
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-211
+  example: examples/211.sh
+  shellcheck_code: 2069
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-212
+  example: examples/212.sh
+  shellcheck_code: 2070
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-213
+  example: examples/213.sh
+  shellcheck_code: 2071
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-214
+  example: examples/214.sh
+  shellcheck_code: 2072
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+- sh_id: SH-215
+  example: examples/215.sh
+  shellcheck_code: 2077
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-216
+  example: examples/216.sh
+  shellcheck_code: 2078
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-217
+  example: examples/217.sh
+  shellcheck_code: 2081
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-218
+  example: examples/218.sh
+  shellcheck_code: 2082
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-199
+  example: examples/199.sh
+  shellcheck_code: 2012
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-219
+  example: examples/219.sh
+  shellcheck_code: 2088
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-220
+  example: examples/220.sh
+  shellcheck_code: 2091
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-221
+  example: examples/221.sh
+  shellcheck_code: 2092
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-222
+  example: examples/222.sh
+  shellcheck_code: 2094
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-223
+  example: examples/223.sh
+  shellcheck_code: 2096
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-224
+  example: examples/224.sh
+  shellcheck_code: 2100
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-225
+  example: examples/225.sh
+  shellcheck_code: 2102
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-226
+  example: examples/226.sh
+  shellcheck_code: 2112
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-227
+  example: examples/227.sh
+  shellcheck_code: 2117
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-228
+  example: examples/228.sh
+  shellcheck_code: 2120
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-229
+  example: examples/229.sh
+  shellcheck_code: 2121
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-230
+  example: examples/230.sh
+  shellcheck_code: 2124
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-231
+  example: examples/231.sh
+  shellcheck_code: 2125
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-232
+  example: examples/232.sh
+  shellcheck_code: 2128
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-233
+  example: examples/233.sh
+  shellcheck_code: 2139
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-235
+  example: examples/235.sh
+  shellcheck_code: 2142
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-236
+  example: examples/236.sh
+  shellcheck_code: 2144
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+- sh_id: SH-237
+  example: examples/237.sh
+  shellcheck_code: 2146
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-234
+  example: examples/234.sh
+  shellcheck_code: 2141
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-238
+  example: examples/238.sh
+  shellcheck_code: 2152
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-239
+  example: examples/239.sh
+  shellcheck_code: 2163
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-240
+  example: examples/240.sh
+  shellcheck_code: 2174
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-241
+  example: examples/241.sh
+  shellcheck_code: 2179
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-242
+  example: examples/242.sh
+  shellcheck_code: 2181
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-243
+  example: examples/243.sh
+  shellcheck_code: 2184
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-244
+  example: examples/244.sh
+  shellcheck_code: 2185
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-245
+  example: examples/245.sh
+  shellcheck_code: 2186
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-246
+  example: examples/246.sh
+  shellcheck_code: 2193
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-247
+  example: examples/247.sh
+  shellcheck_code: 2196
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-248
+  example: examples/248.sh
+  shellcheck_code: 2197
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-249
+  example: examples/249.sh
+  shellcheck_code: 2198
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-250
+  example: examples/250.sh
+  shellcheck_code: 2199
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-251
+  example: examples/251.sh
+  shellcheck_code: 2223
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-252
+  example: examples/252.sh
+  shellcheck_code: 2226
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-253
+  example: examples/253.sh
+  shellcheck_code: 2227
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-254
+  example: examples/254.sh
+  shellcheck_code: 2231
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-255
+  example: examples/255.sh
+  shellcheck_code: 2267
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-256
+  example: examples/256.sh
+  shellcheck_code: 2268
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-257
+  example: examples/257.sh
+  shellcheck_code: 2269
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-258
+  example: examples/258.sh
+  shellcheck_code: 2270
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-259
+  example: examples/259.sh
+  shellcheck_code: 2276
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-260
+  example: examples/260.sh
+  shellcheck_code: 2277
+  shellcheck_version: 0.11.0
+  shells:
+  - bash
+- sh_id: SH-261
+  example: examples/261.sh
+  shellcheck_code: 3002
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-262
+  example: examples/262.sh
+  shellcheck_code: 3004
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-263
+  example: examples/263.sh
+  shellcheck_code: 3005
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-264
+  example: examples/264.sh
+  shellcheck_code: 3007
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-265
+  example: examples/265.sh
+  shellcheck_code: 3012
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-266
+  example: examples/266.sh
+  shellcheck_code: 3015
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-267
+  example: examples/267.sh
+  shellcheck_code: 3016
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-268
+  example: examples/268.sh
+  shellcheck_code: 3017
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-269
+  example: examples/269.sh
+  shellcheck_code: 3018
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-270
+  example: examples/270.sh
+  shellcheck_code: 3021
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-271
+  example: examples/271.sh
+  shellcheck_code: 3024
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-272
+  example: examples/272.sh
+  shellcheck_code: 3026
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-273
+  example: examples/273.sh
+  shellcheck_code: 3029
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-274
+  example: examples/274.sh
+  shellcheck_code: 3033
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-275
+  example: examples/275.sh
+  shellcheck_code: 3041
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-276
+  example: examples/276.sh
+  shellcheck_code: 3048
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-277
+  example: examples/277.sh
+  shellcheck_code: 3052
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-278
+  example: examples/278.sh
+  shellcheck_code: 3055
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-279
+  example: examples/279.sh
+  shellcheck_code: 3056
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-280
+  example: examples/280.sh
+  shellcheck_code: 3062
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-281
+  example: examples/281.sh
+  shellcheck_code: 3065
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-282
+  example: examples/282.sh
+  shellcheck_code: 3067
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+- sh_id: SH-283
+  example: examples/283.sh
+  shellcheck_code: 2156
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-284
+  example: examples/284.sh
+  shellcheck_code: 2171
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-285
+  example: examples/285.sh
+  shellcheck_code: 2260
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-286
+  example: examples/286.sh
+  shellcheck_code: 2300
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-287
+  example: examples/287.sh
+  shellcheck_code: 2308
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-288
+  example: examples/288.sh
+  shellcheck_code: 2309
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-289
+  example: examples/289.sh
+  shellcheck_code: 2316
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-290
+  example: examples/290.sh
+  shellcheck_code: 2331
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-291
+  example: examples/291.sh
+  shellcheck_code: 3028
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-292
+  example: examples/292.sh
+  shellcheck_code: 2119
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-293
+  example: examples/293.sh
+  shellcheck_code: 2317
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-294
+  example: examples/294.sh
+  shellcheck_code: 2063
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-295
+  example: examples/295.sh
+  shellcheck_code: 2103
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-296
+  example: examples/296.sh
+  shellcheck_code: 2104
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-297
+  example: examples/297.sh
+  shellcheck_code: 2172
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-298
+  example: examples/298.sh
+  shellcheck_code: 2188
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-299
+  example: examples/299.sh
+  shellcheck_code: 2195
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-300
+  example: examples/300.sh
+  shellcheck_code: 2220
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-303
+  example: examples/303.sh
+  shellcheck_code: 2301
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-304
+  example: examples/304.sh
+  shellcheck_code: 3051
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-305
+  example: examples/305.sh
+  shellcheck_code: 3058
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - dash
+- sh_id: SH-301
+  example: examples/301.sh
+  shellcheck_code: 2221
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-302
+  example: examples/302.sh
+  shellcheck_code: 2222
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-306
+  example: examples/306.sh
+  shellcheck_code: 2027
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-307
+  example: examples/307.sh
+  shellcheck_code: 2089
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-308
+  example: examples/308.sh
+  shellcheck_code: 2090
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-309
+  example: examples/309.sh
+  shellcheck_code: 2097
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-310
+  example: examples/310.sh
+  shellcheck_code: 2098
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-311
+  example: examples/311.sh
+  shellcheck_code: 2178
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-312
+  example: examples/312.sh
+  shellcheck_code: 2213
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-313
+  example: examples/313.sh
+  shellcheck_code: 2214
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-314
+  example: examples/314.sh
+  shellcheck_code: 2318
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-315
+  example: examples/315.sh
+  shellcheck_code: 1112
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-318
+  example: examples/318.sh
+  shellcheck_code: 1044
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-319
+  example: examples/319.sh
+  shellcheck_code: 2290
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-320
+  example: examples/320.sh
+  shellcheck_code: 2282
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-321
+  example: examples/321.sh
+  shellcheck_code: 1061
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-322
+  example: examples/322.sh
+  shellcheck_code: 1062
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-327
+  example: examples/327.sh
+  shellcheck_code: 1048
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-330
+  example: examples/330.sh
+  shellcheck_code: 1040
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-333
+  example: examples/333.sh
+  shellcheck_code: 1042
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-334
+  example: examples/334.sh
+  shellcheck_code: 1057
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-335
+  example: examples/335.sh
+  shellcheck_code: 1045
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-329
+  example: examples/329.sh
+  shellcheck_code: 1133
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-332
+  example: examples/332.sh
+  shellcheck_code: 1041
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-336
+  example: examples/336.sh
+  shellcheck_code: 1137
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-337
+  example: examples/337.sh
+  shellcheck_code: 2190
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-338
+  example: examples/338.sh
+  shellcheck_code: 2285
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-339
+  example: examples/339.sh
+  shellcheck_code: 2030
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-340
+  example: examples/340.sh
+  shellcheck_code: 2054
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-344
+  example: examples/344.sh
+  shellcheck_code: 2165
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-345
+  example: examples/345.sh
+  shellcheck_code: 2167
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-346
+  example: examples/346.sh
+  shellcheck_code: 2218
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-347
+  example: examples/347.sh
+  shellcheck_code: 2031
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+- sh_id: SH-350
+  example: examples/350.sh
+  shellcheck_code: 2140
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-349
+  example: examples/349.sh
+  shellcheck_code: 2129
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-351
+  example: examples/351.sh
+  shellcheck_code: 2153
+  shellcheck_version: 0.11.0
+  shells:
+  - sh
+  - bash
+  - dash
+  - ksh
+- sh_id: SH-352
+  example: examples/352.sh
+  shellcheck_code: 1121
+  shells:
+  - bash
+  shellcheck_version: 0.11.0
+- sh_id: SH-353
+  example: examples/353.sh
+  shellcheck_code: 1069
+  shells:
+  - sh
+  shellcheck_version: 0.11.0

@@ -1,0 +1,22 @@
+---
+artifact_id: SH-003
+created_at: 2026-03-27
+files:
+- path: rules/SH-003.yaml
+  sha256: d3cbcca6c8d19c4f3e41792d7803dd6450550476818f9ffc0934e3b03bb58d09
+- path: examples/003.sh
+  sha256: 5106ce8eaecd7f1096324d63ab5f73dbc8c4a26afe993e822ad1fc4cd5673743
+source_basis:
+- A shell assignment only matters when later code reads or exports it, so a bare assignment
+  can be isolated as a dead-store case.
+- The example was reduced to a single assignment line after confirming that one oracle
+  code remained in sh mode.
+ai_sessions:
+- session-005
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/003.sh
+  expected_code: 2034
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

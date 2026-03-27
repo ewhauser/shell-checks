@@ -1,0 +1,10 @@
+id: SH-298
+name: unused-heredoc
+summary: A here-document is opened without a consuming command.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/298.sh
+rationale: "Prefix the here-doc with a command like `cat` or `:` if the text is intentional."

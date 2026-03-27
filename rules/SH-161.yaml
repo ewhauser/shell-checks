@@ -1,0 +1,10 @@
+id: SH-161
+name: arithmetic-score-line
+summary: Uses a long arithmetic expansion in an assignment.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/161.sh
+rationale: Break complex math into smaller steps if it gets hard to read.

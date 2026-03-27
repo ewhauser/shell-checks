@@ -1,0 +1,8 @@
+id: SH-264
+name: legacy-arithmetic-in-sh
+summary: "The legacy `$[...]` arithmetic syntax is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/264.sh
+rationale: "Use `$((...))` for arithmetic expansion."

@@ -1,0 +1,10 @@
+id: SH-060
+name: sudo-redirection-order
+summary: A redirection attached to sudo still happens in the current shell before privilege escalation.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/060.sh
+rationale: Move the write operation into the privileged command itself or use a helper such as tee.

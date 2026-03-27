@@ -1,0 +1,24 @@
+---
+artifact_id: SH-113
+created_at: '2026-03-28'
+files:
+- path: rules/SH-113.yaml
+  sha256: dd1fea2401ec709f673c6fc3ddf3b34a6a4cda8f03bf68a54e007112b706d78e
+- path: examples/113.sh
+  sha256: 4ec97d30ee682f4b5465268f3da61e455334f1b4ac1bbd02c82b84f0363eec7e
+source_basis:
+- A double-quoted string is opened inside another quoted string and ShellCheck thinks
+  it was never closed.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-025
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/113.sh
+  expected_code: 1078
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,10 @@
+id: SH-321
+name: loop-without-end
+summary: A loop body is opened but never closed.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/321.sh
+rationale: Finish the `do` block with `done`.

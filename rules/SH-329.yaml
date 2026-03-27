@@ -1,0 +1,10 @@
+id: SH-329
+name: linebreak-before-and
+summary: A control operator starts a new line instead of ending the previous one.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/329.sh
+rationale: Put `&&` at the end of the previous line or keep the command on one line.

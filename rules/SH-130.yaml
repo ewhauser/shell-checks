@@ -1,0 +1,10 @@
+id: SH-130
+name: bare-glob-path
+summary: Leaves a wildcard path unquoted in command position
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/130.sh
+rationale: Quote the path or expand it explicitly before using it.

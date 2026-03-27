@@ -1,0 +1,8 @@
+id: SH-021
+name: declare-command
+summary: "The script uses `declare`, which is not available in portable `sh`."
+shells:
+- sh
+- dash
+example: examples/021.sh
+rationale: Use plain assignments or shell features that your target shell actually supports.

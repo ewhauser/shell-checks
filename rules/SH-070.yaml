@@ -1,0 +1,10 @@
+id: SH-070
+name: loop-control-outside-loop
+summary: A loop-control command at top level has nowhere to break from and just stops script execution.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/070.sh
+rationale: Keep loop-control commands inside the loop they are meant to manage.

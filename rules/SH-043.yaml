@@ -1,0 +1,10 @@
+id: SH-043
+name: quoted-bash-regex
+summary: Quoting the pattern on the right side of bash's regex match changes how the match is interpreted.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/043.sh
+rationale: Leave the regular expression unquoted when you want bash to treat it as a pattern rather than a literal string.

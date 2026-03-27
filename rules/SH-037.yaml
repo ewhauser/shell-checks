@@ -1,0 +1,10 @@
+id: SH-037
+name: printf-format-variable
+summary: "The format string for `printf` is supplied through a variable, which makes the call harder to audit."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/037.sh
+rationale: Keep the format string literal and pass data in later arguments.

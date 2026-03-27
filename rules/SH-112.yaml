@@ -1,0 +1,10 @@
+id: SH-112
+name: else-if
+summary: "`else if` is used where bash expects `elif`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/112.sh
+rationale: "Collapse the nested form into a single `elif` branch."

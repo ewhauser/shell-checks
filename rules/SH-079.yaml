@@ -1,0 +1,8 @@
+id: SH-079
+name: avoid-let-builtin
+summary: "The bash `let` builtin is an unnecessarily indirect way to perform arithmetic."
+shells:
+- bash
+- ksh
+example: examples/079.sh
+rationale: Use arithmetic expansion or another direct arithmetic form instead.

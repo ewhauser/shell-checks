@@ -1,0 +1,22 @@
+---
+artifact_id: SH-078
+created_at: 2026-03-27
+files:
+- path: rules/SH-078.yaml
+  sha256: e14543ab2e671e56ff7af7b11d56bd1d79d85920d8919c32349d5a9f518deeec
+- path: examples/078.sh
+  sha256: d9d2d1bd6ec83075aa9088fcae56be04591b65a16fe19063cbe2d92f21eb5798
+source_basis:
+- In arithmetic contexts, a leading zero changes how the shell interprets a numeric
+  literal.
+- I reduced the snippet to a no-op command wrapping one arithmetic expansion so only
+  the numeric literal issue remained.
+ai_sessions:
+- session-014
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/078.sh
+  expected_code: 2080
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

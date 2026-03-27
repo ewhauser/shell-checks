@@ -1,0 +1,22 @@
+---
+artifact_id: SH-055
+created_at: 2026-03-27
+files:
+- path: rules/SH-055.yaml
+  sha256: 1c3495256a96694839875f0b533c219d6042e3185508f2a07e49fa47d04316bb
+- path: examples/055.sh
+  sha256: ac888268d54112a4296c320fecfe41587d551817e1333bd11f4cc79f630162f5
+source_basis:
+- Shell arithmetic can replace a separate expr process when the task is only to calculate
+  a number.
+- I started from the smallest expr invocation that still exposed the target code,
+  then kept one harmless read of the result to avoid unrelated unused-value noise.
+ai_sessions:
+- session-011
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/055.sh
+  expected_code: 2003
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

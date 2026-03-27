@@ -1,0 +1,10 @@
+id: SH-088
+name: literal-backslash
+summary: A backslash before a normal letter gets treated as plain text.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/088.sh
+rationale: Only escape characters that need it, or quote the word instead.

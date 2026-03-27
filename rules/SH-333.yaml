@@ -1,0 +1,10 @@
+id: SH-333
+name: misquoted-heredoc-close
+summary: The heredoc closing marker is only a near match.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/333.sh
+rationale: Use the exact unquoted marker text on the closing line.

@@ -1,0 +1,10 @@
+id: SH-242
+name: dollar-question-after-command
+summary: "The exit status `$?` is checked after an intervening command overwrites it."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/242.sh
+rationale: "Save `$?` immediately or test the command directly."

@@ -1,0 +1,8 @@
+id: SH-028
+name: brace-fd-redirection
+summary: The script opens a file descriptor with a brace-based redirection form that portable sh does not support.
+shells:
+- sh
+- dash
+example: examples/028.sh
+rationale: Use a fixed descriptor or a shell that supports this redirection syntax.

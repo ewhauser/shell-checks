@@ -1,0 +1,10 @@
+id: SH-078
+name: leading-zero-arithmetic
+summary: A leading zero can change how the shell interprets a numeric literal in arithmetic.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/078.sh
+rationale: Use an unpadded decimal literal unless you explicitly want octal semantics.

@@ -1,0 +1,10 @@
+id: SH-252
+name: relative-symlink-target
+summary: "A symbolic link target uses a relative path with many `../` segments."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/252.sh
+rationale: Use an absolute path or verify the relative target resolves correctly.

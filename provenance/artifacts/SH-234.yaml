@@ -1,0 +1,20 @@
+---
+artifact_id: SH-234
+created_at: '2026-03-28'
+files:
+- path: rules/SH-234.yaml
+  sha256: 830066c12ec0156f628f956430f694ee0a0bbdd4815fea01937e277d4055b72d
+- path: examples/234.sh
+  sha256: 8ee771a840bb7768724d466afc2347101286b97c0c0d1f94288f146740b19ded
+source_basis:
+- IFS=backslash-n sets IFS to two literal characters, not a newline
+- Example reads input with the wrong field separator
+ai_sessions:
+- session-035
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/234.sh
+  expected_code: 2141
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

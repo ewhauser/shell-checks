@@ -1,0 +1,10 @@
+id: SH-287
+name: expr-substr-in-test
+summary: "The `expr substr` command is used inside a test expression."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/287.sh
+rationale: Use shell parameter expansion for substring extraction.

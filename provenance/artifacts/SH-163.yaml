@@ -1,0 +1,23 @@
+---
+artifact_id: SH-163
+created_at: '2026-03-28'
+files:
+- path: rules/SH-163.yaml
+  sha256: 6f757e7ea2bdbff3bfb56860e63a0ca89cf4116bd4bfd816883b0bbceb86e880
+- path: examples/163.sh
+  sha256: 1b39deac524cf661533baff87c749b37505c18ae671de3e8fe65a713a6cb133c
+source_basis:
+- Uses `read` without extra options.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-031
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/163.sh
+  expected_code: 3061
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

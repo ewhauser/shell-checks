@@ -1,0 +1,23 @@
+---
+artifact_id: SH-225
+created_at: '2026-03-28'
+files:
+- path: rules/SH-225.yaml
+  sha256: cf296a3abef3771f839c941558344309a8084f3e6c32bd2450d17bc5d18f7f3b
+- path: examples/225.sh
+  sha256: 0a3cadea8d333b91d23c0e20e909abc6d2960485b7f2a8f6d29de058036e370b
+source_basis:
+- Pipe and brace characters in an echo argument may be interpreted by the shell.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-035
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/225.sh
+  expected_code: 2102
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

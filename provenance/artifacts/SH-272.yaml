@@ -1,0 +1,23 @@
+---
+artifact_id: SH-272
+created_at: '2026-03-28'
+files:
+- path: rules/SH-272.yaml
+  sha256: 2eac63d75525bd4c7b00208164085be9111aa378e8d92dad8252cb90d1adbf46
+- path: examples/272.sh
+  sha256: 34a4bb1a23f137965bb0607f1776df1d3ba4f9c067880058f8c08a53557c7edf
+source_basis:
+- A `[^...]` negated bracket expression is used in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/272.sh
+  expected_code: 3026
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

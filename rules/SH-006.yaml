@@ -1,0 +1,8 @@
+id: SH-006
+name: double-bracket-in-sh
+summary: "The `[[ ... ]]` conditional form is not portable to `/bin/sh`."
+shells:
+- sh
+- dash
+example: examples/006.sh
+rationale: "Use portable `[` or `test`, or switch the script to a shell that supports `[[ ... ]]`."

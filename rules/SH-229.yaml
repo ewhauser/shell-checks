@@ -1,0 +1,10 @@
+id: SH-229
+name: set-flags-without-dashes
+summary: "Flags are passed to `set` without a leading dash."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/229.sh
+rationale: "Add a dash before the flags: `set -euo pipefail`."

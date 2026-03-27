@@ -1,0 +1,10 @@
+id: SH-123
+name: c-prototype-fragment
+summary: A C/C++-style declaration is being read as shell code.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/123.sh
+rationale: Keep non-shell source out of shell scripts or quote it as data.

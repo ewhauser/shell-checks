@@ -1,0 +1,10 @@
+id: SH-254
+name: glob-with-expansion-in-loop
+summary: A glob pattern with an embedded variable is used in a for loop.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/254.sh
+rationale: "Quote the variable portion or use `find` for reliable matching."

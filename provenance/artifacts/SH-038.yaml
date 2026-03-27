@@ -1,0 +1,22 @@
+---
+artifact_id: SH-038
+created_at: 2026-03-27
+files:
+- path: rules/SH-038.yaml
+  sha256: 65f5158b97952719dfd99179336410814c248a3f48084164f24d55ab03b8b349
+- path: examples/038.sh
+  sha256: 18301ab1ff2e9c94b4702c8b671ef009dce5453a25c9e4a8bbcb9c3029e7c4f8
+source_basis:
+- Array members expand independently, and leaving that expansion unquoted can split
+  elements or treat glob characters specially.
+- I reduced the snippet to one array and one unquoted expansion, which left only the
+  array-expansion warning.
+ai_sessions:
+- session-008
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/038.sh
+  expected_code: 2068
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

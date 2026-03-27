@@ -1,0 +1,22 @@
+---
+artifact_id: SH-075
+created_at: 2026-03-27
+files:
+- path: rules/SH-075.yaml
+  sha256: a4a8f5bd32cbc56817bc5e8743c73eea8cc1ff100f93b2d9e6325a4cb7622a40
+- path: examples/075.sh
+  sha256: cb478d2302b319ee0c37261927b74359642da899ea6289ca6d798c3dfa67548e
+source_basis:
+- An empty test expression has no meaningful operand and cannot describe a runtime
+  condition.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-013
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/075.sh
+  expected_code: 2212
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

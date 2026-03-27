@@ -1,0 +1,23 @@
+---
+artifact_id: SH-165
+created_at: '2026-03-28'
+files:
+- path: rules/SH-165.yaml
+  sha256: 52f95c53656aeb50f1ee6d1ab4bb7a5bd3df1bb40742dd9944be6fff1695d8ba
+- path: examples/165.sh
+  sha256: 1bfe0e07d3aeefc367fd872e79c0124b6c7d5fbf4aef67b5aa7adb372e67b62c
+source_basis:
+- Redirects output to a filename that shadows a known command.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-032
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/165.sh
+  expected_code: 2238
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

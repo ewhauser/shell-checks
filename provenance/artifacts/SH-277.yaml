@@ -1,0 +1,23 @@
+---
+artifact_id: SH-277
+created_at: '2026-03-28'
+files:
+- path: rules/SH-277.yaml
+  sha256: ca93edfc4a4023d1143df71d4ea50e15d0a911f2081978fd52d313d05ccb8881
+- path: examples/277.sh
+  sha256: 4e4059aff67f4bb0eab13a0a97eb415b5f0591b25dead7ec83090eb811262bc4
+source_basis:
+- A base prefix like `10#` is used in arithmetic in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/277.sh
+  expected_code: 3052
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

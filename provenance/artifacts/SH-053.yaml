@@ -1,0 +1,22 @@
+---
+artifact_id: SH-053
+created_at: 2026-03-27
+files:
+- path: rules/SH-053.yaml
+  sha256: a949ac37cf4ca620b9b9658f8cf18c531ad12caaa124b85e1fb442090187b33e
+- path: examples/053.sh
+  sha256: 487f1d456470a431e8e25192fd09832d6d4b774df0aa6f8e9e87012e44d61c64
+source_basis:
+- The $(< file) form is a bash-specific file-read shortcut rather than portable sh
+  syntax.
+- The example was trimmed to the substitution and a plain print so the wrapper reported
+  one code.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/053.sh
+  expected_code: 3034
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

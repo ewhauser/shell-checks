@@ -1,0 +1,10 @@
+id: SH-094
+name: spaced-assignment
+summary: "An assignment is split by a space after `=`, so the shell treats it as a command name and argument instead."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/094.sh
+rationale: Remove the space so the shell parses it as a real assignment.

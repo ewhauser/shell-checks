@@ -1,0 +1,23 @@
+---
+artifact_id: SH-254
+created_at: '2026-03-28'
+files:
+- path: rules/SH-254.yaml
+  sha256: 4b0c5bb13409532b0ade9ae71b4299269212ba22c5a5143b22ee34124a3c0597
+- path: examples/254.sh
+  sha256: 446a850239d6a4a2fd0db42ac309315908d8249605eb71925c157e7244e6f107
+source_basis:
+- A glob pattern with an embedded variable is used in a for loop.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/254.sh
+  expected_code: 2231
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

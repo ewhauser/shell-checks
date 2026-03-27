@@ -1,0 +1,25 @@
+---
+session_id: session-047
+date: '2026-03-29'
+tool: codex
+model: gpt-5.4
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/336.sh
+- examples/337.sh
+- examples/338.sh
+- provenance/artifacts/SH-336.yaml
+- provenance/artifacts/SH-337.yaml
+- provenance/artifacts/SH-338.yaml
+- rules/SH-336.yaml
+- rules/SH-337.yaml
+- rules/SH-338.yaml
+prompt_sha256: 11ee961469739bb777859affdbdf8a7a53d1cf5b4f95a3aec815e387007c63c5
+output_sha256: b4d3494cc073188151d68aced347781a61635f4670d2e4f6086672a488d15298

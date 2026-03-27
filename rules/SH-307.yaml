@@ -1,0 +1,10 @@
+id: SH-307
+name: append-with-escaped-quotes
+summary: "A `+=` string append contains escaped quotes that may not behave as intended."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/307.sh
+rationale: Build the string with a separate assignment or use single quotes.

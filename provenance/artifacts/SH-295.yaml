@@ -1,0 +1,23 @@
+---
+artifact_id: SH-295
+created_at: '2026-03-28'
+files:
+- path: rules/SH-295.yaml
+  sha256: 71b995c6d305837edea6c266ed4e4fd3d70ed498795100c3715325abc4e66d04
+- path: examples/295.sh
+  sha256: 9c94332c65f63724b2c62a6dfcc123bdacf17a0e3f4d04bede37c5ba33cced08
+source_basis:
+- A `cd` command inside a function has no error handling.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/295.sh
+  expected_code: 2103
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

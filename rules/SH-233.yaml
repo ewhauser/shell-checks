@@ -1,0 +1,10 @@
+id: SH-233
+name: command-substitution-in-alias
+summary: A command substitution is used inside an alias definition.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/233.sh
+rationale: Define a function instead or expand the path before aliasing.

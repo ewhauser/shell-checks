@@ -1,0 +1,23 @@
+---
+artifact_id: SH-161
+created_at: '2026-03-28'
+files:
+- path: rules/SH-161.yaml
+  sha256: ca8de9ab798344e8e80415660285f9546069583f1d8b8ef2c794ec429946a328
+- path: examples/161.sh
+  sha256: 955b87c9a541ee1021f5473474923d13eb504dfbf000b801e4610edc08ceecc7
+source_basis:
+- Uses a long arithmetic expansion in an assignment.
+- The example was independently authored and reduced until the target oracle code
+  was present with minimal extra diagnostics.
+ai_sessions:
+- session-031
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/161.sh
+  expected_code: 2323
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

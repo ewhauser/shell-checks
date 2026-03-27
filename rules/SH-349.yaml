@@ -1,0 +1,10 @@
+id: SH-349
+name: combine-appends
+summary: Multiple commands append to the same file with separate redirections.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/349.sh
+rationale: Group the commands and apply one trailing >> redirection for clearer, more efficient output handling.

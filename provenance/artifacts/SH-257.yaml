@@ -1,0 +1,23 @@
+---
+artifact_id: SH-257
+created_at: '2026-03-28'
+files:
+- path: rules/SH-257.yaml
+  sha256: 72e6e4691b8a6003c69dd9c1318bfaa29e632c610b47b0e377a3793ad6ca5cc1
+- path: examples/257.sh
+  sha256: 0f9b348e6e7b21fc91fdf6faea9ca437a030e5337b6c1db3f4fa0f74c9aeb453
+source_basis:
+- A `&&`/`||` chain is used as a ternary but the `||` catches all failures.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/257.sh
+  expected_code: 2269
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

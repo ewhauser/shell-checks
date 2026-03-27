@@ -1,0 +1,10 @@
+id: SH-199
+name: ls-in-substitution
+summary: Command substitution captures ls output for processing.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/199.sh
+rationale: Use a glob or find to avoid parsing ls output.

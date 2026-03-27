@@ -1,0 +1,10 @@
+id: SH-294
+name: backtick-output-to-command
+summary: Backtick output is word-split and passed as arguments to a command.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/294.sh
+rationale: "Use `xargs` or a `while read` loop for safe argument passing."

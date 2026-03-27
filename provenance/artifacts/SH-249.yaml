@@ -1,0 +1,23 @@
+---
+artifact_id: SH-249
+created_at: '2026-03-28'
+files:
+- path: rules/SH-249.yaml
+  sha256: 2b660168816c1033780d8c7b556192e80dd13b733e9875a1718667fb2b4d0acc
+- path: examples/249.sh
+  sha256: b0e4ea7a3ce2885a7c02ef7026f5c35843ba6f49fdec6f4c0d0b8fe581976500
+source_basis:
+- Quoting `$@` inside a string comparison folds all arguments together.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/249.sh
+  expected_code: 2198
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

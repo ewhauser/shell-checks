@@ -1,0 +1,10 @@
+id: SH-220
+name: if-dollar-command
+summary: The output of a command substitution is used as a condition.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/220.sh
+rationale: "Remove the `$( )` wrapper and test the command exit status directly."

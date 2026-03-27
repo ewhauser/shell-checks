@@ -1,0 +1,8 @@
+id: SH-270
+name: ampersand-redirect-in-sh
+summary: "The `>&` combined redirect is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/270.sh
+rationale: "Use `>/dev/null 2>&1` for portable output suppression."

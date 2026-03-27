@@ -1,0 +1,23 @@
+---
+artifact_id: SH-194
+created_at: '2026-03-28'
+files:
+- path: rules/SH-194.yaml
+  sha256: f54e032ead1072e4eb882adbc0f2dd8e76d8b58370ef8bd64f1d9b392978268d
+- path: examples/194.sh
+  sha256: 24b3b96aa39f4034fda150fdc5595f0263827b525e1f749315131825fc922570
+source_basis:
+- A line continuation is followed by a commented-out argument.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/194.sh
+  expected_code: 1143
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

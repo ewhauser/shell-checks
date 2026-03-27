@@ -1,0 +1,8 @@
+id: SH-017
+name: ampersand-redirection
+summary: "The script uses combined stdout-and-stderr redirection syntax that portable `sh` does not provide."
+shells:
+- sh
+- dash
+example: examples/017.sh
+rationale: Redirect stdout and stderr separately when you need the code to stay portable.

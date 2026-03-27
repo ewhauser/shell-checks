@@ -1,0 +1,8 @@
+id: SH-022
+name: trap-err
+summary: "The script depends on trapping `ERR`, which is shell-specific rather than POSIX behavior."
+shells:
+- sh
+- dash
+example: examples/022.sh
+rationale: "Check command statuses explicitly instead of relying on `ERR` traps in portable code."

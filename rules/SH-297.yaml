@@ -1,0 +1,10 @@
+id: SH-297
+name: trap-signal-numbers
+summary: Numeric signal identifiers are used in a trap command.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/297.sh
+rationale: Use symbolic signal names for clarity and portability.

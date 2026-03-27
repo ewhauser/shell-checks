@@ -1,0 +1,10 @@
+id: SH-108
+name: zsh-redir-pipe
+summary: A zsh-only redirection operator appears in a POSIX shell script.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/108.sh
+rationale: Use portable redirections instead of the zsh operator.

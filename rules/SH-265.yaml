@@ -1,0 +1,7 @@
+id: SH-265
+name: greater-than-in-double-bracket
+summary: "The `>` operator is used inside `[[ ]]` in a POSIX sh script."
+shells:
+- sh
+example: examples/265.sh
+rationale: "Use `-gt` for numeric comparison."

@@ -1,0 +1,10 @@
+id: SH-004
+name: loop-from-command-output
+summary: Building loop items from raw command output lets whitespace and pathname characters change the iteration set.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/004.sh
+rationale: Iterate over globs, arrays, or explicit delimiters instead of splitting command output.

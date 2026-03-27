@@ -1,0 +1,10 @@
+id: SH-230
+name: quoted-array-slice
+summary: An array slice is quoted, preventing word splitting of the elements.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/230.sh
+rationale: "Use `${@:N}` without surrounding double quotes if splitting is needed."

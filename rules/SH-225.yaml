@@ -1,0 +1,10 @@
+id: SH-225
+name: unquoted-pipe-in-echo
+summary: Pipe and brace characters in an echo argument may be interpreted by the shell.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/225.sh
+rationale: Quote the argument to prevent special character interpretation.

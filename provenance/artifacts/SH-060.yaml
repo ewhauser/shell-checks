@@ -1,0 +1,22 @@
+---
+artifact_id: SH-060
+created_at: 2026-03-27
+files:
+- path: rules/SH-060.yaml
+  sha256: 75bdb26e54f03e693ae44b4c97f405adf73397135bcf459924389f9c0d22ced5
+- path: examples/060.sh
+  sha256: 37e4a943e34ebb5e52246165b377edcfd9207f310db250de5952cfe24d085c85
+source_basis:
+- A redirect attached to sudo still happens before privilege changes, so the shell
+  can write in the wrong context.
+- I reduced the example to the smallest sudo-and-redirection form that still produced
+  the target code.
+ai_sessions:
+- session-011
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/060.sh
+  expected_code: 2024
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

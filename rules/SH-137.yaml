@@ -1,0 +1,10 @@
+id: SH-137
+name: single-test-subshell
+summary: A lone test runs inside a subshell.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/137.sh
+rationale: Drop the parentheses and run the command directly.

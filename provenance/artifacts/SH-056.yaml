@@ -1,0 +1,22 @@
+---
+artifact_id: SH-056
+created_at: 2026-03-27
+files:
+- path: rules/SH-056.yaml
+  sha256: aa5c96d254389f4d86c93bff1d8f47aeb99ebbcd1a3d8c830ee07b53c0bb5210
+- path: examples/056.sh
+  sha256: 118478c2133acd662502a1695e8b5272e30dcf621e991f53dd7e31d163416597
+source_basis:
+- Parsing a process listing with grep depends on human-formatted ps output instead
+  of process metadata.
+- I reduced the example to one ps pipeline and stopped once the wrapper reported only
+  the target code.
+ai_sessions:
+- session-011
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/056.sh
+  expected_code: 2009
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

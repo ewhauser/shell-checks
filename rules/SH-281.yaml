@@ -1,0 +1,7 @@
+id: SH-281
+name: sticky-bit-test-in-sh
+summary: "The `-k` sticky-bit test is used in POSIX sh."
+shells:
+- sh
+example: examples/281.sh
+rationale: "Use `stat` or `ls -l` to check the sticky bit portably."

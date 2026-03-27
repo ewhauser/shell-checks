@@ -1,0 +1,20 @@
+---
+artifact_id: SH-199
+created_at: '2026-03-28'
+files:
+- path: rules/SH-199.yaml
+  sha256: c34dcdf5ae4178fa71b352fd1595e3ec76adc858a6a7cd829079d957ff8b0225
+- path: examples/199.sh
+  sha256: b91e3758c9701c8a9d845c0ed3e0c54bb94508c794e950e0673b6f178d770cae
+source_basis:
+- Parsing ls output is fragile with special filenames
+- Example pipes ls through cut to extract fields
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/199.sh
+  expected_code: 2012
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

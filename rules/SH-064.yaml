@@ -1,0 +1,10 @@
+id: SH-064
+name: grep-count-pipeline
+summary: Counting matches by piping grep into wc -l adds an unnecessary command stage.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/064.sh
+rationale: Use grep -c when you only need the number of matching lines.

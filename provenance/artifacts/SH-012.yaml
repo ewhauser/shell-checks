@@ -1,0 +1,22 @@
+---
+artifact_id: SH-012
+created_at: 2026-03-27
+files:
+- path: rules/SH-012.yaml
+  sha256: 3dffc2d6b05380a3cb319df58336fa1e986e9a2c0ac4c5c9e3838c7ee972b848
+- path: examples/012.sh
+  sha256: 53bfd7f1ecb5e7d9ce26c34f2e7c403677184db57ae6e29f6b1aa8d097a5a062
+source_basis:
+- ANSI C quoting interprets backslash escapes inside `$'...'` literals rather than
+  using ordinary shell quoting.
+- I built the example from a single quoted assignment and a normal expansion, then
+  removed anything that added extra diagnostics.
+ai_sessions:
+- session-006
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/012.sh
+  expected_code: 3003
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

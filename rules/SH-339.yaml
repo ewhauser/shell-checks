@@ -1,0 +1,10 @@
+id: SH-339
+name: subshell-local-assignment
+summary: A variable is reassigned inside a subshell, so the update does not affect the parent shell.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/339.sh
+rationale: Move the assignment to the current shell or return the value explicitly.

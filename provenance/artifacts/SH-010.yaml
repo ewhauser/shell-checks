@@ -1,0 +1,22 @@
+---
+artifact_id: SH-010
+created_at: 2026-03-27
+files:
+- path: rules/SH-010.yaml
+  sha256: 17e6c617496da079a78d6298176275ef6308d000041712dddb8fde4a489c0c7e
+- path: examples/010.sh
+  sha256: 9e872b5478ed1e225c6861b8f5d89d0c9852b20e31e45a6f8c04d50e3094a711
+source_basis:
+- The `case` statement uses a bash-only fallthrough marker that portable `sh` does
+  not understand.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-006
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/010.sh
+  expected_code: 2127
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

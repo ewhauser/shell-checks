@@ -1,0 +1,23 @@
+---
+artifact_id: SH-250
+created_at: '2026-03-28'
+files:
+- path: rules/SH-250.yaml
+  sha256: b443707dcfa2ca84055e93118a6de44c722bf981450d18a7bb8f2d25387b1494
+- path: examples/250.sh
+  sha256: e539316fb44b12ea45fbf4b588d1f6e8b33653ff9fa43c26aa36cdf519b5a64c
+source_basis:
+- An array slice is used in a string comparison.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/250.sh
+  expected_code: 2199
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

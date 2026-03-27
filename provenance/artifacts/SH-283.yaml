@@ -1,0 +1,23 @@
+---
+artifact_id: SH-283
+created_at: '2026-03-28'
+files:
+- path: rules/SH-283.yaml
+  sha256: fad53b7f57fb50351f4b0a3043e8aac7529717da98c02d633ab235e4af77f57c
+- path: examples/283.sh
+  sha256: 94321b3eb1dfc16c48874302707fb59f0ecd43cb3d061f3ba488e19b1af1015e
+source_basis:
+- A `find -execdir` passes `{}` to a shell command that may mishandle filenames.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-037
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/283.sh
+  expected_code: 2156
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

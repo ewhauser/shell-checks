@@ -1,0 +1,23 @@
+---
+artifact_id: SH-147
+created_at: '2026-03-28'
+files:
+- path: rules/SH-147.yaml
+  sha256: bf38d8729ee7aaa131900527ff3b93da5d01c8f39f2983f4083dea97051c2db4
+- path: examples/147.sh
+  sha256: 58befc592d800cdebf58e9e95137e32d66f14576f0b4f9e001458155b6b21883
+source_basis:
+- Spaces around an assignment operator change the meaning.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-029
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/147.sh
+  expected_code: 2283
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

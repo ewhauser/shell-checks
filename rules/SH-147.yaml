@@ -1,0 +1,10 @@
+id: SH-147
+name: spacey-assign
+summary: Spaces around an assignment operator change the meaning.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/147.sh
+rationale: "Write assignments as `name=value` with no spaces."

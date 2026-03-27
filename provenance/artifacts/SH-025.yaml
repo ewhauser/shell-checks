@@ -1,0 +1,22 @@
+---
+artifact_id: SH-025
+created_at: 2026-03-27
+files:
+- path: rules/SH-025.yaml
+  sha256: 5016bb8af2da91285cb89aaf774c58a9dd5e220bfbabf23f42a1e45bb4a3869a
+- path: examples/025.sh
+  sha256: 7f0e1f22f509a7547e10cf76288b9a67eb8d3355b04c222d2a759ef3c7f9f575
+source_basis:
+- A dot command that receives its path from a variable depends on runtime state rather
+  than a fixed file reference.
+- I started with a variable-driven load and reduced it to the shortest form that still
+  produced the code.
+ai_sessions:
+- session-007
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/025.sh
+  expected_code: 1090
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

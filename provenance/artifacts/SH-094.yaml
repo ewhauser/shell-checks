@@ -1,0 +1,24 @@
+---
+artifact_id: SH-094
+created_at: '2026-03-28'
+files:
+- path: rules/SH-094.yaml
+  sha256: 62fc794e03704e2aa4db73d3ad2473ed3891c67be71c1ba620cb78396e765c54
+- path: examples/094.sh
+  sha256: fb4af86b95ec58a8ee67b4f08c3497022e07a9c4c29bfc3033ce09ac6e56de6f
+source_basis:
+- An assignment is split by a space after `=`, so the shell treats it as a command
+  name and argument instead.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-020
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/094.sh
+  expected_code: 1007
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,10 @@
+id: SH-105
+name: unterminated-if
+summary: "An `if` block is opened without a matching `fi`."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/105.sh
+rationale: "Close the conditional with `fi` or rewrite the control flow so it is complete."

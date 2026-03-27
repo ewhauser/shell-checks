@@ -1,0 +1,23 @@
+---
+artifact_id: SH-258
+created_at: '2026-03-28'
+files:
+- path: rules/SH-258.yaml
+  sha256: 02ee4ffc37e0ae5b799a59463d5f98f4f7b6a29f88ba68ea0b6ee11f6a235bd5
+- path: examples/258.sh
+  sha256: 6a8e798ae489ec1b45b06e620c348a560d46a735c64ece548a11523b9ba99d82
+source_basis:
+- A numeric string is used as a variable name in an assignment.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/258.sh
+  expected_code: 2270
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

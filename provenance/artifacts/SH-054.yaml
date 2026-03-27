@@ -1,0 +1,21 @@
+---
+artifact_id: SH-054
+created_at: 2026-03-27
+files:
+- path: rules/SH-054.yaml
+  sha256: 6b376f2e062c60148824458a70b6a4d4e113326d69259b6c22bc769f4bf88b21
+- path: examples/054.sh
+  sha256: 514ab8a164ea33ab759a64284f031defb09a6290146799947440fb5d644b4da4
+source_basis:
+- Echo flags change output formatting in implementation-specific ways, so the behavior
+  is not stable across shells.
+- The example was minimized to a single echo invocation with one flag.
+ai_sessions:
+- session-010
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/054.sh
+  expected_code: 3037
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

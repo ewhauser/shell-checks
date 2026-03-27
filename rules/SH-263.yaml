@@ -1,0 +1,8 @@
+id: SH-263
+name: c-style-for-in-sh
+summary: "A C-style `for ((...))` loop is used in a POSIX shell script."
+shells:
+- sh
+- dash
+example: examples/263.sh
+rationale: "Use a `while` loop with arithmetic for portability."

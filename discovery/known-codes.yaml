@@ -1,0 +1,3312 @@
+---
+shellcheck_version: 0.11.0
+known_codes:
+- shellcheck_code: 2086
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Unquoted parameter expansion in an ordinary argument position is already
+    represented by SH-001, so discovery should avoid generating more single-purpose
+    variants of that same behavior.
+  sources:
+  - mappings/SH-001
+- shellcheck_code: 2162
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Raw input handling is now represented by SH-002, so discovery should
+    skip more snippets that only differ by how read treats backslashes.
+  sources:
+  - mappings/SH-002
+- shellcheck_code: 2034
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A plain assignment with no later read is now represented by SH-003, so
+    discovery should avoid more single-line dead stores.
+  sources:
+  - mappings/SH-003
+- shellcheck_code: 2045
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Looping directly over command output is now represented by SH-004, so
+    discovery should skip more snippets that only vary the producer.
+  sources:
+  - mappings/SH-004
+- shellcheck_code: 2046
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Unquoted command substitution is now represented by SH-005, so discovery
+    should avoid similar word-splitting variants.
+  sources:
+  - mappings/SH-005
+- shellcheck_code: 3010
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Bash-style double-bracket conditionals are now represented by SH-006,
+    so discovery should skip more portable-test lookalikes.
+  sources:
+  - mappings/SH-006
+- shellcheck_code: 3014
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Using the nonportable equality operator in POSIX test syntax is now represented
+    by SH-007, so discovery should avoid more comparison-only tweaks.
+  sources:
+  - mappings/SH-007
+- shellcheck_code: 3043
+  status: covered
+  shells:
+  - sh
+  rationale: Function-local variable declarations are now represented by SH-008, so
+    discovery should not chase more shell-local scope variants.
+  sources:
+  - mappings/SH-008
+- shellcheck_code: 2113
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The nonportable `function` keyword is now represented by SH-009, so discovery
+    can skip more bash-style function declarations.
+  sources:
+  - mappings/SH-009
+- shellcheck_code: 2127
+  status: covered
+  shells:
+  - dash
+  - ksh
+  - sh
+  rationale: The bash-only `;;&` case form is now represented by SH-010, so discovery
+    should avoid more fallthrough variants in `sh`.
+  sources:
+  - mappings/SH-010
+- shellcheck_code: 3001
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Process substitution is now represented by SH-011, so discovery should
+    skip more snippets that only vary the substituted command.
+  sources:
+  - mappings/SH-011
+- shellcheck_code: 3003
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: ANSI C-style quoting is now represented by SH-012, so discovery can move
+    past more `$'...'` literals.
+  sources:
+  - mappings/SH-012
+- shellcheck_code: 3006
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Standalone arithmetic commands are now represented by SH-013, so discovery
+    should avoid more `((...))` variants.
+  sources:
+  - mappings/SH-013
+- shellcheck_code: 3008
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: "`select` loops are now represented by SH-014, so discovery should not
+    spend more effort on menu-loop syntax."
+  sources:
+  - mappings/SH-014
+- shellcheck_code: 3009
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Brace expansion is now represented by SH-015, so discovery should skip
+    more comma-list brace forms.
+  sources:
+  - mappings/SH-015
+- shellcheck_code: 3011
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Here-strings are now represented by SH-016, so discovery should avoid
+    more `<<<` input examples.
+  sources:
+  - mappings/SH-016
+- shellcheck_code: 3020
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Combined stdout-and-stderr redirection is now represented by SH-017,
+    so discovery can skip more `&>` forms.
+  sources:
+  - mappings/SH-017
+- shellcheck_code: 3030
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Array assignment syntax is now represented by SH-018, so discovery should
+    not chase more array literals in `sh`.
+  sources:
+  - mappings/SH-018
+- shellcheck_code: 3032
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Co-process syntax is now represented by SH-019, so discovery should avoid
+    more `coproc` variants.
+  sources:
+  - mappings/SH-019
+- shellcheck_code: 3039
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The `let` builtin is now represented by SH-020, so discovery should move
+    past more arithmetic-command snippets.
+  sources:
+  - mappings/SH-020
+- shellcheck_code: 3044
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: "`declare`-style shell state is now represented by SH-021, so discovery
+    should avoid more nonportable declaration builtins."
+  sources:
+  - mappings/SH-021
+- shellcheck_code: 3047
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: "`ERR` trapping is now represented by SH-022, so discovery should skip
+    more trap forms that only vary the handler body."
+  sources:
+  - mappings/SH-022
+- shellcheck_code: 3053
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Indirect expansion is now represented by SH-023, so discovery should
+    avoid more `${!name}` patterns.
+  sources:
+  - mappings/SH-023
+- shellcheck_code: 3054
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Array indexing is now represented by SH-024, so discovery should skip
+    more `${name[index]}` examples.
+  sources:
+  - mappings/SH-024
+- shellcheck_code: 1090
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A runtime-resolved source path is now represented by SH-025, so discovery
+    should not keep probing dot commands that depend on a variable.
+  sources:
+  - mappings/SH-025
+- shellcheck_code: 1091
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A literal sourced dependency is now represented by SH-026, so discovery
+    should skip more direct dot commands that point at unseen files.
+  sources:
+  - mappings/SH-026
+- shellcheck_code: 2164
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An unchecked directory change is now represented by SH-027, so discovery
+    should avoid more bare cd examples.
+  sources:
+  - mappings/SH-027
+- shellcheck_code: 3022
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Brace-based file descriptor allocation is now represented by SH-028,
+    so discovery should skip more shell-specific fd redirection forms.
+  sources:
+  - mappings/SH-028
+- shellcheck_code: 3040
+  status: covered
+  shells:
+  - sh
+  rationale: The pipefail option is now represented by SH-029, so discovery should
+    avoid more shell-option variants.
+  sources:
+  - mappings/SH-029
+- shellcheck_code: 3045
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The wait option is now represented by SH-030, so discovery should not
+    keep testing more bash-style wait flags.
+  sources:
+  - mappings/SH-030
+- shellcheck_code: 3057
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Substring expansion is now represented by SH-031, so discovery should
+    skip more bash-only slice forms.
+  sources:
+  - mappings/SH-031
+- shellcheck_code: 3059
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Uppercase parameter conversion is now represented by SH-032, so discovery
+    should avoid more bash case-conversion forms.
+  sources:
+  - mappings/SH-032
+- shellcheck_code: 3060
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: Global replacement expansion is now represented by SH-033, so discovery
+    should skip more bash substitution forms.
+  sources:
+  - mappings/SH-033
+- shellcheck_code: 1089
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A stray closing keyword is now covered by SH-065, so discovery should
+    avoid more unmatched control-token cases.
+  sources:
+  - mappings/SH-065
+- shellcheck_code: 2116
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Using echo inside command substitution is now covered by SH-066, so discovery
+    should skip more nested-output wrappers.
+  sources:
+  - mappings/SH-066
+- shellcheck_code: 2206
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Unquoted bash array construction is now covered by SH-067, so discovery
+    should avoid more word-splitting array forms.
+  sources:
+  - mappings/SH-067
+- shellcheck_code: 2207
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Directly turning command output into an array is now covered by SH-068,
+    so discovery should skip more command-output splitting cases.
+  sources:
+  - mappings/SH-068
+- shellcheck_code: 2050
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A fixed comparison in a test expression is now covered by SH-069, so
+    discovery should skip more constant-condition probes.
+  sources:
+  - mappings/SH-069
+- shellcheck_code: 2105
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A loop-control command outside any loop is now covered by SH-070, so
+    discovery should avoid more top-level break and continue probes.
+  sources:
+  - mappings/SH-070
+- shellcheck_code: 2143
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Testing captured grep text instead of its status is now covered by SH-071,
+    so discovery should skip more grep-output-in-condition variants.
+  sources:
+  - mappings/SH-071
+- shellcheck_code: 2157
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A unary string test on a fixed literal is now covered by SH-072, so discovery
+    should avoid more constant word-length checks.
+  sources:
+  - mappings/SH-072
+- shellcheck_code: 2161
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A one-word test on a literal value is now covered by SH-073, so discovery
+    should skip more bare truthiness checks.
+  sources:
+  - mappings/SH-073
+- shellcheck_code: 2194
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A case statement built around a fixed literal is now covered by SH-074,
+    so discovery should avoid more constant-subject case probes.
+  sources:
+  - mappings/SH-074
+- shellcheck_code: 2212
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An empty test expression is now covered by SH-075, so discovery should
+    skip more vacuous bracket forms.
+  sources:
+  - mappings/SH-075
+- shellcheck_code: 2013
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Flattening command output into a loop is now represented by SH-046, so
+    discovery should avoid more word-splitting loops.
+  sources:
+  - mappings/SH-046
+- shellcheck_code: 2029
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Local expansion inside an ssh command string is now represented by SH-047,
+    so discovery should skip more remote-command quoting variants.
+  sources:
+  - mappings/SH-047
+- shellcheck_code: 2035
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An unprotected wildcard used as a command argument is now represented
+    by SH-048, so discovery should avoid more glob-to-option cases.
+  sources:
+  - mappings/SH-048
+- shellcheck_code: 2044
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Looping over `find` output is now represented by SH-049, so discovery
+    should skip more path-splitting patterns.
+  sources:
+  - mappings/SH-049
+- shellcheck_code: 2155
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Combining `export` with command substitution is now represented by SH-050,
+    so discovery should avoid more merged declaration-and-assignment forms.
+  sources:
+  - mappings/SH-050
+- shellcheck_code: 2166
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Compact `-a`/`-o` test chains are now represented by SH-051, so discovery
+    should skip more bundled boolean expressions.
+  sources:
+  - mappings/SH-051
+- shellcheck_code: 2168
+  status: covered
+  shells:
+  - bash
+  - dash
+  rationale: "`local` used at script scope is now represented by SH-052, so discovery
+    should avoid more top-level bash-local examples."
+  sources:
+  - mappings/SH-052
+- shellcheck_code: 3034
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The bash-only `$(< file)` shortcut is now represented by SH-053, so discovery
+    should move past more file-slurping bashisms.
+  sources:
+  - mappings/SH-053
+- shellcheck_code: 3037
+  status: covered
+  shells:
+  - sh
+  rationale: Echo flags that change output formatting are now represented by SH-054,
+    so discovery should avoid more implementation-specific `echo` forms.
+  sources:
+  - mappings/SH-054
+- shellcheck_code: 2003
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Using `expr` for arithmetic is now represented by SH-055, so discovery
+    should skip more external-numbering variants.
+  sources:
+  - mappings/SH-055
+- shellcheck_code: 2009
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Piping `ps` into `grep` is now represented by SH-056, so discovery should
+    avoid more process-list filtering patterns.
+  sources:
+  - mappings/SH-056
+- shellcheck_code: 2010
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Piping `ls` into `grep` is now represented by SH-057, so discovery should
+    skip more directory-list filtering patterns.
+  sources:
+  - mappings/SH-057
+- shellcheck_code: 2018
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A lower-case range in `tr` is now represented by SH-058, so discovery
+    should avoid more locale-sensitive translation ranges.
+  sources:
+  - mappings/SH-058
+- shellcheck_code: 2019
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An upper-case range in `tr` is now represented by SH-059, so discovery
+    should avoid more locale-sensitive translation ranges.
+  sources:
+  - mappings/SH-059
+- shellcheck_code: 2024
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Redirecting output after `sudo` is now represented by SH-060, so discovery
+    should skip more privilege-and-redirection ordering cases.
+  sources:
+  - mappings/SH-060
+- shellcheck_code: 2028
+  status: covered
+  shells:
+  - bash
+  - ksh
+  - sh
+  rationale: Backslash escapes passed to `echo` are now represented by SH-061, so
+    discovery should avoid more shell-specific escape rendering cases.
+  sources:
+  - mappings/SH-061
+- shellcheck_code: 2048
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Iterating over `$*` is now represented by SH-062, so discovery should
+    skip more collapsed-positional-parameter loops.
+  sources:
+  - mappings/SH-062
+- shellcheck_code: 2066
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Putting `"$*"` in a loop is now represented by SH-063, so discovery should
+    avoid more combined positional-parameter loops.
+  sources:
+  - mappings/SH-063
+- shellcheck_code: 2126
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Counting `grep` matches with `wc -l` is now represented by SH-064, so
+    discovery should avoid more count-via-pipeline patterns.
+  sources:
+  - mappings/SH-064
+- shellcheck_code: 2006
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Backtick substitution is now represented by SH-034, so discovery should
+    avoid more legacy command-substitution forms.
+  sources:
+  - mappings/SH-034
+- shellcheck_code: 2007
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: The legacy arithmetic form is now represented by SH-035, so discovery
+    should skip more `$[...]` examples.
+  sources:
+  - mappings/SH-035
+- shellcheck_code: 2016
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A literal single-quoted expansion is now represented by SH-036, so discovery
+    should avoid more quote-delimited text that looks like variables.
+  sources:
+  - mappings/SH-036
+- shellcheck_code: 2059
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A variable-supplied printf format string is now represented by SH-037,
+    so discovery should skip more format-string indirection.
+  sources:
+  - mappings/SH-037
+- shellcheck_code: 2068
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An unquoted array expansion is now represented by SH-038, so discovery
+    should avoid more array-word-splitting variants.
+  sources:
+  - mappings/SH-038
+- shellcheck_code: 2154
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A read of an uninitialized variable is now represented by SH-039, so
+    discovery should not keep probing plain unset-variable reads.
+  sources:
+  - mappings/SH-039
+- shellcheck_code: 2005
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: An `echo` around a command substitution is now represented by SH-040,
+    so discovery should skip more direct-output wrappers.
+  sources:
+  - mappings/SH-040
+- shellcheck_code: 2038
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Piping `find` into `xargs` is now represented by SH-041, so discovery
+    should avoid more file-list handoff variants.
+  sources:
+  - mappings/SH-041
+- shellcheck_code: 2064
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A trap body that expands variables immediately is now represented by
+    SH-042, so discovery should skip more quoted trap strings.
+  sources:
+  - mappings/SH-042
+- shellcheck_code: 2076
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Quoting the regex side of `=~` is now represented by SH-043, so discovery
+    should avoid more bash regex quoting variants.
+  sources:
+  - mappings/SH-043
+- shellcheck_code: 2115
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A destructive glob applied to a variable path is now represented by SH-044,
+    so discovery should skip more broad `rm -rf` patterns.
+  sources:
+  - mappings/SH-044
+- shellcheck_code: 2333
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Chaining commands with `&&` and `||` to stand in for branching is now
+    represented by SH-045, so discovery should avoid more `if`-replacement patterns.
+  sources:
+  - mappings/SH-045
+- shellcheck_code: 2043
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A loop that exits immediately is now represented by SH-076, so discovery
+    should avoid more one-iteration loop forms.
+  sources:
+  - mappings/SH-076
+- shellcheck_code: 2145
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A quoted string that folds positional parameters into surrounding text
+    is now represented by SH-077, so discovery should skip more mixed-argument string
+    forms.
+  sources:
+  - mappings/SH-077
+- shellcheck_code: 2080
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: A leading zero in arithmetic input is now represented by SH-078, so discovery
+    should avoid more octal-looking literals.
+  sources:
+  - mappings/SH-078
+- shellcheck_code: 2219
+  status: covered
+  shells:
+  - bash
+  - ksh
+  rationale: The bash `let` builtin is now represented by SH-079, so discovery should
+    skip more simple arithmetic builtins.
+  sources:
+  - mappings/SH-079
+- shellcheck_code: 3046
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The bash-style `source` builtin is now represented by SH-080, so discovery
+    should avoid more attempts to load files with the nonportable command name.
+  sources:
+  - mappings/SH-080
+- shellcheck_code: 3050
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: The bash-only `%q` formatter is now represented by SH-081, so discovery
+    should skip more non-POSIX `printf` format specifiers.
+  sources:
+  - mappings/SH-081
+- shellcheck_code: 1001
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-082: A needless backslash is left in a plain word.'
+  sources:
+  - mappings/SH-082
+- shellcheck_code: 1007
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-084: An assignment is written with an extra space before
+    its value.'
+  sources:
+  - mappings/SH-084
+- shellcheck_code: 1037
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-086: Refers to the tenth positional parameter without
+    braces.'
+  sources:
+  - mappings/SH-086
+- shellcheck_code: 1003
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-087: Includes a literal backslash inside a quoted shell
+    string.'
+  sources:
+  - mappings/SH-087
+- shellcheck_code: 1001
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-088: A backslash before a normal letter gets treated as
+    plain text.'
+  sources:
+  - mappings/SH-088
+- shellcheck_code: 1007
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-090: A space after `=` turns an assignment into a command.'
+  sources:
+  - mappings/SH-090
+- shellcheck_code: 1010
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-091: A reserved word is being passed as a literal argument.'
+  sources:
+  - mappings/SH-091
+- shellcheck_code: 1001
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-092: A backslash is used before a normal character in
+    a plain word.'
+  sources:
+  - mappings/SH-092
+- shellcheck_code: 1009
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-093: A POSIX sh script uses a bash-style `[[ ... ]]` test
+    in an `elif` clause.'
+  sources:
+  - mappings/SH-093
+- shellcheck_code: 1007
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-094: An assignment is split by a space after `=`, so the
+    shell treats it as a command name and argument instead.'
+  sources:
+  - mappings/SH-094
+- shellcheck_code: 1001
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-095: A backslash before `_` is unnecessary in bash and
+    becomes a literal underscore.'
+  sources:
+  - mappings/SH-095
+- shellcheck_code: 1010
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-096: `done` is read as a command name when it is not separated
+    from the previous word.'
+  sources:
+  - mappings/SH-096
+- shellcheck_code: 1019
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-098: A test bracket is closed without surrounding space.'
+  sources:
+  - mappings/SH-098
+- shellcheck_code: 1027
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-101: A `[[` match uses extended glob syntax.'
+  sources:
+  - mappings/SH-101
+- shellcheck_code: 1035
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-102: The `[` test starts without the expected spacing.'
+  sources:
+  - mappings/SH-102
+- shellcheck_code: 1039
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-104: The here-doc terminator is indented instead of starting
+    at column 1.'
+  sources:
+  - mappings/SH-104
+- shellcheck_code: 1046
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-105: An `if` block is opened without a matching `fi`.'
+  sources:
+  - mappings/SH-105
+- shellcheck_code: 1020
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-100: A test expression is missing the space before `]`,
+    which ShellCheck flags as a bracket-spacing issue.'
+  sources:
+  - mappings/SH-100
+- shellcheck_code: 1047
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-106: An `if` block is left without its closing `fi`, which
+    ShellCheck reports as an unmatched conditional.'
+  sources:
+  - mappings/SH-106
+- shellcheck_code: 1070
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-108: A zsh-only redirection operator appears in a POSIX
+    shell script.'
+  sources:
+  - mappings/SH-108
+- shellcheck_code: 1074
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-111: A grouped case pattern uses non-POSIX shell syntax.'
+  sources:
+  - mappings/SH-111
+- shellcheck_code: 1075
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-112: `else if` is used where bash expects `elif`.'
+  sources:
+  - mappings/SH-112
+- shellcheck_code: 1083
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-116: Literal braces appear where bash may treat them as
+    expansion syntax.'
+  sources:
+  - mappings/SH-116
+- shellcheck_code: 1065
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-107: A POSIX `sh` function is written with parameter syntax
+    that ShellCheck rejects.'
+  sources:
+  - mappings/SH-107
+- shellcheck_code: 1072
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-109: A malformed `[` test leaves ShellCheck unable to
+    finish parsing the expression.'
+  sources:
+  - mappings/SH-109
+- shellcheck_code: 1073
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-110: A malformed `[` test expression cannot be parsed
+    by ShellCheck.'
+  sources:
+  - mappings/SH-110
+- shellcheck_code: 1078
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-113: A double-quoted string is opened inside another quoted
+    string and ShellCheck thinks it was never closed.'
+  sources:
+  - mappings/SH-113
+- shellcheck_code: 1079
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-114: A quote is syntactically closed, but the following
+    character makes ShellCheck flag it as suspicious.'
+  sources:
+  - mappings/SH-114
+- shellcheck_code: 1080
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-115: A `[` test is split across lines without the required
+    line-continuation backslash.'
+  sources:
+  - mappings/SH-115
+- shellcheck_code: 1118
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-119: Trailing whitespace on a here-doc terminator makes
+    the marker sloppy.'
+  sources:
+  - mappings/SH-119
+- shellcheck_code: 1126
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-120: A shellcheck directive placed after code is ignored.'
+  sources:
+  - mappings/SH-120
+- shellcheck_code: 1127
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-121: C-style comment text is not a shell comment.'
+  sources:
+  - mappings/SH-121
+- shellcheck_code: 1132
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-123: A C/C++-style declaration is being read as shell
+    code.'
+  sources:
+  - mappings/SH-123
+- shellcheck_code: 1140
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-124: Zsh-style conditional bracing is not portable shell
+    syntax.'
+  sources:
+  - mappings/SH-124
+- shellcheck_code: 1141
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-125: Zsh `always` blocks are not valid shell syntax.'
+  sources:
+  - mappings/SH-125
+- shellcheck_code: 2202
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-126: Uses array-style subscripting in a POSIX shell test'
+  sources:
+  - mappings/SH-126
+- shellcheck_code: 2203
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-127: Uses array-style subscripting inside a shell condition'
+  sources:
+  - mappings/SH-127
+- shellcheck_code: 2209
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-128: Uses a boolean-style assignment shortcut after a
+    command check'
+  sources:
+  - mappings/SH-128
+- shellcheck_code: 2210
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-129: Uses a malformed file-descriptor redirection'
+  sources:
+  - mappings/SH-129
+- shellcheck_code: 2211
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-130: Leaves a wildcard path unquoted in command position'
+  sources:
+  - mappings/SH-130
+- shellcheck_code: 2215
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-133: Contains a patch-style marker line in shell code'
+  sources:
+  - mappings/SH-133
+- shellcheck_code: 2216
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-134: Pipes data into `kill`'
+  sources:
+  - mappings/SH-134
+- shellcheck_code: 2217
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-135: Attaches a here-doc to `echo`'
+  sources:
+  - mappings/SH-135
+- shellcheck_code: 2234
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-137: A lone test runs inside a subshell.'
+  sources:
+  - mappings/SH-137
+- shellcheck_code: 2240
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-140: A sourced file is invoked with extra words.'
+  sources:
+  - mappings/SH-140
+- shellcheck_code: 2242
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-141: Exit is given a nonnumeric status.'
+  sources:
+  - mappings/SH-141
+- shellcheck_code: 2254
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-142: A case pattern is built from a variable.'
+  sources:
+  - mappings/SH-142
+- shellcheck_code: 2252
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-143: The `||` chain can never fail.'
+  sources:
+  - mappings/SH-143
+- shellcheck_code: 2257
+  status: covered
+  shells:
+  - bash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-144: A redirection target is an arithmetic expansion.'
+  sources:
+  - mappings/SH-144
+- shellcheck_code: 2261
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-145: A later redirect makes an earlier one pointless.'
+  sources:
+  - mappings/SH-145
+- shellcheck_code: 2280
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-146: Assigning to the script-name parameter is rejected.'
+  sources:
+  - mappings/SH-146
+- shellcheck_code: 2283
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-147: Spaces around an assignment operator change the meaning.'
+  sources:
+  - mappings/SH-147
+- shellcheck_code: 2287
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-148: A lone `*/` token is not valid shell syntax.'
+  sources:
+  - mappings/SH-148
+- shellcheck_code: 2295
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-152: A variable is being expanded inside a pattern expression.'
+  sources:
+  - mappings/SH-152
+- shellcheck_code: 2296
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-153: This uses a zsh-only parameter expansion form.'
+  sources:
+  - mappings/SH-153
+- shellcheck_code: 2298
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-154: Nested zsh-style expansion syntax is not portable
+    to sh.'
+  sources:
+  - mappings/SH-154
+- shellcheck_code: 2294
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-151: `eval` is used to execute composed command text.'
+  sources:
+  - mappings/SH-151
+- shellcheck_code: 2319
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-155: Reads `$?` after a test command has already overwritten
+    it.'
+  sources:
+  - mappings/SH-155
+- shellcheck_code: 2321
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-157: Uses arithmetic expansion inside an array subscript.'
+  sources:
+  - mappings/SH-157
+- shellcheck_code: 2324
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-158: Uses `+=` style assignment in `sh`.'
+  sources:
+  - mappings/SH-158
+- shellcheck_code: 2327
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-159: Runs a command substitution whose output is redirected
+    away.'
+  sources:
+  - mappings/SH-159
+- shellcheck_code: 2328
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-160: Runs a command substitution with redirected output
+    in the subshell.'
+  sources:
+  - mappings/SH-160
+- shellcheck_code: 2323
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-161: Uses a long arithmetic expansion in an assignment.'
+  sources:
+  - mappings/SH-161
+- shellcheck_code: 3061
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-163: Uses `read` without extra options.'
+  sources:
+  - mappings/SH-163
+- shellcheck_code: 2235
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-164: A grouped test uses a subshell instead of braces.'
+  sources:
+  - mappings/SH-164
+- shellcheck_code: 2238
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-165: Redirects output to a filename that shadows a known
+    command.'
+  sources:
+  - mappings/SH-165
+- shellcheck_code: 2239
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-166: The shebang line does not start with an absolute
+    path.'
+  sources:
+  - mappings/SH-166
+- shellcheck_code: 2288
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-167: A template placeholder with double braces appears
+    in command position.'
+  sources:
+  - mappings/SH-167
+- shellcheck_code: 2291
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-168: Extra spaces between echo arguments are collapsed
+    by the shell.'
+  sources:
+  - mappings/SH-168
+- shellcheck_code: 2299
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-169: A parameter expansion is nested inside another expansion.'
+  sources:
+  - mappings/SH-169
+- shellcheck_code: 2320
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-170: Returns the exit status that the function would already
+    propagate.'
+  sources:
+  - mappings/SH-170
+- shellcheck_code: 2329
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-171: A function definition is overwritten before it can
+    be called.'
+  sources:
+  - mappings/SH-171
+- shellcheck_code: 1011
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-172: A backslash sequence inside single quotes is treated
+    literally.'
+  sources:
+  - mappings/SH-172
+- shellcheck_code: 1012
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-173: A backslash precedes a command name to bypass aliases.'
+  sources:
+  - mappings/SH-173
+- shellcheck_code: 1036
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-174: An extended glob pattern appears inside a test bracket.'
+  sources:
+  - mappings/SH-174
+- shellcheck_code: 1049
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-175: An if-test block is written without a `then` keyword.'
+  sources:
+  - mappings/SH-175
+- shellcheck_code: 1050
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-176: An `else` clause appears without a preceding `then`.'
+  sources:
+  - mappings/SH-176
+- shellcheck_code: 1054
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-177: A closing brace follows a command without a semicolon
+    or newline.'
+  sources:
+  - mappings/SH-177
+- shellcheck_code: 1055
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-178: A function body contains no commands.'
+  sources:
+  - mappings/SH-178
+- shellcheck_code: 1056
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-179: A closing brace is not preceded by a semicolon or
+    newline.'
+  sources:
+  - mappings/SH-179
+- shellcheck_code: 1058
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-180: A `for` loop binds more than one variable per iteration.'
+  sources:
+  - mappings/SH-180
+- shellcheck_code: 1064
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-181: A function body is a bare compound command instead
+    of a brace group.'
+  sources:
+  - mappings/SH-181
+- shellcheck_code: 1085
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-182: A case pattern uses extended-glob parenthesized alternation.'
+  sources:
+  - mappings/SH-182
+- shellcheck_code: 1087
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-183: A zsh prompt escape is used inside a POSIX shell
+    script.'
+  sources:
+  - mappings/SH-183
+- shellcheck_code: 1088
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-184: A csh-style `set` assignment appears in a POSIX shell
+    script.'
+  sources:
+  - mappings/SH-184
+- shellcheck_code: 1097
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-185: Setting IFS to `=` with `IFS==` looks like a comparison.'
+  sources:
+  - mappings/SH-185
+- shellcheck_code: 1101
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-186: A backslash-space appears right before a closing
+    backtick.'
+  sources:
+  - mappings/SH-186
+- shellcheck_code: 1102
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-187: A positional parameter is used as an arithmetic operator.'
+  sources:
+  - mappings/SH-187
+- shellcheck_code: 1105
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-188: Double parentheses are used to group commands instead
+    of arithmetic.'
+  sources:
+  - mappings/SH-188
+- shellcheck_code: 1113
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-190: The script has no shebang and starts with a comment.'
+  sources:
+  - mappings/SH-190
+- shellcheck_code: 1114
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-191: The shebang line is indented with leading whitespace.'
+  sources:
+  - mappings/SH-191
+- shellcheck_code: 1115
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-192: The shebang has a space between `#` and `!`.'
+  sources:
+  - mappings/SH-192
+- shellcheck_code: 1128
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-193: The shebang appears on the second line instead of
+    the first.'
+  sources:
+  - mappings/SH-193
+- shellcheck_code: 1143
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-194: A line continuation is followed by a commented-out
+    argument.'
+  sources:
+  - mappings/SH-194
+- shellcheck_code: 1111
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-189: A Unicode smart quote appears inside a shell string.'
+  sources:
+  - mappings/SH-189
+- shellcheck_code: 2000
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-195: A command substitution is nested inside an arithmetic
+    expansion.'
+  sources:
+  - mappings/SH-195
+- shellcheck_code: 2001
+  status: covered
+  shells:
+  - bash
+  - ksh
+  rationale: 'Covered by SH-196: A variable is used unquoted in a sed substitution
+    argument.'
+  sources:
+  - mappings/SH-196
+- shellcheck_code: 2004
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-197: A dollar sign is used before a variable name inside
+    `$(( ))`.'
+  sources:
+  - mappings/SH-197
+- shellcheck_code: 2011
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-198: The output of `ls` is piped into another command.'
+  sources:
+  - mappings/SH-198
+- shellcheck_code: 2014
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-200: An unquoted variable and glob appear in a `find -exec`
+    command.'
+  sources:
+  - mappings/SH-200
+- shellcheck_code: 2015
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-201: A `&&`/`||` chain may not branch as intended.'
+  sources:
+  - mappings/SH-201
+- shellcheck_code: 2017
+  status: covered
+  shells:
+  - bash
+  - dash
+  - sh
+  rationale: 'Covered by SH-202: A dollar-prefixed variable is used in a double-parenthesis
+    expansion.'
+  sources:
+  - mappings/SH-202
+- shellcheck_code: 2021
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-203: A `tr` character class is passed without quoting.'
+  sources:
+  - mappings/SH-203
+- shellcheck_code: 2022
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-204: A glob character inside a grep pattern may be expanded
+    by the shell.'
+  sources:
+  - mappings/SH-204
+- shellcheck_code: 2026
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-205: An unquoted word sits between two single-quoted segments.'
+  sources:
+  - mappings/SH-205
+- shellcheck_code: 2053
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-206: A variable used in a string comparison may be treated
+    as a glob.'
+  sources:
+  - mappings/SH-206
+- shellcheck_code: 2057
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-207: A backslash-escaped `!` is used in a test expression.'
+  sources:
+  - mappings/SH-207
+- shellcheck_code: 2060
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-208: A `tr` character class is not quoted and may be expanded
+    as a glob.'
+  sources:
+  - mappings/SH-208
+- shellcheck_code: 2061
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-209: A glob pattern inside a `find` command substitution
+    may expand early.'
+  sources:
+  - mappings/SH-209
+- shellcheck_code: 2062
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-210: A grep regex contains characters that may be glob-expanded.'
+  sources:
+  - mappings/SH-210
+- shellcheck_code: 2069
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-211: Standard error is redirected before standard output
+    is redirected.'
+  sources:
+  - mappings/SH-211
+- shellcheck_code: 2070
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-212: A variable expansion is not quoted inside a `[ -n
+    ... ]` test.'
+  sources:
+  - mappings/SH-212
+- shellcheck_code: 2071
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-213: A `>` operator inside `[ ]` creates a file instead
+    of comparing.'
+  sources:
+  - mappings/SH-213
+- shellcheck_code: 2072
+  status: covered
+  shells:
+  - bash
+  - dash
+  - sh
+  rationale: 'Covered by SH-214: A `<` operator inside `[[ ]]` compares lexicographically,
+    not numerically.'
+  sources:
+  - mappings/SH-214
+- shellcheck_code: 2077
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-215: A `[[ ]]` test mixes `&&` and `||` without grouping.'
+  sources:
+  - mappings/SH-215
+- shellcheck_code: 2078
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-216: A command pipeline is quoted as a string inside a
+    test bracket.'
+  sources:
+  - mappings/SH-216
+- shellcheck_code: 2081
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-217: A glob pattern on the right side of `==` inside `[
+    ]` is not expanded.'
+  sources:
+  - mappings/SH-217
+- shellcheck_code: 2082
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-218: A zsh-style nested parameter expansion is used in
+    a POSIX script.'
+  sources:
+  - mappings/SH-218
+- shellcheck_code: 2012
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-199: Command substitution captures ls output for processing.'
+  sources:
+  - mappings/SH-199
+- shellcheck_code: 2088
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-219: A literal tilde inside quotes is compared instead
+    of the expanded home path.'
+  sources:
+  - mappings/SH-219
+- shellcheck_code: 2091
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-220: The output of a command substitution is used as a
+    condition.'
+  sources:
+  - mappings/SH-220
+- shellcheck_code: 2092
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-221: A backtick command substitution is used as a command
+    name.'
+  sources:
+  - mappings/SH-221
+- shellcheck_code: 2094
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-222: A command reads and writes the same file via redirection.'
+  sources:
+  - mappings/SH-222
+- shellcheck_code: 2096
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-223: A flag is repeated in the shebang line.'
+  sources:
+  - mappings/SH-223
+- shellcheck_code: 2100
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-224: An assignment value contains a dash that may indicate
+    a typo.'
+  sources:
+  - mappings/SH-224
+- shellcheck_code: 2102
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-225: Pipe and brace characters in an echo argument may
+    be interpreted by the shell.'
+  sources:
+  - mappings/SH-225
+- shellcheck_code: 2112
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-226: The `function` keyword is used with parentheses in
+    a POSIX shell script.'
+  sources:
+  - mappings/SH-226
+- shellcheck_code: 2117
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-227: The `su` command is used without `-l` or `-c`.'
+  sources:
+  - mappings/SH-227
+- shellcheck_code: 2120
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-228: A function that references `$1` is called without
+    arguments.'
+  sources:
+  - mappings/SH-228
+- shellcheck_code: 2121
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-229: Flags are passed to `set` without a leading dash.'
+  sources:
+  - mappings/SH-229
+- shellcheck_code: 2124
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-230: An array slice is quoted, preventing word splitting
+    of the elements.'
+  sources:
+  - mappings/SH-230
+- shellcheck_code: 2125
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-231: A glob pattern is assigned to a variable without
+    quoting.'
+  sources:
+  - mappings/SH-231
+- shellcheck_code: 2128
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-232: `$BASH_SOURCE` is quoted without array syntax.'
+  sources:
+  - mappings/SH-232
+- shellcheck_code: 2139
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-233: A command substitution is used inside an alias definition.'
+  sources:
+  - mappings/SH-233
+- shellcheck_code: 2142
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-235: A function definition is embedded inside an alias
+    string.'
+  sources:
+  - mappings/SH-235
+- shellcheck_code: 2144
+  status: covered
+  shells:
+  - bash
+  - dash
+  - sh
+  rationale: 'Covered by SH-236: A glob pattern inside a `[ -d ... ]` test may match
+    multiple paths.'
+  sources:
+  - mappings/SH-236
+- shellcheck_code: 2146
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-237: A `find` command uses `-o` without grouping the alternatives.'
+  sources:
+  - mappings/SH-237
+- shellcheck_code: 2141
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-234: IFS is set to the literal string backslash-n instead
+    of a newline.'
+  sources:
+  - mappings/SH-234
+- shellcheck_code: 2152
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-238: A line of C or other non-shell code appears in a
+    shell script.'
+  sources:
+  - mappings/SH-238
+- shellcheck_code: 2163
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-239: The `export` command is called with `$@` which may
+    not work as intended.'
+  sources:
+  - mappings/SH-239
+- shellcheck_code: 2174
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-240: A variable path is not quoted in a directory creation
+    command.'
+  sources:
+  - mappings/SH-240
+- shellcheck_code: 2179
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-241: A string is appended to an array variable with `+=`
+    and a space.'
+  sources:
+  - mappings/SH-241
+- shellcheck_code: 2181
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-242: The exit status `$?` is checked after an intervening
+    command overwrites it.'
+  sources:
+  - mappings/SH-242
+- shellcheck_code: 2184
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-243: An associative array element is unset with a quoted
+    key.'
+  sources:
+  - mappings/SH-243
+- shellcheck_code: 2185
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-244: A `mapfile` command reads from a process substitution.'
+  sources:
+  - mappings/SH-244
+- shellcheck_code: 2186
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-245: The deprecated `tempfile` command is used to create
+    a temporary file.'
+  sources:
+  - mappings/SH-245
+- shellcheck_code: 2193
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-246: A test expression contains `=` that looks like an
+    assignment.'
+  sources:
+  - mappings/SH-246
+- shellcheck_code: 2196
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-247: The `egrep` command is used instead of `grep -E`.'
+  sources:
+  - mappings/SH-247
+- shellcheck_code: 2197
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-248: The `fgrep` command is used instead of `grep -F`.'
+  sources:
+  - mappings/SH-248
+- shellcheck_code: 2198
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-249: Quoting `$@` inside a string comparison folds all
+    arguments together.'
+  sources:
+  - mappings/SH-249
+- shellcheck_code: 2199
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-250: An array slice is used in a string comparison.'
+  sources:
+  - mappings/SH-250
+- shellcheck_code: 2223
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-251: A colon-assign expansion provides a default without
+    quoting.'
+  sources:
+  - mappings/SH-251
+- shellcheck_code: 2226
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-252: A symbolic link target uses a relative path with
+    many `../` segments.'
+  sources:
+  - mappings/SH-252
+- shellcheck_code: 2227
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-253: A `find` command output is captured in a word-splitting
+    loop.'
+  sources:
+  - mappings/SH-253
+- shellcheck_code: 2231
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-254: A glob pattern with an embedded variable is used
+    in a for loop.'
+  sources:
+  - mappings/SH-254
+- shellcheck_code: 2267
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-255: The `-i` flag for `xargs` is deprecated.'
+  sources:
+  - mappings/SH-255
+- shellcheck_code: 2268
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-256: A test comparison uses the `x$var` idiom for empty-string
+    safety.'
+  sources:
+  - mappings/SH-256
+- shellcheck_code: 2269
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-257: A `&&`/`||` chain is used as a ternary but the `||`
+    catches all failures.'
+  sources:
+  - mappings/SH-257
+- shellcheck_code: 2270
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-258: A numeric string is used as a variable name in an
+    assignment.'
+  sources:
+  - mappings/SH-258
+- shellcheck_code: 2276
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-259: A `+` character precedes a variable assignment.'
+  sources:
+  - mappings/SH-259
+- shellcheck_code: 2277
+  status: covered
+  shells:
+  - bash
+  rationale: 'Covered by SH-260: The variable `0` is assigned a value, which is a
+    zsh idiom.'
+  sources:
+  - mappings/SH-260
+- shellcheck_code: 3002
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-261: An extended glob pattern `@()` is used in a POSIX
+    shell context.'
+  sources:
+  - mappings/SH-261
+- shellcheck_code: 3004
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-262: A `$"string"` locale-translated string is used in
+    POSIX sh.'
+  sources:
+  - mappings/SH-262
+- shellcheck_code: 3005
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-263: A C-style `for ((...))` loop is used in a POSIX shell
+    script.'
+  sources:
+  - mappings/SH-263
+- shellcheck_code: 3007
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-264: The legacy `$[...]` arithmetic syntax is used in
+    POSIX sh.'
+  sources:
+  - mappings/SH-264
+- shellcheck_code: 3012
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-265: The `>` operator is used inside `[[ ]]` in a POSIX
+    sh script.'
+  sources:
+  - mappings/SH-265
+- shellcheck_code: 3015
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-266: The `=~` regex match operator is used in POSIX sh.'
+  sources:
+  - mappings/SH-266
+- shellcheck_code: 3016
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-267: The `-v` variable-is-set test is used in POSIX sh.'
+  sources:
+  - mappings/SH-267
+- shellcheck_code: 3017
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-268: The `-a` file-existence test is used inside `[[ ]]`
+    in POSIX sh.'
+  sources:
+  - mappings/SH-268
+- shellcheck_code: 3018
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-269: A C-style for loop with arithmetic uses bashism syntax
+    in POSIX sh.'
+  sources:
+  - mappings/SH-269
+- shellcheck_code: 3021
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-270: The `>&` combined redirect is used in POSIX sh.'
+  sources:
+  - mappings/SH-270
+- shellcheck_code: 3024
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-271: The `+=` append operator is used in POSIX sh.'
+  sources:
+  - mappings/SH-271
+- shellcheck_code: 3026
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-272: A `[^...]` negated bracket expression is used in
+    POSIX sh.'
+  sources:
+  - mappings/SH-272
+- shellcheck_code: 3029
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-273: The `|&` pipe-stderr operator is used in POSIX sh.'
+  sources:
+  - mappings/SH-273
+- shellcheck_code: 3033
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-274: A function name contains a hyphen, which is not portable.'
+  sources:
+  - mappings/SH-274
+- shellcheck_code: 3041
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-275: The `-E` flag for `set` is used in POSIX sh.'
+  sources:
+  - mappings/SH-275
+- shellcheck_code: 3048
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-276: A symbolic signal name like `SIGHUP` is used with
+    `trap` in POSIX sh.'
+  sources:
+  - mappings/SH-276
+- shellcheck_code: 3052
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-277: A base prefix like `10#` is used in arithmetic in
+    POSIX sh.'
+  sources:
+  - mappings/SH-277
+- shellcheck_code: 3055
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-278: The `${!arr[*]}` array key expansion is used in POSIX
+    sh.'
+  sources:
+  - mappings/SH-278
+- shellcheck_code: 3056
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-279: A pattern-based `unset -v` is used in POSIX sh.'
+  sources:
+  - mappings/SH-279
+- shellcheck_code: 3062
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-280: The `-o` option test is used inside `[[ ]]` in POSIX
+    sh.'
+  sources:
+  - mappings/SH-280
+- shellcheck_code: 3065
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-281: The `-k` sticky-bit test is used in POSIX sh.'
+  sources:
+  - mappings/SH-281
+- shellcheck_code: 3067
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-282: The `-O` ownership test is used in a POSIX sh script.'
+  sources:
+  - mappings/SH-282
+- shellcheck_code: 2156
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-283: A `find -execdir` passes `{}` to a shell command
+    that may mishandle filenames.'
+  sources:
+  - mappings/SH-283
+- shellcheck_code: 2171
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-284: An arithmetic expansion inside a conditional test
+    is malformed.'
+  sources:
+  - mappings/SH-284
+- shellcheck_code: 2260
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-285: A redirect placed before a pipe only affects the
+    left-hand side.'
+  sources:
+  - mappings/SH-285
+- shellcheck_code: 2300
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-286: A zsh-style parameter flag is used in POSIX sh.'
+  sources:
+  - mappings/SH-286
+- shellcheck_code: 2308
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-287: The `expr substr` command is used inside a test expression.'
+  sources:
+  - mappings/SH-287
+- shellcheck_code: 2309
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-288: A string value is compared using the numeric `-eq`
+    operator.'
+  sources:
+  - mappings/SH-288
+- shellcheck_code: 2316
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-289: Both `local` and `declare` are used together in one
+    statement.'
+  sources:
+  - mappings/SH-289
+- shellcheck_code: 2331
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-290: The `-a` flag inside `[[ ]]` is ambiguous in POSIX
+    sh.'
+  sources:
+  - mappings/SH-290
+- shellcheck_code: 3028
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-291: A nested default-value expansion is used in POSIX
+    sh.'
+  sources:
+  - mappings/SH-291
+- shellcheck_code: 2119
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-292: A function references a positional parameter that
+    is never passed by callers.'
+  sources:
+  - mappings/SH-292
+- shellcheck_code: 2317
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-293: Code appears after all branches exit, making it unreachable.'
+  sources:
+  - mappings/SH-293
+- shellcheck_code: 2063
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-294: Backtick output is word-split and passed as arguments
+    to a command.'
+  sources:
+  - mappings/SH-294
+- shellcheck_code: 2103
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-295: A `cd` command inside a function has no error handling.'
+  sources:
+  - mappings/SH-295
+- shellcheck_code: 2104
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-296: A `continue` statement appears inside a function
+    but outside a loop.'
+  sources:
+  - mappings/SH-296
+- shellcheck_code: 2172
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-297: Numeric signal identifiers are used in a trap command.'
+  sources:
+  - mappings/SH-297
+- shellcheck_code: 2188
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-298: A here-document is opened without a consuming command.'
+  sources:
+  - mappings/SH-298
+- shellcheck_code: 2195
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-299: A zsh-style array subscript is used in a case subject.'
+  sources:
+  - mappings/SH-299
+- shellcheck_code: 2220
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-300: A bare single letter is used as a case label in a
+    getopts handler.'
+  sources:
+  - mappings/SH-300
+- shellcheck_code: 2301
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-303: A zsh-style parameter index flag is used in POSIX
+    sh.'
+  sources:
+  - mappings/SH-303
+- shellcheck_code: 3051
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-304: The bash-only `source` command is used inside a function
+    in POSIX sh.'
+  sources:
+  - mappings/SH-304
+- shellcheck_code: 3058
+  status: covered
+  shells:
+  - dash
+  - sh
+  rationale: 'Covered by SH-305: The `${*%%pattern}` longest-suffix removal is applied
+    to `$*` in POSIX sh.'
+  sources:
+  - mappings/SH-305
+- shellcheck_code: 2221
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-301: A case glob pattern may shadow a later arm.'
+  sources:
+  - mappings/SH-301
+- shellcheck_code: 2222
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-302: A default case label appears before a glob that also
+    matches it.'
+  sources:
+  - mappings/SH-302
+- shellcheck_code: 2027
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-306: A double-quoted variable sits between unquoted text
+    inside a larger double-quoted string.'
+  sources:
+  - mappings/SH-306
+- shellcheck_code: 2089
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-307: A `+=` string append contains escaped quotes that
+    may not behave as intended.'
+  sources:
+  - mappings/SH-307
+- shellcheck_code: 2090
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-308: An unquoted variable is used as a command name in
+    a function.'
+  sources:
+  - mappings/SH-308
+- shellcheck_code: 2097
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-309: An environment variable prefix to a command has unnecessary
+    quoting.'
+  sources:
+  - mappings/SH-309
+- shellcheck_code: 2098
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-310: A configure option name looks like a misspelling.'
+  sources:
+  - mappings/SH-310
+- shellcheck_code: 2178
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-311: An array variable is converted to a flat string then
+    used as a string.'
+  sources:
+  - mappings/SH-311
+- shellcheck_code: 2213
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-312: A getopts option string contains an option not handled
+    in the case statement.'
+  sources:
+  - mappings/SH-312
+- shellcheck_code: 2214
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-313: A case arm handles an option not listed in the getopts
+    string.'
+  sources:
+  - mappings/SH-313
+- shellcheck_code: 2318
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-314: A `local` statement assigns from a variable defined
+    earlier on the same line.'
+  sources:
+  - mappings/SH-314
+- shellcheck_code: 1112
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-315: A Unicode smart single-quote appears inside a single-quoted
+    string.'
+  sources:
+  - mappings/SH-315
+- shellcheck_code: 1044
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-318: A heredoc starts but never gets a closing marker.'
+  sources:
+  - mappings/SH-318
+- shellcheck_code: 2290
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-319: An assignment-like word has stray spaces around `=`.'
+  sources:
+  - mappings/SH-319
+- shellcheck_code: 2282
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-320: A variable name starts with an invalid character.'
+  sources:
+  - mappings/SH-320
+- shellcheck_code: 1061
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-321: A loop body is opened but never closed.'
+  sources:
+  - mappings/SH-321
+- shellcheck_code: 1062
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-322: An unfinished `for` loop triggers ShellCheck 1062
+    when it reaches EOF without a matching `done`.'
+  sources:
+  - mappings/SH-322
+- shellcheck_code: 1048
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-327: Else branch has no body'
+  sources:
+  - mappings/SH-327
+- shellcheck_code: 1040
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-330: A `<<-` heredoc uses spaces before its closing marker.'
+  sources:
+  - mappings/SH-330
+- shellcheck_code: 1042
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-333: The heredoc closing marker is only a near match.'
+  sources:
+  - mappings/SH-333
+- shellcheck_code: 1057
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-334: An `until` loop skips the `do` keyword.'
+  sources:
+  - mappings/SH-334
+- shellcheck_code: 1045
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-335: A backgrounded command is followed immediately by
+    `;`.'
+  sources:
+  - mappings/SH-335
+- shellcheck_code: 1133
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-329: A control operator starts a new line instead of ending
+    the previous one.'
+  sources:
+  - mappings/SH-329
+- shellcheck_code: 1041
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-332: The here-document closer appears on the same line
+    as content instead of by itself.'
+  sources:
+  - mappings/SH-332
+- shellcheck_code: 1137
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-336: A reserved shell word is written as a function name.'
+  sources:
+  - mappings/SH-336
+- shellcheck_code: 2190
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-337: An associative-array key is missing its closing bracket.'
+  sources:
+  - mappings/SH-337
+- shellcheck_code: 2285
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-338: An append assignment is split by spaces and no longer
+    parses as an assignment.'
+  sources:
+  - mappings/SH-338
+- shellcheck_code: 2030
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-339: A variable is reassigned inside a subshell, so the
+    update does not affect the parent shell.'
+  sources:
+  - mappings/SH-339
+- shellcheck_code: 2054
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-340: A Bash array literal uses commas, so multiple intended
+    elements become one malformed item.'
+  sources:
+  - mappings/SH-340
+- shellcheck_code: 2165
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-344: An inner loop reuses the outer loop''s iteration
+    variable.'
+  sources:
+  - mappings/SH-344
+- shellcheck_code: 2167
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-345: A nested loop overwrites the parent loop''s iteration
+    variable.'
+  sources:
+  - mappings/SH-345
+- shellcheck_code: 2218
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-346: A function is called before its definition has been
+    reached.'
+  sources:
+  - mappings/SH-346
+- shellcheck_code: 2031
+  status: covered
+  shells:
+  - bash
+  - dash
+  - sh
+  rationale: 'Covered by SH-347: A value is updated inside a pipeline child shell
+    and then read afterward.'
+  sources:
+  - mappings/SH-347
+- shellcheck_code: 2140
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-350: One argument is assembled from alternating quoted
+    and bare fragments.'
+  sources:
+  - mappings/SH-350
+- shellcheck_code: 2129
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-349: Multiple commands append to the same file with separate
+    redirections.'
+  sources:
+  - mappings/SH-349
+- shellcheck_code: 2153
+  status: covered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: 'Covered by SH-351: A referenced variable looks like a misspelling of
+    one that was assigned.'
+  sources:
+  - mappings/SH-351
+- shellcheck_code: 1121
+  status: covered
+  shells:
+  - bash
+  rationale: 'Covered by SH-352: A here-document closing marker has extra syntax attached
+    to its line.'
+  sources:
+  - mappings/SH-352
+- shellcheck_code: 1069
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-353: The `if` keyword is concatenated with a `[` test.'
+  sources:
+  - mappings/SH-353

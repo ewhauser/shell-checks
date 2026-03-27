@@ -1,0 +1,22 @@
+---
+artifact_id: SH-036
+created_at: 2026-03-27
+files:
+- path: rules/SH-036.yaml
+  sha256: 4efaccb4e87e8659df74e8d70e1b76005316095f0c40d8fce766bb584c223127
+- path: examples/036.sh
+  sha256: 0ecb6824bdd0b5bcc8bdd194a18eeab245e3f4004c4b04d56555262ac82f0431
+source_basis:
+- Single quotes suppress expansion, so a dollar-sign sequence inside them remains
+  literal text.
+- I reduced the snippet to one quoted word so the result was a single literal-expansion
+  warning.
+ai_sessions:
+- session-008
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/036.sh
+  expected_code: 2016
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

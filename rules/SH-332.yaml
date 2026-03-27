@@ -1,0 +1,10 @@
+id: SH-332
+name: heredoc-closer-not-alone
+summary: The here-document closer appears on the same line as content instead of by itself.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/332.sh
+rationale: Put the here-doc terminator on a line by itself.

@@ -1,0 +1,9 @@
+id: SH-010
+name: bash-case-fallthrough
+summary: "The `case` statement uses a bash-only fallthrough marker that portable `sh` does not understand."
+shells:
+- sh
+- dash
+- ksh
+example: examples/010.sh
+rationale: "Keep `case` branches to POSIX syntax unless the script is explicitly targeting bash."

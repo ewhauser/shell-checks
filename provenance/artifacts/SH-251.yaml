@@ -1,0 +1,23 @@
+---
+artifact_id: SH-251
+created_at: '2026-03-28'
+files:
+- path: rules/SH-251.yaml
+  sha256: 1cecf1c862ea96388d880c968afb4b86b9ef1b236b5632bc91103752eb2f8c9c
+- path: examples/251.sh
+  sha256: fceb6c068354434b12b07aaaf027fc4b918a00ca64e34c7eb5601b086ff99ed4
+source_basis:
+- A colon-assign expansion provides a default without quoting.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/251.sh
+  expected_code: 2223
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

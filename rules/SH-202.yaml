@@ -1,0 +1,9 @@
+id: SH-202
+name: dollar-in-arithmetic-context
+summary: A dollar-prefixed variable is used in a double-parenthesis expansion.
+shells:
+- sh
+- bash
+- dash
+example: examples/202.sh
+rationale: "Drop the `$` prefix inside `$(( ))` since variables expand implicitly."

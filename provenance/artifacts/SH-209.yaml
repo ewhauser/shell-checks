@@ -1,0 +1,23 @@
+---
+artifact_id: SH-209
+created_at: '2026-03-28'
+files:
+- path: rules/SH-209.yaml
+  sha256: 9d4f517e467e9e21d1da4b722b849dc83ceb75453e1a492d23582bea5dfd6a1c
+- path: examples/209.sh
+  sha256: 47844ac16edde7d06a96f0b95f5dd19875d9abe40ea8e87bd0289bcdc160b5ca
+source_basis:
+- A glob pattern inside a `find` command substitution may expand early.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-034
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/209.sh
+  expected_code: 2061
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

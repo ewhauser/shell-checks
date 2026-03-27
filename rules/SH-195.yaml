@@ -1,0 +1,10 @@
+id: SH-195
+name: subshell-in-arithmetic
+summary: A command substitution is nested inside an arithmetic expansion.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/195.sh
+rationale: Assign the command output to a variable first, then use it in the arithmetic.

@@ -1,0 +1,10 @@
+id: SH-175
+name: test-missing-then
+summary: "An if-test block is written without a `then` keyword."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/175.sh
+rationale: "Add `then` after the condition to form a valid if-block."

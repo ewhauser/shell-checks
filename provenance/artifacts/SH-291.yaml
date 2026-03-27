@@ -1,0 +1,23 @@
+---
+artifact_id: SH-291
+created_at: '2026-03-28'
+files:
+- path: rules/SH-291.yaml
+  sha256: 0aee7471837d2c1116d8a8085046d6725f2035ed00fec99af81b15360ac03c53
+- path: examples/291.sh
+  sha256: 900488162c708e91d01e59264726c09027bf89930685746a4b2dce19155dacb5
+source_basis:
+- A nested default-value expansion is used in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-037
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/291.sh
+  expected_code: 3028
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

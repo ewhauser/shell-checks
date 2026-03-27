@@ -1,0 +1,10 @@
+id: SH-289
+name: local-declare-combined
+summary: "Both `local` and `declare` are used together in one statement."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/289.sh
+rationale: "Use either `local` or `declare`, not both."

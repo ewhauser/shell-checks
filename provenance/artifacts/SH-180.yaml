@@ -1,0 +1,23 @@
+---
+artifact_id: SH-180
+created_at: '2026-03-28'
+files:
+- path: rules/SH-180.yaml
+  sha256: 00de2d8652afaff33e43c67a78914f7a8ee58a4d1d4d04396a2c8e1ee8326f45
+- path: examples/180.sh
+  sha256: 4443c4041fe932c23c7d8d96df4eed847bda3709308598f5ddd210e109097505
+source_basis:
+- A `for` loop binds more than one variable per iteration.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/180.sh
+  expected_code: 1058
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

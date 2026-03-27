@@ -1,0 +1,10 @@
+id: SH-257
+name: default-else-in-short-circuit
+summary: "A `&&`/`||` chain is used as a ternary but the `||` catches all failures."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/257.sh
+rationale: "Use an explicit `if`/`else` to avoid unintended fallthrough."

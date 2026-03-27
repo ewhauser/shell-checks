@@ -1,0 +1,23 @@
+---
+artifact_id: SH-183
+created_at: '2026-03-28'
+files:
+- path: rules/SH-183.yaml
+  sha256: 5fad2cf3f0d5bb3809f57c4ae8dba6854a55baa1e15e4a95577d1c775739ecc9
+- path: examples/183.sh
+  sha256: '06587c0d44b86aa49ed9c39d83fc59ffebf4d8bfd9cf0a1d6cee88f1f9f86a90'
+source_basis:
+- A zsh prompt escape is used inside a POSIX shell script.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/183.sh
+  expected_code: 1087
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

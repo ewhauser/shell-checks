@@ -1,0 +1,10 @@
+id: SH-350
+name: mixed-quote-word
+summary: One argument is assembled from alternating quoted and bare fragments.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/350.sh
+rationale: Use a single explicit word form so the intended text is obvious.

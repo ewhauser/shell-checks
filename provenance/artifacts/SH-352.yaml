@@ -1,0 +1,23 @@
+---
+artifact_id: SH-352
+created_at: '2026-03-29'
+files:
+- path: rules/SH-352.yaml
+  sha256: d68c90c15b72e62dd37b6e41ff2f872b1e703d752d7e7b71cf1b77a90aecb3f6
+- path: examples/352.sh
+  sha256: d50d205d4801bed001f7f555f340ce7cace1849535908640f4464c34f99609e6
+source_basis:
+- Shell semantics knowledge about the construct that triggers this diagnostic.
+- Example independently authored, reduced, and checked so the target oracle code remains
+  present with minimal extra diagnostics.
+ai_sessions:
+- session-053
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/352.sh
+  expected_code: 1121
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via synthetic bad-script generation but the
+  example script was independently authored.

@@ -1,0 +1,21 @@
+---
+artifact_id: SH-019
+created_at: 2026-03-27
+files:
+- path: rules/SH-019.yaml
+  sha256: 28bd2582f735ae96ecba7a02230c36837973628ed472f0485d19233fc047fde7
+- path: examples/019.sh
+  sha256: 3e98cc421411dcf295145e30df1b79ba599f02f223b15885f4c27cda99f45975
+source_basis:
+- The script uses a co-process, which is a shell extension rather than POSIX `sh`.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-006
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/019.sh
+  expected_code: 3032
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets.

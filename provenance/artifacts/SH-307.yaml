@@ -1,0 +1,23 @@
+---
+artifact_id: SH-307
+created_at: '2026-03-28'
+files:
+- path: rules/SH-307.yaml
+  sha256: 7b09adb172f2146c05e421031003b5835bd4ab2943abeff4562c13b37afe385e
+- path: examples/307.sh
+  sha256: 49a028460d5406a1e431772c74ae3cb7b63a5ff1eb91c98ff527b10a2e32c966
+source_basis:
+- A `+=` string append contains escaped quotes that may not behave as intended.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-040
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/307.sh
+  expected_code: 2089
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,8 @@
+id: SH-196
+name: unquoted-variable-in-sed
+summary: A variable is used unquoted in a sed substitution argument.
+shells:
+- bash
+- ksh
+example: examples/196.sh
+rationale: Quote the variable to prevent word splitting.

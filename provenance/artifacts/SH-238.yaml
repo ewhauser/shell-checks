@@ -1,0 +1,23 @@
+---
+artifact_id: SH-238
+created_at: '2026-03-28'
+files:
+- path: rules/SH-238.yaml
+  sha256: fc494db0e4f138456a7258f80db3a40ca6f97c527eeaddcf186f2a9bb3a536e0
+- path: examples/238.sh
+  sha256: ec40bf5690f83972ad26b1ca63fab897b614e0c8dec742cd93ed2bb3c863c991
+source_basis:
+- A line of C or other non-shell code appears in a shell script.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/238.sh
+  expected_code: 2152
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-179
+created_at: '2026-03-28'
+files:
+- path: rules/SH-179.yaml
+  sha256: 162409c1f6cb60be61e1c9208b6cef0710f64deb9d24b0e5f867c3d183d62690
+- path: examples/179.sh
+  sha256: 6fd9e6253835fa14750031653bfdcd5596a2f6d30a602234ed07ed1644694b19
+source_basis:
+- A closing brace is not preceded by a semicolon or newline.
+- The example was independently authored and reduced until one oracle code remained
+  in bash mode.
+ai_sessions:
+- session-033
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s bash -f json1 examples/179.sh
+  expected_code: 1056
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

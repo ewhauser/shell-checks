@@ -1,0 +1,23 @@
+---
+artifact_id: SH-305
+created_at: '2026-03-28'
+files:
+- path: rules/SH-305.yaml
+  sha256: 89212e7177885a8b4a4d0a3d766c594ac2a1b59ed249461543d29ce8098360c0
+- path: examples/305.sh
+  sha256: 7e87472b602553b785d877f00e92480a7535deb40d7359572d7272d03fc2b140
+source_basis:
+- The `${*%%pattern}` longest-suffix removal is applied to `$*` in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-039
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/305.sh
+  expected_code: 3058
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

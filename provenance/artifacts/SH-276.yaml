@@ -1,0 +1,23 @@
+---
+artifact_id: SH-276
+created_at: '2026-03-28'
+files:
+- path: rules/SH-276.yaml
+  sha256: ae744143c152ecc5fa5add9c7cc197b190928c10d8adb5105e9b539aa6509281
+- path: examples/276.sh
+  sha256: d80f0d51cbf8803aea539c4201f506eceffc3b80d7b5b45984c12887af140805
+source_basis:
+- A symbolic signal name like `SIGHUP` is used with `trap` in POSIX sh.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-036
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/276.sh
+  expected_code: 3048
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

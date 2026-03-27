@@ -1,0 +1,10 @@
+id: SH-212
+name: unquoted-variable-in-test
+summary: "A variable expansion is not quoted inside a `[ -n ... ]` test."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/212.sh
+rationale: Quote the variable to avoid syntax errors when it is empty.

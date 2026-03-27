@@ -1,0 +1,10 @@
+id: SH-337
+name: broken-assoc-key
+summary: An associative-array key is missing its closing bracket.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/337.sh
+rationale: Finish the key before assigning its value.

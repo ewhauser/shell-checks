@@ -1,0 +1,10 @@
+id: SH-168
+name: redundant-spaces-in-echo
+summary: Extra spaces between echo arguments are collapsed by the shell.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/168.sh
+rationale: Quote the spaced text or use printf for precise formatting.

@@ -1,0 +1,8 @@
+id: SH-262
+name: dollar-string-in-sh
+summary: "A `$\"string\"` locale-translated string is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/262.sh
+rationale: Use plain double quotes for portability.

@@ -1,0 +1,23 @@
+---
+artifact_id: SH-171
+created_at: '2026-03-28'
+files:
+- path: rules/SH-171.yaml
+  sha256: 052a7c6487b9dd6401ef47fc858303db24686b890bece06aea4e33d576a18be1
+- path: examples/171.sh
+  sha256: fd80e2b4b830f582a7d07633af3df17302c68bf2edd4b7060f1207931f245116
+source_basis:
+- A function definition is overwritten before it can be called.
+- The example was independently authored and reduced until one oracle code remained
+  in sh mode.
+ai_sessions:
+- session-032
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/171.sh
+  expected_code: 2329
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via corpus scanning but the example script
+  was independently authored.

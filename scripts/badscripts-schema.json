@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "scripts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": { "type": "string" },
+          "shells": { "type": "array", "items": { "type": "string", "enum": ["sh", "bash", "dash", "ksh"] }, "minItems": 1 },
+          "category": { "type": "integer" },
+          "script": { "type": "string" }
+        },
+        "required": ["filename", "shells", "category", "script"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["scripts"],
+  "additionalProperties": false
+}

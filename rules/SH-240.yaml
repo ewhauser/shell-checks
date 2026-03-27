@@ -1,0 +1,10 @@
+id: SH-240
+name: unquoted-path-in-mkdir
+summary: A variable path is not quoted in a directory creation command.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/240.sh
+rationale: Quote the variable to handle paths with spaces.

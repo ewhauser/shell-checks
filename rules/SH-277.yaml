@@ -1,0 +1,8 @@
+id: SH-277
+name: base-prefix-in-arithmetic
+summary: "A base prefix like `10#` is used in arithmetic in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/277.sh
+rationale: Strip leading zeros manually for portability.

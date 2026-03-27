@@ -1,0 +1,10 @@
+id: SH-187
+name: positional-param-as-operator
+summary: A positional parameter is used as an arithmetic operator.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/187.sh
+rationale: Pass the operator as a distinct argument or use a case dispatch.

@@ -1,0 +1,73 @@
+---
+session_id: session-035
+date: '2026-03-28'
+tool: codex
+model: claude-opus-4-6
+task_summary: Create clean-room artifact bundles for corpus-discovered ShellCheck
+  codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify
+  numeric codes or likely triggering constructs
+generated_files:
+- examples/219.sh
+- examples/220.sh
+- examples/221.sh
+- examples/222.sh
+- examples/223.sh
+- examples/224.sh
+- examples/225.sh
+- examples/226.sh
+- examples/227.sh
+- examples/228.sh
+- examples/229.sh
+- examples/230.sh
+- examples/231.sh
+- examples/232.sh
+- examples/233.sh
+- examples/234.sh
+- examples/235.sh
+- examples/236.sh
+- examples/237.sh
+- provenance/artifacts/SH-219.yaml
+- provenance/artifacts/SH-220.yaml
+- provenance/artifacts/SH-221.yaml
+- provenance/artifacts/SH-222.yaml
+- provenance/artifacts/SH-223.yaml
+- provenance/artifacts/SH-224.yaml
+- provenance/artifacts/SH-225.yaml
+- provenance/artifacts/SH-226.yaml
+- provenance/artifacts/SH-227.yaml
+- provenance/artifacts/SH-228.yaml
+- provenance/artifacts/SH-229.yaml
+- provenance/artifacts/SH-230.yaml
+- provenance/artifacts/SH-231.yaml
+- provenance/artifacts/SH-232.yaml
+- provenance/artifacts/SH-233.yaml
+- provenance/artifacts/SH-234.yaml
+- provenance/artifacts/SH-235.yaml
+- provenance/artifacts/SH-236.yaml
+- provenance/artifacts/SH-237.yaml
+- rules/SH-219.yaml
+- rules/SH-220.yaml
+- rules/SH-221.yaml
+- rules/SH-222.yaml
+- rules/SH-223.yaml
+- rules/SH-224.yaml
+- rules/SH-225.yaml
+- rules/SH-226.yaml
+- rules/SH-227.yaml
+- rules/SH-228.yaml
+- rules/SH-229.yaml
+- rules/SH-230.yaml
+- rules/SH-231.yaml
+- rules/SH-232.yaml
+- rules/SH-233.yaml
+- rules/SH-234.yaml
+- rules/SH-235.yaml
+- rules/SH-236.yaml
+- rules/SH-237.yaml
+prompt_sha256: 3abcdd65cafa9d1c7e4246ccbf8cdcc1748b10e8cfe035d8530d406a0e58b569
+output_sha256: 1f9270f0074040bc0d2bfed64e8dbd8f3cc4a65a7ca8bcaabb6c07d51cc5bc36

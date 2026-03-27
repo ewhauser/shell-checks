@@ -1,0 +1,8 @@
+id: SH-266
+name: regex-match-in-sh
+summary: "The `=~` regex match operator is used in POSIX sh."
+shells:
+- sh
+- dash
+example: examples/266.sh
+rationale: "Use `grep` or `case` for pattern matching in POSIX sh."

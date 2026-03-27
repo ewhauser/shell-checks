@@ -1,0 +1,10 @@
+id: SH-106
+name: missing-fi
+summary: "An `if` block is left without its closing `fi`, which ShellCheck reports as an unmatched conditional."
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/106.sh
+rationale: "Stop the script after the `then` body so the only issue is the missing terminator."

@@ -1,0 +1,10 @@
+id: SH-301
+name: case-glob-reachability
+summary: A case glob pattern may shadow a later arm.
+shells:
+- sh
+- bash
+- dash
+- ksh
+example: examples/301.sh
+rationale: Reorder case arms so more specific patterns come first.
