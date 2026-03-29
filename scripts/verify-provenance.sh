@@ -78,7 +78,7 @@ errors << "missing provenance/artifacts records" if artifact_paths.empty?
 sessions = {}
 
 session_paths.each do |path|
-  session = YAML.load_file(path)
+  session = YAML.load_file(path, permitted_classes: [Date])
   session_id = session["session_id"].to_s
   if session_id.empty?
     errors << "#{path}: missing session_id"
@@ -176,7 +176,7 @@ session_paths.each do |path|
 end
 
 artifact_paths.each do |path|
-  artifact = YAML.load_file(path)
+  artifact = YAML.load_file(path, permitted_classes: [Date])
 
   %w[artifact_id created_at clean_room_statement].each do |key|
     errors << "#{path}: missing #{key}" if artifact[key].to_s.empty?

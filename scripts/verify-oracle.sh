@@ -24,7 +24,7 @@ fi
 
 expected_version=$(
   ruby -ryaml -e '
-    data = YAML.load_file(ARGV[0])
+    data = YAML.load_file(ARGV[0], permitted_classes: [Date])
     versions = Array(data.fetch("mappings")).map { |item| item.fetch("shellcheck_version").to_s }.uniq
     abort "mappings/shellcheck.yaml must declare exactly one shellcheck_version" unless versions.length == 1
     puts versions.first
@@ -41,7 +41,7 @@ mapping_rows=$(mktemp)
 trap 'rm -f "$mapping_rows"' EXIT HUP INT TERM
 
 ruby -ryaml -e '
-  data = YAML.load_file(ARGV[0])
+  data = YAML.load_file(ARGV[0], permitted_classes: [Date])
   Array(data.fetch("mappings")).each do |item|
     shells = Array(item.fetch("shells")).join(",")
     fields = [
