@@ -29,6 +29,8 @@ BASE_ALLOWED_SOURCE_CLASSES = [
 
 CORPUS_SOURCE_CLASS = "Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify numeric codes or likely triggering constructs".freeze
 
+GITHUB_SOURCE_CLASS = "Public GitHub code search references to numeric codes in non-ShellCheck repositories used to identify candidate compatibility codes".freeze
+
 DISCOVERY_MODES = {
   "corpus" => {
     "task_summary" => "Create clean-room artifact bundles for corpus-discovered ShellCheck codes.",
@@ -44,6 +46,12 @@ DISCOVERY_MODES = {
     "task_summary" => "Discover new ShellCheck compatibility codes and create clean-room artifact bundles.",
     "discovery_method" => "synthetic bad-script generation",
     "include_corpus_source_class" => false
+  },
+  "github" => {
+    "task_summary" => "Create clean-room artifact bundles for GitHub-search-discovered ShellCheck codes.",
+    "discovery_method" => "GitHub public code search",
+    "include_corpus_source_class" => false,
+    "include_github_source_class" => true
   }
 }.freeze
 
@@ -68,6 +76,7 @@ discovery_method = mode_config.fetch("discovery_method")
 task_summary = mode_config.fetch("task_summary")
 allowed = BASE_ALLOWED_SOURCE_CLASSES.dup
 allowed << CORPUS_SOURCE_CLASS if mode_config.fetch("include_corpus_source_class")
+allowed << GITHUB_SOURCE_CLASS if mode_config.fetch("include_github_source_class", false)
 
 items = JSON.parse(File.read(json_path))
 verified_items = []

@@ -1,0 +1,533 @@
+---
+search_date: '2026-03-29'
+total_codes_found: 127
+already_known_count: 103
+new_code_count: 24
+new_codes:
+- code: 1004
+  references: 2
+  example_sources:
+  - sobjornstad/dreamdir/dr
+  - pkmgr/installer/.shellcheckrc
+  text_fragments:
+  - "headerline=$(grep \"$header:\t\" \"$filename\")\n        # shellcheck disable=SC1004\n
+    \       # :: we actually do want a break within the single-quoted string for sed"
+  - |-
+    shell=/bin/bash
+    #disable=SC
+    disable=SC1004
+- code: 1008
+  references: 2
+  example_sources:
+  - ryuzi/oyster/.travis.yml
+  - PF4Public/gb-chroot/.github/workflows/main.yml
+  text_fragments:
+  - |-
+    sudo: false
+
+    script:
+      - bash -c 'shopt -s globstar; shellcheck --exclude=SC1008,SC1090,SC2034 oyster'
+      - ./install
+      - source ~/.oyster/config
+      - oyster
+  - |-
+    runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v1
+        - name: shellcheck
+          run: shellcheck --exclude SC1008,SC1091,SC2029 scripts/gb-chroot scripts/host/* scripts/target/* scripts/chroot/*
+- code: 1071
+  references: 6
+  example_sources:
+  - aywrite/nix-config/.shellcheckrc
+  - andyscott/computer/.pre-commit-config.yaml
+  - OS2borgerPC/os2borgerpc-client/.gitlab-ci.yml
+  - magenta-aps/os2borgerpc-client/.gitlab-ci.yml
+  - DataDog/nginx-datadog/.gitlab/build-and-test-fast.yml
+  text_fragments:
+  - |-
+    # Disable warning about ShellCheck only supporting sh/bash/dash/ksh
+    disable=SC1071
+  - |-
+    files: &nix-files \.nix$
+          - id: shell-shellcheck
+            name: "[shell]    shellcheck"
+            entry: shellcheck --exclude=SC1071,SC1090,SC1091
+            language: system
+            types: [shell]
+          - id: statix
+  - |-
+    script:
+        - printf 'Running shellcheck:'
+        - printf '%s\n' 'https://github.com/koalaman/shellcheck/wiki/Checks'
+        - shellcheck --exclude SC1071 bin/*
+        # Shellcheck the extension-less scripts in bin/
+      #after_script:
+      #  - fd --extension sh --exclude bin --exec shellcheck
+- code: 1100
+  references: 1
+  example_sources:
+  - chef/bento/.shellcheckrc
+  text_fragments:
+  - |-
+    # ~/.shellcheckrc
+    # disable=SC2059,SC2034 # Disable individual error codes
+    # disable=SC1090-SC1100 # Disable a range of error codes
+- code: 1117
+  references: 4
+  example_sources:
+  - essentialkaos/jira-avatars-replacer/jr
+  - sobjornstad/dreamdir/dr
+  - irvin-s/docker_repair/binacle_data/sources/361715098.Dockerfile
+  - mrowa44/emojify/.circleci/config.yml
+  text_fragments:
+  - |-
+    #!/usr/bin/env bash
+    # shellcheck disable=SC1117,SC2034,SC2154,SC2181
+  - |-
+    #!/usr/bin/env bash
+    # shellcheck disable=SC2086,SC1117,SC2119
+  - |-
+    RUN echo "export GPG_TTY=\$(tty)" >>  /root/.bashrc
+    RUN groupadd --non-unique -g "${GROUP_ID}" "${USER_NAME}"
+    RUN useradd -g "${GROUP_ID}" -u "${USER_ID}" -k /root -m "${USER_NAME}"
+    # shellcheck disable=SC2039,SC1117
+    RUN echo -e "${USER_NAME}\\tALL=NOPASSWD: ALL" > "/etc/sudoers.d/yetus-build-${USER_ID}"
+    ENV HOME /home/${USER_NAME}
+- code: 1909
+  references: 1
+  example_sources:
+  - Ayushd70/telegram-jenkins-bot/.github/workflows/shellcheck.yml
+  text_fragments:
+  - |-
+    shellCheck:
+        name: ShellCheck
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v1
+        - name: Run shellcheck.
+          run: shellcheck --exclude=SC1909,SC1091,SC2153,SC2154,SC2155,SC2164 bot.sh
+- code: 2002
+  references: 16
+  example_sources:
+  - checkstyle/checkstyle/.shellcheckrc
+  - Pagefind/pagefind/.shellcheckrc
+  - vlayer-xyz/vlayer/.shellcheckrc
+  - xwmx/nb/.shellcheckrc
+  - Dicklesworthstone/agentic_coding_flywheel_setup/.shellcheckrc
+  text_fragments:
+  - |-
+    disable=SC2002 # (style): Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+    disable=SC2035 # (info): Use ./glob or -- glob so names with dashes won't become options.
+    disable=SC2185 # (info): Some finds don't have a default path. Specify '.' explicitly.
+  - |-
+    external-sources=true
+    source-path=SCRIPTDIR
+    disable=SC2002
+    # SC2002: ignore "useless cat" warning: starting pipes with `cat` improves composability
+  - |-
+    disable=SC1070
+    disable=SC1091
+    disable=SC2002
+- code: 2039
+  references: 8
+  example_sources:
+  - OpenRC/opentmpfiles/.shellcheckrc
+  - brujoand/dotfiles/.shellcheckrc
+  - berlysia/dotfiles/.shellcheckrc
+  - irvin-s/docker_repair/binacle_data/sources/361715098.Dockerfile
+  - intuit/unmazedboot/runner/regular-jdk/Dockerfile
+  text_fragments:
+  - |-
+    # disable the warning about local
+    disable=SC2039
+  - |-
+    # SC2250: Prefer putting braces around variable references (style preference)
+    # SC2068: Double quote array expansions (common pattern in dotfiles)
+    # SC2086: Double quote to prevent globbing (intentional in some cases)
+    disable=SC1090,SC1091,SC2034,SC2039,SC2119,SC2120,SC2155,SC2164,SC2207,SC2206,SC2250,SC2068
+
+    # Keep important checks enabled:
+    # SC2016: Expressions don't expand in single quotes
+  - |-
+    # SC2039: POSIX互換でない場合でも許可する特定の構文
+    # disable=SC2039
+- code: 2148
+  references: 16
+  example_sources:
+  - yunielrc/ydf/.shellcheckrc.ci
+  - sblask/dotfiles/dotfiles_shared/.shellcheckrc.symlink
+  - scmbreeze/scm_breeze/.shellcheckrc
+  - mongodb/mongodb-kubernetes/.shellcheckrc
+  - jamke/qubes-completion/.shellcheckrc
+  text_fragments:
+  - disable=SC1091,SC2148,SC2034
+  - |-
+    # don't warn if there is no shebang
+    disable=SC2148
+  - |-
+    # Disable warnings about not being able to follow sourced files
+    disable=SC1090
+    disable=SC1091
+
+    # Disable warnings about missing shebangs
+    disable=SC2148
+- code: 2169
+  references: 3
+  example_sources:
+  - marcinbojko/pipetools-ansible/Dockerfile
+  - marcinbojko/alpine-tools/Dockerfile
+  - marcinbojko/pipetools/Dockerfile
+  text_fragments:
+  - |-
+    SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+    COPY requirements.yml /tmp/requirements.yml
+    COPY entrypoint.sh /entrypoint.sh
+    # shellcheck disable=SC2169
+    RUN apk update && apk add --no-cache --update -t deps ca-certificates curl bash gettext tar gzip openssl openssh rsync python3 python3-dev py3-pip py3-wheel tzdata git httpie sshfs shellcheck \
+    libffi libffi-dev py3-setuptools py3-distutils-extra build-base yamllint dos2unix ansible \
+    && apk upgrade --no-cache
+  - |-
+    LABEL release="alpine-tools"
+    LABEL maintainer="marcinbojko"
+    SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+    # shellcheck disable=SC2169
+    RUN apk add --no-cache --update -t deps ca-certificates curl bash gettext tar gzip openssl openssh rsync python3 python3-dev py3-pip py3-wheel tzdata git httpie nmap tcpdump sshfs shellcheck  httpie nmap \
+      && pip3 install --upgrade pip \
+      && pip3 install --no-cache-dir --upgrade wheel pip yamllint jsonlint dos2unix\
+  - |-
+    COPY --from=axiomhq/cli:0.14.1 /usr/bin/axiom /bin/axiom
+    COPY --from=infisical/cli:0.43.56 /bin/infisical /bin/infisical
+
+    # shellcheck disable=SC2169
+    RUN apk update && apk add --no-cache --update -t deps ca-certificates curl bash gettext tar gzip openssl openssh rsync python3 python3-dev py3-pip py3-wheel tzdata git httpie sshfs shellcheck jq npm dos2unix gcc musl-dev linux-headers docker git-lfs sshpass
+    ENV VIRTUAL_ENV=/home/pipetools
+    ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+- code: 2183
+  references: 1
+  example_sources:
+  - twpayne/chezmoi/assets/scripts/install-local-bin.sh
+  text_fragments:
+  - "glibc_version=\"$(ldd --version 2>&1 | awk '$1 == \"ldd\" { print $NF }')\"\n\t\t\t#
+    shellcheck disable=SC2046,SC2183\n\t\t\tminimum_glibc_version_string=\"$(printf
+    \"%03d%03d\" $(echo \"${minimum_glibc_version}\" | tr \".\" \" \"))\"\n\t\t\t#
+    shellcheck disable=SC2046,SC2183\n\t\t\tglibc_version_string=\"$(printf \"%03d%03d\"
+    $(echo \"${glibc_version}\" | tr \".\" \" \"))\"\n\t\t\tlog_info \"found glibc
+    version ${glibc_version}\"\n\t\t\tif [ \"${glibc_version_string}\" -lt \"${minimum_glibc_version_string}\"
+    ]; then"
+- code: 2187
+  references: 1
+  example_sources:
+  - archlinux/mkinitcpio/.shellcheckrc
+  text_fragments:
+  - |-
+    enable=quote-safe-variables
+
+    # Require [[ and warn about [ in Bash/Ksh
+    enable=require-double-brackets
+
+    # disable warnings validating ash scripts
+    disable=SC2187
+- code: 2230
+  references: 2
+  example_sources:
+  - exonum/exonum-java-binding/.shellcheckrc
+  - johndpope/face/module/.github/workflows/composer-install.yml
+  text_fragments:
+  - |-
+    # Allow 'which' usage
+    disable=SC2230
+  - |-
+    - name: "Checkout repository"
+            uses: "actions/checkout@v3"
+          - name: "Run shellcheck"
+            run: "shellcheck --exclude=SC2230 bin/*.sh tests/*.sh"
+
+      run:
+        needs: test
+- code: 2233
+  references: 1
+  example_sources:
+  - KDAB/GammaRay/.shellcheckrc
+  text_fragments:
+  - |-
+    #disable=SC2006
+    disable=SC2233
+- code: 2236
+  references: 5
+  example_sources:
+  - natelandau/dotfiles/.shellcheckrc
+  - liferay/liferay-docker/.shellcheckrc
+  - natelandau/shell-scripting-templates/.shellcheckrc
+  - pkmgr/installer/.shellcheckrc
+  - AlbanAndrieu/ansible-nabla/.shellcheckrc
+  text_fragments:
+  - |-
+    # Specify the shell to use
+    shell=bash
+
+    disable=SC2236 # Allow [ ! -z foo ] instead of suggesting -n
+    disable=SC2001 # Allow string="string" ; echo "$string" | sed -e "s/ir/ri/"
+    disable=SC2317 # Allow Command appears to be unreachable
+    disable=SC2034 # Allow unused variables
+  - |-
+    # information about SC2236.
+    #
+
+    disable=SC1090
+    disable=SC1091
+    disable=SC2001
+    disable=SC2016
+  - |-
+    disable=SC2207
+    disable=SC2231
+    disable=SC2236
+- code: 2243
+  references: 1
+  example_sources:
+  - MichaIng/DietPi/.shellcheckrc
+  text_fragments:
+  - |-
+    # https://github.com/koalaman/shellcheck/wiki/Checks
+    disable=SC2004,SC2119,SC2155,SC2188,SC2243,SC2244,SC2250,SC2312,SC2317
+- code: 2244
+  references: 1
+  example_sources:
+  - MichaIng/DietPi/.shellcheckrc
+  text_fragments:
+  - |-
+    # https://github.com/koalaman/shellcheck/wiki/Checks
+    disable=SC2004,SC2119,SC2155,SC2188,SC2243,SC2244,SC2250,SC2312,SC2317
+- code: 2248
+  references: 1
+  example_sources:
+  - MikeMcQuaid/strap/.shellcheckrc
+  text_fragments:
+  - |-
+    # Regularly want to allow unquoted, empty argument lists.
+    disable=SC2248
+    disable=SC2086
+
+    # Suggest adding a default case in `case` statements
+    enable=add-default-case
+- code: 2250
+  references: 5
+  example_sources:
+  - MichaIng/DietPi/.shellcheckrc
+  - ralish/bash-script-template/.shellcheckrc
+  - brujoand/dotfiles/.shellcheckrc
+  - Excoriate/mcp-terragrunt-docs/.shellcheckrc
+  - jaclu/tmux-menus/.shellcheckrc
+  text_fragments:
+  - |-
+    # https://github.com/koalaman/shellcheck/wiki/Checks
+    disable=SC2004,SC2119,SC2155,SC2188,SC2243,SC2244,SC2250,SC2312,SC2317
+  - |-
+    #
+    # Check ID          Symbolic name                   Type
+    # SC2250            require-variable-braces         optional
+    disable=SC2250
+
+    # Add the script directory to the search path for source statements
+    source-path=SCRIPTDIR
+  - |-
+    # SC2250: Prefer putting braces around variable references (style preference)
+    # SC2068: Double quote array expansions (common pattern in dotfiles)
+    # SC2086: Double quote to prevent globbing (intentional in some cases)
+    disable=SC1090,SC1091,SC2034,SC2039,SC2119,SC2120,SC2155,SC2164,SC2207,SC2206,SC2250,SC2068
+
+    # Keep important checks enabled:
+    # SC2016: Expressions don't expand in single quotes
+- code: 2292
+  references: 2
+  example_sources:
+  - Homebrew/brew/Dockerfile
+  - hype8912/proxy-and-certificate-settings/docker/homebrew.dockerfile
+  text_fragments:
+  - |-
+    # We need `[` instead of `[[` because the shell is `/bin/sh`.
+    # shellcheck disable=SC1091,SC2154,SC2292
+    RUN bash -c "for i in {1..5}; do apt-get update && break || sleep \$((i)); done" \
+  - |-
+    # We need `[` instead of `[[` because the shell is `/bin/sh`.
+    # shellcheck disable=SC1091,SC2154,SC2292
+    RUN apt-get update \
+- code: 2310
+  references: 3
+  example_sources:
+  - webcoyote/sandvault/sv
+  - apache/doris/.shellcheckrc
+  - sddevelopment-be/quickstart_agent-augmented-development/.shellcheckrc
+  text_fragments:
+  - |-
+    ensure_brew() {
+        # shellcheck disable=SC2310 # brew_shellenv intentionally used in condition
+        if brew_shellenv; then
+  - |-
+    env bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        # shellcheck disable=SC2310 # brew_shellenv intentionally used in || condition
+        brew_shellenv || abort "Homebrew install failed."
+  - |-
+    source-path=thirdparty
+
+    external-sources=true
+
+    enable=all
+    disable=SC2310
+    disable=SC2312
+- code: 2311
+  references: 1
+  example_sources:
+  - sddevelopment-be/quickstart_agent-augmented-development/.shellcheckrc
+  text_fragments:
+  - |-
+    # SC2311: "set -e disabled in command substitution" - Acceptable for capturing command output
+    # SC2312: "Command substitution in echo/test" - Acceptable for simple display/test operations
+    # SC2016: "Expressions don't expand in single quotes" - Intentional for literal strings
+    disable=SC1091,SC2086,SC2181,SC2317,SC2310,SC2311,SC2312,SC2016
+
+    # Output format: gcc - compatible with CI/CD systems and IDE integration
+    format=gcc
+- code: 2312
+  references: 5
+  example_sources:
+  - adeira/universe/x
+  - apache/doris/.shellcheckrc
+  - MichaIng/DietPi/.shellcheckrc
+  - sddevelopment-be/quickstart_agent-augmented-development/.shellcheckrc
+  - jaclu/tmux-menus/.shellcheckrc
+  text_fragments:
+  - |-
+    if ! command -v rustup &> /dev/null ; then
+      # https://www.shellcheck.net/wiki/SC2312
+      # shellcheck disable=SC2312
+      curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused -fsSL "https://sh.rustup.rs" | sh -s -- -y
+    fi
+  - |-
+    source-path=thirdparty
+
+    external-sources=true
+
+    enable=all
+    disable=SC2310
+    disable=SC2312
+  - |-
+    # https://github.com/koalaman/shellcheck/wiki/Checks
+    disable=SC2004,SC2119,SC2155,SC2188,SC2243,SC2244,SC2250,SC2312,SC2317
+- code: 3023
+  references: 1
+  example_sources:
+  - Oaklight/autossh-tunnel-dockerized/.shellcheckrc
+  text_fragments:
+  - |-
+    # All scripts run on BusyBox ash (Alpine), which supports these POSIX
+    # extensions.  Suppress the "not defined in POSIX sh" family of warnings.
+    disable=SC3043  # 'local' is undefined in POSIX sh (supported by ash)
+    disable=SC3003  # In POSIX sh, ERR traps are undefined
+    disable=SC3037  # In POSIX sh, echo flags are undefined
+    disable=SC3023  # In POSIX sh, $! is undefined (ash supports it)
+already_known:
+- 1001
+- 1007
+- 1009
+- 1056
+- 1069
+- 1070
+- 1072
+- 1073
+- 1078
+- 1079
+- 1090
+- 1091
+- 1111
+- 1112
+- 2001
+- 2003
+- 2004
+- 2005
+- 2006
+- 2009
+- 2010
+- 2012
+- 2013
+- 2015
+- 2016
+- 2018
+- 2019
+- 2024
+- 2028
+- 2029
+- 2030
+- 2031
+- 2034
+- 2035
+- 2038
+- 2043
+- 2044
+- 2045
+- 2046
+- 2048
+- 2053
+- 2059
+- 2064
+- 2068
+- 2072
+- 2076
+- 2086
+- 2088
+- 2089
+- 2090
+- 2091
+- 2096
+- 2102
+- 2103
+- 2104
+- 2116
+- 2119
+- 2120
+- 2124
+- 2126
+- 2128
+- 2129
+- 2139
+- 2143
+- 2145
+- 2153
+- 2154
+- 2155
+- 2162
+- 2164
+- 2165
+- 2167
+- 2168
+- 2174
+- 2178
+- 2181
+- 2184
+- 2185
+- 2188
+- 2196
+- 2206
+- 2207
+- 2209
+- 2211
+- 2213
+- 2220
+- 2221
+- 2222
+- 2231
+- 2235
+- 2254
+- 2261
+- 2288
+- 2295
+- 2296
+- 2317
+- 2329
+- 3003
+- 3020
+- 3037
+- 3040
+- 3043
+- 3044

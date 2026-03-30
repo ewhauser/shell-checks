@@ -23,6 +23,9 @@ prompt_session_prefix = "provenance/prompts/"
 corpus_task_summary = "Create clean-room artifact bundles for corpus-discovered ShellCheck codes."
 corpus_source_class = "Non-ShellCheck third-party shell scripts or corpus-derived hints used to identify numeric codes or likely triggering constructs"
 corpus_discovery_phrase = "identified via corpus scanning"
+github_task_summary = "Create clean-room artifact bundles for GitHub-search-discovered ShellCheck codes."
+github_source_class = "Public GitHub code search references to numeric codes in non-ShellCheck repositories used to identify candidate compatibility codes"
+github_discovery_phrase = "identified via GitHub public code search"
 # Sessions through session-053 predate prompt-artifact recording.
 legacy_prompt_hash_max_session = 53
 
@@ -104,6 +107,14 @@ session_paths.each do |path|
     end
   elsif allowed_sources.include?(corpus_source_class)
     errors << "#{path}: non-corpus task_summary must not include the canonical corpus source class"
+  end
+
+  if task_summary == github_task_summary
+    unless allowed_sources.include?(github_source_class)
+      errors << "#{path}: github task_summary must include the canonical github source class"
+    end
+  elsif allowed_sources.include?(github_source_class)
+    errors << "#{path}: non-github task_summary must not include the canonical github source class"
   end
 
   prompt_files = Array(session["prompt_files"])
@@ -228,6 +239,14 @@ artifact_paths.each do |path|
       allowed_sources = Array(session["allowed_source_classes"])
       unless task_summary == corpus_task_summary && allowed_sources.include?(corpus_source_class)
         errors << "#{path}: corpus-discovered artifact must reference a corpus-compliant AI session (#{session_id})"
+      end
+    end
+
+    if artifact["clean_room_statement"].to_s.include?(github_discovery_phrase)
+      task_summary = session["task_summary"].to_s
+      allowed_sources = Array(session["allowed_source_classes"])
+      unless task_summary == github_task_summary && allowed_sources.include?(github_source_class)
+        errors << "#{path}: github-discovered artifact must reference a github-compliant AI session (#{session_id})"
       end
     end
   end
