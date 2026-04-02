@@ -1,0 +1,7 @@
+id: SH-365
+name: escaped-parens-in-double-brackets
+summary: Parentheses are escaped inside `[[ ... ]]`.
+shells:
+- sh
+example: examples/365.sh
+rationale: Drop the escapes and let `[[` handle grouping tokens directly.

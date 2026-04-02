@@ -1,0 +1,7 @@
+id: SH-364
+name: bare-parens-in-test
+summary: A single-bracket test leaves parentheses unquoted.
+shells:
+- sh
+example: examples/364.sh
+rationale: Quote the literal characters or rewrite the condition without standalone parens.

@@ -1,9 +1,9 @@
 id: SH-144
-name: arith-redirection-target
-summary: A redirection target is an arithmetic expansion.
+name: stateful-redirect-target
+summary: A redirection target performs an expansion that changes shell state while the filename is being resolved.
 shells:
 - sh
 - bash
 - ksh
 example: examples/144.sh
-rationale: Write to a normal filename or redirect by descriptor.
+rationale: Compute the value first, then redirect to the resulting path.

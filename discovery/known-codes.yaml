@@ -872,27 +872,6 @@ known_codes:
     string.'
   sources:
   - mappings/SH-087
-- shellcheck_code: 1001
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-088: A backslash before a normal letter gets treated as
-    plain text.'
-  sources:
-  - mappings/SH-088
-- shellcheck_code: 1007
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-090: A space after `=` turns an assignment into a command.'
-  sources:
-  - mappings/SH-090
 - shellcheck_code: 1010
   status: covered
   shells:
@@ -903,17 +882,6 @@ known_codes:
   rationale: 'Covered by SH-091: A reserved word is being passed as a literal argument.'
   sources:
   - mappings/SH-091
-- shellcheck_code: 1001
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-092: A backslash is used before a normal character in
-    a plain word.'
-  sources:
-  - mappings/SH-092
 - shellcheck_code: 1009
   status: covered
   shells:
@@ -925,39 +893,6 @@ known_codes:
     in an `elif` clause.'
   sources:
   - mappings/SH-093
-- shellcheck_code: 1007
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-094: An assignment is split by a space after `=`, so the
-    shell treats it as a command name and argument instead.'
-  sources:
-  - mappings/SH-094
-- shellcheck_code: 1001
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-095: A backslash before `_` is unnecessary in bash and
-    becomes a literal underscore.'
-  sources:
-  - mappings/SH-095
-- shellcheck_code: 1010
-  status: covered
-  shells:
-  - bash
-  - dash
-  - ksh
-  - sh
-  rationale: 'Covered by SH-096: `done` is read as a command name when it is not separated
-    from the previous word.'
-  sources:
-  - mappings/SH-096
 - shellcheck_code: 1019
   status: covered
   shells:
@@ -3310,3 +3245,114 @@ known_codes:
   rationale: 'Covered by SH-353: The `if` keyword is concatenated with a `[` test.'
   sources:
   - mappings/SH-353
+- shellcheck_code: 1017
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-362: The file contains a carriage return character.'
+  sources:
+  - mappings/SH-362
+- shellcheck_code: 1026
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-363: A bracket-style test is being nested inside `[[ ...
+    ]]`.'
+  sources:
+  - mappings/SH-363
+- shellcheck_code: 1028
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-364: A single-bracket test leaves parentheses unquoted.'
+  sources:
+  - mappings/SH-364
+- shellcheck_code: 1029
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-365: Parentheses are escaped inside `[[ ... ]]`.'
+  sources:
+  - mappings/SH-365
+- shellcheck_code: 1033
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-366: A `[[` test is closed with a lone `]`.'
+  sources:
+  - mappings/SH-366
+- shellcheck_code: 1034
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-367: A `[` test is closed with `]]`.'
+  sources:
+  - mappings/SH-367
+- shellcheck_code: 1038
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-368: Process substitution is glued directly to `<<`.'
+  sources:
+  - mappings/SH-368
+- shellcheck_code: 1051
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-370: A `then` branch is followed by an unnecessary semicolon.'
+  sources:
+  - mappings/SH-370
+- shellcheck_code: 1053
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-372: An `else` branch is followed by an unnecessary semicolon.'
+  sources:
+  - mappings/SH-372
+- shellcheck_code: 1014
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-378: Places a command name inside test brackets as if
+    test would run it.'
+  sources:
+  - mappings/SH-378
+- shellcheck_code: 1018
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-381: Contains a non-breaking space where regular shell
+    whitespace was intended.'
+  sources:
+  - mappings/SH-381
+- shellcheck_code: 1060
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-385: Creates a loop body with no command between `do`
+    and `done`.'
+  sources:
+  - mappings/SH-385
+- shellcheck_code: 1063
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-386: Places `do` on the same line without a separator
+    before it.'
+  sources:
+  - mappings/SH-386
+- shellcheck_code: 1077
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-392: Uses an acute accent instead of a shell backtick
+    for command substitution.'
+  sources:
+  - mappings/SH-392
+- shellcheck_code: 1059
+  status: covered
+  shells:
+  - sh
+  rationale: 'Covered by SH-404: Adds a command separator immediately after `do`.'
+  sources:
+  - mappings/SH-404

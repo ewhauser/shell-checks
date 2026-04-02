@@ -1,10 +1,10 @@
 id: SH-069
-name: constant-comparison-test
-summary: A test that compares only fixed literals cannot react to runtime data and usually adds no value.
+name: literal-test-comparison
+summary: A test made only of fixed literals cannot react to runtime data and is usually a forgotten variable reference.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/069.sh
-rationale: Compare values that come from the script's inputs or variables instead of hard-coded text when the condition is meant to branch.
+rationale: Compare values that come from inputs or variables so the branch can actually change.

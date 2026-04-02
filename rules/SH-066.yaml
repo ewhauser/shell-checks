@@ -1,10 +1,10 @@
 id: SH-066
-name: echo-inside-command-substitution
-summary: Capturing echo output through command substitution adds an unnecessary extra step.
+name: echo-in-command-substitution
+summary: Wrapping `echo` in `$(...)` adds an extra command where a direct emitter or the original command would do.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/066.sh
-rationale: Use a direct emitter such as printf when building substitution output.
+rationale: Print directly with `printf` or use the inner command's output without an extra `echo` layer.

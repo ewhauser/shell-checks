@@ -1,10 +1,10 @@
 id: SH-159
-name: subst-with-redirect
-summary: Runs a command substitution whose output is redirected away.
+name: empty-command-substitution-from-redirection
+summary: Captures a substitution whose command sends all of its output somewhere else.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/159.sh
-rationale: Run the command directly if you only want the side effect.
+rationale: Run the command directly, or separate the side effect from the value you want to capture.

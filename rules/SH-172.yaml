@@ -1,10 +1,10 @@
 id: SH-172
-name: literal-backslash-in-single-quotes
-summary: A backslash sequence inside single quotes is treated literally.
+name: backslash-escape-inside-single-quotes
+summary: A backslash inside single quotes stays literal, so it does not create an escape sequence.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/172.sh
-rationale: Use double quotes or $'...' if backslash escapes are intended.
+rationale: Use double quotes or ANSI-C quoting when you need the backslash to introduce special characters.

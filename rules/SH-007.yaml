@@ -1,8 +1,8 @@
 id: SH-007
-name: test-equality-operator
-summary: "The `==` comparison operator inside `[` is not portable in POSIX shells."
+name: double-equals-in-bracket-test
+summary: Using `==` inside `[` is not supported by POSIX `sh`.
 shells:
 - sh
 - dash
 example: examples/007.sh
-rationale: "Use `=` when writing tests for `/bin/sh`."
+rationale: Use `=` for string comparisons in `sh`, or switch to a shell whose test syntax accepts `==`.

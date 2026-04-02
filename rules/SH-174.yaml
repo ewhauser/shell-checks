@@ -1,10 +1,10 @@
 id: SH-174
-name: extglob-in-test
-summary: An extended glob pattern appears inside a test bracket.
+name: parenthesized-test-fragment
+summary: A parenthesized fragment appears in a test or expansion where the shell can confuse it with control syntax.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/174.sh
-rationale: Quote or restructure the pattern to avoid parsing ambiguity.
+rationale: Rewrite the expression with portable operators or add the missing quoting and escaping so the shell reads it the way you intended.

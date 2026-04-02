@@ -1,10 +1,10 @@
 id: SH-125
-name: zsh-always-block
-summary: "Zsh `always` blocks are not valid shell syntax."
+name: zsh-always-clause
+summary: Zsh's `always` clause is not valid in portable shell scripts.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/125.sh
-rationale: Rewrite the flow using normal shell constructs.
+rationale: Rewrite the control flow with ordinary shell blocks that every target shell understands.

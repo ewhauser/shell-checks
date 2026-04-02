@@ -1,6 +1,6 @@
 id: SH-004
-name: loop-from-command-output
-summary: Building loop items from raw command output lets whitespace and pathname characters change the iteration set.
+name: iterating-over-command-output
+summary: Building a loop from command output lets whitespace and glob characters change what gets iterated.
 shells:
 - sh
 - bash

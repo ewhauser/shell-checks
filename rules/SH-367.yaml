@@ -1,0 +1,7 @@
+id: SH-367
+name: single-open-double-close
+summary: A `[` test is closed with `]]`.
+shells:
+- sh
+example: examples/367.sh
+rationale: Keep the bracket style consistent from start to finish.

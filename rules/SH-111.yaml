@@ -1,10 +1,10 @@
 id: SH-111
-name: extglob-case
-summary: A grouped case pattern uses non-POSIX shell syntax.
+name: extended-case-pattern
+summary: A case branch uses grouped alternation syntax that portable shells do not understand.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/111.sh
-rationale: Spell out the alternatives with plain case patterns or use bash.
+rationale: Spell the matches out as separate labels, or rely on a shell that explicitly supports the extension.

@@ -1,0 +1,7 @@
+id: SH-381
+name: nonbreaking-space
+summary: Contains a non-breaking space where regular shell whitespace was intended.
+shells:
+- sh
+example: examples/381.sh
+rationale: Replace it with an ordinary ASCII space.

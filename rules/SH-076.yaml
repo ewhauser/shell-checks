@@ -1,10 +1,10 @@
 id: SH-076
-name: single-iteration-loop
-summary: A loop that exits immediately is more complicated than the code it wraps.
+name: single-pass-loop
+summary: A loop that is guaranteed to stop after one pass adds structure without iteration.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/076.sh
-rationale: Replace it with the direct command sequence or a simpler conditional structure.
+rationale: Inline the body or rewrite the control flow unless the loop form is deliberately documenting a one-shot block.

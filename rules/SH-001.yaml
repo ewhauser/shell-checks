@@ -1,10 +1,10 @@
 id: SH-001
-name: unquoted-argument-expansion
-summary: Unquoted parameter expansion in a normal argument position can split one value into several words or match path patterns unexpectedly.
+name: unquoted-variable-argument
+summary: An unquoted variable used as an argument can split into multiple words or expand to unexpected path matches.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/001.sh
-rationale: Quote ordinary parameter expansions unless the script deliberately relies on shell field splitting and pathname matching.
+rationale: Quote ordinary variable expansions unless you deliberately want shell splitting or globbing to happen.

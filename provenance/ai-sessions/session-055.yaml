@@ -1,0 +1,41 @@
+---
+session_id: session-055
+date: '2026-04-02'
+tool: codex
+model: gpt-5.4-mini
+task_summary: Create clean-room artifact bundles for issue-discovered ShellCheck codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Community-authored GitHub issue content used as weak contextual hints for identifying
+  candidate compatibility codes
+generated_files:
+- examples/363.sh
+- examples/364.sh
+- examples/365.sh
+- examples/366.sh
+- examples/367.sh
+- examples/368.sh
+- examples/370.sh
+- examples/372.sh
+- provenance/artifacts/SH-363.yaml
+- provenance/artifacts/SH-364.yaml
+- provenance/artifacts/SH-365.yaml
+- provenance/artifacts/SH-366.yaml
+- provenance/artifacts/SH-367.yaml
+- provenance/artifacts/SH-368.yaml
+- provenance/artifacts/SH-370.yaml
+- provenance/artifacts/SH-372.yaml
+- rules/SH-363.yaml
+- rules/SH-364.yaml
+- rules/SH-365.yaml
+- rules/SH-366.yaml
+- rules/SH-367.yaml
+- rules/SH-368.yaml
+- rules/SH-370.yaml
+- rules/SH-372.yaml
+prompt_sha256: f92906d9a29adc1b161bff0727142f03e1374fafa0387cf46d69b79d7d4d1493
+output_sha256: 16b8c064a76168813d49f8b8e0fd68393fd3bbe38e13589183e1c047c0796ef6
+prompt_files:
+- provenance/prompts/session-055/prompt-01.txt

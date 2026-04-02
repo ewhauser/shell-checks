@@ -1,10 +1,10 @@
 id: SH-182
-name: extglob-in-case-pattern
-summary: A case pattern uses extended-glob parenthesized alternation.
+name: extglob-case-pattern
+summary: A `case` arm uses extended glob alternation that only some shells accept.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/182.sh
-rationale: Use separate case arms or a portable glob pattern.
+rationale: Prefer separate case arms or a simpler glob so the match stays portable.

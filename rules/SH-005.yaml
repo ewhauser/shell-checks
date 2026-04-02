@@ -1,10 +1,10 @@
 id: SH-005
 name: unquoted-command-substitution
-summary: An unquoted command substitution can break one produced value into several words before the command sees it.
+summary: Leaving a command substitution unquoted can break one produced value into multiple words before the command sees it.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/005.sh
-rationale: Quote substitutions unless word splitting is genuinely what you want.
+rationale: Quote substitutions unless you intentionally want word splitting to occur.

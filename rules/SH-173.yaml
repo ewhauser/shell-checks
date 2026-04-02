@@ -1,10 +1,10 @@
 id: SH-173
-name: backslash-before-command
-summary: A backslash precedes a command name to bypass aliases.
+name: misused-backslash-sequence
+summary: A backslash in plain shell text usually becomes literal text or just suppresses alias expansion.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/173.sh
-rationale: Use 'command' instead of a leading backslash for clarity.
+rationale: Use `printf` or `$'...'` for escape sequences, and keep a leading backslash only when you intentionally want alias suppression.

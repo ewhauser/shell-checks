@@ -1,10 +1,10 @@
 id: SH-002
-name: raw-input-backslash-preservation
-summary: Reading text without the raw-input option can change literal backslashes before later use.
+name: read-without-raw-mode
+summary: Reading input without raw mode can rewrite backslashes before the text is used later.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/002.sh
-rationale: "Use `read -r` when the script needs incoming text to stay intact instead of treating backslashes as escapes."
+rationale: Use `read -r` when the script needs to preserve the input exactly as typed.

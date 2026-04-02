@@ -1,8 +1,8 @@
 id: SH-013
-name: standalone-arithmetic
-summary: "The script uses the standalone arithmetic command form, which is not defined by POSIX `sh`."
+name: standalone-arithmetic-command
+summary: The script invokes arithmetic evaluation as a command, which portable `sh` is not required to support.
 shells:
 - sh
 - dash
 example: examples/013.sh
-rationale: Use a portable arithmetic approach or switch to a shell that supports this command form.
+rationale: Move the calculation into a POSIX arithmetic form or use a shell that understands `((...))`.

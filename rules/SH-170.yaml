@@ -1,10 +1,10 @@
 id: SH-170
-name: redundant-return-status
-summary: Returns the exit status that the function would already propagate.
+name: unnecessary-explicit-status-hand-off
+summary: The script immediately feeds `$?` back into `return` or `exit`, which usually adds no new information.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/170.sh
-rationale: Omit the explicit return when the last command status is the desired result.
+rationale: Let the surrounding command or function carry the status naturally unless you need to save it first.

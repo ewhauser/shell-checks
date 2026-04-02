@@ -1,0 +1,38 @@
+For each shell code below, write a minimal shell script (1-5 lines) that triggers
+the target shellcheck code, plus a short name and description. These codes were
+discovered via mining community-authored GitHub issues. Use context hints to
+understand what construct might trigger the code, but write your own independent
+example from shell semantics knowledge.
+
+Codes:
+- code: 1026, sh_id: SH-363, shells: [sh]
+  Context hint: SC1026: If grouping expressions inside [[..]], use ( .. ).  | Issue title: Full list of checks
+- code: 1028, sh_id: SH-364, shells: [sh]
+  Context hint: SC1028: In [..] you have to escape \\( \\) or preferably combine [..] expressions.  | Issue title: Full list of checks
+- code: 1029, sh_id: SH-365, shells: [sh]
+  Context hint: shellcheck --shell=bash --severity=error -i 2086,SC1029  | Issue title: Is there a way to include specific rules and not have to exclude all the others?
+- code: 1033, sh_id: SH-366, shells: [sh]
+  Context hint: SC1033: Test expression was opened with double `[[` but closed with single `]`. Make sure they match.  | Issue title: Full list of checks
+- code: 1034, sh_id: SH-367, shells: [sh]
+  Context hint: ^-- [SC1034](https://www.shellcheck.net/wiki/SC1034) (error): Test expression was opened with single [ but closed with double ]]. Make sure they match. | Issue title: SC2199 appears to incorrectly error on e.g., "${@:2:1}" expansion of "$@"
+- code: 1038, sh_id: SH-368, shells: [sh]
+  Context hint: SC1038: Shells are space sensitive. Use '< <(cmd)', not '<<(cmd)'.  | Issue title: Full list of checks
+- code: 1043, sh_id: SH-369, shells: [sh]
+  Context hint: - https://github.com/koalaman/shellcheck/wiki/SC1043 | Issue title: Some shellcheck wiki links have no content
+- code: 1051, sh_id: SH-370, shells: [sh]
+  Context hint: SC1051: Semicolons directly after 'then' are not allowed. Just remove it.  | Issue title: Full list of checks
+- code: 1052, sh_id: SH-371, shells: [sh]
+  Context hint: SC1052: Semicolons directly after 'then' are not allowed. Just remove it.  | Issue title: moustache templates support
+- code: 1053, sh_id: SH-372, shells: [sh]
+  Context hint: SC1053: Semicolons directly after 'else' are not allowed. Just remove it.  | Issue title: Full list of checks
+
+Rules:
+- example_script MUST start with #!/bin/sh or #!/bin/bash as appropriate
+- Do NOT copy any code fragments from the context hints — write your own minimal triggering example
+- Minimize extra shellcheck codes; companion parser/context diagnostics are acceptable only when tightly coupled to the same construct
+- Do NOT reuse ShellCheck diagnostic wording
+- Compatibility identifiers may appear as bare numbers or SC1234, but do not reuse ShellCheck diagnostic wording
+- If you need to suppress other warnings in example_script, use numeric codes only (e.g. "# shellcheck disable=1072,1073")
+- Keep name, summary, rationale SHORT
+- Set requires_dataflow to true if the rule requires cross-statement analysis (e.g. tracking how values flow through assignments, control-flow reachability, or how a declaration on one line affects interpretation on another)
+- Do NOT run any commands or write any files

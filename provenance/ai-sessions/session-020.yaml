@@ -13,16 +13,7 @@ allowed_source_classes:
   numeric codes or likely triggering constructs
 generated_files:
 - examples/093.sh
-- examples/094.sh
-- examples/095.sh
-- examples/096.sh
 - provenance/artifacts/SH-093.yaml
-- provenance/artifacts/SH-094.yaml
-- provenance/artifacts/SH-095.yaml
-- provenance/artifacts/SH-096.yaml
 - rules/SH-093.yaml
-- rules/SH-094.yaml
-- rules/SH-095.yaml
-- rules/SH-096.yaml
-prompt_sha256: 69b92a049fee3800463041fdae2dd1484559dd71728d8e0fa61dcf27998420b1
-output_sha256: 0b764d8cae0dcebf95e9a8247cbd0abf7a9c9cbe0b6fe0bb8cdc06b8341bc27b
+prompt_sha256: ae9caf372dc69fe4b6178476367762b7bc8fa547f4a5c5cf1e9e30b38fe2393d
+output_sha256: 4ee3ec39579e7d27d6e72bb72503d40584c2ef128d6bfe381ec872411e68691b

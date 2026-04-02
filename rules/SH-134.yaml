@@ -1,10 +1,10 @@
 id: SH-134
-name: pipe-to-kill
-summary: "Pipes data into `kill`"
+name: pipe-into-kill
+summary: `kill` appears at the end of a pipeline even though it does not read piped input.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/134.sh
-rationale: "Collect the PIDs first, then pass them to `kill` directly."
+rationale: Pass the process IDs as arguments, or use a tool like `xargs` to build that argument list explicitly.

@@ -1,10 +1,10 @@
 id: SH-160
-name: subst-with-redirect-err
-summary: Runs a command substitution with redirected output in the subshell.
+name: redirected-output-inside-substitution
+summary: Places a redirection inside a substitution so the captured text never receives the command's output.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/160.sh
-rationale: Keep the redirect outside the substitution if possible.
+rationale: Move the redirection outside the substitution, or duplicate the stream with a tool like `tee` if you need both effects.

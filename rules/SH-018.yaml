@@ -1,8 +1,8 @@
 id: SH-018
 name: array-assignment
-summary: "The script assigns a shell array, which is not part of standard `sh`."
+summary: The script initializes an array-like value, but POSIX `sh` only provides scalar variables.
 shells:
 - sh
 - dash
 example: examples/018.sh
-rationale: Use separate variables or positional parameters instead of array assignment in portable shell.
+rationale: Use separate variables, positional parameters, or another representation that works in plain `sh`.

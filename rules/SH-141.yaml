@@ -1,10 +1,10 @@
 id: SH-141
-name: invalid-exit-status
-summary: Exit is given a nonnumeric status.
+name: nonnumeric-exit-status
+summary: `exit` is given text or another invalid status instead of a usable exit code.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/141.sh
-rationale: Use a numeric code and print any message separately.
+rationale: Use a number from 0 to 255 and print any message separately.

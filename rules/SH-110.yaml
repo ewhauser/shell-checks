@@ -1,10 +1,10 @@
 id: SH-110
-name: broken-test-parse
-summary: "A malformed `[` test expression cannot be parsed by ShellCheck."
+name: unparseable-test-condition
+summary: A bracket test contains tokens that ShellCheck cannot turn into a valid expression.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/110.sh
-rationale: Correct the test syntax before relying on any other static checks.
+rationale: Correct the test syntax first so the rest of the script can be analyzed normally.

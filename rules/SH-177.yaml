@@ -1,10 +1,10 @@
 id: SH-177
-name: missing-semicolon-before-brace
-summary: A closing brace follows a command without a semicolon or newline.
+name: open-brace-needs-separator
+summary: A command starts immediately after `{`, so the shell cannot cleanly recognize the group boundary.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/177.sh
-rationale: "Add a semicolon before `}` so the shell sees the end of the group."
+rationale: Put whitespace, a semicolon, or a newline after `{` before the first command.

@@ -1,8 +1,8 @@
 id: SH-052
-name: local-top-level
-summary: "In bash, `local` is only valid inside a function body and is not meaningful at script scope."
+name: local-outside-function
+summary: `local` only has meaning inside a function, so using it elsewhere leaves you with a script-level variable instead of a function-local one.
 shells:
 - bash
 - dash
 example: examples/052.sh
-rationale: Move the declaration into a function or use a regular assignment when working at top level.
+rationale: Put the declaration inside the function that owns it, or use a plain assignment when the value should remain global.

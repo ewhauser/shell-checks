@@ -1,10 +1,10 @@
 id: SH-072
-name: literal-unary-string-test
-summary: A unary string check on a hard-coded word never reflects changing input.
+name: literal-string-in-unary-test
+summary: A string test against a fixed word can never reflect changing runtime data.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/072.sh
-rationale: Test a variable or path that can change, or drop the check if the literal is intentional.
+rationale: Point the test at a variable, command result, or path that may change, or remove the check if the constant is intentional.

@@ -1,10 +1,10 @@
 id: SH-114
-name: suspect-closing-quote
-summary: A quote is syntactically closed, but the following character makes ShellCheck flag it as suspicious.
+name: ambiguous-string-boundary
+summary: A quote closes next to adjacent text, making the boundary look dubious to ShellCheck.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/114.sh
-rationale: Restructure the string generation so the closing quote is unambiguous, or move the embedded script text to a here-doc.
+rationale: Reformat the string so the closing quote stands on its own, or escape the adjacent text explicitly.

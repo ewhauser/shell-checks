@@ -1,10 +1,10 @@
 id: SH-068
-name: command-output-array-split
-summary: Feeding raw command output straight into an array can break on whitespace and similar separators.
+name: command-substitution-array-assignment
+summary: Assigning command output to an array directly makes the shell re-parse the text as shell syntax.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/068.sh
-rationale: Capture the data with a structured reader instead of arraying command output directly.
+rationale: Read the output with a structured reader or split it deliberately instead of feeding it straight into the array.

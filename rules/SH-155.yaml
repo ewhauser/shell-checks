@@ -1,10 +1,10 @@
 id: SH-155
-name: status-capture-after-branch-test
-summary: "Reads `$?` after a test command has already overwritten it."
+name: capture-status-after-condition
+summary: Reads the exit status after a condition has already become the result of the control-flow construct.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/155.sh
-rationale: Save the status before running another command in the branch.
+rationale: Capture the command's status immediately, before wrapping it in a condition or boolean list that can replace the value you wanted.

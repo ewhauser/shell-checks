@@ -1,0 +1,7 @@
+id: SH-368
+name: missing-space-before-proc-sub
+summary: Process substitution is glued directly to `<<`.
+shells:
+- sh
+example: examples/368.sh
+rationale: Insert the separating space before `<(...)`.

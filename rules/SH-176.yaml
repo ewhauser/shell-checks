@@ -1,10 +1,10 @@
 id: SH-176
-name: else-without-then
-summary: "An `else` clause appears without a preceding `then`."
+name: else-missing-then
+summary: An `else` branch shows up before the preceding `if` branch has been opened with `then`.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/176.sh
-rationale: "Add `then` after the condition so that `else` is valid."
+rationale: Add the missing `then` so the `else` belongs to a complete `if` structure.

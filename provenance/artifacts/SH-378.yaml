@@ -1,0 +1,23 @@
+---
+artifact_id: SH-378
+created_at: '2026-04-02'
+files:
+- path: rules/SH-378.yaml
+  sha256: 655a82ce5036c01ed2ce5d44a955ba1b587b8f07719400e7c386ccd75be93cfe
+- path: examples/378.sh
+  sha256: 9cc57d47cffa2a9e76a59d3621f7142dfa231a8fc59bc98915c273b513a94651
+source_basis:
+- Shell semantics knowledge about the construct that triggers this diagnostic.
+- Example independently authored, reduced, and checked so the target oracle code remains
+  present with minimal extra diagnostics.
+ai_sessions:
+- session-056
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/378.sh
+  expected_code: 1014
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via GitHub issue mining of community-authored
+  content but the example script was independently authored.

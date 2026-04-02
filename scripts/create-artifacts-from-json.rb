@@ -150,6 +150,10 @@ end
 
 if verified_items.empty?
   $stderr.puts "  No items passed verification."
+  # Write failures so the caller can retry
+  if failures_path && !failed_items.empty?
+    File.write(failures_path, JSON.pretty_generate(failed_items))
+  end
   exit 0
 end
 

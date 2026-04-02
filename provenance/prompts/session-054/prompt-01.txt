@@ -1,0 +1,38 @@
+For each shell code below, write a minimal shell script (1-5 lines) that triggers
+the target shellcheck code, plus a short name and description. These codes were
+discovered via mining community-authored GitHub issues. Use context hints to
+understand what construct might trigger the code, but write your own independent
+example from shell semantics knowledge.
+
+Codes:
+- code: 0, sh_id: SH-354, shells: [sh]
+  Context hint: ^--^ SC0000: Ensure that only trusted scripts are downloaded and executed.  | Issue title: Check: curl/wget piped to sh
+- code: 142, sh_id: SH-355, shells: [sh]
+  Context hint: Your first two attempts both work, it's just that you apparently switched the 0 and 2, so you ended up with an unused `SC0216` instead of `SC2016`. | Issue title: multiple ignore directives in shellcheckrc not working
+- code: 1000, sh_id: SH-356, shells: [sh]
+  Context hint: #shellcheck -save -eSC1000 -eSC1001  | Issue title: SC2004 - On old versions of ksh the syntax ((var)) is not valid
+- code: 1004, sh_id: SH-357, shells: [sh]
+  Context hint: ^-- SC1004: This backslash+linefeed is literal. Break outside single quotes if you just want to break the line.  | Issue title: Incorrect suggestions in the common `git filter-branch --index-filter` example
+- code: 1008, sh_id: SH-358, shells: [sh]
+  Context hint: SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh.  | Issue title: TODO: Add sehll
+- code: 1014, sh_id: SH-359, shells: [sh]
+  Context hint: ^-- SC1014: Use 'if cmd; then ..' to check exit code, or 'if [[ $(cmd) == .. ]]' to check output.  | Issue title: SC1009: if a variable starts with a built-in name, shellcheck thinks it's a command
+- code: 1015, sh_id: SH-360, shells: [sh]
+  Context hint: SC1015: This is a unicode double quote. Delete and retype it.  | Issue title: Full list of checks
+- code: 1016, sh_id: SH-361, shells: [sh]
+  Context hint: SC1016: This is a Unicode single quote. Delete and retype it.  | Issue title: Full list of checks
+- code: 1017, sh_id: SH-362, shells: [sh]
+  Context hint: - SC1017 | Issue title: SC1017 not excluded properly with .shellcheckrc
+- code: 1018, sh_id: SH-363, shells: [sh]
+  Context hint: # [\#2829 Issue](https://github.com/koalaman/shellcheck/issues/2829) `closed`: SC1018: Unicode non-breaking space character, fix instructions do not work for MacOS | Issue title: SC1018: Unicode non-breaking space character, fix instructions do not work for MacOS
+
+Rules:
+- example_script MUST start with #!/bin/sh or #!/bin/bash as appropriate
+- Do NOT copy any code fragments from the context hints — write your own minimal triggering example
+- Minimize extra shellcheck codes; companion parser/context diagnostics are acceptable only when tightly coupled to the same construct
+- Do NOT reuse ShellCheck diagnostic wording
+- Compatibility identifiers may appear as bare numbers or SC1234, but do not reuse ShellCheck diagnostic wording
+- If you need to suppress other warnings in example_script, use numeric codes only (e.g. "# shellcheck disable=1072,1073")
+- Keep name, summary, rationale SHORT
+- Set requires_dataflow to true if the rule requires cross-statement analysis (e.g. tracking how values flow through assignments, control-flow reachability, or how a declaration on one line affects interpretation on another)
+- Do NOT run any commands or write any files

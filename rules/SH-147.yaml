@@ -1,10 +1,10 @@
 id: SH-147
-name: spacey-assign
-summary: Spaces around an assignment operator change the meaning.
+name: spaced-assignment-operator
+summary: Adds whitespace around `=` so the line is parsed as separate words rather than a variable assignment.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/147.sh
-rationale: "Write assignments as `name=value` with no spaces."
+rationale: Write assignments as `name=value`, or quote `=` when you truly mean a literal character.

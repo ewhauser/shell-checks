@@ -1,10 +1,10 @@
 id: SH-055
-name: expr-arithmetic
-summary: Using expr to combine numbers spawns a separate process for work the shell can already do itself.
+name: expr-for-arithmetic
+summary: Using `expr` for arithmetic adds an external command where the shell can already do the math itself.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/055.sh
-rationale: Use shell arithmetic expansion when you only need a numeric result.
+rationale: Prefer arithmetic expansion for numeric calculations unless you are keeping legacy compatibility on purpose.

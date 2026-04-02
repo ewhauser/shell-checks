@@ -1,10 +1,10 @@
 id: SH-058
-name: tr-lower-range
-summary: A lower-case range in tr can depend on locale and may not cover the characters you expect.
+name: tr-lowercase-range
+summary: A lowercase range in `tr` can expand differently under different locales, so it may miss letters you expected to translate.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/058.sh
-rationale: Use explicit character classes or a fixed character list when mapping characters.
+rationale: Use `[:lower:]` or an explicit character list when you need predictable lowercase handling.

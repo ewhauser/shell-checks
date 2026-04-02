@@ -1,10 +1,10 @@
 id: SH-121
-name: c-style-comment
-summary: C-style comment text is not a shell comment.
+name: c-style-comment-text
+summary: C-style comment markers are treated as code, not shell comments.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/121.sh
-rationale: "Use `#` comments in shell scripts instead of `/* ... */`."
+rationale: Use `#` comments so the script stays valid in POSIX shells.

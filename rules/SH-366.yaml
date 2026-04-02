@@ -1,0 +1,7 @@
+id: SH-366
+name: double-open-single-close
+summary: A `[[` test is closed with a lone `]`.
+shells:
+- sh
+example: examples/366.sh
+rationale: Match the closing token to the opener.

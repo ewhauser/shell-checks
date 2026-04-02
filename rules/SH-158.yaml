@@ -1,10 +1,10 @@
 id: SH-158
-name: plus-equals-append
-summary: "Uses `+=` style assignment in `sh`."
+name: plus-equals-assignment
+summary: Uses `+=` in a shell that treats it as a non-portable append-style assignment.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/158.sh
-rationale: Rewrite it as a normal assignment or string append.
+rationale: Rewrite the update as a plain assignment or explicit concatenation so the script works in shells that do not support this syntax.

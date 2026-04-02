@@ -3,7 +3,7 @@ artifact_id: SH-001
 created_at: 2026-03-27
 files:
 - path: rules/SH-001.yaml
-  sha256: ea61a3f1b42d56e1a99e700aa81fbf09c3b59144e896e35e441f3a6510778bef
+  sha256: 0fc957da5bcb5111d6e8f7ec00fcfa947e97b0d092b8743cb4333aa3d10eb5b0
 - path: examples/001.sh
   sha256: 9f3ac37ca5feaa4912fa4ca514af2c07f3ef438e0555d4c477beef34e075f07a
 source_basis:

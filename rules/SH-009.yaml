@@ -1,8 +1,8 @@
 id: SH-009
-name: function-keyword
-summary: "The script uses the `function` keyword, which is not part of portable `sh` syntax."
+name: function-keyword-in-sh
+summary: The `function` keyword declares functions in a non-POSIX form.
 shells:
 - sh
 - dash
 example: examples/009.sh
-rationale: "Define shell functions with the plain `name() { ...; }` form when portability matters."
+rationale: Write functions as `name() { ...; }` when the script needs to run under `sh`.

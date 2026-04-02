@@ -1,10 +1,10 @@
 id: SH-057
-name: ls-grep-pipeline
-summary: Piping ls into grep treats a directory listing like a data format, which is brittle.
+name: avoid-ls-grep-pipelines
+summary: Parsing `ls` output through `grep` couples your logic to directory formatting and can fail on odd filenames or flags.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/057.sh
-rationale: Use shell patterns or filename-aware tools instead of parsing ls output.
+rationale: Use globbing, a `for` loop, or a filename-aware tool when you need to select files by name.

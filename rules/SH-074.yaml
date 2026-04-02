@@ -1,10 +1,10 @@
 id: SH-074
 name: constant-case-subject
-summary: A case statement on a fixed literal is redundant because the subject never varies.
+summary: A `case` statement on a hard-coded subject cannot vary at runtime.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/074.sh
-rationale: Switch on a variable or collapse the branch if the outcome is predetermined.
+rationale: Switch on a variable instead, or collapse the `case` when the chosen branch is already fixed.

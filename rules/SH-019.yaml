@@ -1,8 +1,8 @@
 id: SH-019
-name: coproc
-summary: "The script uses a co-process, which is a shell extension rather than POSIX `sh`."
+name: coprocess
+summary: The script starts a coprocess, but that concurrency primitive is not part of portable `sh`.
 shells:
 - sh
 - dash
 example: examples/019.sh
-rationale: Use ordinary background jobs and pipes if the script must remain portable.
+rationale: Replace it with background jobs, pipes, or a helper process if the script must run in `dash`.

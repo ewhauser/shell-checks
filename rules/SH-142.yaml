@@ -1,10 +1,10 @@
 id: SH-142
-name: case-pattern-var
-summary: A case pattern is built from a variable.
+name: case-pattern-variable
+summary: A `case` pattern is built from an expansion that can change the match semantics.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/142.sh
-rationale: Use a direct test or a fixed pattern instead.
+rationale: Use a fixed pattern or quote the value elsewhere if you want a literal comparison.

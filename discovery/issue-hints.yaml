@@ -1,11 +1,11 @@
 ---
-generated: 2026-04-02T15:03:05Z
+generated: 2026-04-02T16:32:59Z
 source: issues/
 description: >
   Discovery hints extracted from ShellCheck GitHub issues for codes
   not yet in known-codes.yaml. Shell snippets are community-authored
   (not ShellCheck source) and can inform independent example authoring.
-total_undiscovered: 197
+total_undiscovered: 183
 codes:
 - code: 0000
   issue_count: 1
@@ -27,10 +27,6 @@ codes:
   issue_count: 14
   issues: [1190, 1210, 1303, 1478, 1760, 1988, 2143, 2349, 3103, 3390, 564, 641, 709, 977]
   hint: "SC1008: This shebang was unrecognized. Note that ShellCheck only handles sh/bash/dash/ksh."
-- code: 1014
-  issue_count: 4
-  issues: [1091, 1737, 641, 740]
-  hint: "^-- SC1014: Use 'if cmd; then ..' to check exit code, or 'if [[ $(cmd) == .. ]]' to check output."
 - code: 1015
   issue_count: 2
   issues: [641, 689]
@@ -39,66 +35,18 @@ codes:
   issue_count: 2
   issues: [641, 689]
   hint: "SC1016: This is a Unicode single quote. Delete and retype it."
-- code: 1017
-  issue_count: 7
-  issues: [1811, 1860, 2103, 2609, 3325, 641, 965]
-  hint: "- SC1017"
-- code: 1018
-  issue_count: 3
-  issues: [2829, 574, 641]
-  hint: "# [\\#2829 Issue](https://github.com/koalaman/shellcheck/issues/2829) `closed`: SC1018: Unicode non-breaking space character, fix instructions do not work for MacOS"
-- code: 1026
-  issue_count: 1
-  issues: [641]
-  hint: "SC1026: If grouping expressions inside [[..]], use ( .. )."
-- code: 1028
-  issue_count: 1
-  issues: [641]
-  hint: "SC1028: In [..] you have to escape \\\\( \\\\) or preferably combine [..] expressions."
-- code: 1029
-  issue_count: 3
-  issues: [1394, 2226, 641]
-  hint: "shellcheck --shell=bash --severity=error -i 2086,SC1029"
-- code: 1033
-  issue_count: 1
-  issues: [641]
-  hint: "SC1033: Test expression was opened with double `[[` but closed with single `]`. Make sure they match."
-- code: 1034
-  issue_count: 2
-  issues: [3118, 641]
-  hint: "^-- [SC1034](https://www.shellcheck.net/wiki/SC1034) (error): Test expression was opened with single [ but closed with double ]]. Make sure they match."
-- code: 1038
-  issue_count: 1
-  issues: [641]
-  hint: "SC1038: Shells are space sensitive. Use '< <(cmd)', not '<<(cmd)'."
 - code: 1043
   issue_count: 1
   issues: [2572]
   hint: "- https://github.com/koalaman/shellcheck/wiki/SC1043"
-- code: 1051
-  issue_count: 1
-  issues: [641]
-  hint: "SC1051: Semicolons directly after 'then' are not allowed. Just remove it."
 - code: 1052
   issue_count: 2
   issues: [1657, 641]
   hint: "SC1052: Semicolons directly after 'then' are not allowed. Just remove it."
-- code: 1053
-  issue_count: 1
-  issues: [641]
-  hint: "SC1053: Semicolons directly after 'else' are not allowed. Just remove it."
 - code: 1059
   issue_count: 1
   issues: [2572]
   hint: "- https://github.com/koalaman/shellcheck/wiki/SC1059"
-- code: 1060
-  issue_count: 2
-  issues: [1671, 2180]
-  hint: "^-- SC1060: Can't have empty do clauses (use 'true' as a no-op)."
-- code: 1063
-  issue_count: 1
-  issues: [926]
-  hint: "^-- SC1063: You need a line feed or semicolon before the 'do'."
 - code: 1066
   issue_count: 5
   issues: [1162, 641, 843, 944, 986]
@@ -119,10 +67,6 @@ codes:
   issue_count: 1
   issues: [2572]
   hint: "- https://github.com/koalaman/shellcheck/wiki/SC1076"
-- code: 1077
-  issue_count: 1
-  issues: [641]
-  hint: "SC1077: For command expansion, the tick should slant left (` vs ´)."
 - code: 1081
   issue_count: 1
   issues: [641]

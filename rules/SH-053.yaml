@@ -1,8 +1,8 @@
 id: SH-053
-name: bash-file-slurp
-summary: "The `$(< file)` shortcut reads a file with bash-specific syntax instead of portable shell syntax."
+name: posix-file-slurp-shortcut
+summary: The `$(<file)` shortcut depends on Bash-style parsing, so it is not portable in `sh` scripts.
 shells:
 - sh
 - dash
 example: examples/053.sh
-rationale: "Use a portable read pattern when the script is meant to run under `sh`."
+rationale: Read the file with a POSIX-safe pattern such as `cat` or a `read` loop when portability matters.

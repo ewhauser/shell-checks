@@ -1,0 +1,20 @@
+---
+session_id: session-054
+date: '2026-04-02'
+tool: codex
+model: gpt-5.4-mini
+task_summary: Create clean-room artifact bundles for issue-discovered ShellCheck codes.
+allowed_source_classes:
+- shell language manuals and semantic notes
+- internally authored repository files
+- shellcheck binary behavior observed through command-line runs
+- Community-authored GitHub issue content used as weak contextual hints for identifying
+  candidate compatibility codes
+generated_files:
+- examples/362.sh
+- provenance/artifacts/SH-362.yaml
+- rules/SH-362.yaml
+prompt_sha256: abe446b554ff0037a3f18cb9f2f559061ac4e68ce650a4fb41dc665bded3d37b
+output_sha256: 782757c947aaa98fa5b7db81fae5c3288586f60909035e2b874bcf7d3e734853
+prompt_files:
+- provenance/prompts/session-054/prompt-01.txt

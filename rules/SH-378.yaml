@@ -1,0 +1,7 @@
+id: SH-378
+name: command-inside-test
+summary: Places a command name inside test brackets as if test would run it.
+shells:
+- sh
+example: examples/378.sh
+rationale: Run the command directly for status, or compare its output explicitly.

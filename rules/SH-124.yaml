@@ -1,10 +1,10 @@
 id: SH-124
-name: zsh-brace-if
-summary: Zsh-style conditional bracing is not portable shell syntax.
+name: brace-after-condition
+summary: A condition immediately followed by a brace is not portable shell syntax.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/124.sh
-rationale: "Use standard `if ...; then ...; fi` structure instead."
+rationale: Write the branch with explicit `then` and `fi` instead of attaching a brace to the test.

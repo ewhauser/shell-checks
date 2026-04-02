@@ -1,10 +1,10 @@
 id: SH-109
-name: broken-test-end
-summary: "A malformed `[` test leaves ShellCheck unable to finish parsing the expression."
+name: unterminated-test-condition
+summary: A bracket test ends before ShellCheck can finish reading the condition.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/109.sh
-rationale: Fix the test syntax first, or keep the test on one line so ShellCheck can continue checking the rest of the script.
+rationale: Close every test operator and operand cleanly, or keep the expression intact on one line.

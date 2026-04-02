@@ -1,10 +1,10 @@
 id: SH-060
-name: sudo-redirection-order
-summary: A redirection attached to sudo still happens in the current shell before privilege escalation.
+name: sudo-redirection-before-escalation
+summary: A redirect attached to `sudo` is opened by the current shell first, so the file access happens before privileges change.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/060.sh
-rationale: Move the write operation into the privileged command itself or use a helper such as tee.
+rationale: Put the redirection inside the elevated command or use a helper like `tee` so the privileged process opens the file.

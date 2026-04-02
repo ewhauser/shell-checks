@@ -1,10 +1,10 @@
 id: SH-126
 name: array-subscript-test
-summary: Uses array-style subscripting in a POSIX shell test
+summary: Array-style indexing inside `[` tests is read as text, not an actual element lookup.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/126.sh
-rationale: Use a portable test or a shell that actually supports arrays.
+rationale: Use a real array-capable shell or rewrite the test so it works with plain parameters.

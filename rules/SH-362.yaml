@@ -1,0 +1,7 @@
+id: SH-362
+name: carriage-return
+summary: The file contains a carriage return character.
+shells:
+- sh
+example: examples/362.sh
+rationale: Convert the file to LF line endings.

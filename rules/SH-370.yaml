@@ -1,0 +1,7 @@
+id: SH-370
+name: semicolon-after-then
+summary: A `then` branch is followed by an unnecessary semicolon.
+shells:
+- sh
+example: examples/370.sh
+rationale: Remove the semicolon after `then`.

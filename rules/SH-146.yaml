@@ -1,7 +1,7 @@
 id: SH-146
-name: assign-special-zero
-summary: Assigning to the script-name parameter is rejected.
+name: assign-to-positional-zero
+summary: Attempts to assign a value to the script-name parameter, which shells do not treat as a writable variable.
 shells:
 - sh
 example: examples/146.sh
-rationale: Use a normal variable instead of the positional-zero parameter.
+rationale: Use an ordinary variable instead, because the script name itself is not a portable assignment target.

@@ -1,10 +1,10 @@
 id: SH-120
-name: trailing-directive
-summary: A shellcheck directive placed after code is ignored.
+name: trailing-shellcheck-directive
+summary: A ShellCheck directive written after executable code does not affect that line.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/120.sh
-rationale: Put directives on their own comment line before the command.
+rationale: Put the directive on its own comment line before the statement you want to silence.

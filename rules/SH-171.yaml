@@ -1,10 +1,10 @@
 id: SH-171
-name: overwritten-function
-summary: A function definition is overwritten before it can be called.
+name: function-redefined-later
+summary: A later definition replaces an earlier function body with the same name.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/171.sh
-rationale: Remove the first definition or give the functions distinct names.
+rationale: Remove the dead definition or rename one side so the intended implementation is the one that remains.

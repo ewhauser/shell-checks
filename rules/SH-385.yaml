@@ -1,0 +1,7 @@
+id: SH-385
+name: empty-do-body
+summary: Creates a loop body with no command between `do` and `done`.
+shells:
+- sh
+example: examples/385.sh
+rationale: Add a real command or an explicit no-op.

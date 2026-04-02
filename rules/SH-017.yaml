@@ -1,8 +1,8 @@
 id: SH-017
-name: ampersand-redirection
-summary: "The script uses combined stdout-and-stderr redirection syntax that portable `sh` does not provide."
+name: combined-stream-redirection
+summary: The script uses a redirection form that merges stdout and stderr, which portable `sh` does not support.
 shells:
 - sh
 - dash
 example: examples/017.sh
-rationale: Redirect stdout and stderr separately when you need the code to stay portable.
+rationale: Redirect the two streams separately, or use a portable grouping pattern if you need both outputs captured together.

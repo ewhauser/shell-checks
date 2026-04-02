@@ -1,0 +1,23 @@
+---
+artifact_id: SH-386
+created_at: '2026-04-02'
+files:
+- path: rules/SH-386.yaml
+  sha256: f81721711682fe52ce7a397cff17aee55a3279d401e62694152667f590318b85
+- path: examples/386.sh
+  sha256: cc7a7f820f2eccaef3e444214bacb6efa712d1bd7efeb532307c5ebb033bcb44
+source_basis:
+- Shell semantics knowledge about the construct that triggers this diagnostic.
+- Example independently authored, reduced, and checked so the target oracle code remains
+  present with minimal extra diagnostics.
+ai_sessions:
+- session-056
+oracle:
+  tool: shellcheck
+  version: 0.11.0
+  command: shellcheck --norc -s sh -f json1 examples/386.sh
+  expected_code: 1063
+clean_room_statement: This artifact set was authored from shell semantics and local
+  oracle runs without reusing ShellCheck source, wiki text, or example snippets. The
+  numeric code was initially identified via GitHub issue mining of community-authored
+  content but the example script was independently authored.

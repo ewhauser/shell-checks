@@ -1,0 +1,7 @@
+id: SH-386
+name: missing-separator-before-do
+summary: Places `do` on the same line without a separator before it.
+shells:
+- sh
+example: examples/386.sh
+rationale: Insert a newline or semicolon before `do`.

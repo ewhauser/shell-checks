@@ -1,10 +1,10 @@
 id: SH-059
-name: tr-upper-range
-summary: An upper-case range in tr can depend on locale and may not cover the characters you expect.
+name: tr-uppercase-range
+summary: An uppercase range in `tr` can also vary by locale, which can make character mapping incomplete on some systems.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/059.sh
-rationale: Use explicit character classes or a fixed character list when mapping characters.
+rationale: Use `[:upper:]` or an explicit character list when you need predictable uppercase handling.

@@ -1,0 +1,7 @@
+id: SH-372
+name: semicolon-after-else
+summary: An `else` branch is followed by an unnecessary semicolon.
+shells:
+- sh
+example: examples/372.sh
+rationale: Put `else` on its own and begin the next command after it.

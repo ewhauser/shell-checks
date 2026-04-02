@@ -1,8 +1,8 @@
 id: SH-020
-name: let-command
-summary: "The script relies on `let`, which portable `sh` does not define."
+name: let-arithmetic-command
+summary: The script uses `let` for math, but that builtin is not defined by portable `sh`.
 shells:
 - sh
 - dash
 example: examples/020.sh
-rationale: Prefer arithmetic expansion or another portable arithmetic mechanism instead.
+rationale: Use arithmetic expansion or another POSIX-compatible arithmetic expression instead.

@@ -1,10 +1,10 @@
 id: SH-075
-name: empty-test
-summary: An empty test expression has no meaningful operand and cannot describe a runtime condition.
+name: empty-conditional-expression
+summary: An empty conditional has no operand, so it cannot evaluate any real runtime condition.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/075.sh
-rationale: Populate the test with the value you intended to check or drop the empty expression.
+rationale: Fill in the expression you intended to check, or use `true` or `false` when you want a fixed result.

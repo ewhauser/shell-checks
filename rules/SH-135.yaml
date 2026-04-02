@@ -1,10 +1,10 @@
 id: SH-135
-name: echo-here-doc
-summary: "Attaches a here-doc to `echo`"
+name: echo-with-here-doc
+summary: A here-document is attached to `echo`, which never consumes standard input.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/135.sh
-rationale: Use a command that reads standard input, or print the text directly.
+rationale: Print the text directly or send the here-document to a command that actually reads from stdin.

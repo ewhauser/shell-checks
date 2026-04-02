@@ -1,10 +1,10 @@
 id: SH-181
-name: function-body-without-braces
-summary: A function body is a bare compound command instead of a brace group.
+name: bare-function-body
+summary: A function body is written as a standalone compound command instead of a brace group.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/181.sh
-rationale: "Wrap the function body in `{ ... }` for portability."
+rationale: Wrap the body in `{ ... }` so the definition is portable across shells.

@@ -1,0 +1,7 @@
+id: SH-392
+name: wrong-backtick-glyph
+summary: Uses an acute accent instead of a shell backtick for command substitution.
+shells:
+- sh
+example: examples/392.sh
+rationale: Use a real backtick, or prefer `$(...)`.

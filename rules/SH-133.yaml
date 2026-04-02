@@ -1,10 +1,10 @@
 id: SH-133
-name: diff-marker-line
-summary: Contains a patch-style marker line in shell code
+name: patch-marker-line
+summary: A diff header or hunk marker has been pasted where executable shell code is expected.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/133.sh
-rationale: Remove patch headers from the script or turn them into comments.
+rationale: Keep patch text out of the script or turn it into a comment before running it.

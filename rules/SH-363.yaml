@@ -1,0 +1,7 @@
+id: SH-363
+name: nested-test-in-brackets
+summary: A bracket-style test is being nested inside `[[ ... ]]`.
+shells:
+- sh
+example: examples/363.sh
+rationale: Use `(` and `)` for grouping instead of embedding a separate `[` test.

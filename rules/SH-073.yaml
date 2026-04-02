@@ -1,10 +1,10 @@
 id: SH-073
-name: truthy-literal-test
-summary: A one-word test on a fixed literal does not ask a runtime question and is always decided the same way.
+name: bare-literal-test
+summary: A one-word test built from a fixed literal is just a constant truth value.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/073.sh
-rationale: Check a variable, path, or explicit comparison instead of a bare literal.
+rationale: Use a real comparison, or spell the branch directly with `true` or `false` if the outcome is predetermined.

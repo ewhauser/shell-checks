@@ -1,10 +1,10 @@
 id: SH-065
-name: stray-closing-keyword
-summary: A closing control keyword appears without a matching block opener.
+name: unmatched-closing-keyword
+summary: A block terminator appears where the parser has no open construct to match it.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/065.sh
-rationale: Remove the unmatched keyword or add the corresponding opener and body.
+rationale: Remove the extra closing word or add the missing opener so the control structure is balanced.

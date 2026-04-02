@@ -700,24 +700,6 @@ mappings:
   - bash
   - dash
   - ksh
-- sh_id: SH-088
-  example: examples/088.sh
-  shellcheck_code: 1001
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
-- sh_id: SH-090
-  example: examples/090.sh
-  shellcheck_code: 1007
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
 - sh_id: SH-091
   example: examples/091.sh
   shellcheck_code: 1010
@@ -727,45 +709,9 @@ mappings:
   - bash
   - dash
   - ksh
-- sh_id: SH-092
-  example: examples/092.sh
-  shellcheck_code: 1001
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
 - sh_id: SH-093
   example: examples/093.sh
   shellcheck_code: 1009
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
-- sh_id: SH-094
-  example: examples/094.sh
-  shellcheck_code: 1007
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
-- sh_id: SH-095
-  example: examples/095.sh
-  shellcheck_code: 1001
-  shellcheck_version: 0.11.0
-  shells:
-  - sh
-  - bash
-  - dash
-  - ksh
-- sh_id: SH-096
-  example: examples/096.sh
-  shellcheck_code: 1010
   shellcheck_version: 0.11.0
   shells:
   - sh
@@ -2760,6 +2706,96 @@ mappings:
 - sh_id: SH-353
   example: examples/353.sh
   shellcheck_code: 1069
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-362
+  example: examples/362.sh
+  shellcheck_code: 1017
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-363
+  example: examples/363.sh
+  shellcheck_code: 1026
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-364
+  example: examples/364.sh
+  shellcheck_code: 1028
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-365
+  example: examples/365.sh
+  shellcheck_code: 1029
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-366
+  example: examples/366.sh
+  shellcheck_code: 1033
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-367
+  example: examples/367.sh
+  shellcheck_code: 1034
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-368
+  example: examples/368.sh
+  shellcheck_code: 1038
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-370
+  example: examples/370.sh
+  shellcheck_code: 1051
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-372
+  example: examples/372.sh
+  shellcheck_code: 1053
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-378
+  example: examples/378.sh
+  shellcheck_code: 1014
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-381
+  example: examples/381.sh
+  shellcheck_code: 1018
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-385
+  example: examples/385.sh
+  shellcheck_code: 1060
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-386
+  example: examples/386.sh
+  shellcheck_code: 1063
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-392
+  example: examples/392.sh
+  shellcheck_code: 1077
+  shells:
+  - sh
+  shellcheck_version: 0.11.0
+- sh_id: SH-404
+  example: examples/404.sh
+  shellcheck_code: 1059
   shells:
   - sh
   shellcheck_version: 0.11.0

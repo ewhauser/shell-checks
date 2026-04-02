@@ -1,0 +1,7 @@
+id: SH-404
+name: do-semicolon
+summary: Adds a command separator immediately after `do`.
+shells:
+- sh
+example: examples/404.sh
+rationale: Start the loop body after `do` without an extra semicolon.

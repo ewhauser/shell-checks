@@ -1,8 +1,8 @@
 id: SH-016
-name: here-string
-summary: The script feeds data with a here-string, which is a bash-style redirection.
+name: here-string-redirection
+summary: The script feeds input with a here-string, which portable `sh` does not define.
 shells:
 - sh
 - dash
 example: examples/016.sh
-rationale: Use a pipe or temporary file when the same input needs to work in portable shell code.
+rationale: Use a pipe, a here-document, or a temporary file to supply the same input portably.

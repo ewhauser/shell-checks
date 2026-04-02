@@ -1,10 +1,10 @@
 id: SH-164
-name: subshell-test-group
-summary: A grouped test uses a subshell instead of braces.
+name: test-group-in-subshell
+summary: A grouped test runs in a subshell, so any work inside it happens in a separate process.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/164.sh
-rationale: Replace the subshell parentheses with a brace group to avoid a needless fork.
+rationale: Use a brace group when you only need grouping and want to avoid spawning another shell.

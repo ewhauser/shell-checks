@@ -1,10 +1,10 @@
 id: SH-180
-name: multi-var-for-loop
-summary: "A `for` loop binds more than one variable per iteration."
+name: multiple-loop-variables
+summary: A `for` loop tries to assign more than one name from each item in the list.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/180.sh
-rationale: Use a single loop variable and unpack values inside the body.
+rationale: Iterate with one loop variable and split the values inside the loop body instead.

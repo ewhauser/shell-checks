@@ -1,10 +1,10 @@
 id: SH-112
-name: else-if
-summary: "`else if` is used where bash expects `elif`."
+name: nested-else-if
+summary: An `else if` sequence starts a fresh conditional instead of using the dedicated branch form.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/112.sh
-rationale: "Collapse the nested form into a single `elif` branch."
+rationale: Use `elif` for the next branch, or put the inner `if` on its own line if you truly need nesting.

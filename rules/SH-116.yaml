@@ -1,10 +1,10 @@
 id: SH-116
-name: literal-braces
-summary: Literal braces appear where bash may treat them as expansion syntax.
+name: literal-brace-text
+summary: Literal braces are written in a way that bash-style parsing can read as expansion syntax.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/116.sh
-rationale: Quote the text so the braces stay literal.
+rationale: Quote brace characters that are meant as data, or build the text in pieces.

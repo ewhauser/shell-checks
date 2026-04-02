@@ -1,8 +1,8 @@
 id: SH-163
-name: bare-read
-summary: "Uses `read` without extra options."
+name: read-without-target-variable
+summary: Calls `read` in POSIX sh without naming a destination for the input.
 shells:
 - sh
 - dash
 example: examples/163.sh
-rationale: Provide the needed options explicitly for the input you expect.
+rationale: Provide a variable name or use a different input-handling pattern, because bare `read` is not defined consistently there.

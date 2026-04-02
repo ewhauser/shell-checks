@@ -1,10 +1,10 @@
 id: SH-062
-name: unquoted-dollar-star
-summary: Expanding $* without quotes collapses positional parameters into a single word and can split them again.
+name: unquoted-positional-star
+summary: Expanding `$*` without quotes can split the positional parameters into separate words or reshape them through `IFS`.
 shells:
 - sh
 - bash
 - dash
 - ksh
 example: examples/062.sh
-rationale: Use "$@" when you need to preserve each argument separately.
+rationale: Use `"$@"` when each argument must stay distinct, or quote `"$*"` only when you intentionally want one joined string.
