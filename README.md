@@ -12,6 +12,7 @@ We've currently discovered 353 codes out of 520 (according to ChatGPT) using the
 
 1) Using a large corpus of shell scripts from GitHub and running ShellCheck on them
 2) Brute force search with an LLM
+3) Mining community-authored GitHub issues for SC code references and shell snippets
 
 ## Repository Layout
 
