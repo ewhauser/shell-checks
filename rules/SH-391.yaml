@@ -1,0 +1,7 @@
+id: SH-391
+name: detects-use-of-/dev/tcp
+summary: Detects use of /dev/tcp and /dev/udp which are undefined in POSIX sh.
+shells:
+- sh
+example: examples/391.sh
+rationale: These are bash-specific network device extensions that will fail in POSIX-compliant shells.

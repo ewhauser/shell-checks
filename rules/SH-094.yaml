@@ -1,0 +1,8 @@
+id: SH-094
+name: the-regex-match-operator
+summary: The regex match operator =~ cannot be used inside [ ] test constructs and requires [[ ]] instead.
+shells:
+- bash
+example: examples/094.sh
+rationale: The =~ operator only works in [[ ]] conditional expressions; attempting to use it in [ ] will
+  fail.

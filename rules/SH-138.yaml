@@ -1,0 +1,12 @@
+id: SH-138
+name: detects-ssh-commands-that
+summary: Detects ssh commands that may consume stdin without the -n flag, which can break pipes and while
+  loops.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/138.sh
+rationale: SSH reads from stdin by default, which can cause unexpected behavior when stdin is redirected
+  or piped in scripts.

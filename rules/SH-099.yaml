@@ -1,0 +1,10 @@
+id: SH-099
+name: detects-incorrect-shebang-syntax
+summary: 'Detects incorrect shebang syntax using !# instead of the required #!.'
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/099.sh
+rationale: 'The shebang must start with #! to be recognized as an executable script by the operating system.'

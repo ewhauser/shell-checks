@@ -1,0 +1,12 @@
+id: SH-324
+name: detects-when-false-is
+summary: Detects when [ false ] is used as a test, which evaluates to true because 'false' is a non-empty
+  string literal.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/324.sh
+rationale: This pattern creates a logic error where the condition succeeds when intended to fail, causing
+  incorrect program behavior.

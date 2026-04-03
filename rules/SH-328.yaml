@@ -1,0 +1,11 @@
+id: SH-328
+name: detects-numerical--eq-comparisons
+summary: Detects numerical -eq comparisons inside test brackets without proper variable dereferencing.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/328.sh
+rationale: Improper dereferencing in test brackets can lead to incorrect test evaluation and portability
+  issues across shells.

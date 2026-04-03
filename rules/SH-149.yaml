@@ -1,0 +1,12 @@
+id: SH-149
+name: detects-&&-operator-used
+summary: Detects && operator used inside test brackets and suggests using separate test brackets with
+  && outside instead.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/149.sh
+rationale: Using && outside of test brackets ensures proper evaluation semantics and portability across
+  different shell implementations.

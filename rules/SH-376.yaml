@@ -1,0 +1,12 @@
+id: SH-376
+name: detects-when-the-$
+summary: Detects when the $ and " characters are flipped in quoted substitutions, such as $"(...) instead
+  of "$(...)".
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/376.sh
+rationale: Catches a common typo where misplaced $ and " prevents command substitution from executing
+  as intended.

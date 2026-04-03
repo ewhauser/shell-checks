@@ -1,0 +1,8 @@
+id: SH-397
+name: detects-use-of-lowercase
+summary: Detects use of lowercase or mixed-case signal names which are undefined in POSIX sh.
+shells:
+- sh
+example: examples/397.sh
+rationale: POSIX sh requires signal names to be uppercase; lowercase variants are not recognized in portable
+  shell scripts.

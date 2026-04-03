@@ -1,0 +1,8 @@
+id: SH-387
+name: $0-cannot-be-assigned
+summary: $0 cannot be assigned in Ksh, though it does reflect the current function.
+shells:
+- ksh
+example: examples/387.sh
+rationale: Attempting to assign to $0 in Ksh has no effect on the script name, causing code that relies
+  on this assignment to malfunction.

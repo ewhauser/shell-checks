@@ -1,0 +1,11 @@
+id: SH-139
+name: named-character-classes-must
+summary: Named character classes must be wrapped in outer brackets in bracket expressions.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/139.sh
+rationale: Without outer brackets, named character classes like [:digit:] will not match correctly and
+  are treated as literal characters instead.

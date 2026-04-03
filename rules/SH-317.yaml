@@ -1,0 +1,11 @@
+id: SH-317
+name: detects-assignment-to-path
+summary: Detects assignment to PATH variable, which is reserved as the shell's executable search path.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/317.sh
+rationale: PATH is a critical shell variable for locating executables; reassigning it as a regular variable
+  breaks command resolution.

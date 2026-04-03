@@ -1,0 +1,10 @@
+id: SH-162
+name: in-double-bracket-test
+summary: In double bracket test constructs [[ ]], use || (logical OR operator) instead of -o (single bracket
+  operator).
+shells:
+- bash
+- ksh
+example: examples/162.sh
+rationale: Using || instead of -o in [[ ]] follows modern shell syntax conventions and is semantically
+  correct for the double bracket construct.

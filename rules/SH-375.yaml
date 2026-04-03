@@ -1,0 +1,11 @@
+id: SH-375
+name: detects-when-a-shebang
+summary: Detects when a shebang line specifies a directory path instead of an executable interpreter file.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/375.sh
+rationale: A shebang pointing to a directory rather than an executable file will cause script execution
+  to fail.

@@ -1,0 +1,12 @@
+id: SH-156
+name: detects-use-of-||
+summary: Detects use of || (logical OR) inside [ ] test expressions, which should use separate tests with
+  || operator outside the brackets.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/156.sh
+rationale: The || operator does not work as a logical operator inside single bracket tests; POSIX-compliant
+  syntax requires separate test commands joined by || outside the brackets.

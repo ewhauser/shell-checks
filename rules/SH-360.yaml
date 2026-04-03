@@ -1,0 +1,12 @@
+id: SH-360
+name: warns-when-parentheses-are
+summary: Warns when parentheses (..) are used instead of test brackets [ .. ], as parentheses create a
+  subshell rather than performing a test expression.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/360.sh
+rationale: Using parentheses creates a subshell instead of evaluating a conditional test, which is typically
+  unintended and leads to incorrect program logic.

@@ -1,0 +1,8 @@
+id: SH-394
+name: in-posix-sh-backtick
+summary: In POSIX sh, backtick command substitution with file input redirection (`<file`) is undefined.
+shells:
+- sh
+- dash
+example: examples/394.sh
+rationale: Using this syntax prevents code from being portable to POSIX sh and dash implementations.

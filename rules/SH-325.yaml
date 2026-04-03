@@ -1,0 +1,11 @@
+id: SH-325
+name: warns-when-0-is
+summary: Warns when [ 0 ] is used, which evaluates to true because '0' is a non-empty string.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/325.sh
+rationale: Developers may mistakenly expect [ 0 ] to be false like in other programming languages, but
+  shell treats non-empty strings as true.

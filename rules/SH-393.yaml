@@ -1,0 +1,8 @@
+id: SH-393
+name: detects-redirections-using-glob
+summary: Detects redirections using glob patterns, which are undefined in POSIX sh
+shells:
+- sh
+example: examples/393.sh
+rationale: Glob expansion in redirections is not guaranteed in POSIX sh and may cause portability issues
+  across different systems

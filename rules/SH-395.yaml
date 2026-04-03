@@ -1,0 +1,10 @@
+id: SH-395
+name: detects-non-standard-echo-flags
+summary: Detects non-standard echo flags beyond -n that are incompatible with POSIX sh
+shells:
+- sh
+- dash
+- ksh
+example: examples/395.sh
+rationale: POSIX sh only reliably supports the -n flag for echo, so using other flags reduces portability
+  across shell implementations

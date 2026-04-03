@@ -1,0 +1,12 @@
+id: SH-374
+name: warns-that-test-operators
+summary: Warns that test operators like -d only apply to the first expansion of a glob pattern, not all
+  matches.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/374.sh
+rationale: Glob patterns expand to multiple files but test operators evaluate only the first result, risking
+  incorrect conditional logic.

@@ -1,0 +1,11 @@
+id: SH-103
+name: detects-incorrect-use-of
+summary: Detects incorrect use of $ prefix on iterator variable names in for loops.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/103.sh
+rationale: The iterator variable in for loops must be declared without a $ prefix; $ is only used for
+  variable expansion, not declaration.

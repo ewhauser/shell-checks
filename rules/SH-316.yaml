@@ -1,0 +1,10 @@
+id: SH-316
+name: warns-when-rm-command
+summary: Warns when rm command targets system directories that could cause data loss.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/316.sh
+rationale: Prevents accidental deletion of critical system directories like /usr or /lib.

@@ -1,0 +1,8 @@
+id: SH-396
+name: in-posix-sh-exec
+summary: In POSIX sh, exec flags are undefined.
+shells:
+- sh
+example: examples/396.sh
+rationale: Using exec flags not defined in POSIX sh will cause scripts to fail in POSIX-compliant shell
+  environments.

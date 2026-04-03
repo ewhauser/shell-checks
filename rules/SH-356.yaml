@@ -1,0 +1,10 @@
+id: SH-356
+name: detects-when-=-is
+summary: Detects when = is used literally instead of for array index assignment, which should use [index]=value
+  syntax without spaces.
+shells:
+- bash
+- ksh
+example: examples/356.sh
+rationale: Array index assignment requires specific syntax; incorrect placement of = can create unintended
+  literal values instead of proper array elements.

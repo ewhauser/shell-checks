@@ -1,0 +1,2 @@
+#!/bin/sh
+[ -Q file ]

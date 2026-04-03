@@ -1,0 +1,12 @@
+id: SH-382
+name: detects-when-a-function
+summary: Detects when a function unconditionally re-invokes itself, which may indicate infinite recursion
+  or a missing `command` builtin prefix.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/382.sh
+rationale: Unconditional recursion causes stack overflow or infinite loops, often from forgetting to use
+  `command` to invoke an external program instead of recursing.

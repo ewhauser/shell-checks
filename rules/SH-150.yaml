@@ -1,0 +1,8 @@
+id: SH-150
+name: in-constructs-use-&&
+summary: In [[ ]] constructs, use && logical operator instead of -a to combine conditions.
+shells:
+- bash
+- ksh
+example: examples/150.sh
+rationale: The && operator is clearer and more consistent with command-level syntax than the -a test operator.

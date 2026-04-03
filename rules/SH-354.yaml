@@ -1,0 +1,12 @@
+id: SH-354
+name: checks-that-the-number
+summary: Checks that the number of format string placeholders matches the number of arguments passed to
+  printf.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/354.sh
+rationale: Mismatches between placeholders and arguments cause undefined behavior, missing output, or
+  runtime errors.

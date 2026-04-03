@@ -1,0 +1,10 @@
+id: SH-377
+name: detects-when-is-not
+summary: Detects when ! is not on a condition and may skip errexit behavior.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/377.sh
+rationale: Using ! improperly can prevent errexit from working, causing undetected errors to pass silently.

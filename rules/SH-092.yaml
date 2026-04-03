@@ -1,0 +1,11 @@
+id: SH-092
+name: checks-for-unescaped-<
+summary: Checks for unescaped < operator in [ ] test command, which should be escaped or use [[ .. ]].
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/092.sh
+rationale: The < character is a redirection operator in shell and will redirect a file instead of performing
+  comparison in [ ].

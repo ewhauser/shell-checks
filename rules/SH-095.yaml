@@ -1,0 +1,9 @@
+id: SH-095
+name: arithmetic-evaluation-doesnt-support
+summary: Arithmetic evaluation (( )) doesn't support decimal numbers; use bc or awk instead.
+shells:
+- bash
+- ksh
+example: examples/095.sh
+rationale: The (( )) arithmetic expansion syntax evaluates only integers, so operations with decimal numbers
+  must use external tools like bc or awk.

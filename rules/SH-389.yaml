@@ -1,0 +1,12 @@
+id: SH-389
+name: warns-when-attempting-to
+summary: Warns when attempting to assign to a variable expansion or substitution instead of the variable
+  name itself.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/389.sh
+rationale: The left side of an assignment must be a variable name, not a parameter expansion or command
+  substitution.

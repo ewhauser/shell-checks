@@ -1,0 +1,10 @@
+id: SH-398
+name: shell-functions-cannot-be
+summary: Shell functions cannot be passed as arguments to external commands.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/398.sh
+rationale: External commands cannot execute shell functions defined in the current shell environment.

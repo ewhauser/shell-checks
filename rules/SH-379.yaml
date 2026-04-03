@@ -1,0 +1,11 @@
+id: SH-379
+name: detects-incorrect-chmod-patterns
+summary: Detects incorrect chmod patterns when attempting to recursively modify or remove read permissions.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/379.sh
+rationale: Correct chmod syntax is essential to avoid unintended permission changes that could compromise
+  file security or accessibility.

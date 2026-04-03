@@ -1,0 +1,11 @@
+id: SH-132
+name: detects-variables-used-in
+summary: Detects variables used in brace range expansions, which Bash doesn't support.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/132.sh
+rationale: Brace range expansions with variables will produce literal text instead of expanding to the
+  intended numeric or character sequence.

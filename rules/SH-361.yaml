@@ -1,0 +1,11 @@
+id: SH-361
+name: detects-unquoted-arguments-to
+summary: Detects unquoted arguments to the -v option that could undergo glob expansion.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/361.sh
+rationale: Unquoted arguments to -v can expand to multiple filenames, causing unexpected behavior or incorrect
+  test results.

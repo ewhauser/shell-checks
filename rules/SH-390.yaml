@@ -1,0 +1,8 @@
+id: SH-390
+name: detects-file-descriptors-outside
+summary: Detects file descriptors outside the 0-9 range, which are undefined in POSIX sh.
+shells:
+- sh
+example: examples/390.sh
+rationale: File descriptors above 9 are not defined in POSIX sh, making code using them non-portable to
+  strict POSIX environments.

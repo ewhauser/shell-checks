@@ -1,0 +1,12 @@
+id: SH-117
+name: requires-a-space-or
+summary: Requires a space or linefeed between function name and function body to ensure proper syntax
+  parsing.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/117.sh
+rationale: Missing whitespace between function name and body causes parse errors and prevents correct
+  function definition.

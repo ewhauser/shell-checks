@@ -1,0 +1,11 @@
+id: SH-083
+name: detects-literal-strings-that
+summary: Detects literal strings that should be executed as commands using command substitution.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/083.sh
+rationale: Using a literal string instead of command substitution prevents the command from being executed,
+  causing logic errors.

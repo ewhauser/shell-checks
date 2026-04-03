@@ -1,0 +1,12 @@
+id: SH-097
+name: detects-shell-keywords-written
+summary: Detects shell keywords written with incorrect capitalization, such as 'If' instead of 'if', which
+  causes parse errors.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/097.sh
+rationale: Shell keywords are case-sensitive and must be lowercase; incorrect capitalization prevents
+  script execution.

@@ -1,0 +1,11 @@
+id: SH-348
+name: detects-printf-format-strings
+summary: Detects printf format strings with no variables where other arguments are silently ignored.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/348.sh
+rationale: Identifies likely programming errors where printf arguments are ignored due to missing variables
+  in the format string.

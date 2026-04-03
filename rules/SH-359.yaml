@@ -1,0 +1,11 @@
+id: SH-359
+name: detects-when-subshell-syntax
+summary: Detects when (..) subshell syntax is used where a test expression [ .. ] was likely intended.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/359.sh
+rationale: Using a subshell in a conditional context typically indicates user confusion between subshell
+  and test expression syntax.

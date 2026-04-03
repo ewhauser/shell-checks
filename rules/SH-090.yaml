@@ -1,0 +1,11 @@
+id: SH-090
+name: missing-or-improperly-quoted
+summary: Missing or improperly quoted terminator (';' or '+') for find -exec, -execdir, or -ok commands.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/090.sh
+rationale: Find -exec requires a separate, properly quoted terminator argument to execute correctly; missing
+  it causes syntax errors and pipes/operators to be misparsed.

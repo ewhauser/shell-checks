@@ -1,0 +1,11 @@
+id: SH-384
+name: detects-when-a-command
+summary: Detects when a command name starts with =, indicating a bad line break or malformed syntax.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/384.sh
+rationale: This warning catches unintended line breaks that cause an equals sign to be misinterpreted
+  as a command name instead of an assignment or comparison operator.

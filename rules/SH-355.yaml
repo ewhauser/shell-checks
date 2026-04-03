@@ -1,0 +1,12 @@
+id: SH-355
+name: detects-when-a-pipe
+summary: Detects when a pipe character is placed between a redirection and the command it should apply
+  to.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/355.sh
+rationale: This pattern indicates a syntax error where the pipe operator is misplaced relative to redirections,
+  preventing the command from executing correctly.

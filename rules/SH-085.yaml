@@ -1,0 +1,9 @@
+id: SH-085
+name: detects-use-of-glob
+summary: Detects use of glob patterns with the =~ regex matching operator instead of with == or = operators.
+shells:
+- bash
+- ksh
+example: examples/085.sh
+rationale: The =~ operator expects regex syntax; glob patterns will not match as intended and should use
+  == or = instead.

@@ -1,0 +1,10 @@
+id: SH-373
+name: detects-attempts-to-use
+summary: Detects attempts to use sudo with shell builtins like cd that cannot be executed with sudo.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/373.sh
+rationale: Sudo cannot elevate privileges for shell builtins; use sudo sh -c to wrap the command instead.

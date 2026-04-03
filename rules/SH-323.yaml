@@ -1,0 +1,11 @@
+id: SH-323
+name: literal-tilde-in-path
+summary: Literal tilde in PATH works poorly across programs.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/323.sh
+rationale: Tilde expansion is inconsistent across programs, causing path resolution failures when used
+  literally in PATH.

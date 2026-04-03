@@ -1,0 +1,12 @@
+id: SH-089
+name: detects-unknown-or-invalid
+summary: Detects unknown or invalid unary operators used in test expressions that would cause evaluation
+  errors.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/089.sh
+rationale: Unknown unary operators in test expressions indicate a syntax error that will cause the script
+  to fail or behave unexpectedly.

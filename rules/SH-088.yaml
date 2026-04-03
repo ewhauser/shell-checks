@@ -1,0 +1,12 @@
+id: SH-088
+name: detects-logical-operator-combinations
+summary: Detects logical operator combinations in conditional expressions that create tautological conditions
+  (always true or always false), typically when && was intended instead of ||
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/088.sh
+rationale: Prevents logic errors in conditions that will always evaluate the same way, usually indicating
+  a mistake in operator choice

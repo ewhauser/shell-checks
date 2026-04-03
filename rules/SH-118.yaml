@@ -1,0 +1,12 @@
+id: SH-118
+name: warns-when-special-characters
+summary: Warns when special characters in eval arguments are not properly quoted or escaped, which can
+  cause parsing errors or unintended command execution.
+shells:
+- bash
+- sh
+- dash
+- ksh
+example: examples/118.sh
+rationale: Unquoted special characters passed to eval can be reinterpreted as shell syntax, leading to
+  security vulnerabilities or unexpected behavior.

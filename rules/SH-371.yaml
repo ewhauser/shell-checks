@@ -1,0 +1,11 @@
+id: SH-371
+name: detects-cp-commands-that
+summary: Detects cp commands that are missing a destination argument.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/371.sh
+rationale: An incomplete cp command without a destination argument will fail and indicates a likely scripting
+  error.

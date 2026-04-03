@@ -1,4 +1,3 @@
----
 shellcheck_version: 0.11.0
 known_codes:
 - shellcheck_code: 2086
@@ -8,9 +7,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Unquoted parameter expansion in an ordinary argument position is already
-    represented by SH-001, so discovery should avoid generating more single-purpose
-    variants of that same behavior.
+  rationale: Unquoted parameter expansion in an ordinary argument position is already represented by SH-001,
+    so discovery should avoid generating more single-purpose variants of that same behavior.
   sources:
   - mappings/SH-001
 - shellcheck_code: 2162
@@ -20,8 +18,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Raw input handling is now represented by SH-002, so discovery should
-    skip more snippets that only differ by how read treats backslashes.
+  rationale: Raw input handling is now represented by SH-002, so discovery should skip more snippets that
+    only differ by how read treats backslashes.
   sources:
   - mappings/SH-002
 - shellcheck_code: 2034
@@ -31,8 +29,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A plain assignment with no later read is now represented by SH-003, so
-    discovery should avoid more single-line dead stores.
+  rationale: A plain assignment with no later read is now represented by SH-003, so discovery should avoid
+    more single-line dead stores.
   sources:
   - mappings/SH-003
 - shellcheck_code: 2045
@@ -42,8 +40,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Looping directly over command output is now represented by SH-004, so
-    discovery should skip more snippets that only vary the producer.
+  rationale: Looping directly over command output is now represented by SH-004, so discovery should skip
+    more snippets that only vary the producer.
   sources:
   - mappings/SH-004
 - shellcheck_code: 2046
@@ -53,8 +51,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Unquoted command substitution is now represented by SH-005, so discovery
-    should avoid similar word-splitting variants.
+  rationale: Unquoted command substitution is now represented by SH-005, so discovery should avoid similar
+    word-splitting variants.
   sources:
   - mappings/SH-005
 - shellcheck_code: 3010
@@ -62,8 +60,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Bash-style double-bracket conditionals are now represented by SH-006,
-    so discovery should skip more portable-test lookalikes.
+  rationale: Bash-style double-bracket conditionals are now represented by SH-006, so discovery should
+    skip more portable-test lookalikes.
   sources:
   - mappings/SH-006
 - shellcheck_code: 3014
@@ -71,16 +69,16 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Using the nonportable equality operator in POSIX test syntax is now represented
-    by SH-007, so discovery should avoid more comparison-only tweaks.
+  rationale: Using the nonportable equality operator in POSIX test syntax is now represented by SH-007,
+    so discovery should avoid more comparison-only tweaks.
   sources:
   - mappings/SH-007
 - shellcheck_code: 3043
   status: covered
   shells:
   - sh
-  rationale: Function-local variable declarations are now represented by SH-008, so
-    discovery should not chase more shell-local scope variants.
+  rationale: Function-local variable declarations are now represented by SH-008, so discovery should not
+    chase more shell-local scope variants.
   sources:
   - mappings/SH-008
 - shellcheck_code: 2113
@@ -88,8 +86,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The nonportable `function` keyword is now represented by SH-009, so discovery
-    can skip more bash-style function declarations.
+  rationale: The nonportable `function` keyword is now represented by SH-009, so discovery can skip more
+    bash-style function declarations.
   sources:
   - mappings/SH-009
 - shellcheck_code: 2127
@@ -98,8 +96,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: The bash-only `;;&` case form is now represented by SH-010, so discovery
-    should avoid more fallthrough variants in `sh`.
+  rationale: The bash-only `;;&` case form is now represented by SH-010, so discovery should avoid more
+    fallthrough variants in `sh`.
   sources:
   - mappings/SH-010
 - shellcheck_code: 3001
@@ -107,8 +105,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Process substitution is now represented by SH-011, so discovery should
-    skip more snippets that only vary the substituted command.
+  rationale: Process substitution is now represented by SH-011, so discovery should skip more snippets
+    that only vary the substituted command.
   sources:
   - mappings/SH-011
 - shellcheck_code: 3003
@@ -116,8 +114,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: ANSI C-style quoting is now represented by SH-012, so discovery can move
-    past more `$'...'` literals.
+  rationale: ANSI C-style quoting is now represented by SH-012, so discovery can move past more `$'...'`
+    literals.
   sources:
   - mappings/SH-012
 - shellcheck_code: 3006
@@ -125,8 +123,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Standalone arithmetic commands are now represented by SH-013, so discovery
-    should avoid more `((...))` variants.
+  rationale: Standalone arithmetic commands are now represented by SH-013, so discovery should avoid more
+    `((...))` variants.
   sources:
   - mappings/SH-013
 - shellcheck_code: 3008
@@ -134,8 +132,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: "`select` loops are now represented by SH-014, so discovery should not
-    spend more effort on menu-loop syntax."
+  rationale: '`select` loops are now represented by SH-014, so discovery should not spend more effort
+    on menu-loop syntax.'
   sources:
   - mappings/SH-014
 - shellcheck_code: 3009
@@ -143,8 +141,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Brace expansion is now represented by SH-015, so discovery should skip
-    more comma-list brace forms.
+  rationale: Brace expansion is now represented by SH-015, so discovery should skip more comma-list brace
+    forms.
   sources:
   - mappings/SH-015
 - shellcheck_code: 3011
@@ -152,8 +150,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Here-strings are now represented by SH-016, so discovery should avoid
-    more `<<<` input examples.
+  rationale: Here-strings are now represented by SH-016, so discovery should avoid more `<<<` input examples.
   sources:
   - mappings/SH-016
 - shellcheck_code: 3020
@@ -161,8 +158,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Combined stdout-and-stderr redirection is now represented by SH-017,
-    so discovery can skip more `&>` forms.
+  rationale: Combined stdout-and-stderr redirection is now represented by SH-017, so discovery can skip
+    more `&>` forms.
   sources:
   - mappings/SH-017
 - shellcheck_code: 3030
@@ -170,8 +167,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Array assignment syntax is now represented by SH-018, so discovery should
-    not chase more array literals in `sh`.
+  rationale: Array assignment syntax is now represented by SH-018, so discovery should not chase more
+    array literals in `sh`.
   sources:
   - mappings/SH-018
 - shellcheck_code: 3032
@@ -179,8 +176,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Co-process syntax is now represented by SH-019, so discovery should avoid
-    more `coproc` variants.
+  rationale: Co-process syntax is now represented by SH-019, so discovery should avoid more `coproc` variants.
   sources:
   - mappings/SH-019
 - shellcheck_code: 3039
@@ -188,8 +184,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The `let` builtin is now represented by SH-020, so discovery should move
-    past more arithmetic-command snippets.
+  rationale: The `let` builtin is now represented by SH-020, so discovery should move past more arithmetic-command
+    snippets.
   sources:
   - mappings/SH-020
 - shellcheck_code: 3044
@@ -197,8 +193,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: "`declare`-style shell state is now represented by SH-021, so discovery
-    should avoid more nonportable declaration builtins."
+  rationale: '`declare`-style shell state is now represented by SH-021, so discovery should avoid more
+    nonportable declaration builtins.'
   sources:
   - mappings/SH-021
 - shellcheck_code: 3047
@@ -206,8 +202,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: "`ERR` trapping is now represented by SH-022, so discovery should skip
-    more trap forms that only vary the handler body."
+  rationale: '`ERR` trapping is now represented by SH-022, so discovery should skip more trap forms that
+    only vary the handler body.'
   sources:
   - mappings/SH-022
 - shellcheck_code: 3053
@@ -215,8 +211,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Indirect expansion is now represented by SH-023, so discovery should
-    avoid more `${!name}` patterns.
+  rationale: Indirect expansion is now represented by SH-023, so discovery should avoid more `${!name}`
+    patterns.
   sources:
   - mappings/SH-023
 - shellcheck_code: 3054
@@ -224,8 +220,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Array indexing is now represented by SH-024, so discovery should skip
-    more `${name[index]}` examples.
+  rationale: Array indexing is now represented by SH-024, so discovery should skip more `${name[index]}`
+    examples.
   sources:
   - mappings/SH-024
 - shellcheck_code: 1090
@@ -235,8 +231,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A runtime-resolved source path is now represented by SH-025, so discovery
-    should not keep probing dot commands that depend on a variable.
+  rationale: A runtime-resolved source path is now represented by SH-025, so discovery should not keep
+    probing dot commands that depend on a variable.
   sources:
   - mappings/SH-025
 - shellcheck_code: 1091
@@ -246,8 +242,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A literal sourced dependency is now represented by SH-026, so discovery
-    should skip more direct dot commands that point at unseen files.
+  rationale: A literal sourced dependency is now represented by SH-026, so discovery should skip more
+    direct dot commands that point at unseen files.
   sources:
   - mappings/SH-026
 - shellcheck_code: 2164
@@ -257,8 +253,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An unchecked directory change is now represented by SH-027, so discovery
-    should avoid more bare cd examples.
+  rationale: An unchecked directory change is now represented by SH-027, so discovery should avoid more
+    bare cd examples.
   sources:
   - mappings/SH-027
 - shellcheck_code: 3022
@@ -266,16 +262,16 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Brace-based file descriptor allocation is now represented by SH-028,
-    so discovery should skip more shell-specific fd redirection forms.
+  rationale: Brace-based file descriptor allocation is now represented by SH-028, so discovery should
+    skip more shell-specific fd redirection forms.
   sources:
   - mappings/SH-028
 - shellcheck_code: 3040
   status: covered
   shells:
   - sh
-  rationale: The pipefail option is now represented by SH-029, so discovery should
-    avoid more shell-option variants.
+  rationale: The pipefail option is now represented by SH-029, so discovery should avoid more shell-option
+    variants.
   sources:
   - mappings/SH-029
 - shellcheck_code: 3045
@@ -283,8 +279,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The wait option is now represented by SH-030, so discovery should not
-    keep testing more bash-style wait flags.
+  rationale: The wait option is now represented by SH-030, so discovery should not keep testing more bash-style
+    wait flags.
   sources:
   - mappings/SH-030
 - shellcheck_code: 3057
@@ -292,8 +288,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Substring expansion is now represented by SH-031, so discovery should
-    skip more bash-only slice forms.
+  rationale: Substring expansion is now represented by SH-031, so discovery should skip more bash-only
+    slice forms.
   sources:
   - mappings/SH-031
 - shellcheck_code: 3059
@@ -301,8 +297,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Uppercase parameter conversion is now represented by SH-032, so discovery
-    should avoid more bash case-conversion forms.
+  rationale: Uppercase parameter conversion is now represented by SH-032, so discovery should avoid more
+    bash case-conversion forms.
   sources:
   - mappings/SH-032
 - shellcheck_code: 3060
@@ -310,8 +306,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: Global replacement expansion is now represented by SH-033, so discovery
-    should skip more bash substitution forms.
+  rationale: Global replacement expansion is now represented by SH-033, so discovery should skip more
+    bash substitution forms.
   sources:
   - mappings/SH-033
 - shellcheck_code: 1089
@@ -321,8 +317,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A stray closing keyword is now covered by SH-065, so discovery should
-    avoid more unmatched control-token cases.
+  rationale: A stray closing keyword is now covered by SH-065, so discovery should avoid more unmatched
+    control-token cases.
   sources:
   - mappings/SH-065
 - shellcheck_code: 2116
@@ -332,8 +328,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Using echo inside command substitution is now covered by SH-066, so discovery
-    should skip more nested-output wrappers.
+  rationale: Using echo inside command substitution is now covered by SH-066, so discovery should skip
+    more nested-output wrappers.
   sources:
   - mappings/SH-066
 - shellcheck_code: 2206
@@ -343,8 +339,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Unquoted bash array construction is now covered by SH-067, so discovery
-    should avoid more word-splitting array forms.
+  rationale: Unquoted bash array construction is now covered by SH-067, so discovery should avoid more
+    word-splitting array forms.
   sources:
   - mappings/SH-067
 - shellcheck_code: 2207
@@ -354,8 +350,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Directly turning command output into an array is now covered by SH-068,
-    so discovery should skip more command-output splitting cases.
+  rationale: Directly turning command output into an array is now covered by SH-068, so discovery should
+    skip more command-output splitting cases.
   sources:
   - mappings/SH-068
 - shellcheck_code: 2050
@@ -365,8 +361,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A fixed comparison in a test expression is now covered by SH-069, so
-    discovery should skip more constant-condition probes.
+  rationale: A fixed comparison in a test expression is now covered by SH-069, so discovery should skip
+    more constant-condition probes.
   sources:
   - mappings/SH-069
 - shellcheck_code: 2105
@@ -376,8 +372,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A loop-control command outside any loop is now covered by SH-070, so
-    discovery should avoid more top-level break and continue probes.
+  rationale: A loop-control command outside any loop is now covered by SH-070, so discovery should avoid
+    more top-level break and continue probes.
   sources:
   - mappings/SH-070
 - shellcheck_code: 2143
@@ -387,8 +383,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Testing captured grep text instead of its status is now covered by SH-071,
-    so discovery should skip more grep-output-in-condition variants.
+  rationale: Testing captured grep text instead of its status is now covered by SH-071, so discovery should
+    skip more grep-output-in-condition variants.
   sources:
   - mappings/SH-071
 - shellcheck_code: 2157
@@ -398,8 +394,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A unary string test on a fixed literal is now covered by SH-072, so discovery
-    should avoid more constant word-length checks.
+  rationale: A unary string test on a fixed literal is now covered by SH-072, so discovery should avoid
+    more constant word-length checks.
   sources:
   - mappings/SH-072
 - shellcheck_code: 2161
@@ -409,8 +405,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A one-word test on a literal value is now covered by SH-073, so discovery
-    should skip more bare truthiness checks.
+  rationale: A one-word test on a literal value is now covered by SH-073, so discovery should skip more
+    bare truthiness checks.
   sources:
   - mappings/SH-073
 - shellcheck_code: 2194
@@ -420,8 +416,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A case statement built around a fixed literal is now covered by SH-074,
-    so discovery should avoid more constant-subject case probes.
+  rationale: A case statement built around a fixed literal is now covered by SH-074, so discovery should
+    avoid more constant-subject case probes.
   sources:
   - mappings/SH-074
 - shellcheck_code: 2212
@@ -431,8 +427,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An empty test expression is now covered by SH-075, so discovery should
-    skip more vacuous bracket forms.
+  rationale: An empty test expression is now covered by SH-075, so discovery should skip more vacuous
+    bracket forms.
   sources:
   - mappings/SH-075
 - shellcheck_code: 2013
@@ -442,8 +438,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Flattening command output into a loop is now represented by SH-046, so
-    discovery should avoid more word-splitting loops.
+  rationale: Flattening command output into a loop is now represented by SH-046, so discovery should avoid
+    more word-splitting loops.
   sources:
   - mappings/SH-046
 - shellcheck_code: 2029
@@ -453,8 +449,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Local expansion inside an ssh command string is now represented by SH-047,
-    so discovery should skip more remote-command quoting variants.
+  rationale: Local expansion inside an ssh command string is now represented by SH-047, so discovery should
+    skip more remote-command quoting variants.
   sources:
   - mappings/SH-047
 - shellcheck_code: 2035
@@ -464,8 +460,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An unprotected wildcard used as a command argument is now represented
-    by SH-048, so discovery should avoid more glob-to-option cases.
+  rationale: An unprotected wildcard used as a command argument is now represented by SH-048, so discovery
+    should avoid more glob-to-option cases.
   sources:
   - mappings/SH-048
 - shellcheck_code: 2044
@@ -475,8 +471,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Looping over `find` output is now represented by SH-049, so discovery
-    should skip more path-splitting patterns.
+  rationale: Looping over `find` output is now represented by SH-049, so discovery should skip more path-splitting
+    patterns.
   sources:
   - mappings/SH-049
 - shellcheck_code: 2155
@@ -486,8 +482,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Combining `export` with command substitution is now represented by SH-050,
-    so discovery should avoid more merged declaration-and-assignment forms.
+  rationale: Combining `export` with command substitution is now represented by SH-050, so discovery should
+    avoid more merged declaration-and-assignment forms.
   sources:
   - mappings/SH-050
 - shellcheck_code: 2166
@@ -497,8 +493,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Compact `-a`/`-o` test chains are now represented by SH-051, so discovery
-    should skip more bundled boolean expressions.
+  rationale: Compact `-a`/`-o` test chains are now represented by SH-051, so discovery should skip more
+    bundled boolean expressions.
   sources:
   - mappings/SH-051
 - shellcheck_code: 2168
@@ -506,8 +502,8 @@ known_codes:
   shells:
   - bash
   - dash
-  rationale: "`local` used at script scope is now represented by SH-052, so discovery
-    should avoid more top-level bash-local examples."
+  rationale: '`local` used at script scope is now represented by SH-052, so discovery should avoid more
+    top-level bash-local examples.'
   sources:
   - mappings/SH-052
 - shellcheck_code: 3034
@@ -515,16 +511,16 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The bash-only `$(< file)` shortcut is now represented by SH-053, so discovery
-    should move past more file-slurping bashisms.
+  rationale: The bash-only `$(< file)` shortcut is now represented by SH-053, so discovery should move
+    past more file-slurping bashisms.
   sources:
   - mappings/SH-053
 - shellcheck_code: 3037
   status: covered
   shells:
   - sh
-  rationale: Echo flags that change output formatting are now represented by SH-054,
-    so discovery should avoid more implementation-specific `echo` forms.
+  rationale: Echo flags that change output formatting are now represented by SH-054, so discovery should
+    avoid more implementation-specific `echo` forms.
   sources:
   - mappings/SH-054
 - shellcheck_code: 2003
@@ -534,8 +530,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Using `expr` for arithmetic is now represented by SH-055, so discovery
-    should skip more external-numbering variants.
+  rationale: Using `expr` for arithmetic is now represented by SH-055, so discovery should skip more external-numbering
+    variants.
   sources:
   - mappings/SH-055
 - shellcheck_code: 2009
@@ -545,8 +541,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Piping `ps` into `grep` is now represented by SH-056, so discovery should
-    avoid more process-list filtering patterns.
+  rationale: Piping `ps` into `grep` is now represented by SH-056, so discovery should avoid more process-list
+    filtering patterns.
   sources:
   - mappings/SH-056
 - shellcheck_code: 2010
@@ -556,8 +552,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Piping `ls` into `grep` is now represented by SH-057, so discovery should
-    skip more directory-list filtering patterns.
+  rationale: Piping `ls` into `grep` is now represented by SH-057, so discovery should skip more directory-list
+    filtering patterns.
   sources:
   - mappings/SH-057
 - shellcheck_code: 2018
@@ -567,8 +563,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A lower-case range in `tr` is now represented by SH-058, so discovery
-    should avoid more locale-sensitive translation ranges.
+  rationale: A lower-case range in `tr` is now represented by SH-058, so discovery should avoid more locale-sensitive
+    translation ranges.
   sources:
   - mappings/SH-058
 - shellcheck_code: 2019
@@ -578,8 +574,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An upper-case range in `tr` is now represented by SH-059, so discovery
-    should avoid more locale-sensitive translation ranges.
+  rationale: An upper-case range in `tr` is now represented by SH-059, so discovery should avoid more
+    locale-sensitive translation ranges.
   sources:
   - mappings/SH-059
 - shellcheck_code: 2024
@@ -589,8 +585,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Redirecting output after `sudo` is now represented by SH-060, so discovery
-    should skip more privilege-and-redirection ordering cases.
+  rationale: Redirecting output after `sudo` is now represented by SH-060, so discovery should skip more
+    privilege-and-redirection ordering cases.
   sources:
   - mappings/SH-060
 - shellcheck_code: 2028
@@ -599,8 +595,8 @@ known_codes:
   - bash
   - ksh
   - sh
-  rationale: Backslash escapes passed to `echo` are now represented by SH-061, so
-    discovery should avoid more shell-specific escape rendering cases.
+  rationale: Backslash escapes passed to `echo` are now represented by SH-061, so discovery should avoid
+    more shell-specific escape rendering cases.
   sources:
   - mappings/SH-061
 - shellcheck_code: 2048
@@ -610,8 +606,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Iterating over `$*` is now represented by SH-062, so discovery should
-    skip more collapsed-positional-parameter loops.
+  rationale: Iterating over `$*` is now represented by SH-062, so discovery should skip more collapsed-positional-parameter
+    loops.
   sources:
   - mappings/SH-062
 - shellcheck_code: 2066
@@ -621,8 +617,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Putting `"$*"` in a loop is now represented by SH-063, so discovery should
-    avoid more combined positional-parameter loops.
+  rationale: Putting `"$*"` in a loop is now represented by SH-063, so discovery should avoid more combined
+    positional-parameter loops.
   sources:
   - mappings/SH-063
 - shellcheck_code: 2126
@@ -632,8 +628,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Counting `grep` matches with `wc -l` is now represented by SH-064, so
-    discovery should avoid more count-via-pipeline patterns.
+  rationale: Counting `grep` matches with `wc -l` is now represented by SH-064, so discovery should avoid
+    more count-via-pipeline patterns.
   sources:
   - mappings/SH-064
 - shellcheck_code: 2006
@@ -643,8 +639,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Backtick substitution is now represented by SH-034, so discovery should
-    avoid more legacy command-substitution forms.
+  rationale: Backtick substitution is now represented by SH-034, so discovery should avoid more legacy
+    command-substitution forms.
   sources:
   - mappings/SH-034
 - shellcheck_code: 2007
@@ -654,8 +650,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: The legacy arithmetic form is now represented by SH-035, so discovery
-    should skip more `$[...]` examples.
+  rationale: The legacy arithmetic form is now represented by SH-035, so discovery should skip more `$[...]`
+    examples.
   sources:
   - mappings/SH-035
 - shellcheck_code: 2016
@@ -665,8 +661,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A literal single-quoted expansion is now represented by SH-036, so discovery
-    should avoid more quote-delimited text that looks like variables.
+  rationale: A literal single-quoted expansion is now represented by SH-036, so discovery should avoid
+    more quote-delimited text that looks like variables.
   sources:
   - mappings/SH-036
 - shellcheck_code: 2059
@@ -676,8 +672,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A variable-supplied printf format string is now represented by SH-037,
-    so discovery should skip more format-string indirection.
+  rationale: A variable-supplied printf format string is now represented by SH-037, so discovery should
+    skip more format-string indirection.
   sources:
   - mappings/SH-037
 - shellcheck_code: 2068
@@ -687,8 +683,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An unquoted array expansion is now represented by SH-038, so discovery
-    should avoid more array-word-splitting variants.
+  rationale: An unquoted array expansion is now represented by SH-038, so discovery should avoid more
+    array-word-splitting variants.
   sources:
   - mappings/SH-038
 - shellcheck_code: 2154
@@ -698,8 +694,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A read of an uninitialized variable is now represented by SH-039, so
-    discovery should not keep probing plain unset-variable reads.
+  rationale: A read of an uninitialized variable is now represented by SH-039, so discovery should not
+    keep probing plain unset-variable reads.
   sources:
   - mappings/SH-039
 - shellcheck_code: 2005
@@ -709,8 +705,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: An `echo` around a command substitution is now represented by SH-040,
-    so discovery should skip more direct-output wrappers.
+  rationale: An `echo` around a command substitution is now represented by SH-040, so discovery should
+    skip more direct-output wrappers.
   sources:
   - mappings/SH-040
 - shellcheck_code: 2038
@@ -720,8 +716,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Piping `find` into `xargs` is now represented by SH-041, so discovery
-    should avoid more file-list handoff variants.
+  rationale: Piping `find` into `xargs` is now represented by SH-041, so discovery should avoid more file-list
+    handoff variants.
   sources:
   - mappings/SH-041
 - shellcheck_code: 2064
@@ -731,8 +727,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A trap body that expands variables immediately is now represented by
-    SH-042, so discovery should skip more quoted trap strings.
+  rationale: A trap body that expands variables immediately is now represented by SH-042, so discovery
+    should skip more quoted trap strings.
   sources:
   - mappings/SH-042
 - shellcheck_code: 2076
@@ -742,8 +738,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Quoting the regex side of `=~` is now represented by SH-043, so discovery
-    should avoid more bash regex quoting variants.
+  rationale: Quoting the regex side of `=~` is now represented by SH-043, so discovery should avoid more
+    bash regex quoting variants.
   sources:
   - mappings/SH-043
 - shellcheck_code: 2115
@@ -753,8 +749,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A destructive glob applied to a variable path is now represented by SH-044,
-    so discovery should skip more broad `rm -rf` patterns.
+  rationale: A destructive glob applied to a variable path is now represented by SH-044, so discovery
+    should skip more broad `rm -rf` patterns.
   sources:
   - mappings/SH-044
 - shellcheck_code: 2333
@@ -764,8 +760,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: Chaining commands with `&&` and `||` to stand in for branching is now
-    represented by SH-045, so discovery should avoid more `if`-replacement patterns.
+  rationale: Chaining commands with `&&` and `||` to stand in for branching is now represented by SH-045,
+    so discovery should avoid more `if`-replacement patterns.
   sources:
   - mappings/SH-045
 - shellcheck_code: 2043
@@ -775,8 +771,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A loop that exits immediately is now represented by SH-076, so discovery
-    should avoid more one-iteration loop forms.
+  rationale: A loop that exits immediately is now represented by SH-076, so discovery should avoid more
+    one-iteration loop forms.
   sources:
   - mappings/SH-076
 - shellcheck_code: 2145
@@ -786,9 +782,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A quoted string that folds positional parameters into surrounding text
-    is now represented by SH-077, so discovery should skip more mixed-argument string
-    forms.
+  rationale: A quoted string that folds positional parameters into surrounding text is now represented
+    by SH-077, so discovery should skip more mixed-argument string forms.
   sources:
   - mappings/SH-077
 - shellcheck_code: 2080
@@ -798,8 +793,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: A leading zero in arithmetic input is now represented by SH-078, so discovery
-    should avoid more octal-looking literals.
+  rationale: A leading zero in arithmetic input is now represented by SH-078, so discovery should avoid
+    more octal-looking literals.
   sources:
   - mappings/SH-078
 - shellcheck_code: 2219
@@ -807,8 +802,8 @@ known_codes:
   shells:
   - bash
   - ksh
-  rationale: The bash `let` builtin is now represented by SH-079, so discovery should
-    skip more simple arithmetic builtins.
+  rationale: The bash `let` builtin is now represented by SH-079, so discovery should skip more simple
+    arithmetic builtins.
   sources:
   - mappings/SH-079
 - shellcheck_code: 3046
@@ -816,8 +811,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The bash-style `source` builtin is now represented by SH-080, so discovery
-    should avoid more attempts to load files with the nonportable command name.
+  rationale: The bash-style `source` builtin is now represented by SH-080, so discovery should avoid more
+    attempts to load files with the nonportable command name.
   sources:
   - mappings/SH-080
 - shellcheck_code: 3050
@@ -825,8 +820,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: The bash-only `%q` formatter is now represented by SH-081, so discovery
-    should skip more non-POSIX `printf` format specifiers.
+  rationale: The bash-only `%q` formatter is now represented by SH-081, so discovery should skip more
+    non-POSIX `printf` format specifiers.
   sources:
   - mappings/SH-081
 - shellcheck_code: 1001
@@ -846,8 +841,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-084: An assignment is written with an extra space before
-    its value.'
+  rationale: 'Covered by SH-084: An assignment is written with an extra space before its value.'
   sources:
   - mappings/SH-084
 - shellcheck_code: 1037
@@ -857,8 +851,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-086: Refers to the tenth positional parameter without
-    braces.'
+  rationale: 'Covered by SH-086: Refers to the tenth positional parameter without braces.'
   sources:
   - mappings/SH-086
 - shellcheck_code: 1003
@@ -868,8 +861,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-087: Includes a literal backslash inside a quoted shell
-    string.'
+  rationale: 'Covered by SH-087: Includes a literal backslash inside a quoted shell string.'
   sources:
   - mappings/SH-087
 - shellcheck_code: 1010
@@ -889,8 +881,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-093: A POSIX sh script uses a bash-style `[[ ... ]]` test
-    in an `elif` clause.'
+  rationale: 'Covered by SH-093: A POSIX sh script uses a bash-style `[[ ... ]]` test in an `elif` clause.'
   sources:
   - mappings/SH-093
 - shellcheck_code: 1019
@@ -930,8 +921,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-104: The here-doc terminator is indented instead of starting
-    at column 1.'
+  rationale: 'Covered by SH-104: The here-doc terminator is indented instead of starting at column 1.'
   sources:
   - mappings/SH-104
 - shellcheck_code: 1046
@@ -951,8 +941,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-100: A test expression is missing the space before `]`,
-    which ShellCheck flags as a bracket-spacing issue.'
+  rationale: 'Covered by SH-100: A test expression is missing the space before `]`, which ShellCheck flags
+    as a bracket-spacing issue.'
   sources:
   - mappings/SH-100
 - shellcheck_code: 1047
@@ -962,8 +952,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-106: An `if` block is left without its closing `fi`, which
-    ShellCheck reports as an unmatched conditional.'
+  rationale: 'Covered by SH-106: An `if` block is left without its closing `fi`, which ShellCheck reports
+    as an unmatched conditional.'
   sources:
   - mappings/SH-106
 - shellcheck_code: 1070
@@ -973,8 +963,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-108: A zsh-only redirection operator appears in a POSIX
-    shell script.'
+  rationale: 'Covered by SH-108: A zsh-only redirection operator appears in a POSIX shell script.'
   sources:
   - mappings/SH-108
 - shellcheck_code: 1074
@@ -1004,8 +993,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-116: Literal braces appear where bash may treat them as
-    expansion syntax.'
+  rationale: 'Covered by SH-116: Literal braces appear where bash may treat them as expansion syntax.'
   sources:
   - mappings/SH-116
 - shellcheck_code: 1065
@@ -1015,8 +1003,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-107: A POSIX `sh` function is written with parameter syntax
-    that ShellCheck rejects.'
+  rationale: 'Covered by SH-107: A POSIX `sh` function is written with parameter syntax that ShellCheck
+    rejects.'
   sources:
   - mappings/SH-107
 - shellcheck_code: 1072
@@ -1026,8 +1014,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-109: A malformed `[` test leaves ShellCheck unable to
-    finish parsing the expression.'
+  rationale: 'Covered by SH-109: A malformed `[` test leaves ShellCheck unable to finish parsing the expression.'
   sources:
   - mappings/SH-109
 - shellcheck_code: 1073
@@ -1037,8 +1024,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-110: A malformed `[` test expression cannot be parsed
-    by ShellCheck.'
+  rationale: 'Covered by SH-110: A malformed `[` test expression cannot be parsed by ShellCheck.'
   sources:
   - mappings/SH-110
 - shellcheck_code: 1078
@@ -1048,8 +1034,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-113: A double-quoted string is opened inside another quoted
-    string and ShellCheck thinks it was never closed.'
+  rationale: 'Covered by SH-113: A double-quoted string is opened inside another quoted string and ShellCheck
+    thinks it was never closed.'
   sources:
   - mappings/SH-113
 - shellcheck_code: 1079
@@ -1059,8 +1045,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-114: A quote is syntactically closed, but the following
-    character makes ShellCheck flag it as suspicious.'
+  rationale: 'Covered by SH-114: A quote is syntactically closed, but the following character makes ShellCheck
+    flag it as suspicious.'
   sources:
   - mappings/SH-114
 - shellcheck_code: 1080
@@ -1070,8 +1056,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-115: A `[` test is split across lines without the required
-    line-continuation backslash.'
+  rationale: 'Covered by SH-115: A `[` test is split across lines without the required line-continuation
+    backslash.'
   sources:
   - mappings/SH-115
 - shellcheck_code: 1118
@@ -1081,8 +1067,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-119: Trailing whitespace on a here-doc terminator makes
-    the marker sloppy.'
+  rationale: 'Covered by SH-119: Trailing whitespace on a here-doc terminator makes the marker sloppy.'
   sources:
   - mappings/SH-119
 - shellcheck_code: 1126
@@ -1112,8 +1097,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-123: A C/C++-style declaration is being read as shell
-    code.'
+  rationale: 'Covered by SH-123: A C/C++-style declaration is being read as shell code.'
   sources:
   - mappings/SH-123
 - shellcheck_code: 1140
@@ -1123,8 +1107,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-124: Zsh-style conditional bracing is not portable shell
-    syntax.'
+  rationale: 'Covered by SH-124: Zsh-style conditional bracing is not portable shell syntax.'
   sources:
   - mappings/SH-124
 - shellcheck_code: 1141
@@ -1164,8 +1147,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-128: Uses a boolean-style assignment shortcut after a
-    command check'
+  rationale: 'Covered by SH-128: Uses a boolean-style assignment shortcut after a command check'
   sources:
   - mappings/SH-128
 - shellcheck_code: 2210
@@ -1339,8 +1321,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-154: Nested zsh-style expansion syntax is not portable
-    to sh.'
+  rationale: 'Covered by SH-154: Nested zsh-style expansion syntax is not portable to sh.'
   sources:
   - mappings/SH-154
 - shellcheck_code: 2294
@@ -1360,8 +1341,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-155: Reads `$?` after a test command has already overwritten
-    it.'
+  rationale: 'Covered by SH-155: Reads `$?` after a test command has already overwritten it.'
   sources:
   - mappings/SH-155
 - shellcheck_code: 2321
@@ -1391,8 +1371,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-159: Runs a command substitution whose output is redirected
-    away.'
+  rationale: 'Covered by SH-159: Runs a command substitution whose output is redirected away.'
   sources:
   - mappings/SH-159
 - shellcheck_code: 2328
@@ -1402,8 +1381,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-160: Runs a command substitution with redirected output
-    in the subshell.'
+  rationale: 'Covered by SH-160: Runs a command substitution with redirected output in the subshell.'
   sources:
   - mappings/SH-160
 - shellcheck_code: 2323
@@ -1441,8 +1419,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-165: Redirects output to a filename that shadows a known
-    command.'
+  rationale: 'Covered by SH-165: Redirects output to a filename that shadows a known command.'
   sources:
   - mappings/SH-165
 - shellcheck_code: 2239
@@ -1452,8 +1429,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-166: The shebang line does not start with an absolute
-    path.'
+  rationale: 'Covered by SH-166: The shebang line does not start with an absolute path.'
   sources:
   - mappings/SH-166
 - shellcheck_code: 2288
@@ -1463,8 +1439,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-167: A template placeholder with double braces appears
-    in command position.'
+  rationale: 'Covered by SH-167: A template placeholder with double braces appears in command position.'
   sources:
   - mappings/SH-167
 - shellcheck_code: 2291
@@ -1474,8 +1449,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-168: Extra spaces between echo arguments are collapsed
-    by the shell.'
+  rationale: 'Covered by SH-168: Extra spaces between echo arguments are collapsed by the shell.'
   sources:
   - mappings/SH-168
 - shellcheck_code: 2299
@@ -1495,8 +1469,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-170: Returns the exit status that the function would already
-    propagate.'
+  rationale: 'Covered by SH-170: Returns the exit status that the function would already propagate.'
   sources:
   - mappings/SH-170
 - shellcheck_code: 2329
@@ -1506,8 +1479,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-171: A function definition is overwritten before it can
-    be called.'
+  rationale: 'Covered by SH-171: A function definition is overwritten before it can be called.'
   sources:
   - mappings/SH-171
 - shellcheck_code: 1011
@@ -1517,8 +1489,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-172: A backslash sequence inside single quotes is treated
-    literally.'
+  rationale: 'Covered by SH-172: A backslash sequence inside single quotes is treated literally.'
   sources:
   - mappings/SH-172
 - shellcheck_code: 1012
@@ -1568,8 +1539,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-177: A closing brace follows a command without a semicolon
-    or newline.'
+  rationale: 'Covered by SH-177: A closing brace follows a command without a semicolon or newline.'
   sources:
   - mappings/SH-177
 - shellcheck_code: 1055
@@ -1589,8 +1559,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-179: A closing brace is not preceded by a semicolon or
-    newline.'
+  rationale: 'Covered by SH-179: A closing brace is not preceded by a semicolon or newline.'
   sources:
   - mappings/SH-179
 - shellcheck_code: 1058
@@ -1610,8 +1579,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-181: A function body is a bare compound command instead
-    of a brace group.'
+  rationale: 'Covered by SH-181: A function body is a bare compound command instead of a brace group.'
   sources:
   - mappings/SH-181
 - shellcheck_code: 1085
@@ -1631,8 +1599,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-183: A zsh prompt escape is used inside a POSIX shell
-    script.'
+  rationale: 'Covered by SH-183: A zsh prompt escape is used inside a POSIX shell script.'
   sources:
   - mappings/SH-183
 - shellcheck_code: 1088
@@ -1642,8 +1609,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-184: A csh-style `set` assignment appears in a POSIX shell
-    script.'
+  rationale: 'Covered by SH-184: A csh-style `set` assignment appears in a POSIX shell script.'
   sources:
   - mappings/SH-184
 - shellcheck_code: 1097
@@ -1663,8 +1629,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-186: A backslash-space appears right before a closing
-    backtick.'
+  rationale: 'Covered by SH-186: A backslash-space appears right before a closing backtick.'
   sources:
   - mappings/SH-186
 - shellcheck_code: 1102
@@ -1684,8 +1649,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-188: Double parentheses are used to group commands instead
-    of arithmetic.'
+  rationale: 'Covered by SH-188: Double parentheses are used to group commands instead of arithmetic.'
   sources:
   - mappings/SH-188
 - shellcheck_code: 1113
@@ -1725,8 +1689,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-193: The shebang appears on the second line instead of
-    the first.'
+  rationale: 'Covered by SH-193: The shebang appears on the second line instead of the first.'
   sources:
   - mappings/SH-193
 - shellcheck_code: 1143
@@ -1736,8 +1699,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-194: A line continuation is followed by a commented-out
-    argument.'
+  rationale: 'Covered by SH-194: A line continuation is followed by a commented-out argument.'
   sources:
   - mappings/SH-194
 - shellcheck_code: 1111
@@ -1757,8 +1719,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-195: A command substitution is nested inside an arithmetic
-    expansion.'
+  rationale: 'Covered by SH-195: A command substitution is nested inside an arithmetic expansion.'
   sources:
   - mappings/SH-195
 - shellcheck_code: 2001
@@ -1766,8 +1727,7 @@ known_codes:
   shells:
   - bash
   - ksh
-  rationale: 'Covered by SH-196: A variable is used unquoted in a sed substitution
-    argument.'
+  rationale: 'Covered by SH-196: A variable is used unquoted in a sed substitution argument.'
   sources:
   - mappings/SH-196
 - shellcheck_code: 2004
@@ -1777,8 +1737,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-197: A dollar sign is used before a variable name inside
-    `$(( ))`.'
+  rationale: 'Covered by SH-197: A dollar sign is used before a variable name inside `$(( ))`.'
   sources:
   - mappings/SH-197
 - shellcheck_code: 2011
@@ -1798,8 +1757,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-200: An unquoted variable and glob appear in a `find -exec`
-    command.'
+  rationale: 'Covered by SH-200: An unquoted variable and glob appear in a `find -exec` command.'
   sources:
   - mappings/SH-200
 - shellcheck_code: 2015
@@ -1818,8 +1776,7 @@ known_codes:
   - bash
   - dash
   - sh
-  rationale: 'Covered by SH-202: A dollar-prefixed variable is used in a double-parenthesis
-    expansion.'
+  rationale: 'Covered by SH-202: A dollar-prefixed variable is used in a double-parenthesis expansion.'
   sources:
   - mappings/SH-202
 - shellcheck_code: 2021
@@ -1839,8 +1796,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-204: A glob character inside a grep pattern may be expanded
-    by the shell.'
+  rationale: 'Covered by SH-204: A glob character inside a grep pattern may be expanded by the shell.'
   sources:
   - mappings/SH-204
 - shellcheck_code: 2026
@@ -1860,8 +1816,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-206: A variable used in a string comparison may be treated
-    as a glob.'
+  rationale: 'Covered by SH-206: A variable used in a string comparison may be treated as a glob.'
   sources:
   - mappings/SH-206
 - shellcheck_code: 2057
@@ -1881,8 +1836,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-208: A `tr` character class is not quoted and may be expanded
-    as a glob.'
+  rationale: 'Covered by SH-208: A `tr` character class is not quoted and may be expanded as a glob.'
   sources:
   - mappings/SH-208
 - shellcheck_code: 2061
@@ -1892,8 +1846,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-209: A glob pattern inside a `find` command substitution
-    may expand early.'
+  rationale: 'Covered by SH-209: A glob pattern inside a `find` command substitution may expand early.'
   sources:
   - mappings/SH-209
 - shellcheck_code: 2062
@@ -1913,8 +1866,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-211: Standard error is redirected before standard output
-    is redirected.'
+  rationale: 'Covered by SH-211: Standard error is redirected before standard output is redirected.'
   sources:
   - mappings/SH-211
 - shellcheck_code: 2070
@@ -1924,8 +1876,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-212: A variable expansion is not quoted inside a `[ -n
-    ... ]` test.'
+  rationale: 'Covered by SH-212: A variable expansion is not quoted inside a `[ -n ... ]` test.'
   sources:
   - mappings/SH-212
 - shellcheck_code: 2071
@@ -1935,8 +1886,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-213: A `>` operator inside `[ ]` creates a file instead
-    of comparing.'
+  rationale: 'Covered by SH-213: A `>` operator inside `[ ]` creates a file instead of comparing.'
   sources:
   - mappings/SH-213
 - shellcheck_code: 2072
@@ -1945,8 +1895,7 @@ known_codes:
   - bash
   - dash
   - sh
-  rationale: 'Covered by SH-214: A `<` operator inside `[[ ]]` compares lexicographically,
-    not numerically.'
+  rationale: 'Covered by SH-214: A `<` operator inside `[[ ]]` compares lexicographically, not numerically.'
   sources:
   - mappings/SH-214
 - shellcheck_code: 2077
@@ -1966,8 +1915,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-216: A command pipeline is quoted as a string inside a
-    test bracket.'
+  rationale: 'Covered by SH-216: A command pipeline is quoted as a string inside a test bracket.'
   sources:
   - mappings/SH-216
 - shellcheck_code: 2081
@@ -1977,8 +1925,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-217: A glob pattern on the right side of `==` inside `[
-    ]` is not expanded.'
+  rationale: 'Covered by SH-217: A glob pattern on the right side of `==` inside `[ ]` is not expanded.'
   sources:
   - mappings/SH-217
 - shellcheck_code: 2082
@@ -1988,8 +1935,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-218: A zsh-style nested parameter expansion is used in
-    a POSIX script.'
+  rationale: 'Covered by SH-218: A zsh-style nested parameter expansion is used in a POSIX script.'
   sources:
   - mappings/SH-218
 - shellcheck_code: 2012
@@ -2009,8 +1955,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-219: A literal tilde inside quotes is compared instead
-    of the expanded home path.'
+  rationale: 'Covered by SH-219: A literal tilde inside quotes is compared instead of the expanded home
+    path.'
   sources:
   - mappings/SH-219
 - shellcheck_code: 2091
@@ -2020,8 +1966,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-220: The output of a command substitution is used as a
-    condition.'
+  rationale: 'Covered by SH-220: The output of a command substitution is used as a condition.'
   sources:
   - mappings/SH-220
 - shellcheck_code: 2092
@@ -2031,8 +1976,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-221: A backtick command substitution is used as a command
-    name.'
+  rationale: 'Covered by SH-221: A backtick command substitution is used as a command name.'
   sources:
   - mappings/SH-221
 - shellcheck_code: 2094
@@ -2062,8 +2006,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-224: An assignment value contains a dash that may indicate
-    a typo.'
+  rationale: 'Covered by SH-224: An assignment value contains a dash that may indicate a typo.'
   sources:
   - mappings/SH-224
 - shellcheck_code: 2102
@@ -2073,8 +2016,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-225: Pipe and brace characters in an echo argument may
-    be interpreted by the shell.'
+  rationale: 'Covered by SH-225: Pipe and brace characters in an echo argument may be interpreted by the
+    shell.'
   sources:
   - mappings/SH-225
 - shellcheck_code: 2112
@@ -2082,8 +2025,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-226: The `function` keyword is used with parentheses in
-    a POSIX shell script.'
+  rationale: 'Covered by SH-226: The `function` keyword is used with parentheses in a POSIX shell script.'
   sources:
   - mappings/SH-226
 - shellcheck_code: 2117
@@ -2103,8 +2045,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-228: A function that references `$1` is called without
-    arguments.'
+  rationale: 'Covered by SH-228: A function that references `$1` is called without arguments.'
   sources:
   - mappings/SH-228
 - shellcheck_code: 2121
@@ -2124,8 +2065,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-230: An array slice is quoted, preventing word splitting
-    of the elements.'
+  rationale: 'Covered by SH-230: An array slice is quoted, preventing word splitting of the elements.'
   sources:
   - mappings/SH-230
 - shellcheck_code: 2125
@@ -2135,8 +2075,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-231: A glob pattern is assigned to a variable without
-    quoting.'
+  rationale: 'Covered by SH-231: A glob pattern is assigned to a variable without quoting.'
   sources:
   - mappings/SH-231
 - shellcheck_code: 2128
@@ -2166,8 +2105,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-235: A function definition is embedded inside an alias
-    string.'
+  rationale: 'Covered by SH-235: A function definition is embedded inside an alias string.'
   sources:
   - mappings/SH-235
 - shellcheck_code: 2144
@@ -2176,8 +2114,7 @@ known_codes:
   - bash
   - dash
   - sh
-  rationale: 'Covered by SH-236: A glob pattern inside a `[ -d ... ]` test may match
-    multiple paths.'
+  rationale: 'Covered by SH-236: A glob pattern inside a `[ -d ... ]` test may match multiple paths.'
   sources:
   - mappings/SH-236
 - shellcheck_code: 2146
@@ -2197,8 +2134,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-234: IFS is set to the literal string backslash-n instead
-    of a newline.'
+  rationale: 'Covered by SH-234: IFS is set to the literal string backslash-n instead of a newline.'
   sources:
   - mappings/SH-234
 - shellcheck_code: 2152
@@ -2208,8 +2144,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-238: A line of C or other non-shell code appears in a
-    shell script.'
+  rationale: 'Covered by SH-238: A line of C or other non-shell code appears in a shell script.'
   sources:
   - mappings/SH-238
 - shellcheck_code: 2163
@@ -2219,8 +2154,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-239: The `export` command is called with `$@` which may
-    not work as intended.'
+  rationale: 'Covered by SH-239: The `export` command is called with `$@` which may not work as intended.'
   sources:
   - mappings/SH-239
 - shellcheck_code: 2174
@@ -2230,8 +2164,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-240: A variable path is not quoted in a directory creation
-    command.'
+  rationale: 'Covered by SH-240: A variable path is not quoted in a directory creation command.'
   sources:
   - mappings/SH-240
 - shellcheck_code: 2179
@@ -2241,8 +2174,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-241: A string is appended to an array variable with `+=`
-    and a space.'
+  rationale: 'Covered by SH-241: A string is appended to an array variable with `+=` and a space.'
   sources:
   - mappings/SH-241
 - shellcheck_code: 2181
@@ -2252,8 +2184,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-242: The exit status `$?` is checked after an intervening
-    command overwrites it.'
+  rationale: 'Covered by SH-242: The exit status `$?` is checked after an intervening command overwrites
+    it.'
   sources:
   - mappings/SH-242
 - shellcheck_code: 2184
@@ -2263,8 +2195,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-243: An associative array element is unset with a quoted
-    key.'
+  rationale: 'Covered by SH-243: An associative array element is unset with a quoted key.'
   sources:
   - mappings/SH-243
 - shellcheck_code: 2185
@@ -2284,8 +2215,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-245: The deprecated `tempfile` command is used to create
-    a temporary file.'
+  rationale: 'Covered by SH-245: The deprecated `tempfile` command is used to create a temporary file.'
   sources:
   - mappings/SH-245
 - shellcheck_code: 2193
@@ -2295,8 +2225,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-246: A test expression contains `=` that looks like an
-    assignment.'
+  rationale: 'Covered by SH-246: A test expression contains `=` that looks like an assignment.'
   sources:
   - mappings/SH-246
 - shellcheck_code: 2196
@@ -2326,8 +2255,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-249: Quoting `$@` inside a string comparison folds all
-    arguments together.'
+  rationale: 'Covered by SH-249: Quoting `$@` inside a string comparison folds all arguments together.'
   sources:
   - mappings/SH-249
 - shellcheck_code: 2199
@@ -2347,8 +2275,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-251: A colon-assign expansion provides a default without
-    quoting.'
+  rationale: 'Covered by SH-251: A colon-assign expansion provides a default without quoting.'
   sources:
   - mappings/SH-251
 - shellcheck_code: 2226
@@ -2358,8 +2285,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-252: A symbolic link target uses a relative path with
-    many `../` segments.'
+  rationale: 'Covered by SH-252: A symbolic link target uses a relative path with many `../` segments.'
   sources:
   - mappings/SH-252
 - shellcheck_code: 2227
@@ -2369,8 +2295,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-253: A `find` command output is captured in a word-splitting
-    loop.'
+  rationale: 'Covered by SH-253: A `find` command output is captured in a word-splitting loop.'
   sources:
   - mappings/SH-253
 - shellcheck_code: 2231
@@ -2380,8 +2305,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-254: A glob pattern with an embedded variable is used
-    in a for loop.'
+  rationale: 'Covered by SH-254: A glob pattern with an embedded variable is used in a for loop.'
   sources:
   - mappings/SH-254
 - shellcheck_code: 2267
@@ -2401,8 +2325,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-256: A test comparison uses the `x$var` idiom for empty-string
-    safety.'
+  rationale: 'Covered by SH-256: A test comparison uses the `x$var` idiom for empty-string safety.'
   sources:
   - mappings/SH-256
 - shellcheck_code: 2269
@@ -2412,8 +2335,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-257: A `&&`/`||` chain is used as a ternary but the `||`
-    catches all failures.'
+  rationale: 'Covered by SH-257: A `&&`/`||` chain is used as a ternary but the `||` catches all failures.'
   sources:
   - mappings/SH-257
 - shellcheck_code: 2270
@@ -2423,8 +2345,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-258: A numeric string is used as a variable name in an
-    assignment.'
+  rationale: 'Covered by SH-258: A numeric string is used as a variable name in an assignment.'
   sources:
   - mappings/SH-258
 - shellcheck_code: 2276
@@ -2441,8 +2362,7 @@ known_codes:
   status: covered
   shells:
   - bash
-  rationale: 'Covered by SH-260: The variable `0` is assigned a value, which is a
-    zsh idiom.'
+  rationale: 'Covered by SH-260: The variable `0` is assigned a value, which is a zsh idiom.'
   sources:
   - mappings/SH-260
 - shellcheck_code: 3002
@@ -2450,8 +2370,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-261: An extended glob pattern `@()` is used in a POSIX
-    shell context.'
+  rationale: 'Covered by SH-261: An extended glob pattern `@()` is used in a POSIX shell context.'
   sources:
   - mappings/SH-261
 - shellcheck_code: 3004
@@ -2459,8 +2378,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-262: A `$"string"` locale-translated string is used in
-    POSIX sh.'
+  rationale: 'Covered by SH-262: A `$"string"` locale-translated string is used in POSIX sh.'
   sources:
   - mappings/SH-262
 - shellcheck_code: 3005
@@ -2468,8 +2386,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-263: A C-style `for ((...))` loop is used in a POSIX shell
-    script.'
+  rationale: 'Covered by SH-263: A C-style `for ((...))` loop is used in a POSIX shell script.'
   sources:
   - mappings/SH-263
 - shellcheck_code: 3007
@@ -2477,16 +2394,14 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-264: The legacy `$[...]` arithmetic syntax is used in
-    POSIX sh.'
+  rationale: 'Covered by SH-264: The legacy `$[...]` arithmetic syntax is used in POSIX sh.'
   sources:
   - mappings/SH-264
 - shellcheck_code: 3012
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-265: The `>` operator is used inside `[[ ]]` in a POSIX
-    sh script.'
+  rationale: 'Covered by SH-265: The `>` operator is used inside `[[ ]]` in a POSIX sh script.'
   sources:
   - mappings/SH-265
 - shellcheck_code: 3015
@@ -2510,8 +2425,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-268: The `-a` file-existence test is used inside `[[ ]]`
-    in POSIX sh.'
+  rationale: 'Covered by SH-268: The `-a` file-existence test is used inside `[[ ]]` in POSIX sh.'
   sources:
   - mappings/SH-268
 - shellcheck_code: 3018
@@ -2519,8 +2433,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-269: A C-style for loop with arithmetic uses bashism syntax
-    in POSIX sh.'
+  rationale: 'Covered by SH-269: A C-style for loop with arithmetic uses bashism syntax in POSIX sh.'
   sources:
   - mappings/SH-269
 - shellcheck_code: 3021
@@ -2544,8 +2457,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-272: A `[^...]` negated bracket expression is used in
-    POSIX sh.'
+  rationale: 'Covered by SH-272: A `[^...]` negated bracket expression is used in POSIX sh.'
   sources:
   - mappings/SH-272
 - shellcheck_code: 3029
@@ -2576,8 +2488,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-276: A symbolic signal name like `SIGHUP` is used with
-    `trap` in POSIX sh.'
+  rationale: 'Covered by SH-276: A symbolic signal name like `SIGHUP` is used with `trap` in POSIX sh.'
   sources:
   - mappings/SH-276
 - shellcheck_code: 3052
@@ -2585,8 +2496,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-277: A base prefix like `10#` is used in arithmetic in
-    POSIX sh.'
+  rationale: 'Covered by SH-277: A base prefix like `10#` is used in arithmetic in POSIX sh.'
   sources:
   - mappings/SH-277
 - shellcheck_code: 3055
@@ -2594,8 +2504,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-278: The `${!arr[*]}` array key expansion is used in POSIX
-    sh.'
+  rationale: 'Covered by SH-278: The `${!arr[*]}` array key expansion is used in POSIX sh.'
   sources:
   - mappings/SH-278
 - shellcheck_code: 3056
@@ -2611,8 +2520,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-280: The `-o` option test is used inside `[[ ]]` in POSIX
-    sh.'
+  rationale: 'Covered by SH-280: The `-o` option test is used inside `[[ ]]` in POSIX sh.'
   sources:
   - mappings/SH-280
 - shellcheck_code: 3065
@@ -2636,8 +2544,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-283: A `find -execdir` passes `{}` to a shell command
-    that may mishandle filenames.'
+  rationale: 'Covered by SH-283: A `find -execdir` passes `{}` to a shell command that may mishandle filenames.'
   sources:
   - mappings/SH-283
 - shellcheck_code: 2171
@@ -2647,8 +2554,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-284: An arithmetic expansion inside a conditional test
-    is malformed.'
+  rationale: 'Covered by SH-284: An arithmetic expansion inside a conditional test is malformed.'
   sources:
   - mappings/SH-284
 - shellcheck_code: 2260
@@ -2658,8 +2564,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-285: A redirect placed before a pipe only affects the
-    left-hand side.'
+  rationale: 'Covered by SH-285: A redirect placed before a pipe only affects the left-hand side.'
   sources:
   - mappings/SH-285
 - shellcheck_code: 2300
@@ -2689,8 +2594,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-288: A string value is compared using the numeric `-eq`
-    operator.'
+  rationale: 'Covered by SH-288: A string value is compared using the numeric `-eq` operator.'
   sources:
   - mappings/SH-288
 - shellcheck_code: 2316
@@ -2700,8 +2604,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-289: Both `local` and `declare` are used together in one
-    statement.'
+  rationale: 'Covered by SH-289: Both `local` and `declare` are used together in one statement.'
   sources:
   - mappings/SH-289
 - shellcheck_code: 2331
@@ -2711,8 +2614,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-290: The `-a` flag inside `[[ ]]` is ambiguous in POSIX
-    sh.'
+  rationale: 'Covered by SH-290: The `-a` flag inside `[[ ]]` is ambiguous in POSIX sh.'
   sources:
   - mappings/SH-290
 - shellcheck_code: 3028
@@ -2720,8 +2622,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-291: A nested default-value expansion is used in POSIX
-    sh.'
+  rationale: 'Covered by SH-291: A nested default-value expansion is used in POSIX sh.'
   sources:
   - mappings/SH-291
 - shellcheck_code: 2119
@@ -2731,8 +2632,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-292: A function references a positional parameter that
-    is never passed by callers.'
+  rationale: 'Covered by SH-292: A function references a positional parameter that is never passed by
+    callers.'
   sources:
   - mappings/SH-292
 - shellcheck_code: 2317
@@ -2752,8 +2653,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-294: Backtick output is word-split and passed as arguments
-    to a command.'
+  rationale: 'Covered by SH-294: Backtick output is word-split and passed as arguments to a command.'
   sources:
   - mappings/SH-294
 - shellcheck_code: 2103
@@ -2773,8 +2673,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-296: A `continue` statement appears inside a function
-    but outside a loop.'
+  rationale: 'Covered by SH-296: A `continue` statement appears inside a function but outside a loop.'
   sources:
   - mappings/SH-296
 - shellcheck_code: 2172
@@ -2814,8 +2713,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-300: A bare single letter is used as a case label in a
-    getopts handler.'
+  rationale: 'Covered by SH-300: A bare single letter is used as a case label in a getopts handler.'
   sources:
   - mappings/SH-300
 - shellcheck_code: 2301
@@ -2825,8 +2723,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-303: A zsh-style parameter index flag is used in POSIX
-    sh.'
+  rationale: 'Covered by SH-303: A zsh-style parameter index flag is used in POSIX sh.'
   sources:
   - mappings/SH-303
 - shellcheck_code: 3051
@@ -2834,8 +2731,7 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-304: The bash-only `source` command is used inside a function
-    in POSIX sh.'
+  rationale: 'Covered by SH-304: The bash-only `source` command is used inside a function in POSIX sh.'
   sources:
   - mappings/SH-304
 - shellcheck_code: 3058
@@ -2843,8 +2739,8 @@ known_codes:
   shells:
   - dash
   - sh
-  rationale: 'Covered by SH-305: The `${*%%pattern}` longest-suffix removal is applied
-    to `$*` in POSIX sh.'
+  rationale: 'Covered by SH-305: The `${*%%pattern}` longest-suffix removal is applied to `$*` in POSIX
+    sh.'
   sources:
   - mappings/SH-305
 - shellcheck_code: 2221
@@ -2864,8 +2760,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-302: A default case label appears before a glob that also
-    matches it.'
+  rationale: 'Covered by SH-302: A default case label appears before a glob that also matches it.'
   sources:
   - mappings/SH-302
 - shellcheck_code: 2027
@@ -2875,8 +2770,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-306: A double-quoted variable sits between unquoted text
-    inside a larger double-quoted string.'
+  rationale: 'Covered by SH-306: A double-quoted variable sits between unquoted text inside a larger double-quoted
+    string.'
   sources:
   - mappings/SH-306
 - shellcheck_code: 2089
@@ -2886,8 +2781,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-307: A `+=` string append contains escaped quotes that
-    may not behave as intended.'
+  rationale: 'Covered by SH-307: A `+=` string append contains escaped quotes that may not behave as intended.'
   sources:
   - mappings/SH-307
 - shellcheck_code: 2090
@@ -2897,8 +2791,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-308: An unquoted variable is used as a command name in
-    a function.'
+  rationale: 'Covered by SH-308: An unquoted variable is used as a command name in a function.'
   sources:
   - mappings/SH-308
 - shellcheck_code: 2097
@@ -2908,8 +2801,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-309: An environment variable prefix to a command has unnecessary
-    quoting.'
+  rationale: 'Covered by SH-309: An environment variable prefix to a command has unnecessary quoting.'
   sources:
   - mappings/SH-309
 - shellcheck_code: 2098
@@ -2929,8 +2821,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-311: An array variable is converted to a flat string then
-    used as a string.'
+  rationale: 'Covered by SH-311: An array variable is converted to a flat string then used as a string.'
   sources:
   - mappings/SH-311
 - shellcheck_code: 2213
@@ -2940,8 +2831,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-312: A getopts option string contains an option not handled
-    in the case statement.'
+  rationale: 'Covered by SH-312: A getopts option string contains an option not handled in the case statement.'
   sources:
   - mappings/SH-312
 - shellcheck_code: 2214
@@ -2951,8 +2841,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-313: A case arm handles an option not listed in the getopts
-    string.'
+  rationale: 'Covered by SH-313: A case arm handles an option not listed in the getopts string.'
   sources:
   - mappings/SH-313
 - shellcheck_code: 2318
@@ -2962,8 +2851,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-314: A `local` statement assigns from a variable defined
-    earlier on the same line.'
+  rationale: 'Covered by SH-314: A `local` statement assigns from a variable defined earlier on the same
+    line.'
   sources:
   - mappings/SH-314
 - shellcheck_code: 1112
@@ -2973,8 +2862,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-315: A Unicode smart single-quote appears inside a single-quoted
-    string.'
+  rationale: 'Covered by SH-315: A Unicode smart single-quote appears inside a single-quoted string.'
   sources:
   - mappings/SH-315
 - shellcheck_code: 1044
@@ -3024,8 +2912,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-322: An unfinished `for` loop triggers ShellCheck 1062
-    when it reaches EOF without a matching `done`.'
+  rationale: 'Covered by SH-322: An unfinished `for` loop triggers ShellCheck 1062 when it reaches EOF
+    without a matching `done`.'
   sources:
   - mappings/SH-322
 - shellcheck_code: 1048
@@ -3075,8 +2963,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-335: A backgrounded command is followed immediately by
-    `;`.'
+  rationale: 'Covered by SH-335: A backgrounded command is followed immediately by `;`.'
   sources:
   - mappings/SH-335
 - shellcheck_code: 1133
@@ -3086,8 +2973,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-329: A control operator starts a new line instead of ending
-    the previous one.'
+  rationale: 'Covered by SH-329: A control operator starts a new line instead of ending the previous one.'
   sources:
   - mappings/SH-329
 - shellcheck_code: 1041
@@ -3097,8 +2983,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-332: The here-document closer appears on the same line
-    as content instead of by itself.'
+  rationale: 'Covered by SH-332: The here-document closer appears on the same line as content instead
+    of by itself.'
   sources:
   - mappings/SH-332
 - shellcheck_code: 1137
@@ -3128,8 +3014,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-338: An append assignment is split by spaces and no longer
-    parses as an assignment.'
+  rationale: 'Covered by SH-338: An append assignment is split by spaces and no longer parses as an assignment.'
   sources:
   - mappings/SH-338
 - shellcheck_code: 2030
@@ -3139,8 +3024,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-339: A variable is reassigned inside a subshell, so the
-    update does not affect the parent shell.'
+  rationale: 'Covered by SH-339: A variable is reassigned inside a subshell, so the update does not affect
+    the parent shell.'
   sources:
   - mappings/SH-339
 - shellcheck_code: 2054
@@ -3150,8 +3035,8 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-340: A Bash array literal uses commas, so multiple intended
-    elements become one malformed item.'
+  rationale: 'Covered by SH-340: A Bash array literal uses commas, so multiple intended elements become
+    one malformed item.'
   sources:
   - mappings/SH-340
 - shellcheck_code: 2165
@@ -3161,8 +3046,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-344: An inner loop reuses the outer loop''s iteration
-    variable.'
+  rationale: 'Covered by SH-344: An inner loop reuses the outer loop''s iteration variable.'
   sources:
   - mappings/SH-344
 - shellcheck_code: 2167
@@ -3172,8 +3056,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-345: A nested loop overwrites the parent loop''s iteration
-    variable.'
+  rationale: 'Covered by SH-345: A nested loop overwrites the parent loop''s iteration variable.'
   sources:
   - mappings/SH-345
 - shellcheck_code: 2218
@@ -3183,8 +3066,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-346: A function is called before its definition has been
-    reached.'
+  rationale: 'Covered by SH-346: A function is called before its definition has been reached.'
   sources:
   - mappings/SH-346
 - shellcheck_code: 2031
@@ -3193,8 +3075,7 @@ known_codes:
   - bash
   - dash
   - sh
-  rationale: 'Covered by SH-347: A value is updated inside a pipeline child shell
-    and then read afterward.'
+  rationale: 'Covered by SH-347: A value is updated inside a pipeline child shell and then read afterward.'
   sources:
   - mappings/SH-347
 - shellcheck_code: 2140
@@ -3204,8 +3085,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-350: One argument is assembled from alternating quoted
-    and bare fragments.'
+  rationale: 'Covered by SH-350: One argument is assembled from alternating quoted and bare fragments.'
   sources:
   - mappings/SH-350
 - shellcheck_code: 2129
@@ -3215,8 +3095,7 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-349: Multiple commands append to the same file with separate
-    redirections.'
+  rationale: 'Covered by SH-349: Multiple commands append to the same file with separate redirections.'
   sources:
   - mappings/SH-349
 - shellcheck_code: 2153
@@ -3226,16 +3105,14 @@ known_codes:
   - dash
   - ksh
   - sh
-  rationale: 'Covered by SH-351: A referenced variable looks like a misspelling of
-    one that was assigned.'
+  rationale: 'Covered by SH-351: A referenced variable looks like a misspelling of one that was assigned.'
   sources:
   - mappings/SH-351
 - shellcheck_code: 1121
   status: covered
   shells:
   - bash
-  rationale: 'Covered by SH-352: A here-document closing marker has extra syntax attached
-    to its line.'
+  rationale: 'Covered by SH-352: A here-document closing marker has extra syntax attached to its line.'
   sources:
   - mappings/SH-352
 - shellcheck_code: 1069
@@ -3256,8 +3133,7 @@ known_codes:
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-363: A bracket-style test is being nested inside `[[ ...
-    ]]`.'
+  rationale: 'Covered by SH-363: A bracket-style test is being nested inside `[[ ... ]]`.'
   sources:
   - mappings/SH-363
 - shellcheck_code: 1028
@@ -3313,40 +3189,35 @@ known_codes:
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-378: Places a command name inside test brackets as if
-    test would run it.'
+  rationale: 'Covered by SH-378: Places a command name inside test brackets as if test would run it.'
   sources:
   - mappings/SH-378
 - shellcheck_code: 1018
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-381: Contains a non-breaking space where regular shell
-    whitespace was intended.'
+  rationale: 'Covered by SH-381: Contains a non-breaking space where regular shell whitespace was intended.'
   sources:
   - mappings/SH-381
 - shellcheck_code: 1060
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-385: Creates a loop body with no command between `do`
-    and `done`.'
+  rationale: 'Covered by SH-385: Creates a loop body with no command between `do` and `done`.'
   sources:
   - mappings/SH-385
 - shellcheck_code: 1063
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-386: Places `do` on the same line without a separator
-    before it.'
+  rationale: 'Covered by SH-386: Places `do` on the same line without a separator before it.'
   sources:
   - mappings/SH-386
 - shellcheck_code: 1077
   status: covered
   shells:
   - sh
-  rationale: 'Covered by SH-392: Uses an acute accent instead of a shell backtick
-    for command substitution.'
+  rationale: 'Covered by SH-392: Uses an acute accent instead of a shell backtick for command substitution.'
   sources:
   - mappings/SH-392
 - shellcheck_code: 1059
@@ -3357,518 +3228,786 @@ known_codes:
   sources:
   - mappings/SH-404
 - shellcheck_code: 1000
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - dash
+  - ksh
+  rationale: ShellCheck directives are control comments that must follow proper syntax to be recognized.
+    Malformed directives cause parser errors and prevent the linter from functioning correctly on affected
+    scripts.
   sources:
   - issues/1003
   - issues/1004
   - issues/1006
+  description: Invalid or malformed ShellCheck directive (e.g., disable comment).
 - shellcheck_code: 1004
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Single quotes in shell prevent all escape processing, including backslash line continuation.
+    Users often mistakenly expect backslash-newline to work inside single quotes, leading to unexpected
+    literal characters in their commands. Understanding this distinction is fundamental to correct shell
+    quoting behavior across all POSIX-compatible shells.
   sources:
   - issues/1114
   - issues/1246
   - issues/2326
+  description: Backslash followed by linefeed inside single quotes is literal and does not continue the
+    line.
 - shellcheck_code: 1008
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ShellCheck must determine the target shell from the shebang to apply appropriate linting
+    rules. An unrecognized shebang prevents this detection, so users must add a 'shell' directive to specify
+    the intended shell.
   sources:
   - issues/1190
   - issues/1210
   - issues/1303
+  description: Unrecognized shebang line that prevents ShellCheck from detecting which shell to lint.
 - shellcheck_code: 1015
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Shells do not recognize Unicode curly quotes as valid quote delimiters, causing parse errors
+    or unintended string concatenation.
   sources:
   - issues/641
   - issues/689
+  description: Detects Unicode curly double quotes that should be replaced with ASCII straight double
+    quotes.
 - shellcheck_code: 1016
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unicode single quotes look similar to ASCII single quotes but are not recognized by the shell,
+    causing quote parsing to fail and breaking script syntax.
   sources:
   - issues/641
   - issues/689
+  description: Detects Unicode single quotes (typographic quotes) that are not recognized as valid shell
+    quote delimiters.
 - shellcheck_code: 1043
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 1052
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Semicolons after 'then' create invalid shell syntax that prevents scripts from executing.
   sources:
   - issues/1657
   - issues/641
+  description: Detects semicolons placed directly after 'then' statements, which are syntactically invalid.
 - shellcheck_code: 1066
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The $ prefix is only used to expand variables, not to declare them; it prevents proper variable
+    assignment and causes syntax errors.
   sources:
   - issues/1162
   - issues/641
   - issues/843
+  description: Detects incorrect use of $ on the left side of variable assignments, which is invalid syntax.
 - shellcheck_code: 1067
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Direct variable indirection in assignments doesn't work; arrays, declare, or read/eval should
+    be used for proper indirection.
   sources:
   - issues/1590
   - issues/641
   - issues/785
+  description: Detects invalid variable indirection syntax on the left side of assignments.
 - shellcheck_code: 1068
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - ksh
+  - dash
+  rationale: Variable assignment syntax requires no spaces around the equals sign; spaces would cause
+    a parse error.
   sources:
   - issues/1119
   - issues/1412
   - issues/1663
+  description: Detects spaces around the equals sign in variable assignments.
 - shellcheck_code: 1071
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ShellCheck can only analyze scripts written for sh, bash, dash, or ksh shells and will reject
+    other shell types.
   sources:
   - issues/1931
   - issues/2534
   - issues/641
+  description: Script uses a shell that ShellCheck does not support.
 - shellcheck_code: 1076
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 1081
-  status: undiscovered
+  status: covered
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Shell keywords are case-sensitive and must be lowercase; incorrect capitalization prevents
+    script execution.
   sources:
-  - issues/641
+  - mappings/SH-097
+  description: Detects shell keywords written with incorrect capitalization, such as 'If' instead of 'if',
+    which causes parse errors.
 - shellcheck_code: 1082
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: UTF-8 BOM causes parse errors and prevents proper script execution across all shells.
   sources:
   - issues/641
+  description: This file has a UTF-8 BOM, which interferes with script parsing and shebang interpretation.
 - shellcheck_code: 1084
-  status: undiscovered
+  status: covered
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: 'The shebang must start with #! to be recognized as an executable script by the operating
+    system.'
   sources:
-  - issues/641
+  - mappings/SH-099
+  description: 'Detects incorrect shebang syntax using !# instead of the required #!.'
 - shellcheck_code: 1086
-  status: undiscovered
+  status: covered
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The iterator variable in for loops must be declared without a $ prefix; $ is only used for
+    variable expansion, not declaration.
   sources:
-  - issues/641
+  - mappings/SH-103
+  description: Detects incorrect use of $ prefix on iterator variable names in for loops.
 - shellcheck_code: 1092
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Deep nesting of file sourcing is impractical and typically indicates an internal bug rather
+    than intentional code structure.
   sources:
   - issues/2572
+  description: Detects when a chain of 100+ files are sourcing each other, indicating excessive nesting
+    in file inclusion.
 - shellcheck_code: 1094
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Failed parsing of sourced files prevents error detection in those files, potentially hiding
+    critical issues.
   sources:
   - issues/1916
   - issues/2803
   - issues/641
+  description: Detects when a sourced file fails to parse, preventing ShellCheck from analyzing its contents.
 - shellcheck_code: 1095
-  status: undiscovered
+  status: covered
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Missing whitespace between function name and body causes parse errors and prevents correct
+    function definition.
   sources:
-  - issues/641
+  - mappings/SH-117
+  description: Requires a space or linefeed between function name and function body to ensure proper syntax
+    parsing.
 - shellcheck_code: 1098
-  status: undiscovered
+  status: covered
   shells:
+  - bash
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - dash
+  - ksh
+  rationale: Unquoted special characters passed to eval can be reinterpreted as shell syntax, leading
+    to security vulnerabilities or unexpected behavior.
   sources:
-  - issues/1387
-  - issues/1615
-  - issues/2433
+  - mappings/SH-118
+  description: Warns when special characters in eval arguments are not properly quoted or escaped, which
+    can cause parsing errors or unintended command execution.
 - shellcheck_code: 1099
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: 'Without a space before #, the character may be misinterpreted as part of syntax rather than
+    a comment marker, causing parse errors.'
   sources:
   - issues/641
+  description: 'Checks that there is a space before the # character to properly denote a comment.'
 - shellcheck_code: 1100
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unicode dashes visually resemble ASCII minus but cause syntax failures in all shells that
+    expect standard ASCII characters in command parsing.
   sources:
   - issues/3283
   - issues/641
+  description: Detects unicode dashes (en-dash, em-dash, etc.) used instead of ASCII minus signs, which
+    cause parse errors.
 - shellcheck_code: 1103
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unknown shell directives prevent ShellCheck from analyzing code against the correct shell
+    specification
   sources:
   - issues/2616
   - issues/3246
+  description: Detects unknown or unsupported shell names specified in ShellCheck directives
 - shellcheck_code: 1104
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: 'The proper #! shebang syntax is required for the operating system to correctly identify
+    and execute shell scripts.'
   sources:
   - issues/641
+  description: 'Detects when only ! is used instead of #! for the shebang.'
 - shellcheck_code: 1106
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Parse errors prevent script execution and must be fixed before the script can run.
   sources:
   - issues/1836
+  description: Unexpected operator encountered during parsing, indicating malformed shell syntax.
 - shellcheck_code: 1107
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Invalid directives fail silently, causing intended linting rules to not be suppressed as
+    expected.
   sources:
   - issues/1771
   - issues/2956
   - issues/641
+  description: ShellCheck directive is malformed or unknown and will be ignored.
 - shellcheck_code: 1108
-  status: undiscovered
+  status: enriched
   shells:
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - ksh
+  rationale: The shell parser requires proper spacing around assignment and comparison operators for correct
+    syntax parsing in conditionals.
   sources:
   - issues/2226
   - issues/641
+  description: You need a space before and after the = or == operator in conditional expressions.
 - shellcheck_code: 1109
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unquoted HTML entities cause parsing errors and should be replaced with actual characters
+    or quoted to prevent interpretation issues.
   sources:
   - issues/641
+  description: Detects unquoted HTML entities in shell scripts that should be replaced with corresponding
+    characters.
 - shellcheck_code: 1110
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unicode quotes are not recognized by shell interpreters and will cause parsing failures or
+    unintended literal characters in scripts.
   sources:
   - issues/641
+  description: Detects unicode quotation marks that should be replaced with standard ASCII quotes to avoid
+    parsing errors.
 - shellcheck_code: 1116
-  status: undiscovered
+  status: enriched
   shells:
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - ksh
+  - dash
+  rationale: Without the $ prefix, the expression is misparsed as nested subshells or command grouping
+    instead of arithmetic evaluation
   sources:
   - issues/255
   - issues/641
+  description: Detects missing $ prefix in arithmetic expansion expressions that should use $((...))
 - shellcheck_code: 1117
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Incorrect escape sequences can cause unexpected parsing behavior or errors in shell scripts
+    and piped commands.
   sources:
   - issues/1000
   - issues/1055
   - issues/1071
+  description: Checks for unnecessary or invalid backslash escaping in strings and patterns.
 - shellcheck_code: 1119
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The here-doc end token must appear alone on its line; lacking a linefeed before a closing
+    parenthesis causes a syntax parse error.
   sources:
   - issues/641
+  description: Detects missing linefeed between here-doc end token and terminating parenthesis.
 - shellcheck_code: 1120
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - dash
+  - ksh
+  rationale: Placing comments after here-doc delimiters causes parse errors; comments must be placed on
+    the next line instead.
   sources:
   - issues/641
+  description: Comments are not allowed directly after here-doc tokens.
 - shellcheck_code: 1122
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Heredoc terminators mark the end of input content, and anything after them is a syntax error
+    that prevents proper command parsing and execution.
   sources:
   - issues/1050
   - issues/641
+  description: Detects syntax errors where text appears after a heredoc terminator line; command operators
+    must be placed on the line with the heredoc start operator, not after the end token.
 - shellcheck_code: 1123
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Directives placed before incomplete constructs like elif branches are not properly parsed
+    and fail to apply to the intended code.
   sources:
   - issues/1127
   - issues/641
+  description: Checks that ShellCheck directives are only placed in front of complete compound commands,
+    not partial constructs like individual branches.
 - shellcheck_code: 1124
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Directives placed on individual case branches are ignored by ShellCheck and cannot suppress
+    or configure checks for those statements.
   sources:
   - issues/3120
   - issues/641
+  description: ShellCheck directives must be placed before complete commands like 'case' statements, not
+    individual case branches.
 - shellcheck_code: 1125
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Invalid directives may not be processed correctly, potentially causing intended ShellCheck
+    checks to be ignored
   sources:
   - issues/1979
   - issues/2372
   - issues/641
+  description: Detects invalid key=value pair syntax in ShellCheck directives
 - shellcheck_code: 1129
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Missing spaces before ! can cause parsing errors since the shell may misinterpret it as part
+    of a command or word boundary.
   sources:
   - issues/641
+  description: A space is required before the ! operator in conditionals or logical negation.
 - shellcheck_code: 1130
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Missing spacing before the colon can cause incorrect parsing and syntax errors in shell scripts.
   sources:
   - issues/641
+  description: Requires a space before the colon (:) character to prevent shell parsing errors.
 - shellcheck_code: 1131
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Proper conditional syntax with `elif` is required for correct shell script parsing and execution
+    across all POSIX-like shells.
   sources:
   - issues/641
+  description: Detects when `elif` should be used to start another conditional branch instead of an alternative
+    construct.
 - shellcheck_code: 1134
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Ensures ShellCheck directives use correct syntax so that linting rules and exceptions are
+    properly applied.
   sources:
   - issues/2384
   - issues/3425
+  description: 'Detects invalid or incorrect directive key names in ShellCheck directives (e.g., misspelled
+    keys in # shellcheck comments).'
 - shellcheck_code: 1135
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Backslash escaping is clearer than quote termination and reduces the risk of misread or malformed
+    syntax.
   sources:
   - issues/1589
   - issues/641
+  description: Suggests using backslash escape instead of ending a quote to make $ literal.
 - shellcheck_code: 1136
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Missing semicolons or linefeeds after condition terminators cause parse errors and prevent
+    script execution.
   sources:
   - issues/2101
   - issues/641
+  description: Detects unexpected characters after a terminating bracket ] in conditional expressions,
+    typically indicating missing semicolons or linefeeds.
 - shellcheck_code: 1138
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 1139
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The '-o' operator is for conditions within test brackets; '||' is the correct operator for
+    logical OR between commands.
   sources:
   - issues/641
+  description: Detects incorrect use of '-o' operator between test commands where '||' should be used
+    instead.
 - shellcheck_code: 1142
-  status: undiscovered
+  status: enriched
   shells:
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - ksh
+  rationale: Prevents syntax errors when redirecting from process substitution into loop constructs.
   sources:
   - issues/641
+  description: Detects missing '<' in process substitution redirection syntax (should use 'done < <(cmd)').
 - shellcheck_code: 1144
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - dash
+  - ksh
+  rationale: external-sources bypasses ShellCheck's sandbox restrictions, so allowing per-script configuration
+    would compromise security and defeat the sandbox's purpose.
   sources:
   - issues/2572
+  description: The external-sources directive cannot be specified in individual shell scripts; it must
+    be configured in .shellcheckrc.
 - shellcheck_code: 1145
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ShellCheck configuration requires boolean values for the external-sources directive to enable
+    or disable following external source files in analysis.
   sources:
   - issues/2572
+  description: Unknown value for external-sources directive; expected true or false.
 - shellcheck_code: 1234
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Semicolons stop remote command execution in ssh, which may not match the user's intent to
+    chain multiple commands.
   sources:
   - issues/1503
   - issues/1671
   - issues/2512
+  description: Detects potential misunderstanding of semicolon behavior in ssh commands where it terminates
+    remote command execution.
 - shellcheck_code: 1235
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - ksh
+  - dash
+  rationale: Prevents bugs from unintended variable expansion and special character interpretation, particularly
+    history expansion in bash.
   sources:
   - issues/2687
+  description: Double-quoted strings without variable expansion should use single quotes to avoid unintended
+    variable expansion and special character issues.
 - shellcheck_code: 2002
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Eliminating unnecessary cat improves performance and code clarity by using shell redirection
+    directly.
   sources:
   - issues/1111
   - issues/1113
   - issues/1401
+  description: Detects useless use of cat (UUOC) where the file can be redirected directly instead of
+    piping through cat.
 - shellcheck_code: 2008
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: echo outputs only its arguments and ignores stdin, making pipes to it ineffective and indicating
+    a likely logic error.
   sources:
   - issues/641
+  description: Warns when piping input to echo, which doesn't read from stdin and ignores piped data.
 - shellcheck_code: 2020
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Misunderstanding tr's character-by-character replacement behavior instead of word-level replacement
+    can cause incorrect string transformations.
   sources:
-  - issues/2457
-  - issues/641
+  - mappings/SH-122
+  description: Warns that tr replaces sets of characters, not words, and detects misuse in character replacement
+    patterns.
 - shellcheck_code: 2025
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
-  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - ksh
+  - dash
+  rationale: Unescaped non-printing characters in prompts cause shells to miscalculate line length, resulting
+    in terminal display wrapping problems.
   sources:
-  - issues/641
-  - issues/834
-  - issues/836
+  - mappings/SH-131
+  description: Checks that non-printing escape sequences in shell prompts are properly enclosed in `\[..\]`
+    to prevent line wrapping issues.
 - shellcheck_code: 2032
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Shadowing builtins with functions can cause unexpected behavior and make code difficult to
+    understand or maintain.
   sources:
   - issues/1200
   - issues/1537
   - issues/1842
+  description: Detects when a function is defined with the same name as a shell builtin or command, potentially
+    shadowing it.
 - shellcheck_code: 2033
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: External commands cannot execute shell functions defined in the current shell environment.
   sources:
   - issues/1200
   - issues/1537
   - issues/1842
+  description: Shell functions cannot be passed as arguments to external commands.
 - shellcheck_code: 2036
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Command substitution with $() properly captures pipeline output in variables, whereas incorrect
+    syntax fails to assign output.
   sources:
   - issues/641
+  description: Detects incorrect pipeline output assignment and recommends using $(pipeline) syntax for
+    proper variable assignment.
 - shellcheck_code: 2037
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The $() command substitution syntax is more readable, properly nestable, and preferred over
+    backticks for assigning command output to variables.
   sources:
   - issues/1119
   - issues/641
   - issues/876
+  description: Warns when command output assignment doesn't use the modern $(cmd) syntax.
 - shellcheck_code: 2039
-  status: undiscovered
+  status: enriched
   shells:
   - bash
+  - sh
   - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Ensures shell scripts remain portable across different shell implementations and maintain
+    POSIX sh compatibility.
   sources:
   - issues/1011
   - issues/118
   - issues/1181
+  description: Warns when bash-specific features like 'local' or 'type' are used and would be undefined
+    in POSIX sh.
 - shellcheck_code: 2040
-  status: undiscovered
+  status: enriched
   shells:
-  - bash
-  - dash
-  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: 'Scripts declaring #!/bin/sh will fail on systems where sh is not bash, such as those using
+    dash.'
   sources:
   - issues/641
+  description: 'Detects use of features not supported in POSIX sh when #!/bin/sh shebang is specified.'
 - shellcheck_code: 2041
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using a literal string instead of command substitution prevents the command from being executed,
+    causing logic errors.
   sources:
-  - issues/2891
-  - issues/641
+  - mappings/SH-083
+  description: Detects literal strings that should be executed as commands using command substitution.
 - shellcheck_code: 2042
   status: undiscovered
   shells:
@@ -3880,282 +4019,307 @@ known_codes:
   sources:
   - issues/2572
 - shellcheck_code: 2049
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The =~ operator expects regex syntax; glob patterns will not match as intended and should
+    use == or = instead.
   sources:
-  - issues/1367
-  - issues/641
-  - issues/969
+  - mappings/SH-085
+  description: Detects use of glob patterns with the =~ regex matching operator instead of with == or
+    = operators.
 - shellcheck_code: 2051
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Brace range expansions with variables will produce literal text instead of expanding to the
+    intended numeric or character sequence.
   sources:
-  - issues/163
-  - issues/1919
-  - issues/580
+  - mappings/SH-132
+  description: Detects variables used in brace range expansions, which Bash doesn't support.
 - shellcheck_code: 2055
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Prevents logic errors in conditions that will always evaluate the same way, usually indicating
+    a mistake in operator choice
   sources:
-  - issues/3179
-  - issues/586
-  - issues/641
+  - mappings/SH-088
+  description: Detects logical operator combinations in conditional expressions that create tautological
+    conditions (always true or always false), typically when && was intended instead of ||
 - shellcheck_code: 2056
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Catches logic errors that create impossible conditions, preventing bugs from contradictory
+    boolean expressions.
   sources:
   - issues/1284
   - issues/3181
   - issues/641
+  description: Detects illogical conditionals where the operator is probably wrong, such as using && when
+    || was likely intended.
 - shellcheck_code: 2058
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unknown unary operators in test expressions indicate a syntax error that will cause the script
+    to fail or behave unexpectedly.
   sources:
-  - issues/51
-  - issues/641
+  - mappings/SH-089
+  description: Detects unknown or invalid unary operators used in test expressions that would cause evaluation
+    errors.
 - shellcheck_code: 2065
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Prevents unintended redirections that silently change program behavior when developers expect
+    comparison operations.
   sources:
   - issues/472
   - issues/641
+  description: Detects when code intended as a comparison is interpreted as a shell file redirection instead.
 - shellcheck_code: 2067
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Find -exec requires a separate, properly quoted terminator argument to execute correctly;
+    missing it causes syntax errors and pipes/operators to be misparsed.
   sources:
-  - issues/3330
-  - issues/3332
-  - issues/641
+  - mappings/SH-090
+  description: Missing or improperly quoted terminator (';' or '+') for find -exec, -execdir, or -ok commands.
 - shellcheck_code: 2073
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The < character is a redirection operator in shell and will redirect a file instead of performing
+    comparison in [ ].
   sources:
-  - issues/1649
-  - issues/641
-  - issues/691
+  - mappings/SH-092
+  description: Checks for unescaped < operator in [ ] test command, which should be escaped or use [[
+    .. ]].
 - shellcheck_code: 2074
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
-  - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The =~ operator only works in [[ ]] conditional expressions; attempting to use it in [ ]
+    will fail.
   sources:
-  - issues/641
+  - mappings/SH-094
+  description: The regex match operator =~ cannot be used inside [ ] test constructs and requires [[ ]]
+    instead.
 - shellcheck_code: 2075
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Mismatched printf arguments lead to incorrect output or runtime errors.
   sources:
   - issues/2572
+  description: Argument mismatch in printf format string and arguments.
 - shellcheck_code: 2079
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The (( )) arithmetic expansion syntax evaluates only integers, so operations with decimal
+    numbers must use external tools like bc or awk.
   sources:
-  - issues/3005
-  - issues/561
-  - issues/641
+  - mappings/SH-095
+  description: Arithmetic evaluation (( )) doesn't support decimal numbers; use bc or awk instead.
 - shellcheck_code: 2083
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 2084
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Executing arithmetic expression output can exit with code 1, especially when errexit is enabled,
+    causing unintended script termination.
   sources:
-  - issues/1830
-  - issues/641
+  - mappings/SH-096
+  description: Detects arithmetic expressions whose output is being executed as a command, which can cause
+    unexpected failures.
 - shellcheck_code: 2087
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Quoting the heredoc delimiter prevents local shell expansion and ensures variables are substituted
+    on the remote server when using SSH or similar remote execution.
   sources:
-  - issues/1806
-  - issues/641
+  - mappings/SH-136
+  description: Checks if heredoc delimiters are quoted to ensure variable expansions occur on the server
+    side rather than the client side.
 - shellcheck_code: 2093
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Detects unreachable dead code following exec, which indicates either a logic error or unnecessary
+    code that wastes maintenance effort.
   sources:
   - issues/1180
   - issues/1339
   - issues/1340
+  description: Warns when code appears after 'exec' that will not be executed because exec replaces the
+    shell process.
 - shellcheck_code: 2095
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: SSH reads from stdin by default, which can cause unexpected behavior when stdin is redirected
+    or piped in scripts.
   sources:
-  - issues/1504
-  - issues/641
-  - issues/798
+  - mappings/SH-138
+  description: Detects ssh commands that may consume stdin without the -n flag, which can break pipes
+    and while loops.
 - shellcheck_code: 2099
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The $((..)) syntax is POSIX-compliant and more efficient than alternatives like expr or let.
   sources:
   - issues/641
+  description: Arithmetic operations should use $((..)) syntax for portable and efficient evaluation.
 - shellcheck_code: 2101
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Without outer brackets, named character classes like [:digit:] will not match correctly and
+    are treated as literal characters instead.
   sources:
-  - issues/1338
-  - issues/134
-  - issues/641
+  - mappings/SH-139
+  description: Named character classes must be wrapped in outer brackets in bracket expressions.
 - shellcheck_code: 2106
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Exit in a pipeline creates unintended behavior by terminating only the subshell while allowing
+    the parent script to continue executing.
   sources:
   - issues/641
   - issues/975
+  description: Detects exit statements in pipelines that only terminate the subshell, not the parent shell.
 - shellcheck_code: 2107
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using && outside of test brackets ensures proper evaluation semantics and portability across
+    different shell implementations.
   sources:
-  - issues/641
+  - mappings/SH-149
+  description: Detects && operator used inside test brackets and suggests using separate test brackets
+    with && outside instead.
 - shellcheck_code: 2108
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The && operator is clearer and more consistent with command-level syntax than the -a test
+    operator.
   sources:
-  - issues/641
+  - mappings/SH-150
+  description: In [[ ]] constructs, use && logical operator instead of -a to combine conditions.
 - shellcheck_code: 2109
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The || operator does not work as a logical operator inside single bracket tests; POSIX-compliant
+    syntax requires separate test commands joined by || outside the brackets.
   sources:
-  - issues/641
+  - mappings/SH-156
+  description: Detects use of || (logical OR) inside [ ] test expressions, which should use separate tests
+    with || operator outside the brackets.
 - shellcheck_code: 2110
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using || instead of -o in [[ ]] follows modern shell syntax conventions and is semantically
+    correct for the double bracket construct.
   sources:
-  - issues/641
+  - mappings/SH-162
+  description: In double bracket test constructs [[ ]], use || (logical OR operator) instead of -o (single
+    bracket operator).
 - shellcheck_code: 2111
-  status: undiscovered
+  status: enriched
   shells:
-  - bash
-  - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Ksh and POSIX shells require explicit variable initialization before use, unlike Bash which
+    permits uninitialized variable references
   sources:
   - issues/518
+  description: Reference to uninitialized local variable in function scope
 - shellcheck_code: 2114
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Prevents accidental deletion of critical system directories like /usr or /lib.
   sources:
-  - issues/1512
-  - issues/2108
-  - issues/641
+  - mappings/SH-316
+  description: Warns when rm command targets system directories that could cause data loss.
 - shellcheck_code: 2118
   status: undiscovered
   shells:
@@ -4167,724 +4331,839 @@ known_codes:
   sources:
   - issues/2572
 - shellcheck_code: 2122
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The >= operator is not valid in POSIX shell; correct syntax requires negating the less-than
+    operator (! a < b).
   sources:
   - issues/641
+  description: Detects use of the invalid >= operator in shell comparisons.
 - shellcheck_code: 2123
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: PATH is a critical shell variable for locating executables; reassigning it as a regular variable
+    breaks command resolution.
   sources:
-  - issues/219
-  - issues/2739
-  - issues/3073
+  - mappings/SH-317
+  description: Detects assignment to PATH variable, which is reserved as the shell's executable search
+    path.
 - shellcheck_code: 2130
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using -eq with string literals produces incorrect results because -eq performs arithmetic
+    comparison while strings require the = operator.
   sources:
   - issues/1129
   - issues/641
+  description: -eq is for integer comparisons; use = for string comparisons instead.
 - shellcheck_code: 2147
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Tilde expansion is inconsistent across programs, causing path resolution failures when used
+    literally in PATH.
   sources:
-  - issues/641
+  - mappings/SH-323
+  description: Literal tilde in PATH works poorly across programs.
 - shellcheck_code: 2148
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ShellCheck requires knowing the target shell to provide accurate shell-specific syntax and
+    compatibility warnings.
   sources:
   - issues/1108
   - issues/1148
   - issues/1176
+  description: Detects when target shell is not specified (missing shebang or shell directive).
 - shellcheck_code: 2149
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Incorrect array indexing syntax can cause unexpected behavior or failures across different
+    shell implementations and versions.
   sources:
   - issues/2823
   - issues/641
+  description: Detects improper variable syntax when indexing arrays, requiring removal of $/${} for numeric
+    indices or proper escaping for string indices.
 - shellcheck_code: 2150
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Without understanding that -exec needs explicit shell invocation, commands may fail when
+    expecting shell syntax like pipes or variable expansion
   sources:
   - issues/1781
   - issues/641
+  description: -exec does not automatically invoke a shell; explicit sh -c is required for shell processing
 - shellcheck_code: 2151
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Return statements must use valid POSIX exit codes (0-255), as shells cannot return arbitrary
+    values through the return mechanism.
   sources:
   - issues/2599
   - issues/3403
   - issues/641
+  description: Only integers 0-255 can be returned from functions; other data should be written to stdout.
 - shellcheck_code: 2158
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: This pattern creates a logic error where the condition succeeds when intended to fail, causing
+    incorrect program behavior.
   sources:
-  - issues/490
-  - issues/641
+  - mappings/SH-324
+  description: Detects when [ false ] is used as a test, which evaluates to true because 'false' is a
+    non-empty string literal.
 - shellcheck_code: 2159
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Developers may mistakenly expect [ 0 ] to be false like in other programming languages, but
+    shell treats non-empty strings as true.
   sources:
-  - issues/641
+  - mappings/SH-325
+  description: Warns when [ 0 ] is used, which evaluates to true because '0' is a non-empty string.
 - shellcheck_code: 2160
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using [ true ] is redundant since true is already a command that succeeds, adding unnecessary
+    complexity to conditional expressions.
   sources:
-  - issues/1054
-  - issues/641
-  - issues/961
+  - mappings/SH-326
+  description: Detects unnecessary test constructs like [ true ] that should be simplified to the true
+    command directly.
 - shellcheck_code: 2169
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Helps identify portability issues where constructs like ulimit options or echo flags behave
+    differently across shells, particularly in POSIX-compliant shells like dash.
   sources:
   - issues/1006
   - issues/1011
   - issues/1384
+  description: Checks for shell constructs or features that may not be supported or behave consistently
+    across different shell implementations, particularly dash.
 - shellcheck_code: 2170
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Improper dereferencing in test brackets can lead to incorrect test evaluation and portability
+    issues across shells.
   sources:
-  - issues/641
+  - mappings/SH-328
+  description: Detects numerical -eq comparisons inside test brackets without proper variable dereferencing.
 - shellcheck_code: 2173
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: SIGKILL and SIGSTOP are special signals reserved by the kernel and cannot be caught or ignored,
+    making trap handlers for them ineffective.
   sources:
-  - issues/2366
-  - issues/2424
-  - issues/641
+  - mappings/SH-331
+  description: Detects attempts to trap SIGKILL or SIGSTOP signals, which cannot be trapped by any shell.
 - shellcheck_code: 2175
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Ensures invalid brace expansions are properly quoted to prevent unintended expansion when
+    passed to eval.
   sources:
   - issues/641
+  description: Detects unquoted invalid brace expansions that should be passed literally to eval.
 - shellcheck_code: 2176
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The 'time' builtin cannot directly precede pipelines; it must wrap a single command or be
+    nested in bash -c for complex constructs.
   sources:
-  - issues/641
+  - mappings/SH-341
+  description: Detects use of 'time' with pipelines, which is undefined syntax in standard shells.
 - shellcheck_code: 2177
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using 'time' with compound commands requires proper syntax like 'time sh -c' to function
+    correctly; direct usage will fail.
   sources:
-  - issues/641
+  - mappings/SH-342
+  description: '''time'' builtin cannot be directly applied to compound commands.'
 - shellcheck_code: 2180
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Attempting to use multidimensional array syntax will fail or behave unexpectedly in Bash,
+    leading to potential runtime errors.
   sources:
-  - issues/2673
-  - issues/641
+  - mappings/SH-343
+  description: Bash does not support multidimensional arrays.
 - shellcheck_code: 2182
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Identifies likely programming errors where printf arguments are ignored due to missing variables
+    in the format string.
   sources:
-  - issues/2650
-  - issues/641
+  - mappings/SH-348
+  description: Detects printf format strings with no variables where other arguments are silently ignored.
 - shellcheck_code: 2183
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Mismatches between placeholders and arguments cause undefined behavior, missing output, or
+    runtime errors.
   sources:
-  - issues/1171
-  - issues/1184
-  - issues/1294
+  - mappings/SH-354
+  description: Checks that the number of format string placeholders matches the number of arguments passed
+    to printf.
 - shellcheck_code: 2187
-  status: undiscovered
+  status: enriched
   shells:
-  - bash
+  - ash
   - dash
-  - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Ash and Dash have different features, so checking Ash code as Dash may miss issues or produce
+    false positives specific to Ash behavior.
   sources:
   - issues/1841
   - issues/2865
   - issues/641
+  description: Warns that Ash scripts will be checked as Dash due to lack of native Ash support.
 - shellcheck_code: 2189
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: This pattern indicates a syntax error where the pipe operator is misplaced relative to redirections,
+    preventing the command from executing correctly.
   sources:
-  - issues/1051
-  - issues/641
+  - mappings/SH-355
+  description: Detects when a pipe character is placed between a redirection and the command it should
+    apply to.
 - shellcheck_code: 2191
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Array index assignment requires specific syntax; incorrect placement of = can create unintended
+    literal values instead of proper array elements.
   sources:
-  - issues/1197
-  - issues/1262
-  - issues/3110
+  - mappings/SH-356
+  description: Detects when = is used literally instead of for array index assignment, which should use
+    [index]=value syntax without spaces.
 - shellcheck_code: 2192
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Improperly formatted array assignments result in array elements lacking intended values,
+    causing unexpected script behavior.
   sources:
   - issues/641
+  description: Detects array element assignments with no value or improper spacing after the equals sign.
 - shellcheck_code: 2200
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Brace expansions do not expand within [ ] operators, causing the test condition to fail or
+    produce unexpected results.
   sources:
-  - issues/641
+  - mappings/SH-357
+  description: Detects brace expansions used as operands in [ ] test constructs, which are not expanded
+    in that context.
 - shellcheck_code: 2201
-  status: undiscovered
+  status: covered
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Brace expansion is not performed inside [[ ]] constructs, so patterns relying on this expansion
+    will not work as intended.
   sources:
-  - issues/641
+  - mappings/SH-358
+  description: Detects when brace expansion is incorrectly expected to work within [[ ]] conditional expressions.
 - shellcheck_code: 2204
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using a subshell in a conditional context typically indicates user confusion between subshell
+    and test expression syntax.
   sources:
-  - issues/2564
-  - issues/641
+  - mappings/SH-359
+  description: Detects when (..) subshell syntax is used where a test expression [ .. ] was likely intended.
 - shellcheck_code: 2205
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using parentheses creates a subshell instead of evaluating a conditional test, which is typically
+    unintended and leads to incorrect program logic.
   sources:
-  - issues/2564
-  - issues/2984
-  - issues/641
+  - mappings/SH-360
+  description: Warns when parentheses (..) are used instead of test brackets [ .. ], as parentheses create
+    a subshell rather than performing a test expression.
 - shellcheck_code: 2208
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unquoted arguments to -v can expand to multiple filenames, causing unexpected behavior or
+    incorrect test results.
   sources:
-  - issues/2755
-  - issues/641
+  - mappings/SH-361
+  description: Detects unquoted arguments to the -v option that could undergo glob expansion.
 - shellcheck_code: 2224
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The mv command requires both source and destination arguments; omitting the destination will
+    cause the command to fail.
   sources:
-  - issues/641
+  - mappings/SH-369
+  description: Detects when an mv command is missing a destination argument.
 - shellcheck_code: 2225
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: An incomplete cp command without a destination argument will fail and indicates a likely
+    scripting error.
   sources:
-  - issues/641
+  - mappings/SH-371
+  description: Detects cp commands that are missing a destination argument.
 - shellcheck_code: 2229
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using correct syntax like ${var?} clarifies whether you intend to check if a variable is
+    set or silently use its value, preventing unintended behavior.
   sources:
   - issues/641
+  description: Detects unnecessary variable expansions that don't actually read the variable's value,
+    indicating potential logic errors.
 - shellcheck_code: 2230
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The 'which' utility is non-standard and not universally available across POSIX-compliant
+    shells, making 'command -v' a more portable alternative.
   sources:
   - issues/1162
   - issues/1262
   - issues/1656
+  description: Detects use of non-standard 'which' command and suggests using the built-in 'command -v'
+    instead.
 - shellcheck_code: 2232
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Sudo cannot elevate privileges for shell builtins; use sudo sh -c to wrap the command instead.
   sources:
-  - issues/3255
-  - issues/641
+  - mappings/SH-373
+  description: Detects attempts to use sudo with shell builtins like cd that cannot be executed with sudo.
 - shellcheck_code: 2233
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unnecessary parentheses around conditions reduce code clarity and indicate potential misunderstanding
+    of shell conditional syntax.
   sources:
   - issues/641
+  description: Detects superfluous parentheses around conditions in control structures that should be
+    removed.
 - shellcheck_code: 2236
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unary -o and -a operators are ambiguous and error-prone; using [ ] with && and || operators
+    is more portable and clearer.
   sources:
   - issues/1327
   - issues/1328
   - issues/1613
+  description: Use [ ] instead of unary -o and -a operators in test conditions.
 - shellcheck_code: 2237
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Double-negation logic is less readable and maintainable than using the direct non-empty string
+    test operator.
   sources:
   - issues/3164
   - issues/3176
   - issues/641
+  description: Detects use of `! [ -z .. ]` pattern and recommends `[ -n .. ]` as a more direct alternative
+    for checking non-empty strings.
 - shellcheck_code: 2241
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Exit codes are constrained to 0-255 by shell specifications; values outside this range should
+    be sent to stdout or stderr instead.
   sources:
   - issues/2044
   - issues/641
+  description: Exit status must be an integer between 0 and 255.
 - shellcheck_code: 2243
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Explicit -n makes the intent of the test clear and prevents ambiguity or misinterpretation
+    of shell syntax.
   sources:
   - issues/1412
   - issues/2169
   - issues/641
+  description: Warns to use explicit -n flag when checking for non-empty command output in test conditions
+    instead of implicit checks.
 - shellcheck_code: 2244
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Explicit -n makes the intent to test for non-empty strings clear and avoids ambiguity in
+    conditional expressions.
   sources:
   - issues/1435
   - issues/1546
   - issues/3187
+  description: Recommends using explicit -n to check if a string is non-empty instead of implicit string
+    testing.
 - shellcheck_code: 2245
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Glob patterns expand to multiple files but test operators evaluate only the first result,
+    risking incorrect conditional logic.
   sources:
-  - issues/1452
-  - issues/641
+  - mappings/SH-374
+  description: Warns that test operators like -d only apply to the first expansion of a glob pattern,
+    not all matches.
 - shellcheck_code: 2246
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: A shebang pointing to a directory rather than an executable file will cause script execution
+    to fail.
   sources:
-  - issues/641
+  - mappings/SH-375
+  description: Detects when a shebang line specifies a directory path instead of an executable interpreter
+    file.
 - shellcheck_code: 2247
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Catches a common typo where misplaced $ and " prevents command substitution from executing
+    as intended.
   sources:
-  - issues/1517
-  - issues/641
+  - mappings/SH-376
+  description: Detects when the $ and " characters are flipped in quoted substitutions, such as $"(...)
+    instead of "$(...)".
 - shellcheck_code: 2248
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Optional style check to flag potentially unnecessary unquoted variables, though some contexts
+    like here strings may legitimately not require quoting.
   sources:
   - issues/1009
   - issues/1662
   - issues/1790
+  description: Warns about unquoted variables that don't contain spaces or glob characters and may not
+    require quoting.
 - shellcheck_code: 2249
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Default cases handle unexpected values and prevent unintended silent failures in case statements.
   sources:
   - issues/1633
   - issues/641
   - issues/997
+  description: Suggests adding a default case (*) to case statements even if it just exits with error.
 - shellcheck_code: 2250
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Improper quoting in parameter expansion can lead to unintended word splitting or globbing
+    that breaks the script logic.
   sources:
   - issues/1662
   - issues/1790
   - issues/2111
+  description: Quoting of parameter expansions in arithmetic contexts or comparisons where unquoted expansion
+    could cause word splitting.
 - shellcheck_code: 2251
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using ! improperly can prevent errexit from working, causing undetected errors to pass silently.
   sources:
-  - issues/1588
-  - issues/2974
-  - issues/2975
+  - mappings/SH-377
+  description: Detects when ! is not on a condition and may skip errexit behavior.
 - shellcheck_code: 2253
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Correct chmod syntax is essential to avoid unintended permission changes that could compromise
+    file security or accessibility.
   sources:
-  - issues/641
+  - mappings/SH-379
+  description: Detects incorrect chmod patterns when attempting to recursively modify or remove read permissions.
 - shellcheck_code: 2255
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Arithmetic expressions in test brackets are treated as strings, not evaluated numerically,
+    causing logic errors.
   sources:
   - issues/1641
   - issues/641
+  description: Test brackets [ ] do not perform arithmetic evaluation; suggests using $((..)) for arithmetic
+    or string comparators instead.
 - shellcheck_code: 2256
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Prevents accidental use of variable names as strings instead of performing variable expansion
+    in quoted contexts.
   sources:
   - issues/641
+  description: Detects when a translated string is the name of a variable and suggests flipping the leading
+    $ and quote marks to create proper variable substitution.
 - shellcheck_code: 2259
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Input redirection and piped input are mutually exclusive, so having both causes the pipe
+    to be silently ignored.
   sources:
-  - issues/2236
-  - issues/2369
-  - issues/641
+  - mappings/SH-380
+  description: Detects when input redirection (<) overrides piped input on the same command.
 - shellcheck_code: 2262
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Aliases cannot be defined and used within the same parsing unit; functions should be used
+    instead for this pattern.
   sources:
   - issues/641
+  description: Detects when an alias is defined and used in the same parsing unit, which is not allowed.
 - shellcheck_code: 2263
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Aliases defined and used within the same parsing unit fail to expand, causing unexpected
+    behavior; functions should be used instead.
   sources:
   - issues/641
+  description: Companion warning indicating an alias is defined and used in the same parsing unit, which
+    cannot be expanded as intended.
 - shellcheck_code: 2264
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unconditional recursion causes stack overflow or infinite loops, often from forgetting to
+    use `command` to invoke an external program instead of recursing.
   sources:
-  - issues/641
+  - mappings/SH-382
+  description: Detects when a function unconditionally re-invokes itself, which may indicate infinite
+    recursion or a missing `command` builtin prefix.
 - shellcheck_code: 2265
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 2266
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unescaped forward slashes in grep patterns cause regex failures and incorrect matching behavior.
   sources:
   - issues/2572
+  description: Detects grep regex patterns containing forward slashes that should be escaped or use a
+    different delimiter.
 - shellcheck_code: 2271
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Proper indirection mechanisms are safer, more portable, and reduce the risk of variable expansion
+    vulnerabilities.
   sources:
   - issues/641
+  description: Indirect variable references should use arrays, declare statements, or read/eval instead
+    of variable indirection.
 - shellcheck_code: 2272
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The == operator cannot appear as a command name; proper string comparison requires test constructs
+    like [ "$var" = value ].
   sources:
   - issues/641
+  description: Detects == in command position which is invalid shell syntax for comparison operations.
 - shellcheck_code: 2273
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unresolved merge conflicts can cause unexpected command execution and script failures
   sources:
   - issues/641
+  description: Detects sequences of === characters which may indicate unresolved merge conflicts or intentional
+    commented borders
 - shellcheck_code: 2274
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Catches accidental uncommented decoration lines that would cause shell syntax errors.
   sources:
-  - issues/641
+  - mappings/SH-383
+  description: Detects when a command name starts with '===' which is typically an uncommented border
+    line.
 - shellcheck_code: 2275
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: This warning catches unintended line breaks that cause an equals sign to be misinterpreted
+    as a command name instead of an assignment or comparison operator.
   sources:
-  - issues/2347
-  - issues/2934
-  - issues/641
+  - mappings/SH-384
+  description: Detects when a command name starts with =, indicating a bad line break or malformed syntax.
 - shellcheck_code: 2278
-  status: undiscovered
+  status: covered
   shells:
-  - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Attempting to assign to $0 in Ksh has no effect on the script name, causing code that relies
+    on this assignment to malfunction.
   sources:
-  - issues/641
+  - mappings/SH-387
+  description: $0 cannot be assigned in Ksh, though it does reflect the current function.
 - shellcheck_code: 2279
-  status: undiscovered
+  status: covered
   shells:
-  - bash
   - dash
-  - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Attempting to assign to $0 in Dash has unexpected behavior that may confuse script authors
+    who expect it to modify the running script's name
   sources:
-  - issues/641
+  - mappings/SH-388
+  description: $0 assignment in Dash becomes the command name instead of modifying the script name
 - shellcheck_code: 2281
-  status: undiscovered
+  status: covered
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The left side of an assignment must be a variable name, not a parameter expansion or command
+    substitution.
   sources:
-  - issues/641
+  - mappings/SH-389
+  description: Warns when attempting to assign to a variable expansion or substitution instead of the
+    variable name itself.
 - shellcheck_code: 2284
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Proper comparison syntax with [ ] and = ensures correct conditional logic and portability
+    across different shell environments.
   sources:
   - issues/3343
   - issues/641
+  description: Detects incorrect comparison operators and suggests using proper syntax for value comparisons
+    with square bracket test syntax.
 - shellcheck_code: 2292
-  status: undiscovered
+  status: enriched
   shells:
   - bash
-  - dash
   - ksh
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: The [[ ]] construct provides safer semantics by avoiding word splitting and glob expansion
+    issues inherent in [ ]
   sources:
   - issues/1197
   - issues/2516
   - issues/2590
+  description: Suggests using [[ ]] instead of [ ] for conditional tests in Bash/Ksh
 - shellcheck_code: 2302
   status: undiscovered
   shells:
@@ -4896,27 +5175,30 @@ known_codes:
   sources:
   - issues/3150
 - shellcheck_code: 2306
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: ''
   sources:
   - issues/2572
+  description: ''
 - shellcheck_code: 2310
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Uncaught errors in scripts continue execution and can cause subtle bugs or data corruption.
   sources:
   - issues/2532
   - issues/2709
   - issues/2738
+  description: Warns about commands that may exit with an error when errexit (set -e) is not enabled to
+    handle the failure.
 - shellcheck_code: 2311
   status: undiscovered
   shells:
@@ -4929,110 +5211,136 @@ known_codes:
   - issues/2537
   - issues/3367
 - shellcheck_code: 2312
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Unchecked exit codes from piped commands can mask errors and cause silent failures in scripts.
   sources:
   - issues/2338
   - issues/2368
   - issues/2392
+  description: Exit code of piped commands is lost when used in command substitution or variable assignment.
 - shellcheck_code: 2325
-  status: undiscovered
+  status: enriched
   shells:
-  - bash
   - dash
-  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Multiple exclamation marks can cause unexpected behavior with history expansion or negation
+    operators in dash and sh shells.
   sources:
   - issues/2918
+  description: Warns about multiple consecutive exclamation marks in dash and sh shells.
 - shellcheck_code: 2330
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Quoted characters inside regex character classes like [abc] don't function as regex; unquoted
+    characters are needed for proper pattern matching.
   sources:
   - issues/1656
   - issues/2998
+  description: Quotes in the string of a regex character class are not recognized as special characters.
 - shellcheck_code: 2807
-  status: undiscovered
+  status: enriched
   shells:
   - bash
   - dash
   - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Command failures can be silently masked by command substitutions, leading to unexpected behavior
+    such as cd failing to change directories but the script continuing undetected.
   sources:
   - issues/2807
+  description: Detects command substitutions that can mask command failures, particularly in contexts
+    like cd where a failed command produces no output but the parent command still succeeds.
 - shellcheck_code: 3000
-  status: undiscovered
+  status: enriched
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  - dash
+  - ksh
+  rationale: Simplified if logic improves readability and follows shell scripting best practices for portable
+    code.
   sources:
   - issues/2840
   - issues/3270
   - issues/505
+  description: Detects if-then-else statements that can be simplified or contain unnecessary logic constructs.
 - shellcheck_code: 3013
-  status: undiscovered
+  status: enriched
   shells:
+  - bash
+  - dash
+  - ksh
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: These file comparison operators are non-portable and will fail in strict POSIX sh environments
+    unless newer POSIX.1-2024 compliance is available.
   sources:
   - issues/3167
   - issues/641
+  description: Detects use of test operators `-nt`, `-ef`, and `-ot` which are not defined in POSIX sh.
 - shellcheck_code: 3023
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: File descriptors above 9 are not defined in POSIX sh, making code using them non-portable
+    to strict POSIX environments.
   sources:
-  - issues/641
+  - mappings/SH-390
+  description: Detects file descriptors outside the 0-9 range, which are undefined in POSIX sh.
 - shellcheck_code: 3025
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: These are bash-specific network device extensions that will fail in POSIX-compliant shells.
   sources:
-  - issues/641
+  - mappings/SH-391
+  description: Detects use of /dev/tcp and /dev/udp which are undefined in POSIX sh.
 - shellcheck_code: 3031
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Glob expansion in redirections is not guaranteed in POSIX sh and may cause portability issues
+    across different systems
   sources:
-  - issues/641
+  - mappings/SH-393
+  description: Detects redirections using glob patterns, which are undefined in POSIX sh
 - shellcheck_code: 3035
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - dash
+  rationale: Using this syntax prevents code from being portable to POSIX sh and dash implementations.
   sources:
-  - issues/3338
-  - issues/641
+  - mappings/SH-394
+  description: In POSIX sh, backtick command substitution with file input redirection (`<file`) is undefined.
 - shellcheck_code: 3036
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - dash
+  - ksh
+  rationale: POSIX sh only reliably supports the -n flag for echo, so using other flags reduces portability
+    across shell implementations
   sources:
-  - issues/2572
-  - issues/3100
-  - issues/3129
+  - mappings/SH-395
+  description: Detects non-standard echo flags beyond -n that are incompatible with POSIX sh
 - shellcheck_code: 3038
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: Using exec flags not defined in POSIX sh will cause scripts to fail in POSIX-compliant shell
+    environments.
   sources:
-  - issues/641
+  - mappings/SH-396
+  description: In POSIX sh, exec flags are undefined.
 - shellcheck_code: 3042
   status: undiscovered
   shells:
@@ -5041,24 +5349,31 @@ known_codes:
   sources:
   - issues/2572
 - shellcheck_code: 3049
-  status: undiscovered
+  status: covered
   shells:
   - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  rationale: POSIX sh requires signal names to be uppercase; lowercase variants are not recognized in
+    portable shell scripts.
   sources:
-  - issues/2715
-  - issues/641
+  - mappings/SH-397
+  description: Detects use of lowercase or mixed-case signal names which are undefined in POSIX sh.
 - shellcheck_code: 3100
-  status: undiscovered
+  status: enriched
   shells:
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - bash
+  rationale: Case patterns in bash 3.1.x command substitution fail without parentheses around the pattern
+    due to a widespread bug in that bash version
   sources:
   - issues/505
+  description: Detects case pattern syntax in command substitution that breaks in bash 3.1.x; requires
+    (patt) instead of patt)
 - shellcheck_code: 3101
-  status: undiscovered
+  status: enriched
   shells:
-  - sh
-  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  - dash
+  rationale: Dash does not support declaring multiple variables in a single `local` keyword, causing unexpected
+    behavior in portable shell scripts
   sources:
   - issues/505
+  description: Detects `local` declarations with multiple variables in a single statement, which may not
+    work correctly in dash

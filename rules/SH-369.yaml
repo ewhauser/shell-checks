@@ -1,0 +1,11 @@
+id: SH-369
+name: detects-when-an-mv
+summary: Detects when an mv command is missing a destination argument.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/369.sh
+rationale: The mv command requires both source and destination arguments; omitting the destination will
+  cause the command to fail.

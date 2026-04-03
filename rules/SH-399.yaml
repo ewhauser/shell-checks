@@ -1,0 +1,12 @@
+id: SH-399
+name: detects-incorrect-pipeline-output
+summary: Detects incorrect pipeline output assignment and recommends using $(pipeline) syntax for proper
+  variable assignment.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/399.sh
+rationale: Command substitution with $() properly captures pipeline output in variables, whereas incorrect
+  syntax fails to assign output.

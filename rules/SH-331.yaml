@@ -1,0 +1,11 @@
+id: SH-331
+name: detects-attempts-to-trap
+summary: Detects attempts to trap SIGKILL or SIGSTOP signals, which cannot be trapped by any shell.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/331.sh
+rationale: SIGKILL and SIGSTOP are special signals reserved by the kernel and cannot be caught or ignored,
+  making trap handlers for them ineffective.

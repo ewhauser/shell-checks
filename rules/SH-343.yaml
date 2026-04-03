@@ -1,0 +1,11 @@
+id: SH-343
+name: bash-does-not-support
+summary: Bash does not support multidimensional arrays.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/343.sh
+rationale: Attempting to use multidimensional array syntax will fail or behave unexpectedly in Bash, leading
+  to potential runtime errors.

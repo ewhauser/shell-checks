@@ -1,0 +1,11 @@
+id: SH-380
+name: detects-when-input-redirection
+summary: Detects when input redirection (<) overrides piped input on the same command.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/380.sh
+rationale: Input redirection and piped input are mutually exclusive, so having both causes the pipe to
+  be silently ignored.

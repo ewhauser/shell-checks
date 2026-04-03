@@ -1,0 +1,12 @@
+id: SH-357
+name: detects-brace-expansions-used
+summary: Detects brace expansions used as operands in [ ] test constructs, which are not expanded in that
+  context.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/357.sh
+rationale: Brace expansions do not expand within [ ] operators, causing the test condition to fail or
+  produce unexpected results.

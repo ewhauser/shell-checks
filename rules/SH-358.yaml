@@ -1,0 +1,9 @@
+id: SH-358
+name: detects-when-brace-expansion
+summary: Detects when brace expansion is incorrectly expected to work within [[ ]] conditional expressions.
+shells:
+- bash
+- ksh
+example: examples/358.sh
+rationale: Brace expansion is not performed inside [[ ]] constructs, so patterns relying on this expansion
+  will not work as intended.

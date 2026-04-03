@@ -1,0 +1,11 @@
+id: SH-341
+name: detects-use-of-time
+summary: Detects use of 'time' with pipelines, which is undefined syntax in standard shells.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/341.sh
+rationale: The 'time' builtin cannot directly precede pipelines; it must wrap a single command or be nested
+  in bash -c for complex constructs.

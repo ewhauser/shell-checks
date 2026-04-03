@@ -1,0 +1,11 @@
+id: SH-342
+name: time-builtin-cannot-be
+summary: '''time'' builtin cannot be directly applied to compound commands.'
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/342.sh
+rationale: Using 'time' with compound commands requires proper syntax like 'time sh -c' to function correctly;
+  direct usage will fail.

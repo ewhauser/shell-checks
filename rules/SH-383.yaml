@@ -1,0 +1,10 @@
+id: SH-383
+name: detects-when-a-command
+summary: Detects when a command name starts with '===' which is typically an uncommented border line.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/383.sh
+rationale: Catches accidental uncommented decoration lines that would cause shell syntax errors.

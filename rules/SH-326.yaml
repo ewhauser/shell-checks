@@ -1,0 +1,12 @@
+id: SH-326
+name: detects-unnecessary-test-constructs
+summary: Detects unnecessary test constructs like [ true ] that should be simplified to the true command
+  directly.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/326.sh
+rationale: Using [ true ] is redundant since true is already a command that succeeds, adding unnecessary
+  complexity to conditional expressions.

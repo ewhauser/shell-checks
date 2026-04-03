@@ -1,0 +1,12 @@
+id: SH-122
+name: warns-that-tr-replaces
+summary: Warns that tr replaces sets of characters, not words, and detects misuse in character replacement
+  patterns.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/122.sh
+rationale: Misunderstanding tr's character-by-character replacement behavior instead of word-level replacement
+  can cause incorrect string transformations.

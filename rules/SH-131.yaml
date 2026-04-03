@@ -1,0 +1,12 @@
+id: SH-131
+name: checks-that-non-printing-escape
+summary: Checks that non-printing escape sequences in shell prompts are properly enclosed in `\[..\]`
+  to prevent line wrapping issues.
+shells:
+- bash
+- sh
+- ksh
+- dash
+example: examples/131.sh
+rationale: Unescaped non-printing characters in prompts cause shells to miscalculate line length, resulting
+  in terminal display wrapping problems.

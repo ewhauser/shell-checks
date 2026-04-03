@@ -1,0 +1,12 @@
+id: SH-096
+name: detects-arithmetic-expressions-whose
+summary: Detects arithmetic expressions whose output is being executed as a command, which can cause unexpected
+  failures.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/096.sh
+rationale: Executing arithmetic expression output can exit with code 1, especially when errexit is enabled,
+  causing unintended script termination.

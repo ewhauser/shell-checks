@@ -1,0 +1,12 @@
+id: SH-136
+name: checks-if-heredoc-delimiters
+summary: Checks if heredoc delimiters are quoted to ensure variable expansions occur on the server side
+  rather than the client side.
+shells:
+- bash
+- dash
+- ksh
+- sh
+example: examples/136.sh
+rationale: Quoting the heredoc delimiter prevents local shell expansion and ensures variables are substituted
+  on the remote server when using SSH or similar remote execution.
