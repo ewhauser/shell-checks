@@ -3356,3 +3356,1709 @@ known_codes:
   rationale: 'Covered by SH-404: Adds a command separator immediately after `do`.'
   sources:
   - mappings/SH-404
+- shellcheck_code: 1000
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1003
+  - issues/1004
+  - issues/1006
+- shellcheck_code: 1004
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1114
+  - issues/1246
+  - issues/2326
+- shellcheck_code: 1008
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1190
+  - issues/1210
+  - issues/1303
+- shellcheck_code: 1015
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+  - issues/689
+- shellcheck_code: 1016
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+  - issues/689
+- shellcheck_code: 1043
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1052
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1657
+  - issues/641
+- shellcheck_code: 1066
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1162
+  - issues/641
+  - issues/843
+- shellcheck_code: 1067
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1590
+  - issues/641
+  - issues/785
+- shellcheck_code: 1068
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1119
+  - issues/1412
+  - issues/1663
+- shellcheck_code: 1071
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1931
+  - issues/2534
+  - issues/641
+- shellcheck_code: 1076
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1081
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1082
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1084
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1086
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1092
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1094
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1916
+  - issues/2803
+  - issues/641
+- shellcheck_code: 1095
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1098
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1387
+  - issues/1615
+  - issues/2433
+- shellcheck_code: 1099
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1100
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3283
+  - issues/641
+- shellcheck_code: 1103
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2616
+  - issues/3246
+- shellcheck_code: 1104
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1106
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1836
+- shellcheck_code: 1107
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1771
+  - issues/2956
+  - issues/641
+- shellcheck_code: 1108
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2226
+  - issues/641
+- shellcheck_code: 1109
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1110
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1116
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/255
+  - issues/641
+- shellcheck_code: 1117
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1000
+  - issues/1055
+  - issues/1071
+- shellcheck_code: 1119
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1120
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1122
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1050
+  - issues/641
+- shellcheck_code: 1123
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1127
+  - issues/641
+- shellcheck_code: 1124
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3120
+  - issues/641
+- shellcheck_code: 1125
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1979
+  - issues/2372
+  - issues/641
+- shellcheck_code: 1129
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1130
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1131
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1134
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2384
+  - issues/3425
+- shellcheck_code: 1135
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1589
+  - issues/641
+- shellcheck_code: 1136
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2101
+  - issues/641
+- shellcheck_code: 1138
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1139
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1142
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 1144
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1145
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 1234
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1503
+  - issues/1671
+  - issues/2512
+- shellcheck_code: 1235
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2687
+- shellcheck_code: 2002
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1111
+  - issues/1113
+  - issues/1401
+- shellcheck_code: 2008
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2020
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2457
+  - issues/641
+- shellcheck_code: 2025
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+  - issues/834
+  - issues/836
+- shellcheck_code: 2032
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1200
+  - issues/1537
+  - issues/1842
+- shellcheck_code: 2033
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1200
+  - issues/1537
+  - issues/1842
+- shellcheck_code: 2036
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2037
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1119
+  - issues/641
+  - issues/876
+- shellcheck_code: 2039
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1011
+  - issues/118
+  - issues/1181
+- shellcheck_code: 2040
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2041
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2891
+  - issues/641
+- shellcheck_code: 2042
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2049
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1367
+  - issues/641
+  - issues/969
+- shellcheck_code: 2051
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/163
+  - issues/1919
+  - issues/580
+- shellcheck_code: 2055
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3179
+  - issues/586
+  - issues/641
+- shellcheck_code: 2056
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1284
+  - issues/3181
+  - issues/641
+- shellcheck_code: 2058
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/51
+  - issues/641
+- shellcheck_code: 2065
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/472
+  - issues/641
+- shellcheck_code: 2067
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3330
+  - issues/3332
+  - issues/641
+- shellcheck_code: 2073
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1649
+  - issues/641
+  - issues/691
+- shellcheck_code: 2074
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2075
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2079
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3005
+  - issues/561
+  - issues/641
+- shellcheck_code: 2083
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2084
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1830
+  - issues/641
+- shellcheck_code: 2087
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1806
+  - issues/641
+- shellcheck_code: 2093
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1180
+  - issues/1339
+  - issues/1340
+- shellcheck_code: 2095
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1504
+  - issues/641
+  - issues/798
+- shellcheck_code: 2099
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2101
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1338
+  - issues/134
+  - issues/641
+- shellcheck_code: 2106
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+  - issues/975
+- shellcheck_code: 2107
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2108
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2109
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2110
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2111
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/518
+- shellcheck_code: 2114
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1512
+  - issues/2108
+  - issues/641
+- shellcheck_code: 2118
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2122
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2123
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/219
+  - issues/2739
+  - issues/3073
+- shellcheck_code: 2130
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1129
+  - issues/641
+- shellcheck_code: 2147
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2148
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1108
+  - issues/1148
+  - issues/1176
+- shellcheck_code: 2149
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2823
+  - issues/641
+- shellcheck_code: 2150
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1781
+  - issues/641
+- shellcheck_code: 2151
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2599
+  - issues/3403
+  - issues/641
+- shellcheck_code: 2158
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/490
+  - issues/641
+- shellcheck_code: 2159
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2160
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1054
+  - issues/641
+  - issues/961
+- shellcheck_code: 2169
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1006
+  - issues/1011
+  - issues/1384
+- shellcheck_code: 2170
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2173
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2366
+  - issues/2424
+  - issues/641
+- shellcheck_code: 2175
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2176
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2177
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2180
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2673
+  - issues/641
+- shellcheck_code: 2182
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2650
+  - issues/641
+- shellcheck_code: 2183
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1171
+  - issues/1184
+  - issues/1294
+- shellcheck_code: 2187
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1841
+  - issues/2865
+  - issues/641
+- shellcheck_code: 2189
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1051
+  - issues/641
+- shellcheck_code: 2191
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1197
+  - issues/1262
+  - issues/3110
+- shellcheck_code: 2192
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2200
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2201
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2204
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2564
+  - issues/641
+- shellcheck_code: 2205
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2564
+  - issues/2984
+  - issues/641
+- shellcheck_code: 2208
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2755
+  - issues/641
+- shellcheck_code: 2224
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2225
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2229
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2230
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1162
+  - issues/1262
+  - issues/1656
+- shellcheck_code: 2232
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3255
+  - issues/641
+- shellcheck_code: 2233
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2236
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1327
+  - issues/1328
+  - issues/1613
+- shellcheck_code: 2237
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3164
+  - issues/3176
+  - issues/641
+- shellcheck_code: 2241
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2044
+  - issues/641
+- shellcheck_code: 2243
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1412
+  - issues/2169
+  - issues/641
+- shellcheck_code: 2244
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1435
+  - issues/1546
+  - issues/3187
+- shellcheck_code: 2245
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1452
+  - issues/641
+- shellcheck_code: 2246
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2247
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1517
+  - issues/641
+- shellcheck_code: 2248
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1009
+  - issues/1662
+  - issues/1790
+- shellcheck_code: 2249
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1633
+  - issues/641
+  - issues/997
+- shellcheck_code: 2250
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1662
+  - issues/1790
+  - issues/2111
+- shellcheck_code: 2251
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1588
+  - issues/2974
+  - issues/2975
+- shellcheck_code: 2253
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2255
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1641
+  - issues/641
+- shellcheck_code: 2256
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2259
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2236
+  - issues/2369
+  - issues/641
+- shellcheck_code: 2262
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2263
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2264
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2265
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2266
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2271
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2272
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2273
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2274
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2275
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2347
+  - issues/2934
+  - issues/641
+- shellcheck_code: 2278
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2279
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2281
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 2284
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3343
+  - issues/641
+- shellcheck_code: 2292
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1197
+  - issues/2516
+  - issues/2590
+- shellcheck_code: 2302
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3150
+- shellcheck_code: 2306
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 2310
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2532
+  - issues/2709
+  - issues/2738
+- shellcheck_code: 2311
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2537
+  - issues/3367
+- shellcheck_code: 2312
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2338
+  - issues/2368
+  - issues/2392
+- shellcheck_code: 2325
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2918
+- shellcheck_code: 2330
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/1656
+  - issues/2998
+- shellcheck_code: 2807
+  status: undiscovered
+  shells:
+  - bash
+  - dash
+  - ksh
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2807
+- shellcheck_code: 3000
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2840
+  - issues/3270
+  - issues/505
+- shellcheck_code: 3013
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3167
+  - issues/641
+- shellcheck_code: 3023
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 3025
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 3031
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 3035
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/3338
+  - issues/641
+- shellcheck_code: 3036
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+  - issues/3100
+  - issues/3129
+- shellcheck_code: 3038
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/641
+- shellcheck_code: 3042
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2572
+- shellcheck_code: 3049
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/2715
+  - issues/641
+- shellcheck_code: 3100
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/505
+- shellcheck_code: 3101
+  status: undiscovered
+  shells:
+  - sh
+  rationale: Referenced in GitHub issues but not yet mapped to an internal rule.
+  sources:
+  - issues/505
